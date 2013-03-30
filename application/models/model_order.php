@@ -51,7 +51,7 @@ class model_order extends MY_Model
      * @param array $data
      * @param int $orderSn
      */
-    public function addOrder(array $data, $orderSn = 0)
+    public function saveOrder(array $data, $orderSn = 0)
     {
         if ($orderSn) {
             $this->db->where('order_sn', $orderSn);

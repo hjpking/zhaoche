@@ -29,6 +29,7 @@ class order extends MY_Controller
         //$amount = intval($this->input->get_post('amount'));
         $leaveMessage = $this->input->get_post('leave_message');
         $flight = $this->input->get_post('flight');
+        $orderSn = intval($this->input->get_post('order_sn'));
 
         $response = array('code' => '0', 'msg' => '下单成功');
 
@@ -127,12 +128,15 @@ class order extends MY_Controller
                 'notice' => $flight,
             );
             $this->load->model('model_order', 'order');
-            $orderSn = $this->order->addOrder($data);
+            $lastId = $this->order->saveOrder($data, $orderSn);
 
-            if (!$orderSn) {
+            if (!$lastId) {
                 $response = error(10016);//下单失败
                 break;
             }
+
+            //判断返回的值是否为布尔值，如果不是则将订单号重置
+            if (!is_bool($lastId)) $orderSn = $lastId;
 
             //$s = $this->user->save(array('amount' => "amount-$amount"), $uData['uid']);
             //$this->db->set(array('amount' => 'amount-'.$amount), '', false)->where('uid', $uData['uid'])->update('user');
@@ -792,6 +796,37 @@ class order extends MY_Controller
             $this->db->where('order_sn', $orderSn);
             $this->db->where('chauffeur_id', $chauffeurId);
             $this->db->update('order', array('train_time' => date('Y-m-d H:i:s', TIMESTAMP)));
+        } while (false);
+
+        $this->json_output($response);
+    }
+
+    /**
+     * 获取订单信息 -- 通过订单ID
+     */
+    public function getOrderByOrderSn()
+    {
+        $orderSn = intval($this->input->get_post('order_sn'));
+
+        $response = array('code' => '0', 'msg' => '获取成功');
+
+        do {
+            if (empty ($orderSn)) {
+                $response = error(10001); //参数不全
+                break;
+            }
+
+            $this->load->model('model_order', 'order');
+            $data = $this->order->getOrderById($orderSn);
+            if (empty ($data)) {
+                $response = error(10024); //订单不存在
+                break;
+            }
+
+            $response['data'] = $data;
+            //$this->db->where('order_sn', $orderSn);
+            //$this->db->where('chauffeur_id', $chauffeurId);
+            //$this->db->update('order', array('train_time' => date('Y-m-d H:i:s', TIMESTAMP)));
         } while (false);
 
         $this->json_output($response);
