@@ -19,7 +19,9 @@ class order extends MY_Controller
         $carTime = $this->input->get_post('car_time');
         $carLength = intval($this->input->get_post('car_length'));
         $trainAddress = $this->input->get_post('train_address');
+        $trainAddressDesc = $this->input->get_post('train_address_desc');
         $getoffAddress = $this->input->get_post('getoff_address');
+        $getoffAddressDesc = $this->input->get_post('getoff_address_desc');
         $addressSupplemental = $this->input->get_post('address_supplemental');
         $token = $this->input->get_post('token');
         $isInvoice = intval($this->input->get_post('is_invoice'));
@@ -35,8 +37,8 @@ class order extends MY_Controller
 
         //'?city_id=1&service_type=1&car_type=1&car_time=2013-03-28 12:00:00&car_length=30&train_address=39.903021,116.440487&getoff_address=39.903021,116.440487&address_supplemental=天安门广场&leave_message=麻烦快点过来&token=529262eaa1f89e6dc5153ea8577e58c6&is_invoice=1&payable=东方佛祖&content=租车&mailing_address=东方佛祖广场整栋&amount=25000&leave_message=你要快点到哦&flight=HU7636';
         do {
-            if (empty ($cityId) || empty ($serviceType) || empty ($carType) || empty ($carTime) ||
-                empty ($trainAddress) || empty ($getoffAddress) || empty ($token)) {
+            if (empty ($cityId) || empty ($serviceType) || empty ($carType) || empty ($carTime) || empty ($trainAddressDesc) ||
+                empty ($getoffAddressDesc) || empty ($trainAddress) || empty ($getoffAddress) || empty ($token)) {
                 $response = error(10001);//参数不全
                 break;
             }
@@ -127,8 +129,10 @@ class order extends MY_Controller
                 'car_time' => $carTime,
                 'car_length' => $carLength,
                 'train_address' => $trainAddress,
+                'train_address_descr' => $trainAddressDesc,
                 'address_supplemental' => $addressSupplemental,
                 'getoff_address' => $getoffAddress,
+                'getoff_address_desc' => $getoffAddressDesc,
                 'is_invoice' => $isInvoice,
                 'payable' => $payable,
                 'content' => $content,

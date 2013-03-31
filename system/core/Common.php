@@ -784,6 +784,34 @@ function cutStr($str, $start=0, $length, $charset="utf-8", $suffix="")
 }
 
 /**
+ * 解析xml文档
+ *
+ * @param $xmle
+ * @return mixed
+ */
+function simplexml2array($xmle)
+{
+    $haschildren = false;
+    foreach ($xmle->attributes() as $k => $c) {
+        $r[$xmle->getName()]['@att'][$k] = (string)$c;
+    }
+    foreach ($xmle->children() as $k => $c) {
+        $haschildren = true;
+        $res = simplexml2array($c);
+        if (!empty($res)) {
+            $r[$xmle->getName()][] = $res;
+        }
+    }
+    if (!$haschildren) {
+        $str = (string)$xmle;
+        if (!empty($str)) {
+            $r[$xmle->getName()]['@txt'] = (string)$xmle;
+        }
+    }
+    return $r;
+}
+
+/**
 function cmp($a, $b)
 {
 $a = strtotime($a[0]['DATE']);
