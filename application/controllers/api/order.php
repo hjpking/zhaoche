@@ -98,6 +98,15 @@ class order extends MY_Controller
                 break;
             }
 
+            $this->load->model('model_order', 'order');
+            if ($orderSn) {
+                $orderData = $this->order->getOrderById($orderSn);
+                if (empty ($orderData)) {
+                    $response = error(10024); //订单不存在
+                    break;
+                }
+            }
+
             //p($uData);
 
             $data = array(
@@ -127,7 +136,7 @@ class order extends MY_Controller
                 'leave_message' => $leaveMessage,
                 'notice' => $flight,
             );
-            $this->load->model('model_order', 'order');
+
             $lastId = $this->order->saveOrder($data, $orderSn);
 
             if (!$lastId) {
@@ -833,5 +842,5 @@ class order extends MY_Controller
     }
 
 
-    
+
 }
