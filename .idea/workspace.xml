@@ -29,7 +29,7 @@
       <file leaf-file-name="order.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="2407" selection-end="2407" vertical-scroll-proportion="0.6674613">
+            <state line="49" column="13" selection-start="2406" selection-end="2406" vertical-scroll-proportion="0.64839095">
               <folding />
             </state>
           </provider>
@@ -276,7 +276,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="0" width="1927" height="1040" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -393,7 +393,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="2407" selection-end="2407" vertical-scroll-proportion="0.6674613">
+        <state line="49" column="13" selection-start="2406" selection-end="2406" vertical-scroll-proportion="0.64839095">
           <folding />
         </state>
       </provider>
