@@ -129,7 +129,7 @@ class order extends MY_Controller
                 'car_time' => $carTime,
                 'car_length' => $carLength,
                 'train_address' => $trainAddress,
-                'train_address_descr' => $trainAddressDesc,
+                'train_address_desc' => $trainAddressDesc,
                 'address_supplemental' => $addressSupplemental,
                 'getoff_address' => $getoffAddress,
                 'getoff_address_desc' => $getoffAddressDesc,
