@@ -211,12 +211,21 @@ class order extends MY_Controller
                 break;
             }
 
-
-
             $this->load->model('model_order', 'order');
             $field = 'order_sn,city_id,chauffeur_id,uid,uname,user_phone,chauffeur_login_name,chauffeur_phone,amount,status,sid,
                 train_address,getoff_address,train_time,getoff_time,create_time,is_invoice,payable,content,mailing_address,leave_message, train_address_desc,getoff_address_desc';
             $orderData = $this->order->getOrder($defLimit, $defOffset, $field, array('uid' => $uId));
+
+            if (isset ($orderData['chauffeur_id'])) {
+                $this->load->model('model_chauffeur', 'chauffeur');
+                $chauffeurData = $this->chauffeur->getChauffeurById($orderData['chauffeur_id']);
+
+                $this->load->model('model_car', 'car');
+                $carData = $this->car->getCarById($chauffeurData['car_id']);
+                $data['car_no'] = $chauffeurData['car_no'];
+                $data['car_name'] = $carData['name'];
+            }
+
 
             $response['data'] = $orderData;
         } while (false);
@@ -756,6 +765,10 @@ class order extends MY_Controller
 
             $content = $data['uname'].' 您好，司机：'.$data['chauffeur_login_name'].'已达到你要上车的地点。请与其联系：'.$data['chauffeur_phone'];
             sendMessage($data['user_phone'], $content);
+
+            $this->db->where('order_sn', $orderSn);
+            $this->db->where('chauffeur_id', $chauffeurId);
+            $this->db->update('order', array('status' => '7'));
         } while (false);
 
         $this->json_output($response);
@@ -808,7 +821,7 @@ class order extends MY_Controller
 
             $this->db->where('order_sn', $orderSn);
             $this->db->where('chauffeur_id', $chauffeurId);
-            $this->db->update('order', array('train_time' => date('Y-m-d H:i:s', TIMESTAMP)));
+            $this->db->update('order', array('status' => '4','train_time' => date('Y-m-d H:i:s', TIMESTAMP)));
         } while (false);
 
         $this->json_output($response);
@@ -836,6 +849,18 @@ class order extends MY_Controller
                 break;
             }
 
+            if (isset ($data['chauffeur_id'])) {
+                $this->load->model('model_chauffeur', 'chauffeur');
+                $chauffeurData = $this->chauffeur->getChauffeurById($data['chauffeur_id']);
+
+                $this->load->model('model_car', 'car');
+                $carData = $this->car->getCarById($chauffeurData['car_id']);
+                $data['car_no'] = $chauffeurData['car_no'];
+                $data['car_name'] = $carData['name'];
+            }
+
+
+
             $response['data'] = $data;
             //$this->db->where('order_sn', $orderSn);
             //$this->db->where('chauffeur_id', $chauffeurId);
@@ -845,6 +870,56 @@ class order extends MY_Controller
         $this->json_output($response);
     }
 
+    /**
+     * 车辆已出发
+     */
+    public function carBeStart()
+    {
+        $chauffeurId = intval($this->input->get_post('chauffeur_id'));
+        $orderSn = intval($this->input->get_post('order_sn'));
 
+        $response = array('code' => '0', 'msg' => '出发成功');
+
+        do {
+            if (empty ($chauffeurId) || empty ($orderSn)) {
+                $response = error(10001);//参数不全
+                break;
+            }
+
+            $this->load->model('model_chauffeur', 'chauffeur');
+            $chauffeurData = $this->chauffeur->getChauffeurById($chauffeurId);
+            if (empty ($chauffeurData)) {
+                $response = error(10012);//司机不存在
+                break;
+            }
+
+            $this->load->model('model_order', 'order');
+            $data = $this->order->getOrderById($orderSn, '*', array('chauffeur_id' => $chauffeurId));
+            if (empty ($data)) {
+                $response = error(10024);//订单不存在
+                break;
+            }
+
+            if ($data['status'] == '0') {
+                $response = error(10030);//此订单未被接单
+                break;
+            }
+
+            if ($chauffeurData['chauffeur_id'] != $data['chauffeur_id']) {
+                $response = error(10033);//订单不属于您
+                break;
+            }
+
+            if ($data['status'] == '6') {
+                break;
+            }
+
+            $this->db->where('order_sn', $orderSn);
+            $this->db->where('chauffeur_id', $chauffeurId);
+            $this->db->update('order', array('status' => '6'));
+        } while (false);
+
+        $this->json_output($response);
+    }
 
 }

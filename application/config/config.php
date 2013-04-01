@@ -436,7 +436,11 @@ $config['order_status'] = array(
     '0' => '初始',
     '1' => '已完成',
     '2' => '已取消',
-    '3' => '司机已接单'
+    '3' => '司机已接单',
+    '4' => '服务开始',
+    '5' => '服务结束',
+    '6' => '车辆已出发',
+    '7' => '车辆已到，等待上车',
 );
 
 //充值方式
@@ -492,5 +496,30 @@ $config['process_status'] = array(
     '0' => '未处理',
     '1' => '已处理',
 );
+
+$config['pay_channel'] = array(
+    '1' => 'alipay',
+    '2' => 'unionpay',
+);
+
+//支付宝配置信息
+define('ALIPAY_PARTNER', '');//合作伙伴ID
+define('ALIPAY_SELLER', '');//签约支付宝账号或卖家支付宝帐户
+define('ALIPAY_NOTIFY_URL', $config['base_url'].'api/pay/aliPayNoticeUrl');//异步返回消息通知页面，用于告知商户订单状态
+define('ALIPAY_CALL_BACK_URL', $config['base_url'].'api/pay/aliPayCallbackUrl');//同步返回消息通知页面，用于提示商户订单状态
+define('ALIPAY_INPUT_CHARSET', 'utf-8');//字符编码格式
+
+
+//银联配置信息
+define('UNIONPAY_SUBMIT_URL', 'http://211.154.166.219/qzjy/MerOrderAction/deal.action');
+define('UNIONPAY_UPOMP_PUBLIC_KEY', APPPATH.'key/Front_test.cer');
+define('UNIONPAY_NOTIFY_PUBLIC_KEY', APPPATH."key/898000000000001.cer");
+define('UNIONPAY_MY_ID', '898000000000002');
+define('UNIONPAY_MY_NAME', '联通华建');
+define('UNIONPAY_MY_PUBLIC_KEY', APPPATH.'key/898000000000002.cer');
+define('UNIONPAY_MY_PRIVATE_KEY', APPPATH.'key/898000000000002.p12');
+define('UNIONPAY_MY_PRIKEY_PASSWORD', APPPATH.'898000000000002');
+
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */

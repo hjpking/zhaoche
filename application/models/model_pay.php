@@ -42,4 +42,39 @@ class model_pay extends MY_Model
 
         return $this->db->count_all_results();
     }
+
+    /**
+     * 保存充值记录
+     *
+     * @param array $data
+     * @param int $payId
+     * @return mixed
+     */
+    public function savePay(array $data, $payId = 0)
+    {
+        if ($payId) {
+            $this->db->where('pay_id', $payId);
+            return $this->db->update('pay_record', $data);
+        } else {
+            $data['create_time'] = date('Y-m-d H:i:s', TIMESTAMP);
+            $this->db->insert('pay_record', $data);
+            return $this->db->insert_id();
+        }
+    }
+
+    /**
+     * 获取充值信息 －－ 通过充值ID
+     *
+     * @param $payId
+     * @param string $field
+     * @param array $where
+     * @return mixed
+     */
+    public function getPayById($payId, $field = '*', $where = array())
+    {
+        $where['pay_id'] = $payId;
+        $data = $this->db->select($field)->get_where('pay_record', $where)->row_array();
+
+        return $data;
+    }
 }
