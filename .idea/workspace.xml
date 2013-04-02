@@ -32,19 +32,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pay.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pay.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/pay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="17" selection-start="4084" selection-end="4084" vertical-scroll-proportion="0.29447854">
+            <state line="125" column="0" selection-start="3982" selection-end="4178" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model_pay_unionpay.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="department_index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/staff/department_index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="68" selection-start="364" selection-end="364" vertical-scroll-proportion="-5.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/staff/detail.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="68" selection-start="364" selection-end="364" vertical-scroll-proportion="-5.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/staff/create.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="68" selection-start="364" selection-end="364" vertical-scroll-proportion="-5.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="department_create.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/staff/department_create.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="68" selection-start="364" selection-end="364" vertical-scroll-proportion="-5.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/staff/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="14" selection-start="711" selection-end="711" vertical-scroll-proportion="-12.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model_pay_unionpay.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/models/model_pay_unionpay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="13" selection-start="3294" selection-end="3294" vertical-scroll-proportion="-19.375">
+            <state line="52" column="52" selection-start="1894" selection-end="1894" vertical-scroll-proportion="0.47468355">
               <folding />
             </state>
           </provider>
@@ -68,28 +113,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Utils.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../share/银联服务端php代码/Utils.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="69" selection-start="2694" selection-end="2694" vertical-scroll-proportion="-5.019231">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="rsa.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../../share/银联服务端php代码/rsa.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="20" column="81" selection-start="861" selection-end="879" vertical-scroll-proportion="-5.769231">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Config.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../share/银联服务端php代码/Config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="77" selection-start="388" selection-end="388" vertical-scroll-proportion="-4.375">
               <folding />
             </state>
           </provider>
@@ -113,8 +140,13 @@
         <option value="$PROJECT_DIR$/system/core/Common.php" />
         <option value="$PROJECT_DIR$/application/models/model_pay_alipay.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
-        <option value="$PROJECT_DIR$/application/models/model_pay_unionpay.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/pay.php" />
+        <option value="$PROJECT_DIR$/application/views/staff/create.php" />
+        <option value="$PROJECT_DIR$/application/views/staff/department_create.php" />
+        <option value="$PROJECT_DIR$/application/views/staff/department_index.php" />
+        <option value="$PROJECT_DIR$/application/views/staff/detail.php" />
+        <option value="$PROJECT_DIR$/application/views/staff/index.php" />
+        <option value="$PROJECT_DIR$/application/models/model_pay_unionpay.php" />
       </list>
     </option>
   </component>
@@ -245,6 +277,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhaoche" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhaoche" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhaoche" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhaoche" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="staff" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -459,33 +531,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/model_pay.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="27" selection-start="1204" selection-end="1211" vertical-scroll-proportion="0.3964497" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/model_order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="73" selection-start="2753" selection-end="2793" vertical-scroll-proportion="0.5195266" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="511" column="61" selection-start="17644" selection-end="17644" vertical-scroll-proportion="0.71153843" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/model_car.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="34" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.6745562" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/error.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="12" selection-start="2633" selection-end="2638" vertical-scroll-proportion="0.85276073">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../share/银联服务端php代码/Config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="77" selection-start="388" selection-end="388" vertical-scroll-proportion="-4.375">
@@ -549,16 +594,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/model_pay_unionpay.php">
+    <entry file="file://$PROJECT_DIR$/application/views/staff/create.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="13" selection-start="3294" selection-end="3294" vertical-scroll-proportion="-19.375">
+        <state line="8" column="68" selection-start="364" selection-end="364" vertical-scroll-proportion="-5.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/staff/department_create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="68" selection-start="364" selection-end="364" vertical-scroll-proportion="-5.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/staff/department_index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="68" selection-start="364" selection-end="364" vertical-scroll-proportion="-5.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/staff/detail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="68" selection-start="364" selection-end="364" vertical-scroll-proportion="-5.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/staff/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="14" selection-start="711" selection-end="711" vertical-scroll-proportion="-12.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/pay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="17" selection-start="4084" selection-end="4084" vertical-scroll-proportion="0.29447854">
+        <state line="125" column="0" selection-start="3982" selection-end="4178" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/model_pay_unionpay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="52" selection-start="1894" selection-end="1894" vertical-scroll-proportion="0.47468355">
           <folding />
         </state>
       </provider>

@@ -3,7 +3,7 @@
 <div class="container-fluid" >
     <div class="row-fluid">
         <div class="span2">
-            <?php require(APPPATH . 'views/left/user_leftnav.php');?>
+            <?php require(APPPATH . 'views/left/staff_leftnav.php');?>
         </div>
         <div class="span10">
             <?php require(APPPATH . 'views/sub/staff_subnav.php');?>

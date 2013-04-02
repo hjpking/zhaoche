@@ -46,7 +46,11 @@ class model_pay_unionpay extends MY_Model
     {
         $xmlPost = file_get_contents('php://input');
         //若不想网络环境测试，可打开下行注释，进行单元测试，上面一行会报WARNING,不用理会
-
+        $xmlPost = file_get_contents('php://input');
+        if (empty ($xmlPost)) {
+            $xmlPost = file_get_contents('php://input', 'r');
+        }
+        log_message("PAYLOG",$xmlPost.'---model_test');
         $rData = array();
 
         // 解析获取到的xml
