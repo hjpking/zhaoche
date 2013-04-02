@@ -14,9 +14,9 @@
 | path to your installation.
 |
 */
-$config['base_url']	    = 'http://zhaoche.com/';
-$config['admin_url']	= 'http://zhaoche.com/';
-$config['static_url']	= 'http://zhaoche.com/';
+$config['base_url']	    = 'http://yongche.aayongche.com/';
+$config['admin_url']	= 'http://yongche.aayongche.com/';
+$config['static_url']	= 'http://yongche.aayongche.com/';
 
 /*
 |--------------------------------------------------------------------------
@@ -514,8 +514,8 @@ define('ALIPAY_INPUT_CHARSET', 'utf-8');//字符编码格式
 define('UNIONPAY_SUBMIT_URL', 'http://211.154.166.219/qzjy/MerOrderAction/deal.action');
 define('UNIONPAY_UPOMP_PUBLIC_KEY', APPPATH.'key/Front_test.cer');
 define('UNIONPAY_NOTIFY_PUBLIC_KEY', APPPATH."key/898000000000001.cer");
-define('UNIONPAY_MY_ID', '898000000000002');
-define('UNIONPAY_MY_NAME', '联通华建');
+define('UNIONPAY_MY_ID', '808080201300485');
+define('UNIONPAY_MY_NAME', '北京车族网际科技有限公司（无卡）');
 define('UNIONPAY_MY_PUBLIC_KEY', APPPATH.'key/898000000000002.cer');
 define('UNIONPAY_MY_PRIVATE_KEY', APPPATH.'key/898000000000002.p12');
 define('UNIONPAY_MY_PRIKEY_PASSWORD', APPPATH.'898000000000002');
