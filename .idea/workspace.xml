@@ -7,11 +7,11 @@
     <file path="/order.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364803409706" ignored="false" />
     <file path="/a.dummy" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364641193797" ignored="false" />
     <file path="/model_order.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364641219162" ignored="false" />
-    <file path="/pay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364890195278" ignored="false" />
+    <file path="/pay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364893495035" ignored="false" />
     <file path="/config.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364876076962" ignored="false" />
     <file path="/model_pay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364801351885" ignored="false" />
     <file path="/model_pay_alipay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364806737793" ignored="false" />
-    <file path="/model_pay_unionpay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364888779891" ignored="false" />
+    <file path="/model_pay_unionpay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364892645263" ignored="false" />
     <file path="/Log.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364875697483" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +35,7 @@
       <file leaf-file-name="pay.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/pay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="39" selection-start="3109" selection-end="3109" vertical-scroll-proportion="0.73619634">
+            <state line="127" column="17" selection-start="4084" selection-end="4084" vertical-scroll-proportion="0.29447854">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,7 @@
       <file leaf-file-name="model_pay_unionpay.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/model_pay_unionpay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="24" selection-start="166" selection-end="184" vertical-scroll-proportion="-1.875">
+            <state line="82" column="13" selection-start="3294" selection-end="3294" vertical-scroll-proportion="-19.375">
               <folding />
             </state>
           </provider>
@@ -551,14 +551,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/model_pay_unionpay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="24" selection-start="166" selection-end="184" vertical-scroll-proportion="-1.875">
+        <state line="82" column="13" selection-start="3294" selection-end="3294" vertical-scroll-proportion="-19.375">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/pay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="39" selection-start="3109" selection-end="3109" vertical-scroll-proportion="0.73619634">
+        <state line="127" column="17" selection-start="4084" selection-end="4084" vertical-scroll-proportion="0.29447854">
           <folding />
         </state>
       </provider>

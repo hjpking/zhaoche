@@ -47,6 +47,8 @@ class model_pay_unionpay extends MY_Model
         $xmlPost = file_get_contents('php://input');
         //若不想网络环境测试，可打开下行注释，进行单元测试，上面一行会报WARNING,不用理会
 
+        $rData = array();
+
         // 解析获取到的xml
         $parse=$this->readXml($xmlPost);
         if ($parse) {
@@ -69,7 +71,7 @@ class model_pay_unionpay extends MY_Model
                 "&respCode=".$nodeArray['respCode'] ;
             $respCode=$this->checkSign($checkIdentifier,UNIONPAY_NOTIFY_PUBLIC_KEY,$nodeArray['sign']);
 
-            $rData = array();
+
             if($respCode=='0000'){
                 //验证成功，写相关处理代码
                 $rData['merchant_id'] = $nodeArray['merchantId'];
@@ -77,10 +79,11 @@ class model_pay_unionpay extends MY_Model
                 $rData['merchantOrderAmt'] = $nodeArray['merchantOrderAmt'];
                 $rData['merchant_id'] = $nodeArray['merchantId'];
                 $rData['merchant_id'] = $nodeArray['merchantId'];
+                $rData['status'] = 1;
             }
         }
-        $data = '';
-        return $data;
+        $rData['status'] = 0;
+        return $rData;
     }
 
 

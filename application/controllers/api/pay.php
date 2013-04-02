@@ -124,8 +124,11 @@ class pay  extends MY_Controller
     public function payBack()
     {
         $xmlPost = file_get_contents('php://input');
+        if (empty ($xmlPost)) {
+            $xmlPost = file_get_contents('php://input', 'r');
+        }
         log_message("PAYLOG",$xmlPost);
-            log_message("PAYLOG", print_r($_SERVER,true)."\n".print_r($_GET,true)."\n".print_r($_POST,true)."\n\n\n");
+        log_message("PAYLOG", print_r($_SERVER,true)."\n".print_r($_GET,true)."\n".print_r($_POST,true)."\n\n\n");
 
         $response = array('error' => '0', 'msg' => '支付成功', 'code' => 'pay_success');
 
