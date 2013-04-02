@@ -19,7 +19,7 @@ class model_pay_unionpay extends MY_Model
         $merchantOrderAmt 	= $data['amount'];//订单金额
         $merchantOrderDesc 	= $data['desc'];//订单描述
         $transTimeout 		= $data['time_out'];//超时时间
-echo $merchantOrderTime;
+
         //订单成功后自动回馈地址
         $backEndUrl = UNIONPAY_NOTIFY_URL;
 

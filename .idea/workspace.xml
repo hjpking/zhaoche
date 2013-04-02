@@ -11,7 +11,7 @@
     <file path="/config.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364876076962" ignored="false" />
     <file path="/model_pay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364801351885" ignored="false" />
     <file path="/model_pay_alipay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364806737793" ignored="false" />
-    <file path="/model_pay_unionpay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364886792094" ignored="false" />
+    <file path="/model_pay_unionpay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364887201543" ignored="false" />
     <file path="/Log.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364875697483" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +44,7 @@
       <file leaf-file-name="model_pay_unionpay.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/models/model_pay_unionpay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="23" selection-start="582" selection-end="600" vertical-scroll-proportion="0.2760736">
+            <state line="41" column="21" selection-start="1533" selection-end="1533" vertical-scroll-proportion="0.6441718">
               <folding />
             </state>
           </provider>
@@ -528,13 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/api/pay.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="24" selection-start="3583" selection-end="3583" vertical-scroll-proportion="-20.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../share/银联服务端php代码/rsa.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="81" selection-start="861" selection-end="879" vertical-scroll-proportion="-5.769231">
@@ -556,9 +549,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/api/pay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="24" selection-start="3583" selection-end="3583" vertical-scroll-proportion="-20.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/model_pay_unionpay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="23" selection-start="582" selection-end="600" vertical-scroll-proportion="0.2760736">
+        <state line="41" column="21" selection-start="1533" selection-end="1533" vertical-scroll-proportion="0.6441718">
           <folding />
         </state>
       </provider>
