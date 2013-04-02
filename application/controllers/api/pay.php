@@ -123,7 +123,9 @@ class pay  extends MY_Controller
 
     public function payBack()
     {
-        log_message("PAYLOG", print_r($_SERVER,true)."\n".print_r($_GET,true)."\n".print_r($_POST,true)."\n\n\n");
+        $xmlPost = file_get_contents('php://input');
+        log_message("PAYLOG",$xmlPost);
+            log_message("PAYLOG", print_r($_SERVER,true)."\n".print_r($_GET,true)."\n".print_r($_POST,true)."\n\n\n");
 
         $response = array('error' => '0', 'msg' => '支付成功', 'code' => 'pay_success');
 
@@ -131,14 +133,15 @@ class pay  extends MY_Controller
             //未知的支付渠道
             $paymentChannel = strtolower($this->checkPaymentChannel());
             if (empty ($paymentChannel) || $paymentChannel == '') {
-                $response = error(30019);
-                break;
+                //$response = error(30019);
+                //break;
             }
-//echo "pay/Model_pay_{$paymentChannel}";exit;
-            $this->load->model('order/Model_Order', 'order');
-            $this->load->model("pay/Model_pay_{$paymentChannel}", 'payment_channel');
-            $payResult = $this->payment_channel->response();
 
+            $this->load->model('model_order', 'order');
+            //$this->load->model("model_pay_{$paymentChannel}", 'payment_channel');
+            $this->load->model("model_pay_unionpay", 'payment_channel');
+            $payResult = $this->payment_channel->response();
+exit;
             //2 签名错误
             if ($payResult['status'] == 2) {
                 $data = array('is_pay' => 2, 'paid' => 0, 'need_pay' => $payResult['amount'], 'status' => 1, 'defray_type' => $payResult['pay_channel']);

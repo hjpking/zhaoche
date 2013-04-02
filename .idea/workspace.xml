@@ -7,11 +7,11 @@
     <file path="/order.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364803409706" ignored="false" />
     <file path="/a.dummy" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364641193797" ignored="false" />
     <file path="/model_order.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364641219162" ignored="false" />
-    <file path="/pay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364884003454" ignored="false" />
+    <file path="/pay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364890195278" ignored="false" />
     <file path="/config.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364876076962" ignored="false" />
     <file path="/model_pay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364801351885" ignored="false" />
     <file path="/model_pay_alipay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364806737793" ignored="false" />
-    <file path="/model_pay_unionpay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364887201543" ignored="false" />
+    <file path="/model_pay_unionpay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364888779891" ignored="false" />
     <file path="/Log.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364875697483" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,19 +32,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pay.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pay.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/pay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="24" selection-start="3583" selection-end="3583" vertical-scroll-proportion="-20.0">
+            <state line="146" column="16" selection-start="4902" selection-end="4902" vertical-scroll-proportion="0.33251533">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model_pay_unionpay.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="model_pay_unionpay.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/model_pay_unionpay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="21" selection-start="1533" selection-end="1533" vertical-scroll-proportion="0.6441718">
+            <state line="9" column="24" selection-start="166" selection-end="184" vertical-scroll-proportion="-1.875">
               <folding />
             </state>
           </provider>
@@ -113,15 +113,15 @@
         <option value="$PROJECT_DIR$/system/core/Common.php" />
         <option value="$PROJECT_DIR$/application/models/model_pay_alipay.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
-        <option value="$PROJECT_DIR$/application/controllers/api/pay.php" />
         <option value="$PROJECT_DIR$/application/models/model_pay_unionpay.php" />
+        <option value="$PROJECT_DIR$/application/controllers/api/pay.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="271" />
-    <option name="y" value="45" />
+    <option name="x" value="449" />
+    <option name="y" value="56" />
     <option name="width" value="1649" />
     <option name="height" value="1024" />
   </component>
@@ -376,7 +376,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="271" y="45" width="1649" height="1024" extended-state="0" />
+    <frame x="449" y="56" width="1649" height="1024" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -549,16 +549,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/api/pay.php">
+    <entry file="file://$PROJECT_DIR$/application/models/model_pay_unionpay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="24" selection-start="3583" selection-end="3583" vertical-scroll-proportion="-20.0">
+        <state line="9" column="24" selection-start="166" selection-end="184" vertical-scroll-proportion="-1.875">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/model_pay_unionpay.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/api/pay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="21" selection-start="1533" selection-end="1533" vertical-scroll-proportion="0.6441718">
+        <state line="146" column="16" selection-start="4902" selection-end="4902" vertical-scroll-proportion="0.33251533">
           <folding />
         </state>
       </provider>

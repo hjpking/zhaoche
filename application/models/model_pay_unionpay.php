@@ -69,8 +69,14 @@ class model_pay_unionpay extends MY_Model
                 "&respCode=".$nodeArray['respCode'] ;
             $respCode=$this->checkSign($checkIdentifier,UNIONPAY_NOTIFY_PUBLIC_KEY,$nodeArray['sign']);
 
+            $rData = array();
             if($respCode=='0000'){
                 //验证成功，写相关处理代码
+                $rData['merchant_id'] = $nodeArray['merchantId'];
+                $rData['merchantOrderId'] = $nodeArray['merchantOrderId'];
+                $rData['merchantOrderAmt'] = $nodeArray['merchantOrderAmt'];
+                $rData['merchant_id'] = $nodeArray['merchantId'];
+                $rData['merchant_id'] = $nodeArray['merchantId'];
             }
         }
         $data = '';
