@@ -95,7 +95,7 @@ class pay  extends MY_Controller
             }
 
             $requestData = array(
-                'order_sn' => '10001001',
+                'order_sn' => '10001002',
                 'order_time' => date('YmdHis', TIMESTAMP),
                 'amount' => 10,
                 'desc' => 'descript',
