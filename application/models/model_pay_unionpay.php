@@ -44,49 +44,70 @@ class model_pay_unionpay extends MY_Model
 
     public function response()
     {
-        $xmlPost = file_get_contents('php://input');
+
         //若不想网络环境测试，可打开下行注释，进行单元测试，上面一行会报WARNING,不用理会
         $xmlPost = file_get_contents('php://input');
         if (empty ($xmlPost)) {
             $xmlPost = file_get_contents('php://input', 'r');
         }
-        log_message("PAYLOG",$xmlPost.'---model_test');
+
+        /*
+        $xmlPost = '<?xml version="1.0" encoding="UTF-8" ?>
+        <upomp application="TransNotify.Req"  version="1.0.0" >
+        <transType>01</transType>
+        <merchantId>898000000000002</merchantId>
+        <merchantOrderId>10001002</merchantOrderId>
+        <merchantOrderAmt>10</merchantOrderAmt>
+        <settleDate>0402</settleDate>
+        <setlAmt>10</setlAmt>
+        <setlCurrency>156</setlCurrency>
+        <converRate></converRate>
+        <cupsQid>201304021719218683772</cupsQid>
+        <cupsTraceNum>868377</cupsTraceNum>
+        <cupsTraceTime>0402171921</cupsTraceTime>
+        <cupsRespCode>00</cupsRespCode>
+        <cupsRespDesc>Success!</cupsRespDesc>
+        <sign>GnEhy6a7TiXG+WyLlQ2qODokqNdT+cT6iNpNl3LutC8eRHrt3pn2dLUj2Jx1l8evuspxHChegffLUrHcVj2ol3Hzt/k7fZMcCCaY8AHC8li9L1KOBII5Fo/462HiOiKZxGKBv3YgATfHuFUA37Rs2n/xQFVWgGepqNFMg2omov8=</sign><respCode></respCode></upomp>';
+        //*/
+
         $rData = array();
 
         // 解析获取到的xml
-        $parse=$this->readXml($xmlPost);
-        if ($parse) {
-            //获取键值对
-            $nodeArray = $this->getNodeArray();
-            //验签
-            $checkIdentifier = "transType=".$nodeArray['transType'].
-                "&merchantId=".$nodeArray['merchantId'].
-                "&merchantOrderId=".$nodeArray['merchantOrderId'].
-                "&merchantOrderAmt=".$nodeArray['merchantOrderAmt'].
-                "&settleDate=".$nodeArray['settleDate'].
-                "&setlAmt=".$nodeArray['setlAmt'].
-                "&setlCurrency=".$nodeArray['setlCurrency'].
-                "&converRate=".$nodeArray['converRate'].
-                "&cupsQid=".$nodeArray['cupsQid'].
-                "&cupsTraceNum=".$nodeArray['cupsTraceNum'].
-                "&cupsTraceTime=".$nodeArray['cupsTraceTime'].
-                "&cupsRespCode=".$nodeArray['cupsRespCode'].
-                "&cupsRespDesc=".$nodeArray['cupsRespDesc'].
-                "&respCode=".$nodeArray['respCode'] ;
-            $respCode=$this->checkSign($checkIdentifier,UNIONPAY_NOTIFY_PUBLIC_KEY,$nodeArray['sign']);
+        $parse = $this->readXml($xmlPost);
 
-
-            if($respCode=='0000'){
-                //验证成功，写相关处理代码
-                $rData['merchant_id'] = $nodeArray['merchantId'];
-                $rData['merchantOrderId'] = $nodeArray['merchantOrderId'];
-                $rData['merchantOrderAmt'] = $nodeArray['merchantOrderAmt'];
-                $rData['merchant_id'] = $nodeArray['merchantId'];
-                $rData['merchant_id'] = $nodeArray['merchantId'];
-                $rData['status'] = 1;
-            }
+        if (!$parse) {
+            $rData['status'] = 2;
+            return $rData;
         }
-        $rData['status'] = 0;
+
+        //获取键值对
+        $nodeArray = $this->getNodeArray();
+        //验签
+        $checkIdentifier = "transType=".$nodeArray['transType'].
+            "&merchantId=".$nodeArray['merchantId'].
+            "&merchantOrderId=".$nodeArray['merchantOrderId'].
+            "&merchantOrderAmt=".$nodeArray['merchantOrderAmt'].
+            "&settleDate=".$nodeArray['settleDate'].
+            "&setlAmt=".$nodeArray['setlAmt'].
+            "&setlCurrency=".$nodeArray['setlCurrency'].
+            "&converRate=".$nodeArray['converRate'].
+            "&cupsQid=".$nodeArray['cupsQid'].
+            "&cupsTraceNum=".$nodeArray['cupsTraceNum'].
+            "&cupsTraceTime=".$nodeArray['cupsTraceTime'].
+            "&cupsRespCode=".$nodeArray['cupsRespCode'].
+            "&cupsRespDesc=".$nodeArray['cupsRespDesc'].
+            "&respCode=".$nodeArray['respCode'] ;
+        $respCode = $this->checkSign($checkIdentifier,UNIONPAY_NOTIFY_PUBLIC_KEY,$nodeArray['sign']);
+
+        $rData['merchant_id'] = $nodeArray['merchantId'];
+        $rData['order_sn'] = $nodeArray['merchantOrderId'];
+        $rData['amount'] = $nodeArray['merchantOrderAmt'];
+        $rData['bank_order_sn'] = $nodeArray['cupsQid'];
+        $rData['trans_type'] = $nodeArray['transType'];
+        $rData['pay_type'] = 'unionpay';
+
+        $rData['status'] = ($respCode=='0000') ? 1 : 0;
+
         return $rData;
     }
 

@@ -1116,3 +1116,2348 @@ PAYLOG - 2013-04-02 15:23:34 --> unionpay-1000-529262eaa1f89e6dc5153ea8577e58c6
 PAYLOG - 2013-04-02 15:24:49 --> unionpay-1000-529262eaa1f89e6dc5153ea8577e58c6
 PAYLOG - 2013-04-02 15:24:50 --> unionpay-1000-529262eaa1f89e6dc5153ea8577e58c6
 PAYLOG - 2013-04-02 15:24:52 --> unionpay-1000-529262eaa1f89e6dc5153ea8577e58c6
+PAYLOG - 2013-04-02 17:53:22 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54470
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364896402.7042
+    [REQUEST_TIME] => 1364896402
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 17:53:33 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54470
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364896413.9808
+    [REQUEST_TIME] => 1364896413
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 17:53:35 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54470
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364896415.014
+    [REQUEST_TIME] => 1364896415
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 17:53:35 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54470
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364896415.4066
+    [REQUEST_TIME] => 1364896415
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 17:53:35 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54470
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364896415.6831
+    [REQUEST_TIME] => 1364896415
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 17:53:35 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54470
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364896415.8911
+    [REQUEST_TIME] => 1364896415
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 17:54:13 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54470
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364896453.1503
+    [REQUEST_TIME] => 1364896453
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 17:54:13 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54470
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364896453.8071
+    [REQUEST_TIME] => 1364896453
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 17:54:14 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54470
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364896454.0863
+    [REQUEST_TIME] => 1364896454
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 17:54:14 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54470
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364896454.3374
+    [REQUEST_TIME] => 1364896454
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 17:54:14 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54470
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364896454.5421
+    [REQUEST_TIME] => 1364896454
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:08:22 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54532
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897302.2289
+    [REQUEST_TIME] => 1364897302
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:08:31 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54532
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897311.637
+    [REQUEST_TIME] => 1364897311
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:08:32 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54532
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897312.4081
+    [REQUEST_TIME] => 1364897312
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:08:32 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54532
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897312.7761
+    [REQUEST_TIME] => 1364897312
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:08:33 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54532
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897313.031
+    [REQUEST_TIME] => 1364897313
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:08:33 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54532
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897313.2764
+    [REQUEST_TIME] => 1364897313
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:08:33 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54532
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897313.4808
+    [REQUEST_TIME] => 1364897313
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:08:49 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54532
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897329.2778
+    [REQUEST_TIME] => 1364897329
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:08:49 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54532
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897329.9332
+    [REQUEST_TIME] => 1364897329
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:08:50 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54532
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897330.2894
+    [REQUEST_TIME] => 1364897330
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:08:50 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54532
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897330.505
+    [REQUEST_TIME] => 1364897330
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:08:50 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54532
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897330.6885
+    [REQUEST_TIME] => 1364897330
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:09:10 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54532
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897350.0385
+    [REQUEST_TIME] => 1364897350
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:09:10 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54532
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897350.6452
+    [REQUEST_TIME] => 1364897350
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:13:03 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54569
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897583.19
+    [REQUEST_TIME] => 1364897583
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:13:03 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54569
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897583.8422
+    [REQUEST_TIME] => 1364897583
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:13:04 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54569
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897584.1446
+    [REQUEST_TIME] => 1364897584
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:13:04 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54569
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897584.3531
+    [REQUEST_TIME] => 1364897584
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:13:04 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54569
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897584.5358
+    [REQUEST_TIME] => 1364897584
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:15:21 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54574
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897721.6177
+    [REQUEST_TIME] => 1364897721
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:15:22 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54574
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897722.2096
+    [REQUEST_TIME] => 1364897722
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:15:22 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54574
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897722.5351
+    [REQUEST_TIME] => 1364897722
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:15:22 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54574
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897722.7917
+    [REQUEST_TIME] => 1364897722
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:15:23 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54574
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897723.0143
+    [REQUEST_TIME] => 1364897723
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:15:23 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54574
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897723.2225
+    [REQUEST_TIME] => 1364897723
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:15:23 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54574
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897723.4088
+    [REQUEST_TIME] => 1364897723
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:15:23 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54574
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897723.604
+    [REQUEST_TIME] => 1364897723
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:15:23 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54574
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897723.8172
+    [REQUEST_TIME] => 1364897723
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:15:23 --> Array
+(
+    [USER] => www-data
+    [HOME] => /var/www
+    [FCGI_ROLE] => RESPONDER
+    [SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php
+    [PATH_INFO] => /api/pay/payBack
+    [PATH_TRANSLATED] => /data/www/zhaoche/web/api/pay/payBack
+    [DOC_ROOT] => /data/www/zhaoche/web
+    [FSN] => /index.php
+    [AA] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [URI] => /index.php/api/pay/payBack
+    [QUERY_STRING] => 
+    [REQUEST_METHOD] => GET
+    [CONTENT_TYPE] => 
+    [CONTENT_LENGTH] => 
+    [SCRIPT_NAME] => /index.php
+    [REQUEST_URI] => /api/pay/payBack
+    [DOCUMENT_URI] => /index.php/api/pay/payBack
+    [DOCUMENT_ROOT] => /data/www/zhaoche/web
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_SOFTWARE] => nginx/1.2.1
+    [REMOTE_ADDR] => 127.0.0.1
+    [REMOTE_PORT] => 54574
+    [SERVER_ADDR] => 127.0.0.1
+    [SERVER_PORT] => 80
+    [SERVER_NAME] => zhaoche.com
+    [HTTPS] => 
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => zhaoche.com
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:19.0) Gecko/20100101 Firefox/19.0
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    [HTTP_ACCEPT_LANGUAGE] => zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [ORIG_SCRIPT_FILENAME] => /data/www/zhaoche/web/index.php/api/pay/payBack
+    [ORIG_PATH_TRANSLATED] => /data/www/zhaoche/web
+    [PHP_SELF] => /index.php/api/pay/payBack
+    [REQUEST_TIME_FLOAT] => 1364897723.9878
+    [REQUEST_TIME] => 1364897723
+)
+
+Array
+(
+)
+
+Array
+(
+)
+
+
+
+
+
+
+PAYLOG - 2013-04-02 18:38:07 --> 
+
+
+
+PAYLOG - 2013-04-02 18:38:07 --> unknown_order!
+
+
+
+PAYLOG - 2013-04-02 18:38:08 --> 
+
+
+
+PAYLOG - 2013-04-02 18:38:08 --> unknown_order!
+
+
+
+PAYLOG - 2013-04-02 18:38:08 --> 
+
+
+
+PAYLOG - 2013-04-02 18:38:08 --> unknown_order!
+
+
+
+PAYLOG - 2013-04-02 18:38:09 --> 
+
+
+
+PAYLOG - 2013-04-02 18:38:09 --> unknown_order!
+
+
+
+PAYLOG - 2013-04-02 18:38:09 --> 
+
+
+
+PAYLOG - 2013-04-02 18:38:09 --> unknown_order!
+
+
+
+PAYLOG - 2013-04-02 18:38:09 --> 
+
+
+
+PAYLOG - 2013-04-02 18:38:09 --> unknown_order!
+
+
+
+PAYLOG - 2013-04-02 18:38:09 --> 
+
+
+
+PAYLOG - 2013-04-02 18:38:09 --> unknown_order!
+
+
+
+PAYLOG - 2013-04-02 18:41:50 --> 
+
+
+
+PAYLOG - 2013-04-02 18:41:50 --> unknown_order!
+
+
+
+PAYLOG - 2013-04-02 18:42:07 --> unionpay-1000-529262eaa1f89e6dc5153ea8577e58c6
+PAYLOG - 2013-04-02 18:42:18 --> unionpay-1000-529262eaa1f89e6dc5153ea8577e58c6

@@ -11,7 +11,6 @@ class model_pay_alipay extends MY_Model
 {
     public function request(array $data)
     {
-
         $arr = array(
             'partner' => ALIPAY_PARTNER,
             'seller' => ALIPAY_SELLER,
@@ -35,22 +34,38 @@ class model_pay_alipay extends MY_Model
         $notify_data = $this->input->get_post('notify_data');
         $sign = $this->input->get_post('sign');
 
-        $isVerify = verify($notify_data, $sign);
+        $rData = array();
+        $isVerify = $this->aliPayVerify($notify_data, $sign);
         if (!$isVerify) {
-            //break;
+            $rData['status'] = '0';
+            return $rData;
         }
 
         //获取交易状态
         $trade_status = getDataForXML($notify_data , '/notify/trade_status');
-        if($trade_status != "TRADE_FINISHED"){
-            //break;
-            //echo "success";
+        $nData = getDataForXML($notify_data , '/notify');
 
-            //在此处添加您的业务逻辑，作为收到支付宝交易完成的依据
-        }
+        /*
+        $notify_data = 'notify_data=<notify><partner>2088702043538774</partner><discount>0.00</discount>
+        <payment_type>1</payment_type><subject>骨头1</subject>
+        <trade_no>2011102716746901</trade_no><buyer_email>4157874@qq.com</buyer_email>
+        <gmt_create>2011-10-27 12:10:51</gmt_create><quantity>1</quantity><out_trade_no>1027040323-9215</out_trade_no>
+        <seller_id>2088702043538774</seller_id><trade_status>TRADE_FINISHED</trade_status><is_total_fee_adjust>N</is_total_fee_adjust>
+        <total_fee>0.01</total_fee><gmt_payment>2011-10-27 12:10:52</gmt_payment><seller_email>17648787@qq.com</seller_email>
+        <gmt_close>2011-10-27 12:10:52</gmt_close><price>0.01</price><buyer_id>2088002456173013</buyer_id>
+        <use_coupon>N</use_coupon></notify>';
+        //*/
 
-        $data = '';
-        return $data;
+        $rData['merchant_id'] = $nData['partner'];
+        $rData['order_sn'] = $nData['out_trade_no'];
+        $rData['amount'] = $nData['total_fee'];
+        $rData['bank_order_sn'] = $nData['trade_no'];
+        $rData['buy_email'] = $nData['buyer_email'];
+        $rData['pay_type'] = 'alipay';
+
+        $rData['status'] = ($trade_status == "TRADE_FINISHED") ? 1 : 2;
+
+        return $rData;
     }
 
     /**

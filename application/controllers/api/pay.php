@@ -95,9 +95,9 @@ class pay  extends MY_Controller
             }
 
             $requestData = array(
-                'order_sn' => '10001002',
+                'order_sn' => $payId,
                 'order_time' => date('YmdHis', TIMESTAMP),
-                'amount' => 10,
+                'amount' => $amount,
                 'desc' => 'descript',
                 'time_out' => '',
             );
@@ -127,10 +127,10 @@ class pay  extends MY_Controller
         if (empty ($xmlPost)) {
             $xmlPost = file_get_contents('php://input', 'r');
         }
-        log_message("PAYLOG",$xmlPost);
-        log_message("PAYLOG", print_r($_SERVER,true)."\n".print_r($_GET,true)."\n".print_r($_POST,true)."\n\n\n");
 
-        $response = array('error' => '0', 'msg' => '支付成功', 'code' => 'pay_success');
+        log_message("PAYLOG", print_r($xmlPost, true)."\n\n\n");
+
+        //$response = array('error' => '0', 'msg' => '支付成功', 'code' => 'pay_success');
 
         do {
             //未知的支付渠道
@@ -140,56 +140,43 @@ class pay  extends MY_Controller
                 //break;
             }
 
-            $this->load->model('model_order', 'order');
+            $this->load->model('model_pay', 'pay');
             //$this->load->model("model_pay_{$paymentChannel}", 'payment_channel');
             $this->load->model("model_pay_unionpay", 'payment_channel');
             $payResult = $this->payment_channel->response();
-exit;
-            //2 签名错误
-            if ($payResult['status'] == 2) {
-                $data = array('is_pay' => 2, 'paid' => 0, 'need_pay' => $payResult['amount'], 'status' => 1, 'defray_type' => $payResult['pay_channel']);
-                $this->order->updateOrderByOrderSn($data, $payResult['order_sn']);
 
-                $response = error(30020);
-                $response['order_sn'] = $payResult['order_sn'];
+            //0 签名错误
+            if ($payResult['status'] == '0') {
+                $this->pay->savePay(array('pay_status' => '3'), $payResult['order_sn']);
+                log_message("PAYLOG", print_r($xmlPost, true).'sign_error!'."\n\n\n");
                 break;
             }
 
-            //3 订单支付失败
-            if ($payResult['status'] == 3) {
-                $data = array('is_pay' => 2, 'paid' => 0, 'need_pay' => $payResult['amount'], 'status' => 1, 'defray_type' => $payResult['pay_channel']);
-                $this->order->updateOrderByOrderSn($data, $payResult['order_sn']);
-
-                $response = error(30021);
-                $response['order_sn'] = $payResult['order_sn'];
+            //2 订单支付失败
+            if ($payResult['status'] == '2') {
+                log_message("PAYLOG", print_r($xmlPost, true).'order_failed!'."\n\n\n");
                 break;
             }
 
             //未知的订单
-            $orderInfo = $this->order->getOrderByOrderSn($payResult['order_sn']);
+            $orderInfo = $this->pay->getPayById($payResult['order_sn']);
             if (empty ($orderInfo)) {
-                $response = error(30022);
-                $response['order_sn'] = $payResult['order_sn'];
+                log_message("PAYLOG", print_r($xmlPost, true).'unknown_order!'."\n\n\n");
                 break;
             }
 
             //是已支付完成
-            if ($orderInfo['is_pay'] == '1') {
-                $response['order_sn'] = $payResult['order_sn'];
-                break;
-            }
-//d(($payResult['amount'] >= ($orderInfo['after_discount_price'] - $orderInfo['paid'])));exit;
-            //支付金额有误 此处判断用于，如果用户多支付了钱，更新订单成功
-            //if (($orderInfo['after_discount_price'] - $orderInfo['paid']) != $payResult['amount']) {
-            if ($payResult['amount'] < ($orderInfo['after_discount_price'] - $orderInfo['paid'])) {
-                $data = array('is_pay' => 2, 'paid' => 0, 'need_pay' => $payResult['amount'], 'status' => 1, 'defray_type' => $payResult['pay_channel']);
-                $this->order->updateOrderByOrderSn($data, $payResult['order_sn']);
-
-                $response = error(30023);
-                $response['order_sn'] = $payResult['order_sn'];
+            if ($orderInfo['pay_status'] == '1') {
                 break;
             }
 
+            //支付金额有误 此处判断用于金额是否相等，如果用户多支付了钱则不理会，直接更新订单成功
+            if ($payResult['amount'] < ($orderInfo['pay_amount'])) {
+                log_message("PAYLOG", print_r($xmlPost, true).'amount_error!'."\n\n\n");
+                break;
+            }
+
+            $this->pay->savePay(array('pay_status' => '1'), $payResult['order_sn']);
             //echo 'success';
         } while (false);
 
@@ -221,5 +208,11 @@ exit;
         } while (false);
 
         return $payChannel;
+    }
+
+
+    public function updatePay()
+    {
+
     }
 }
