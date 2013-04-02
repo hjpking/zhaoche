@@ -3461,3 +3461,626 @@ PAYLOG - 2013-04-02 18:41:50 --> unknown_order!
 
 PAYLOG - 2013-04-02 18:42:07 --> unionpay-1000-529262eaa1f89e6dc5153ea8577e58c6
 PAYLOG - 2013-04-02 18:42:18 --> unionpay-1000-529262eaa1f89e6dc5153ea8577e58c6
+ERROR - 2013-04-02 12:03:54 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:03:54 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:03:54 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:03:54 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:03:54 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:03:54 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:03:54 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:03:54 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:03:54 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:03:54 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:03:54 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:03:54 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:03:54 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:03:54 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:03:58 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:03:58 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:04:39 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:39 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:42 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:45 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:04:45 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:05:29 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:05:29 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:06:19 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:06:19 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:06:24 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:06:25 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:06:27 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:06:27 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:06:27 --> 404 Page Not Found --> login/%3C
+ERROR - 2013-04-02 12:06:27 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:06:46 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: Access denied for user 'root'@'localhost' (using password: YES) D:\wamp\www\zhaoche\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-04-02 12:06:46 --> Unable to connect to the database
+ERROR - 2013-04-02 12:06:46 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:12:58 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: Access denied for user 'root'@'localhost' (using password: YES) D:\wamp\www\zhaoche\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-04-02 12:12:58 --> Unable to connect to the database
+ERROR - 2013-04-02 12:12:59 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:32:11 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: Access denied for user 'root'@'localhost' (using password: YES) D:\wamp\www\zhaoche\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-04-02 12:32:11 --> Unable to connect to the database
+ERROR - 2013-04-02 12:32:11 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:32:13 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: Access denied for user 'root'@'localhost' (using password: YES) D:\wamp\www\zhaoche\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-04-02 12:32:13 --> Unable to connect to the database
+ERROR - 2013-04-02 12:32:13 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:32:14 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: Access denied for user 'root'@'localhost' (using password: YES) D:\wamp\www\zhaoche\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-04-02 12:32:14 --> Unable to connect to the database
+ERROR - 2013-04-02 12:32:14 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:32:15 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: Access denied for user 'root'@'localhost' (using password: YES) D:\wamp\www\zhaoche\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-04-02 12:32:15 --> Unable to connect to the database
+ERROR - 2013-04-02 12:32:15 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:32:17 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: Access denied for user 'root'@'localhost' (using password: YES) D:\wamp\www\zhaoche\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-04-02 12:32:17 --> Unable to connect to the database
+ERROR - 2013-04-02 12:32:17 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:36:03 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: Access denied for user 'root'@'localhost' (using password: YES) D:\wamp\www\zhaoche\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-04-02 12:36:03 --> Unable to connect to the database
+ERROR - 2013-04-02 12:36:03 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:36:04 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: Access denied for user 'root'@'localhost' (using password: YES) D:\wamp\www\zhaoche\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-04-02 12:36:04 --> Unable to connect to the database
+ERROR - 2013-04-02 12:36:04 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:37:16 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:37:48 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:37:49 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:38:37 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:39:08 --> Severity: Notice  --> Undefined variable: is_del_status D:\wamp\www\zhaoche\application\views\chauffeur\detail.php 92
+ERROR - 2013-04-02 12:39:08 --> Severity: Notice  --> Undefined variable: chauffeur D:\wamp\www\zhaoche\application\views\chauffeur\detail.php 95
+ERROR - 2013-04-02 12:39:08 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\wamp\www\zhaoche\application\views\chauffeur\detail.php 95
+ERROR - 2013-04-02 12:39:08 --> Severity: Notice  --> Undefined variable: city_id D:\wamp\www\zhaoche\application\views\chauffeur\detail.php 109
+ERROR - 2013-04-02 12:39:08 --> Severity: Notice  --> Undefined variable: city_id D:\wamp\www\zhaoche\application\views\chauffeur\detail.php 109
+ERROR - 2013-04-02 12:39:08 --> Severity: Notice  --> Undefined variable: city_id D:\wamp\www\zhaoche\application\views\chauffeur\detail.php 109
+ERROR - 2013-04-02 12:39:08 --> Severity: Notice  --> Undefined variable: city_id D:\wamp\www\zhaoche\application\views\chauffeur\detail.php 109
+ERROR - 2013-04-02 12:39:08 --> Severity: Notice  --> Undefined variable: city_id D:\wamp\www\zhaoche\application\views\chauffeur\detail.php 109
+ERROR - 2013-04-02 12:39:08 --> Severity: Notice  --> Undefined variable: city_id D:\wamp\www\zhaoche\application\views\chauffeur\detail.php 109
+ERROR - 2013-04-02 12:39:08 --> Severity: Notice  --> Undefined variable: city_id D:\wamp\www\zhaoche\application\views\chauffeur\detail.php 109
+ERROR - 2013-04-02 12:39:08 --> Severity: Notice  --> Undefined variable: car_model D:\wamp\www\zhaoche\application\views\chauffeur\detail.php 118
+ERROR - 2013-04-02 12:39:08 --> Severity: Notice  --> Undefined variable: car_model D:\wamp\www\zhaoche\application\views\chauffeur\detail.php 118
+ERROR - 2013-04-02 12:39:08 --> Severity: Notice  --> Undefined variable: car_model D:\wamp\www\zhaoche\application\views\chauffeur\detail.php 118
+ERROR - 2013-04-02 12:39:08 --> Severity: Notice  --> Undefined variable: car_model D:\wamp\www\zhaoche\application\views\chauffeur\detail.php 118
+ERROR - 2013-04-02 12:39:08 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:39:39 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:39:40 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:39:56 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:39:57 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:40:23 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:40:26 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:40:27 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:40:48 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:40:51 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:40:51 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:40:53 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:41:19 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:41:20 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:41:52 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:41:52 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:42:16 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:43:00 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:48:06 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:48:06 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:48:12 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:48:15 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:48:34 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:48:35 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:48:36 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:48:36 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:48:36 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:48:36 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:48:36 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:48:40 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:50:02 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:50:03 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:50:07 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:50:08 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 12:50:09 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:00:15 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:00:29 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:00:48 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:01:53 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:01:54 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:02:50 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:02:51 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:03:22 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:04:26 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:04:29 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:04:35 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:04:36 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:05:21 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:07:04 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:07:10 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:07:52 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:07:55 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:07:56 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:07:57 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:08:46 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:08:46 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:08:50 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:10:23 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:10:50 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:12:23 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:13:58 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:13:59 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:16:05 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:16:31 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:16:41 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:17:10 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:17:12 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:17:36 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:17:38 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:17:39 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:18:02 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:18:18 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:18:21 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:18:23 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:04 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:05 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:05 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:05 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:05 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:06 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:06 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:06 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:06 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:06 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:07 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:07 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:15 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:16 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:16 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:16 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:17 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:17 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:17 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:17 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:46 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:51 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:52 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:52 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:52 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:55 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:29:55 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:30:18 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:30:19 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:30:20 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:30:20 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:30:20 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 13:30:21 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:06:50 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:06:51 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:06:52 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:06:53 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:08:09 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:12:10 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:12:37 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:12:37 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:12:38 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:12:38 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:12:38 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:12:38 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:12:38 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:12:39 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:12:46 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:12:47 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:12:53 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:12:53 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:12:54 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:12:54 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:13:12 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:13:13 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:13:45 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:13:46 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:13:46 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:13:47 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:13:47 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:13:47 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:14:15 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:14:16 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:14:33 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:15:44 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:15:45 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:15:50 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:15:55 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:16:08 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:16:37 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:22:22 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:22:23 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:23:21 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:23:27 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:01 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:35 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:36 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:36 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:37 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:37 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:37 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:37 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:37 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:37 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:38 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:38 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:38 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:52 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:53 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:53 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:54 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:54 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:54 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:54 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:54 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:55 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:55 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:55 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:55 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:55 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:55 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:56 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:56 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:56 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:56 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:56 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:57 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:57 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:24:57 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:26:10 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:26:58 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:27:00 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:27:01 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:27:01 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:27:02 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:27:03 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:27:03 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:27:04 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:27:05 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:27:05 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:27:05 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:27:06 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:27:07 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:27:07 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:27:07 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:21 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:21 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:21 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:26 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:26 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:27 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:28 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:28 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:29 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:29 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:30 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:31 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:31 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:32 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:32 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:33 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:33 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:36 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:37 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:38 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:38 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:39 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:39 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:40 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:40 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:41 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:41 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:42 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:28:42 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:32:00 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:32:02 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:32:02 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:32:03 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:33:15 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:33:16 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:33:17 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:33:17 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:33:31 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:33:32 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:33:33 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:33:34 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:34:07 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:34:11 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:34:12 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:34:12 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:34:14 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:34:18 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:34:18 --> Severity: Notice  --> Undefined index: 0 D:\wamp\www\zhaoche\application\views\pay\index.php 92
+ERROR - 2013-04-02 14:34:18 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:34:19 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:34:19 --> Severity: Notice  --> Undefined index: 0 D:\wamp\www\zhaoche\application\views\pay\index.php 92
+ERROR - 2013-04-02 14:34:19 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:34:20 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:34:21 --> Severity: Notice  --> Undefined index: 0 D:\wamp\www\zhaoche\application\views\pay\index.php 92
+ERROR - 2013-04-02 14:34:21 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:34:22 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:34:22 --> Severity: Notice  --> Undefined index: 0 D:\wamp\www\zhaoche\application\views\pay\index.php 92
+ERROR - 2013-04-02 14:34:22 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:34:43 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:40:40 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:40:40 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:41:11 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:41:12 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:42:13 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:42:19 --> Severity: Notice  --> Undefined index: 0 D:\wamp\www\zhaoche\application\views\pay\index.php 92
+ERROR - 2013-04-02 14:42:19 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:42:20 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:42:22 --> Severity: Notice  --> Undefined index: 0 D:\wamp\www\zhaoche\application\views\pay\index.php 92
+ERROR - 2013-04-02 14:42:22 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:50:41 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:51:19 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:51:20 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:52:23 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:52:43 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:52:44 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:52:44 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:52:44 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:52:44 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:52:45 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:52:45 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:01 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:01 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:04 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:08 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:11 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:11 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:12 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:13 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:13 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:14 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:15 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:18 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:21 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:23 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:24 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:25 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:26 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:26 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:27 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:27 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:28 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:28 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:30 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:32 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:32 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:33 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:33 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:35 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:35 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:36 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:36 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:38 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:39 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:53:40 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:59:57 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:59:58 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:59:58 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:59:58 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:59:58 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:59:59 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:59:59 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:59:59 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:59:59 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 14:59:59 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:00:00 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:00:00 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:00:00 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:00:00 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:00:01 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:00:03 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:00:05 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:01:24 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:01:25 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:05:05 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:05:06 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:05:06 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:05:07 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:05:08 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:05:09 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:05:22 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:05:22 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:05:27 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:05:29 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:05:31 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:06:38 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:07:05 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:07:06 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:07:06 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:07:07 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:07:14 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:07:15 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:07:15 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:10:25 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 80
+ERROR - 2013-04-02 15:10:25 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:10:25 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 82
+ERROR - 2013-04-02 15:10:25 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 80
+ERROR - 2013-04-02 15:10:25 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:10:25 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 82
+ERROR - 2013-04-02 15:10:25 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 80
+ERROR - 2013-04-02 15:10:25 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:10:25 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 82
+ERROR - 2013-04-02 15:10:25 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 80
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 82
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 80
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 82
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 80
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 82
+ERROR - 2013-04-02 15:10:26 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 80
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 82
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 80
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 82
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 80
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 82
+ERROR - 2013-04-02 15:10:26 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 80
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 82
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 80
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 82
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 80
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:10:26 --> Severity: Notice  --> Undefined variable: isDelStatus D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 82
+ERROR - 2013-04-02 15:10:27 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:10:50 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:10:50 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:10:51 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:10:51 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:10:51 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:11:30 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:11:32 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:11:44 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:11:46 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:12:13 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:12:17 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:12:18 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:12:32 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:12:34 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:15:10 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:15:16 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:15:17 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:15:27 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:16:01 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:16:13 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:16:13 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:17:48 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:23:55 --> Severity: Notice  --> Undefined variable: url D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:23:55 --> Severity: Notice  --> Undefined variable: url D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:23:55 --> Severity: Notice  --> Undefined variable: url D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:23:56 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:24:00 --> Severity: Notice  --> Undefined variable: url D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:24:00 --> Severity: Notice  --> Undefined variable: url D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:24:00 --> Severity: Notice  --> Undefined variable: url D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:24:00 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:24:01 --> Severity: Notice  --> Undefined variable: url D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:24:01 --> Severity: Notice  --> Undefined variable: url D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:24:01 --> Severity: Notice  --> Undefined variable: url D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:24:01 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:24:01 --> Severity: Notice  --> Undefined variable: url D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:24:01 --> Severity: Notice  --> Undefined variable: url D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:24:01 --> Severity: Notice  --> Undefined variable: url D:\wamp\www\zhaoche\application\views\pay\be_user_pay.php 81
+ERROR - 2013-04-02 15:24:01 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:24:12 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:32:03 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:32:04 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:32:16 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:32:16 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:39:27 --> Severity: Notice  --> Undefined variable: user_data D:\wamp\www\zhaoche\application\views\pay\pay_log.php 18
+ERROR - 2013-04-02 15:39:27 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\wamp\www\zhaoche\application\views\pay\pay_log.php 18
+ERROR - 2013-04-02 15:39:27 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 28
+ERROR - 2013-04-02 15:39:27 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 42
+ERROR - 2013-04-02 15:39:27 --> Severity: Notice  --> Undefined variable: user_info D:\wamp\www\zhaoche\application\views\pay\pay_log.php 70
+ERROR - 2013-04-02 15:39:27 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\wamp\www\zhaoche\application\views\pay\pay_log.php 70
+ERROR - 2013-04-02 15:39:28 --> Severity: Notice  --> Undefined variable: user_data D:\wamp\www\zhaoche\application\views\pay\pay_log.php 18
+ERROR - 2013-04-02 15:39:28 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\wamp\www\zhaoche\application\views\pay\pay_log.php 18
+ERROR - 2013-04-02 15:39:28 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 28
+ERROR - 2013-04-02 15:39:28 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 42
+ERROR - 2013-04-02 15:39:28 --> Severity: Notice  --> Undefined variable: user_info D:\wamp\www\zhaoche\application\views\pay\pay_log.php 70
+ERROR - 2013-04-02 15:39:28 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\wamp\www\zhaoche\application\views\pay\pay_log.php 70
+ERROR - 2013-04-02 15:39:29 --> Severity: Notice  --> Undefined variable: user_data D:\wamp\www\zhaoche\application\views\pay\pay_log.php 18
+ERROR - 2013-04-02 15:39:29 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\wamp\www\zhaoche\application\views\pay\pay_log.php 18
+ERROR - 2013-04-02 15:39:29 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 28
+ERROR - 2013-04-02 15:39:29 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 42
+ERROR - 2013-04-02 15:39:29 --> Severity: Notice  --> Undefined variable: user_info D:\wamp\www\zhaoche\application\views\pay\pay_log.php 70
+ERROR - 2013-04-02 15:39:29 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\wamp\www\zhaoche\application\views\pay\pay_log.php 70
+ERROR - 2013-04-02 15:40:11 --> Severity: Notice  --> Undefined variable: user_data D:\wamp\www\zhaoche\application\views\pay\pay_log.php 18
+ERROR - 2013-04-02 15:40:11 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\wamp\www\zhaoche\application\views\pay\pay_log.php 18
+ERROR - 2013-04-02 15:40:11 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 28
+ERROR - 2013-04-02 15:40:11 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 42
+ERROR - 2013-04-02 15:40:14 --> Severity: Notice  --> Undefined variable: user_data D:\wamp\www\zhaoche\application\views\pay\pay_log.php 18
+ERROR - 2013-04-02 15:40:14 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\wamp\www\zhaoche\application\views\pay\pay_log.php 18
+ERROR - 2013-04-02 15:40:14 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 28
+ERROR - 2013-04-02 15:40:14 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 42
+ERROR - 2013-04-02 15:40:14 --> Severity: Notice  --> Undefined variable: user_data D:\wamp\www\zhaoche\application\views\pay\pay_log.php 18
+ERROR - 2013-04-02 15:40:14 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\wamp\www\zhaoche\application\views\pay\pay_log.php 18
+ERROR - 2013-04-02 15:40:14 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 28
+ERROR - 2013-04-02 15:40:14 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 42
+ERROR - 2013-04-02 15:40:15 --> Severity: Notice  --> Undefined variable: user_data D:\wamp\www\zhaoche\application\views\pay\pay_log.php 18
+ERROR - 2013-04-02 15:40:15 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\wamp\www\zhaoche\application\views\pay\pay_log.php 18
+ERROR - 2013-04-02 15:40:15 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 28
+ERROR - 2013-04-02 15:40:15 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 42
+ERROR - 2013-04-02 15:40:22 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 28
+ERROR - 2013-04-02 15:40:22 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 42
+ERROR - 2013-04-02 15:40:22 --> Severity: Notice  --> Undefined variable: user_info D:\wamp\www\zhaoche\application\views\pay\pay_log.php 70
+ERROR - 2013-04-02 15:40:22 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\wamp\www\zhaoche\application\views\pay\pay_log.php 70
+ERROR - 2013-04-02 15:40:23 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 28
+ERROR - 2013-04-02 15:40:23 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 42
+ERROR - 2013-04-02 15:40:23 --> Severity: Notice  --> Undefined variable: user_info D:\wamp\www\zhaoche\application\views\pay\pay_log.php 70
+ERROR - 2013-04-02 15:40:23 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\wamp\www\zhaoche\application\views\pay\pay_log.php 70
+ERROR - 2013-04-02 15:40:24 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 28
+ERROR - 2013-04-02 15:40:24 --> Severity: Notice  --> Undefined variable: status D:\wamp\www\zhaoche\application\views\pay\pay_log.php 42
+ERROR - 2013-04-02 15:40:24 --> Severity: Notice  --> Undefined variable: user_info D:\wamp\www\zhaoche\application\views\pay\pay_log.php 70
+ERROR - 2013-04-02 15:40:24 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\wamp\www\zhaoche\application\views\pay\pay_log.php 70
+ERROR - 2013-04-02 15:40:59 --> Severity: Notice  --> Undefined variable: user_info D:\wamp\www\zhaoche\application\views\pay\pay_log.php 70
+ERROR - 2013-04-02 15:40:59 --> Severity: Warning  --> Invalid argument supplied for foreach() D:\wamp\www\zhaoche\application\views\pay\pay_log.php 70
+ERROR - 2013-04-02 15:42:37 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:42:38 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:42:39 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:42:39 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:42:40 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:42:40 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:42:40 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:42:40 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:42:41 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:42:56 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:43:40 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:43:53 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:44:39 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:44:41 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:44:41 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:44:42 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:44:42 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:45:38 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:45:39 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:46:08 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:46:11 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:48:12 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:48:13 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:48:15 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:48:15 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:48:15 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:48:16 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:48:16 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:48:17 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:49:41 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:49:54 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:50:14 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:50:46 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:51:22 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:52:00 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:52:22 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:52:31 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:52:33 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:53:21 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:53:23 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:53:37 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:53:54 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:53:54 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:53:54 --> 404 Page Not Found --> favicon.ico
+ERROR - 2013-04-02 15:54:25 --> 404 Page Not Found --> favicon.ico

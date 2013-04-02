@@ -401,6 +401,8 @@ $config['view_nav'] = array(
     '3' => array('title' => '订单/充值', 'links' => array(
         '30' => array('title' => '订单管理', 'url' => 'order/index'),
         '31' => array('title' => '充值管理', 'url' => 'pay/index'),
+        '32' => array('title' => '给用户充值', 'url' => 'pay/beUserPay'),
+        '33' => array('title' => '给用户充值记录', 'url' => 'pay/payLog'),
     )),
     '4' => array('title' => '车辆/计费规则', 'links' => array(
         '40' => array('title' => '服务类型管理', 'url' => 'car/service_type_index'),
@@ -465,6 +467,7 @@ $config['is_post'] = array(
 
 //充值发票邮寄方式
 $config['post_mode'] = array(
+    '0' => '默认',
     '1' => '快递',
     '2' => '平邮',
 );

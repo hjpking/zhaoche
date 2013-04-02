@@ -16,9 +16,9 @@ class model_order extends MY_Model
      * @param int $offset
      * @return mixed
      */
-    public function getChauffeurOrder($chauffeurId, $limit = 20, $offset = 0)
+    public function getChauffeurOrder($chauffeurId, $limit = 20, $offset = 0, $where = array())
     {
-        $this->db->select('')->from('order')->where('chauffeur_id', $chauffeurId)->where('status', '1')->order_by('order_sn', 'desc');
+        $this->db->select('')->from('order')->where('chauffeur_id', $chauffeurId)->where($where)->where('status', '1')->order_by('order_sn', 'desc');
         $data = $this->db->limit($limit, $offset)->get()->result_array();
 
         return $data;

@@ -811,6 +811,19 @@ function simplexml2array($xmle)
     return $r;
 }
 
+
+function exportCsv($filename, $data)
+{
+    //$str = $field;
+    //iconv('utf-8','gb2312',($data));
+    header("Content-type:text/csv");
+    header("Content-Disposition:attachment;filename=".$filename);
+    header('Cache-Control:must-revalidate,post-check=0,pre-check=0');
+    header('Expires:0');
+    header('Pragma:public');
+    echo $data;
+}
+
 /**
 function cmp($a, $b)
 {

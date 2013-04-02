@@ -25,6 +25,7 @@ class order extends MY_Controller
         $orderSn = $this->input->get_post('order_sn');
         $time = $this->input->get_post('time');
         $status = $this->input->get_post('status');
+        $isExport = $this->input->get_post('is_export');
 
         $where = array();
         $orderSn && $where['order_sn'] = $orderSn;
@@ -84,17 +85,30 @@ class order extends MY_Controller
         $this->load->model('model_city', 'city');
         $city = $this->city->getCity(10000, 0, '*', array('is_del' => '0'));
 
+        $orderStatus = config_item('order_status');
         $data = array(
             'order_sn' => $orderSn,
             'time' => $time,
             'status' => $status,
             'pageHtml' => $pageHtml,
             'order' => $orderInfo,
-            'order_status' => config_item('order_status'),
+            'order_status' => $orderStatus,
             'sf_info' => $sfInfo,
             'carLevelInfo' => $carLevelInfo,
             'cityInfo' => $city,
+            'url' => '/order/index/?'.http_build_query($_REQUEST),
         );
+
+        if ($isExport) {
+            $str = "订单号,所属城市,服务类别,车辆级别,用户名,手机号,金额(元),订单状态,司机,司机手机,上车时间,下车时间,订车时间;\n";
+            foreach ($orderInfo as $v) {
+                $str .= $v['order_sn'].','.$city[$v['city_id']]['city_name'].','.$sfInfo[$v['sid']]['name'].','.$carLevelInfo[$v['lid']]['name'].','.$v['uname'].','.
+                    $v['user_phone'].','.fPrice($v['amount']).','.$orderStatus[$v['status']].','.$v['chauffeur_login_name'].','.$v['chauffeur_phone'].','.date('H:i', strtotime($v['train_time'])).','.date('H:i', strtotime($v['getoff_time'])).','.$v['create_time'].";\n";
+            }
+            $fileName = 'order_'.date('Y-m-d', TIMESTAMP) .'.csv';
+            exportCsv($fileName, $str);
+            return;
+        }
 
         $this->load->view('order/index', $data);
     }

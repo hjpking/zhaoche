@@ -3,13 +3,13 @@
 <div class="container-fluid" >
     <div class="row-fluid">
         <div class="span2">
-            <?php require(APPPATH . 'views/left/user_leftnav.php');?>
+            <?php require(APPPATH . 'views/left/order_leftnav.php');?>
         </div>
         <div class="span10">
-            <?php require(APPPATH . 'views/sub/user_subnav.php');?>
+            <?php require(APPPATH . 'views/sub/order_subnav.php');?>
 
             <div class="page-header">
-                <h4><?=$isDelStatus ? '用户回收站' : '用户列表'?></h4>
+                <h4>待充值用户列表</h4>
             </div>
 
             <?php
@@ -23,7 +23,7 @@
             $phone_code = substr($phone_code, 0, -1);
             ?>
 
-            <form class=" well form-inline" action="<?=url('admin')?>user/index/<?=isset($isDelStatus) ? $isDelStatus : ''?>" method="post">
+            <form class=" well form-inline" action="<?=url('admin')?>pay/beUserPay" method="post">
                 <input type="hidden" name="status" id="status"
                        value="<?=isset($status) && $status === '1' ? '1' : ($status === '0' ? '0' : '');?>"/>
                 <input type="text" class="input-medium" placeholder="用户名" data-provide="typeahead" name="uname" value="<?=isset($uname) ? $uname : ''?>"
@@ -48,13 +48,13 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary"><i class="icon-search icon-white"></i> 搜索</button>
-
-                <a href="<?=$url;?>&is_export=1" class="btn"><i class="icon-download"></i> 导出</a>
             </form>
 
+            <form action="<?=url('admin')?>pay/userPay" method="post">
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>
+                    <th><input id="ckbSelectAll" type="checkbox" class="chk" onclick="checkAll()"></th>
                     <th>用户ID</th>
                     <th>用户名</th>
                     <th>真实姓名</th>
@@ -69,6 +69,7 @@
                 <tbody>
                 <?php foreach ($user_info as $v){?>
                 <tr>
+                    <td><input type="checkbox" name="uid[]" class="uid" value="<?=$v['uid']?>"/></td>
                     <td><?=$v['uid']?></td>
                     <td><?=$v['uname']?></td>
                     <td><?=$v['realname']?></td>
@@ -78,47 +79,16 @@
                     <td><?=$v['status'] ? '白名单' : '黑名单'?></td>
                     <td><?=$v['create_time']?></td>
                     <td>
-                        <a href="<?=url('admin')?>user/detail/<?=$v['uid']?>" type="查看"><i class="icon-eye-open"></i></a>
-                        <a href="<?=url('admin')?>user/edit/<?=$isDelStatus?>/<?=$v['uid']?>" type="修改"><i class="icon-pencil"></i></a>
-                        <a href="<?=url('admin')?>user/<?=$isDelStatus ? 'recycle_delete' : 'delete'?>/<?=$v['uid']?>" type="删除"><i class="icon-remove"></i></a>
-                        <?php if ($isDelStatus){?>
-                        <a href="<?=url('admin')?>user/restore/<?=$v['uid']?>" type="恢复"><i class="icon-share-alt"></i></a>
-                        <?php }?>
+                        <a href="<?=url('admin')?>pay/userPay/<?=$v['uid']?>" class="btn"><i class="icon-plus"></i> 充值</a>
                     </td>
                 </tr>
                 <?php }?>
-                <!--tr>
-                    <td>2</td>
-                    <td>大佛爷</td>
-                    <td>刘佛佛</td>
-                    <td>15133256598</td>
-                    <td>银行卡</td>
-                    <td>15</td>
-                    <td>白名单</td>
-                    <td>2013-01-25 13:23:25</td>
-                    <td>
-                        <a href="<?=url('admin')?>/user/detail/"><i class="icon-eye-open"></i></a>
-                        <a href="<?=url('admin')?>/user/edit/"><i class="icon-pencil"></i></a>
-                        <a href="<?=url('admin')?>/user/del/"><i class="icon-remove"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>牛牛</td>
-                    <td>牛大春</td>
-                    <td>13600128848</td>
-                    <td>银行卡</td>
-                    <td>52</td>
-                    <td>白名单</td>
-                    <td>2013-01-25 13:21:25</td>
-                    <td>
-                        <a href="<?=url('admin')?>/user/detail/"><i class="icon-eye-open"></i></a>
-                        <a href="<?=url('admin')?>/user/edit/"><i class="icon-pencil"></i></a>
-                        <a href="<?=url('admin')?>/user/del/"><i class="icon-remove"></i></a>
-                    </td>
-                </tr-->
                 </tbody>
             </table>
+            <div class="pagination">
+                <button type="submit" class="btn btn-primary"><i class="icon-plus icon-white"></i> 批量充值</button>
+            </div>
+            </form>
             <div class="pagination pagination-right"><ul><?php if(isset($pageHtml)) echo $pageHtml;?></ul></div>
         </div>
     </div>
@@ -139,6 +109,15 @@
             }
             $('#status')[0].value = 0;
             $('#status_text').text('黑名单');
+        }
+        function checkAll()
+        {
+            var currStatus = $("#ckbSelectAll").attr("checked");
+            if (currStatus == 'checked') {
+                jQuery(".uid").attr("checked", true);
+            } else {
+                jQuery(".uid").attr("checked", false);
+            }
         }
     </script>
 <?php require(APPPATH . 'views/footer.php');?>

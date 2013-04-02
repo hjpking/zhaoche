@@ -13,12 +13,12 @@
             </div>
 
             <ul class="nav nav-tabs" id="tab">
-                <li class="active"><a data-toggle="tab" href="#home">司机详情</a></li>
-                <li class=""><a data-toggle="tab" href="#profile">接单记录</a></li>
+                <li class="<?=empty($time) ? 'active' : '';?>"><a data-toggle="tab" href="#home">司机详情</a></li>
+                <li class="<?=empty($time) ? '' : 'active';?>"><a data-toggle="tab" href="#profile">接单记录</a></li>
             </ul>
 
             <div class="tab-content" id="myTabContent">
-                <div id="home" class="tab-pane fade active in">
+                <div id="home" class="tab-pane fade <?=empty($time) ? 'active in' : '';?>">
                     <p>
                     <form class="form-horizontal" action="" method="post">
                         <fieldset>
@@ -87,7 +87,16 @@
                     </form>
                     </p>
                 </div>
-                <div id="profile" class="tab-pane fade">
+                <div id="profile" class="tab-pane fade  <?=empty($time) ? '' : 'active in';?>">
+                    <input type="hidden" value="0" name="is_export" id="export"/>
+                    <form class=" well form-inline" action="<?=url('admin')?>chauffeur/detail" method="post">
+                        <input type="text" name="time" id="reservation" placeholder="选择接单开始与结束时间" value="<?=isset ($time) ? $time : ''?>">
+                        <button type="submit" class="btn btn-primary"><i class="icon-search icon-white"></i> 搜索</button>
+
+                        <!--button type="submit" class="btn" onclick="isExport()"><i class="icon-file"></i> 导出 </button-->
+                        <a href="<?=$url;?>&is_export=1" class="btn" onclick="isExport()"><i class="icon-download"></i> 导出</a>
+                    </form>
+
                     <table class="table table-striped table-hover">
                         <thead>
                         <tr>
@@ -98,7 +107,6 @@
                             <th>上车时间</th>
                             <th>下车时间</th>
                             <th>订单状态</th>
-                            <th>用车方式</th>
                             <th>租金</th>
                             <th>司机用户名</th>
                             <th>车型</th>
@@ -118,9 +126,8 @@
                             <td><?=$v['order_time']?></td>
                             <td><?=$v['train_time']?></td>
                             <td><?=$v['getoff_time']?></td>
-                            <td><?=$v['status'] ? '成功' : '取消'?></td>
-                            <td><?=$v['use_mode']?></td>
-                            <td><?=$v['amount']?></td>
+                            <td><?=$order_status[$v['status']];?></td>
+                            <td><?=fPrice($v['amount'])?>元</td>
                             <td><?=$v['chauffeur_login_name']?></td>
                             <td><?=$car[$v['car_id']]['name']?></td>
                             <td>
@@ -129,42 +136,6 @@
                             </td>
                         </tr>
                         <?php }}?>
-                        <!--tr>
-                            <td>123</td>
-                            <td>ak47</td>
-                            <td>马如来</td>
-                            <td>2013-02-23 11:12</td>
-                            <td>2013-02-23 11:15</td>
-                            <td>2013-02-23 15:25</td>
-                            <td>已完成</td>
-                            <td>租用</td>
-                            <td>55</td>
-                            <td>hjpking</td>
-                            <td>花心油</td>
-                            <td>大众 朗逸</td>
-                            <td>
-                                <a href="<?=url('admin')?>order/detail/"><i class="icon-eye-open"></i></a>
-                                <a href="<?=url('admin')?>order/del/"><i class="icon-remove"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>123</td>
-                            <td>ak47</td>
-                            <td>马如来</td>
-                            <td>2013-02-23 11:12</td>
-                            <td>2013-02-23 11:15</td>
-                            <td>2013-02-23 15:25</td>
-                            <td>已完成</td>
-                            <td>租用</td>
-                            <td>55</td>
-                            <td>hjpking</td>
-                            <td>花心油</td>
-                            <td>大众 朗逸</td>
-                            <td>
-                                <a href="<?=url('admin')?>order/detail/"><i class="icon-eye-open"></i></a>
-                                <a href="<?=url('admin')?>order/del/"><i class="icon-remove"></i></a>
-                            </td>
-                        </tr-->
                         </tbody>
                     </table>
                 </div>
@@ -175,5 +146,8 @@
 </div>
     <script type="text/javascript">
         $('.typeahead').typeahead()
+        $(document).ready(function() {
+            $('#reservation').daterangepicker();
+        });
     </script>
 <?php require(APPPATH . 'views/footer.php');?>

@@ -16,6 +16,7 @@ class chauffeur extends MY_Controller
     public function index()
     {
         $isDelStatus = $this->uri->segment(3);
+        $isExport = $this->input->get_post('is_export');
 
         $Limit = 20;
         $currentPage = $this->uri->segment(4, 1);
@@ -79,7 +80,6 @@ class chauffeur extends MY_Controller
             $pageHtml = $this->pagination->create_links();
         }
 
-
         foreach ($carInfo as $k=>$v) {
             $carInfo[$k]['recent_order'] = $this->order->getChauffeurOrderCount($v['chauffeur_id'], 1);
         }
@@ -96,7 +96,19 @@ class chauffeur extends MY_Controller
             'pageHtml' => $pageHtml,
             'is_del_status' => $isDelStatus,
             'chauffeur' => $chauffeur,
+            'url' => '/chauffeur/index/'.$isDelStatus.'?'.http_build_query($_REQUEST),
         );
+
+        if ($isExport) {
+            $str = "司机ID,用户名,真实姓名,车型,所在城市,手机号,服务状态,接单量;\n";
+            foreach ($carInfo as $v) {
+                $str .= $v['chauffeur_id'].','.$v['cname'].','.$v['realname'].','.$car[$v['car_id']]['name'].','.$city[$v['city_id']]['city_name'].','.$v['phone'].','.($v['status'] ? '正常服务' : '暂时服务').','.$v['recent_order'].";\n";
+            }
+            $fileName = 'chauffeur_'.date('Y-m-d', TIMESTAMP) .'.csv';
+            exportCsv($fileName, $str);
+            return;
+        }
+
         $this->load->view('chauffeur/index', $data);
     }
 
@@ -177,6 +189,9 @@ class chauffeur extends MY_Controller
     {
         $chauffeurId = $this->uri->segment(3, 1);
 
+        $time = $this->input->get_post('time');
+        $isExport = $this->input->get_post('is_export');
+
         $this->load->model('model_chauffeur', 'cf');
         $chauffeurData = $this->cf->getChauffeurById($chauffeurId);
         //echo '<pre>';print_r($chauffeurData);exit;
@@ -189,13 +204,32 @@ class chauffeur extends MY_Controller
 
         $this->load->model('model_order', 'order');
         $order = $this->order->getChauffeurOrder($chauffeurId);
-
+        if ($time) {
+            $eTime = explode('-', $time);//echo $eTime[0].'<br>';p(date('Y-m-d H:i:s', strtotime($eTime[0])));
+            $where['create_time >='] = date('Y-m-d H:i:s', strtotime($eTime[0]));
+            $where['create_time <='] = date('Y-m-d ', strtotime($eTime[1])).'23:59:59';
+            $order = $this->order->getChauffeurOrder($chauffeurId, 1000, 0, $where);
+        }
+        $orderStatus = config_item('order_status');
         $data = array(
             'city'=> $city,
             'car' => $car,
             'data' => $chauffeurData,
             'order' => $order,
+            'time' => $time,
+            'order_status' => $orderStatus,
+            'url' => '/chauffeur/detail?'.http_build_query($_REQUEST),
         );
+
+        if ($isExport) {
+            $str = "订单号,用户手机号,用户姓名,订车时间,上车时间,下车时间,订单状态,租金(元),司机用户名,车型,操作;\n";
+            foreach ($order as $v) {
+                $str .= $v['order_sn'].','.$v['user_phone'].','.$v['uname'].','.$v['create_time'].','.$v['train_time'].','.$v['getoff_time'].','.$orderStatus[$v['status']].','.fPrice($v['amount']).','.fPrice($v['amount']).','.$v['chauffeur_login_name'].','.$car[$v['car_id']]['name'].";\n";
+            }
+            $fileName = 'chauffeur_order_'.date('Y-m-d', TIMESTAMP) .'.csv';
+            exportCsv($fileName, $str);
+            return;
+        }
 
         $this->load->view('chauffeur/detail', $data);
     }

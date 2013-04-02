@@ -26,6 +26,7 @@ class pay extends MY_Controller
         $uname = $this->input->get_post('uname');
         $time = $this->input->get_post('time');
         $pay_status = $this->input->get_post('pay_status');
+        $isExport = $this->input->get_post('is_export');
 
         $where = array();
         $orderSn && $where['pay_id'] = $orderSn;
@@ -83,6 +84,11 @@ class pay extends MY_Controller
         //$this->load->model('model_order', 'order');
         //$payData = $this->pay->getPay(10000);
 
+        $payType = config_item('pay_type');
+        $payStatus = config_item('post_status');
+        $isPost = config_item('is_post');
+        $postMode = config_item('post_mode');
+        $postStatus = config_item('pay_status');
         $pay = $this->pay->getPay(100000);
         $data = array(
             'orderSn' => $orderSn,
@@ -92,14 +98,122 @@ class pay extends MY_Controller
             'pageHtml' => $pageHtml,
             'pay' => $payInfo,
             'pay_data' => $pay,
-            'post_status' => config_item('post_status'),
-            'post_mode' => config_item('post_mode'),
-            'is_post' => config_item('is_post'),
-            'pay_type' => config_item('pay_type'),
-            'pay_status' => config_item('pay_status'),
+            'post_status' => $payStatus,
+            'post_mode' => $postMode,
+            'is_post' => $isPost,
+            'pay_type' => $payType,
+            'pay_status' => $postStatus,
             'userData' => $userData,
+            'url' => '/pay/index?'.http_build_query($_REQUEST),
             //'orderData' => $orderData,
         );
+
+        if ($isExport) {
+            $str = "订单号,用户名,充值金额(元),充值来源,充值方式,充值状态,充值时间,操作人,寄送发票,寄送方式,发票抬头,邮寄地址,寄送状态;\n";
+            foreach ($payInfo as $v) {
+                $str .= $v['pay_id'].','.$v['uname'].','.fPrice($v['pay_amount']).','.($v['source'] ? '其他':'客户端').','.$payType[$v['pay_type']].','.$payStatus[$v['pay_status']]
+                    .','.$v['create_time'].','.$v['opera_people'].','.$isPost[$v['is_post']].','.$postMode[$v['post_mode']].','.$v['invoice'].','.$v['post_address'].','.$postStatus[$v['post_status']].";\n";
+            }
+            $fileName = 'pay_'.date('Y-m-d', TIMESTAMP) .'.csv';
+            exportCsv($fileName, $str);
+            return;
+        }
+
         $this->load->view('pay/index', $data);
+    }
+
+    public function beUserPay()
+    {
+        $Limit = 20;
+        $currentPage = $this->uri->segment(3, 1);
+        $offset = ($currentPage - 1) * $Limit;
+
+        $where = array('is_del' => '0');
+
+        $uname = $this->input->get_post('uname');
+        $phone = $this->input->get_post('phone');
+        $time = $this->input->get_post('create_time');
+        $status = $this->input->get_post('status');
+
+        if ($time) {
+            $eTime = explode('-', $time);
+            $where['create_time >='] = date('Y-m-d H:i:s', strtotime($eTime[0]));
+            $where['create_time <='] = date('Y-m-d ', strtotime($eTime[1])).'23:59:59';
+        }
+
+        $uname && $where['uname'] = $uname;
+        $phone && $where['phone'] = $phone;
+        ($status || $status === '0') && $where['status'] = $status;
+
+        $this->load->model('model_user', 'user');
+
+        $totalNum = $this->user->getUserCount($where);
+        $userInfo = $this->user->getUser($Limit, $offset, '*', $where);
+
+        $pageHtml = '';
+        if ($totalNum > $Limit) { //页数不足一页
+            $this->load->library('pagination');
+            $config['base_url'] = site_url('/user/index');
+            $where && $config['suffix'] = ('?' . http_build_query($where));
+            $config['total_rows'] = $totalNum;
+            $config['per_page'] = $Limit;
+            $config['num_links'] = 10;
+            $config['uri_segment'] = 3;
+            $config['use_page_numbers'] = TRUE;
+            $config['anchor_class'] = 'class="number"';
+            $config['prev_tag_open'] = '<li>';
+            $config['prev_tag_close'] = '</li>';
+
+            $config['full_tag_open'] = '<li>';
+            $config['full_tag_close'] = '</li>';
+            $config['first_tag_open'] = '<li>';
+            $config['first_tag_close'] = '</li>';
+            $config['last_tag_open'] = '<li>';
+            $config['last_tag_close'] = '</li>';
+
+            $config['next_tag_open'] = '<li>';
+            $config['next_tag_close'] = '</li>';
+            $config['prev_tag_open'] = '<li>';
+            $config['prev_tag_close'] = '</li>';
+            $config['num_tag_open'] = '<li>';
+            $config['num_tag_close'] = '</li>';
+
+            $config['cur_tag_open'] = '<li class="active"><a>';
+            $config['cur_tag_close'] = '</a></li>';
+
+            $this->pagination->initialize($config);
+            $pageHtml = $this->pagination->create_links();
+        }
+
+        $userData = $this->user->getUser(100000, 0, 'uname, phone', array('is_del' => '0'));
+
+        $binding_status = config_item('binding_type');
+        $data = array(
+            'user_info' => $userInfo,
+            'user_data' => $userData,
+            'pageHtml' => $pageHtml,
+            'binding_status' => $binding_status,
+            'time' => $time,
+            'uname' => $uname,
+            'phone' => $phone,
+            'status' => $status,
+        );
+
+        $this->load->view('pay/be_user_pay', $data);
+    }
+
+    public function userPay()
+    {
+        $this->load->view('pay/user_pay');
+    }
+
+    public function payLog()
+    {
+        $data = array(
+            'user_data' => array(),
+            'status' => '1',
+            'user_info' => array(),
+        );
+        $this->load->view('pay/pay_log', $data);
     }
 }

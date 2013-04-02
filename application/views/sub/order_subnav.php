@@ -8,6 +8,12 @@ $subNav = array(
     '31' => array(
         array('title' => '充值列表', 'url' => 'pay/index'),
     ),
+    '32' => array(
+        array('title' => '给用户充值', 'url' => 'pay/beUserPay'),
+    ),
+    '33' => array(
+        array('title' => '给用户充值记录', 'url' => 'pay/payLog'),
+    ),
 );
 ?>
 <div class="subnav">

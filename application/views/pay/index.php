@@ -56,7 +56,7 @@
 
                 <button type="submit" class="btn btn-primary"><i class="icon-search icon-white"></i> 搜索</button>
 
-                <a href="#" class="btn"><i class="icon-download"></i> 导出</a>
+                <a href="<?=$url?>&is_export=1" class="btn"><i class="icon-download"></i> 导出</a>
             </form>
 
             <table class="table table-striped table-hover">
@@ -82,8 +82,8 @@
                 <tr>
                     <td><?=$v['pay_id']?></td>
                     <td><?=$v['uname']?></td>
-                    <td><?=$v['pay_amount']?> 元</td>
-                    <td><?=$v['source']?></td>
+                    <td><?=fPrice($v['pay_amount'])?> 元</td>
+                    <td><?=$v['source'] ? '其他':'客户端'?></td>
                     <td><?=$pay_type[$v['pay_type']]?></td>
                     <td><?=$pay_status[$v['pay_status']]?></td>
                     <td><?=$v['create_time']?></td>

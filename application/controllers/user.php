@@ -16,6 +16,7 @@ class user extends MY_Controller
     public function index()
     {
         $isDelStatus = $this->uri->segment(3, 1);
+        $isExport = $this->input->get_post('is_export');
 
         $Limit = 20;
         $currentPage = $this->uri->segment(4, 1);
@@ -91,7 +92,18 @@ class user extends MY_Controller
             'uname' => $uname,
             'phone' => $phone,
             'status' => $status,
+            'url' => '/user/index/'.$isDelStatus.'?'.http_build_query($_REQUEST),
         );
+
+        if ($isExport) {
+            $str = "用户ID,用户名,真实姓名,手机号,绑定类型,余额(元),用户状态,注册时间;\n";
+            foreach ($userInfo as $v) {
+                $str .= $v['uid'].','.$v['uname'].','.$v['realname'].','.$v['phone'].','.$binding_status[$v['binding_type']].','.fPrice($v['amount']).','.($v['status'] ? '白名单' : '黑名单').','.$v['create_time'].";\n";
+            }
+            $fileName = 'user_'.date('Y-m-d', TIMESTAMP) .'.csv';
+            exportCsv($fileName, $str);
+            return;
+        }
 
         $this->load->view('user/index', $data);
     }

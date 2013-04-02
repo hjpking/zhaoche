@@ -72,7 +72,7 @@
                 </div-->
                 <button type="submit" class="btn btn-primary"><i class="icon-search icon-white"></i> 搜索</button>
 
-                <a href="#" class="btn"><i class="icon-download"></i> 导出</a>
+                <a href="<?=$url?>&is_export=1" class="btn"><i class="icon-download"></i> 导出</a>
             </form>
 
             <table class="table table-striped table-hover">
