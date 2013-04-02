@@ -9,13 +9,71 @@
 
 class model_pay_unionpay extends MY_Model
 {
-    public function request()
-    {
+    public $attributeArray = '';
+    public $nodeArray = '';
 
+    public function request(array $data)
+    {
+        $merchantOrderId 	= $data['order_sn'];//订单id
+        $merchantOrderTime 	= $data['order_time'];//订单时间
+        $merchantOrderAmt 	= $data['amount'];//订单金额
+        $merchantOrderDesc 	= $data['desc'];//订单描述
+        $transTimeout 		= $data['time_out'];//超时时间
+echo $merchantOrderTime;
+        //订单成功后自动回馈地址
+        $backEndUrl = UNIONPAY_NOTIFY_URL;
+
+        $xml = $this->unionPayGetXml($merchantOrderId,$merchantOrderTime,$merchantOrderAmt,$merchantOrderDesc,$transTimeout,$backEndUrl);
+
+        $recv = $this->submitByPost(UNIONPAY_SUBMIT_URL, $xml);
+        $parse= $this->readXml($recv);
+        $html = '';
+        if ($parse) {
+            //接收成功
+            $nodeArray = $this->getNodeArray();
+            $sign = $this->rsa($merchantOrderId, $merchantOrderTime,$merchantOrderAmt,$merchantOrderDesc,$transTimeout,$backEndUrl);
+
+            $html = '<?xml version="1.0" encoding="utf-8" ?><upomp application="LanchPay.Req" version="1.0.0"><merchantId>'.UNIONPAY_MY_ID;
+            $html .= '</merchantId><merchantOrderId>'.$merchantOrderId.'</merchantOrderId><merchantOrderTime>'.$merchantOrderTime;
+            $html .= '</merchantOrderTime><sign>'.$sign.'</sign></upomp>';
+            return $html;
+        }
+
+        return false;
     }
 
     public function response()
     {
+        $xmlPost = file_get_contents('php://input');
+        //若不想网络环境测试，可打开下行注释，进行单元测试，上面一行会报WARNING,不用理会
+
+        // 解析获取到的xml
+        $parse=$this->readXml($xmlPost);
+        if ($parse) {
+            //获取键值对
+            $nodeArray = $this->getNodeArray();
+            //验签
+            $checkIdentifier = "transType=".$nodeArray['transType'].
+                "&merchantId=".$nodeArray['merchantId'].
+                "&merchantOrderId=".$nodeArray['merchantOrderId'].
+                "&merchantOrderAmt=".$nodeArray['merchantOrderAmt'].
+                "&settleDate=".$nodeArray['settleDate'].
+                "&setlAmt=".$nodeArray['setlAmt'].
+                "&setlCurrency=".$nodeArray['setlCurrency'].
+                "&converRate=".$nodeArray['converRate'].
+                "&cupsQid=".$nodeArray['cupsQid'].
+                "&cupsTraceNum=".$nodeArray['cupsTraceNum'].
+                "&cupsTraceTime=".$nodeArray['cupsTraceTime'].
+                "&cupsRespCode=".$nodeArray['cupsRespCode'].
+                "&cupsRespDesc=".$nodeArray['cupsRespDesc'].
+                "&respCode=".$nodeArray['respCode'] ;
+            $respCode=$this->checkSign($checkIdentifier,UNIONPAY_NOTIFY_PUBLIC_KEY,$nodeArray['sign']);
+
+            if($respCode=='0000'){
+                //验证成功，写相关处理代码
+            }
+        }
+        $data = '';
         return $data;
     }
 
@@ -24,7 +82,7 @@ class model_pay_unionpay extends MY_Model
     private function unionPayGetXml($merchantOrderId, $merchantOrderTime,$merchantOrderAmt,$merchantOrderDesc,$transTimeout,$backEndUrl)
     {
 
-        $merchantPublicCert = SecretUtils::getPublicKeyBase64(MY_public_key);
+        $merchantPublicCert = $this->getPublicKeyBase64(UNIONPAY_MY_PUBLIC_KEY);
         // echo  $merchantPublicCert;
         $merchantId = UNIONPAY_MY_ID;
         $merchantName=UNIONPAY_MY_NAME;
@@ -36,7 +94,8 @@ class model_pay_unionpay extends MY_Model
             "&merchantOrderDesc=" . $merchantOrderDesc.
             "&transTimeout=" .$transTimeout;
         //echo $strForSign;
-        $sign = SecretUtils::sign($strForSign, MY_private_key, MY_prikey_password);
+
+        $sign = $this->sign($strForSign, UNIONPAY_MY_PRIVATE_KEY, UNIONPAY_MY_PRIKEY_PASSWORD);
 
         $attrArray = array("application" => "SubmitOrder.Req", "version" => "1.0.0");
         $nodeArray = array("merchantName" => $merchantName,
@@ -49,19 +108,36 @@ class model_pay_unionpay extends MY_Model
             "backEndUrl"=>$backEndUrl,
             "sign" => $sign,
             "merchantPublicCert" => $merchantPublicCert);
-        $result = XmlUtils::writeXml($attrArray, $nodeArray);
+        $result = $this->writeXml($attrArray, $nodeArray);
         return $result;
+    }
+
+    public static function sign($data, $privateKeyPath, $privateKeyPassword)
+    {
+        $dateMd5 = md5($data, true);
+        $p12cert = array();
+        $fd = fopen($privateKeyPath, 'r');
+        $p12buf = fread($fd, filesize($privateKeyPath));
+        fclose($fd);
+        if (openssl_pkcs12_read($p12buf, $p12cert, $privateKeyPassword)) {
+            $private_key = $p12cert['pkey'];
+            //私钥加密
+            openssl_private_encrypt($dateMd5, $crypted, $private_key);
+            return base64_encode($crypted);
+        } else {
+            return "";
+        }
     }
 
     private function rsa($merchantOrderId, $merchantOrderTime,$merchantOrderAmt,$merchantOrderDesc,$transTimeout,$backEndUrl)
     {
-        $merchantPublicCert = SecretUtils::getPublicKeyBase64(MY_public_key);
+        $merchantPublicCert = $this->getPublicKeyBase64(UNIONPAY_MY_PUBLIC_KEY);
         $merchantId = UNIONPAY_MY_ID;
         $merchantName=UNIONPAY_MY_NAME;
         $strForSign = "merchantId=" . $merchantId .
             "&merchantOrderId=" . $merchantOrderId .
             "&merchantOrderTime=" . $merchantOrderTime;
-        $sign = SecretUtils::sign($strForSign, MY_private_key, MY_prikey_password);
+        $sign = $this->sign($strForSign, UNIONPAY_MY_PRIVATE_KEY, UNIONPAY_MY_PRIKEY_PASSWORD);
         return $sign;
     }
 
@@ -130,23 +206,17 @@ class model_pay_unionpay extends MY_Model
         return $document->saveXML();
     }
 
-    public static function sign($data, $privateKeyPath, $privateKeyPassword)
+    public function getNodeArray()
     {
-        $dateMd5 = md5($data, true);
-        $p12cert = array();
-        $fd = fopen($privateKeyPath, 'r');
-        $p12buf = fread($fd, filesize($privateKeyPath));
-        fclose($fd);
-        if (openssl_pkcs12_read($p12buf, $p12cert, $privateKeyPassword)) {
-            $private_key = $p12cert['pkey'];
-            //私钥加密
-            openssl_private_encrypt($dateMd5, $crypted, $private_key);
-            return base64_encode($crypted);
-        } else {
-            return "";
-        }
+        return $this->nodeArray;
     }
-    public static function checkSign($data, $publicKeyPath, $cryptedStr)
+
+    public function getAttributeArray()
+    {
+        return $this->attributeArray;
+    }
+
+    public function checkSign($data, $publicKeyPath, $cryptedStr)
     {
         $base64Sign = base64_decode($cryptedStr);
         $dateMd5 = md5($data, true);
@@ -168,7 +238,7 @@ class model_pay_unionpay extends MY_Model
             return "9999";
         }
     }
-    public static function getPublicKeyBase64($publicKeyPath)
+    public function getPublicKeyBase64($publicKeyPath)
     {
         $fd2 = fopen($publicKeyPath, 'r');
         $p12buf2 = fread($fd2, filesize($publicKeyPath));

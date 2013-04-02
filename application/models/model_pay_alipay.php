@@ -37,19 +37,19 @@ class model_pay_alipay extends MY_Model
 
         $isVerify = verify($notify_data, $sign);
         if (!$isVerify) {
-            break;
+            //break;
         }
 
         //获取交易状态
         $trade_status = getDataForXML($notify_data , '/notify/trade_status');
         if($trade_status != "TRADE_FINISHED"){
-            break;
+            //break;
             //echo "success";
 
             //在此处添加您的业务逻辑，作为收到支付宝交易完成的依据
         }
 
-
+        $data = '';
         return $data;
     }
 

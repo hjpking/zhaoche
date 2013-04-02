@@ -182,7 +182,7 @@ $config['directory_trigger']	= 'd'; // experimental not currently in use
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 0;
+$config['log_threshold'] = 3;
 
 /*
 |--------------------------------------------------------------------------
@@ -505,21 +505,21 @@ $config['pay_channel'] = array(
 //支付宝配置信息
 define('ALIPAY_PARTNER', '');//合作伙伴ID
 define('ALIPAY_SELLER', '');//签约支付宝账号或卖家支付宝帐户
-define('ALIPAY_NOTIFY_URL', $config['base_url'].'api/pay/aliPayNoticeUrl');//异步返回消息通知页面，用于告知商户订单状态
+define('ALIPAY_NOTIFY_URL', $config['base_url'].'api/pay/payBack');//异步返回消息通知页面，用于告知商户订单状态
 define('ALIPAY_CALL_BACK_URL', $config['base_url'].'api/pay/aliPayCallbackUrl');//同步返回消息通知页面，用于提示商户订单状态
 define('ALIPAY_INPUT_CHARSET', 'utf-8');//字符编码格式
 
 
 //银联配置信息
-define('UNIONPAY_SUBMIT_URL', 'http://211.154.166.219/qzjy/MerOrderAction/deal.action');
-define('UNIONPAY_UPOMP_PUBLIC_KEY', APPPATH.'key/Front_test.cer');
-define('UNIONPAY_NOTIFY_PUBLIC_KEY', APPPATH."key/898000000000001.cer");
-define('UNIONPAY_MY_ID', '808080201300485');
-define('UNIONPAY_MY_NAME', '北京车族网际科技有限公司（无卡）');
-define('UNIONPAY_MY_PUBLIC_KEY', APPPATH.'key/898000000000002.cer');
-define('UNIONPAY_MY_PRIVATE_KEY', APPPATH.'key/898000000000002.p12');
-define('UNIONPAY_MY_PRIKEY_PASSWORD', APPPATH.'898000000000002');
-
+define('UNIONPAY_SUBMIT_URL', 'http://211.154.166.219/qzjy/MerOrderAction/deal.action');//前置请求地址
+define('UNIONPAY_UPOMP_PUBLIC_KEY', '');//前置密钥
+define('UNIONPAY_NOTIFY_PUBLIC_KEY', APPPATH."key/unionpay_test/898000000000001.cer");//前置密钥
+define('UNIONPAY_MY_ID', '898000000000002');//商户ID
+define('UNIONPAY_MY_NAME', '联通华建');//商户名称
+define('UNIONPAY_MY_PUBLIC_KEY', APPPATH.'key/unionpay_test/898000000000002.cer');//商户公钥
+define('UNIONPAY_MY_PRIVATE_KEY', APPPATH.'key/unionpay_test/898000000000002.p12');//商户私钥
+define('UNIONPAY_MY_PRIKEY_PASSWORD', '898000000000002');//商户私钥密码
+define('UNIONPAY_NOTIFY_URL', $config['base_url'].'api/pay/payBack');//回调地址
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */

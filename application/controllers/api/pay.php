@@ -94,17 +94,26 @@ class pay  extends MY_Controller
                 break;
             }
 
+            $requestData = array(
+                'order_sn' => '10001001',
+                'order_time' => date('YmdHis', TIMESTAMP),
+                'amount' => 10,
+                'desc' => 'descript',
+                'time_out' => '',
+            );
             $payType = strtolower($payType);
             switch ($payType) {
                 case 'alipay':
-                    $this->load->model('model_pay_alipay', 'pay');
+                    $this->load->model('model_pay_alipay', 'mpay');
+                    $html = $this->mpay->request( $requestData );
                     break;
                 default:
-                    $this->load->model('model_pay_unionpay', 'pay');
+                    $this->load->model('model_pay_unionpay', 'mpay');//p($this->mpay);
+                    $html = $this->mpay->request( $requestData );
                     break;
             }
 
-            $html = $this->pay->request( $payData );
+            //$html = $this->pay->request( $payData );
 
             $response['data'] = $html;
         } while (false);
