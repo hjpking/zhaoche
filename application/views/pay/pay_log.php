@@ -13,24 +13,22 @@
             </div>
 
             <?php
+
             $username_code = '';
-            $phone_code = '';
-            foreach ($user_data as $v) {
-                $username_code .= '"'.$v['uname'].'",';
-                $phone_code .= '"'.$v['phone'].'",';
-            }
+            foreach ($user_data as $v) { $username_code .= '"'.$v['uname'].'",'; }
             $username_code = substr($username_code, 0, -1);
-            $phone_code = substr($phone_code, 0, -1);
+
+            $staff_code = '';
+            foreach ($staff_data as $v) { $staff_code .= '"'.$v['login_name'].'",'; }
+            $staff_code = substr($staff_code, 0, -1);
             ?>
 
-            <form class=" well form-inline" action="<?=url('admin')?>pay/beUserPay" method="post">
-                <input type="hidden" name="status" id="status"
-                       value="<?=isset($status) && $status === '1' ? '1' : ($status === '0' ? '0' : '');?>"/>
+            <form class=" well form-inline" action="<?=url('admin')?>pay/payLog" method="post">
                 <input type="text" class="input-medium" placeholder="用户名" data-provide="typeahead" name="uname" value="<?=isset($uname) ? $uname : ''?>"
                        data-items="4" data-source='[<?=$username_code?>]'>
 
-                <input type="text" class="input-medium" placeholder="操作人ID" data-provide="typeahead" name="phone"
-                       data-items="4" data-source='[<?=$phone_code?>]' value="<?=isset($phone) ? $phone : ''?>">
+                <input type="text" class="input-medium" placeholder="操作人名称" data-provide="typeahead" name="staff_name"
+                       data-items="4" data-source='[<?=$staff_code?>]' value="<?=isset($staff_name) ? $staff_name : ''?>">
 
                 <div class="input-prepend">
                     <span class="add-on"><i class="icon-calendar"></i></span>
@@ -45,30 +43,30 @@
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>
-                    <th><input id="ckbSelectAll" type="checkbox" class="chk" onclick="checkAll()"></th>
                     <th>ID</th>
                     <th>用户名</th>
-                    <th>真实姓名</th>
                     <th>充值金额</th>
                     <th>操作人</th>
+                    <th>状态</th>
                     <th>充值时间</th>
                     <th>操作</th>
                 <tr>
                 </thead>
                 <tbody>
-                <?php foreach ($user_info as $v){?>
+                <?php foreach ($log_info as $v){?>
                 <tr>
-                    <td><input type="checkbox" name="uid[]" class="uid" value="<?=$v['uid']?>"/></td>
-                    <td><?=$v['uid']?></td>
+                    <td><?=$v['id']?></td>
                     <td><?=$v['uname']?></td>
-                    <td><?=$v['realname']?></td>
-                    <td><?=$v['phone']?></td>
-                    <td><?=$binding_status[$v['binding_type']]?></td>
-                    <td><?=fPrice($v['amount'])?>元</td>
-                    <td><?=$v['status'] ? '白名单' : '黑名单'?></td>
+                    <td><?=fPrice($v['pay_amount'])?>元</td>
+                    <td><?=$v['opera_name']?></td>
+                    <td><?=$v['status'] ? '成功' : '取消'?></td>
                     <td><?=$v['create_time']?></td>
                     <td>
-                        <a href="#" class="btn"><i class="icon-plus"></i> 充值</a>
+                        <?php if ($v['status']){?>
+                        <a href="<?=url('admin')?>pay/cancelBeUserPay/<?=$v['id']?>" class="btn"><i class="icon-plus"></i> 取消</a>
+                        <?php } else {?>
+                        <a href="#" class="btn"><i class=""></i> 已取消</a>
+                        <?php }?>
                     </td>
                 </tr>
                 <?php }?>

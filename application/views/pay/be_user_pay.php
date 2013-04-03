@@ -50,7 +50,7 @@
                 <button type="submit" class="btn btn-primary"><i class="icon-search icon-white"></i> 搜索</button>
             </form>
 
-            <form action="<?=url('admin')?>pay/userPay" method="post">
+            <form action="<?=url('admin')?>pay/batchUserPay" method="post">
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>

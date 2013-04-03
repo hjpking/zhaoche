@@ -202,18 +202,194 @@ class pay extends MY_Controller
         $this->load->view('pay/be_user_pay', $data);
     }
 
+    /**
+     * 用户充值
+     */
     public function userPay()
     {
-        $this->load->view('pay/user_pay');
+        $uId = $this->uri->segment(3);
+        if (empty ($uId)) {
+            show_error('用户ID为空!');
+        }
+
+        $this->load->model('model_user', 'user');
+        $userInfo = $this->user->getUserById($uId);
+        if (empty ($userInfo)) {
+            show_error('用户不存在！');
+        }
+
+        $data = array(
+            'user_info' => $userInfo,
+        );
+        $this->load->view('pay/user_pay', $data);
+    }
+
+    /**
+     * 批量充值
+     */
+    public function batchUserPay()
+    {
+        $uId = $this->input->get_post('uid');
+        if (empty ($uId) || !is_array($uId)) {
+            show_error('用户ID为空!');
+        }
+
+        $uInfo = array();
+        $this->load->model('model_user', 'user');
+        foreach ($uId as $v) {
+            $userInfo = $this->user->getUserById($v);
+            if (empty ($userInfo)) {
+                show_error('用户不存在！');
+            }
+
+            $uInfo[] = $userInfo;
+        }
+
+        $this->load->view('pay/batch_user_pay', array('user_info' => $uInfo));
+    }
+
+    public function toPay()
+    {
+        $uId = $this->input->get_post('uid');
+        $payAmount = intval($this->input->get_post('pay_amount'));
+
+        if (empty ($uId) || !is_array($uId) || empty ($payAmount)) {
+            show_error('用户ID或充值金额为空！');
+        }
+
+        foreach ($uId as $v) {
+            $this->load->model('model_user', 'user');
+            $userInfo = $this->user->getUserById($v);
+            if (empty ($userInfo)) {
+                show_error('用户不存在！');
+            }
+
+            if ($payAmount > 2000000) {
+                show_error('充值金额超过2000元！');
+            }
+
+            $s = $this->db->set(array('amount' => 'amount+'.$payAmount), '', false)->where('uid', $userInfo['uid'])->update('user');
+            if (!$s) {
+                show_error('充值失败');
+            }
+
+            $logData = array(
+                'uid' => $userInfo['uid'],
+                'uname' => $userInfo['uname'],
+                'pay_amount' => $payAmount,
+                'opera_people' => $this->amInfo['staff_id'],
+                'opera_name' => $this->amInfo['login_name'],
+                'status' => '1',
+            );
+            $this->load->model('model_pay', 'pay');
+            $this->pay->saveBeUserPayLog($logData);
+        }
+
+        $this->load->helper('url');
+        redirect('pay/payLog');
     }
 
     public function payLog()
     {
+        $Limit = 20;
+        $currentPage = $this->uri->segment(3, 1);
+        $offset = ($currentPage - 1) * $Limit;
+
+        $where = array();
+
+        $uname = $this->input->get_post('uname');
+        $staffName = $this->input->get_post('staff_name');
+        $time = $this->input->get_post('create_time');
+
+        if ($time) {
+            $eTime = explode('-', $time);
+            $where['create_time >='] = date('Y-m-d H:i:s', strtotime($eTime[0]));
+            $where['create_time <='] = date('Y-m-d ', strtotime($eTime[1])).'23:59:59';
+        }
+
+        $uname && $where['uname'] = $uname;
+        $staffName && $where['opera_name'] = $staffName;
+
+        $this->load->model('model_pay', 'pay');
+
+        $totalNum = $this->pay->getBeUserPayLogCount($where);
+        $logInfo = $this->pay->getBeUserPayLog($Limit, $offset, '*', $where, 'create_time desc');
+
+        $pageHtml = '';
+        if ($totalNum > $Limit) { //页数不足一页
+            $this->load->library('pagination');
+            $config['base_url'] = site_url('/pay/payLog');
+            $where && $config['suffix'] = ('?' . http_build_query($where));
+            $config['total_rows'] = $totalNum;
+            $config['per_page'] = $Limit;
+            $config['num_links'] = 10;
+            $config['uri_segment'] = 3;
+            $config['use_page_numbers'] = TRUE;
+            $config['anchor_class'] = 'class="number"';
+            $config['prev_tag_open'] = '<li>';
+            $config['prev_tag_close'] = '</li>';
+
+            $config['full_tag_open'] = '<li>';
+            $config['full_tag_close'] = '</li>';
+            $config['first_tag_open'] = '<li>';
+            $config['first_tag_close'] = '</li>';
+            $config['last_tag_open'] = '<li>';
+            $config['last_tag_close'] = '</li>';
+
+            $config['next_tag_open'] = '<li>';
+            $config['next_tag_close'] = '</li>';
+            $config['prev_tag_open'] = '<li>';
+            $config['prev_tag_close'] = '</li>';
+            $config['num_tag_open'] = '<li>';
+            $config['num_tag_close'] = '</li>';
+
+            $config['cur_tag_open'] = '<li class="active"><a>';
+            $config['cur_tag_close'] = '</a></li>';
+
+            $this->pagination->initialize($config);
+            $pageHtml = $this->pagination->create_links();
+        }
+
+        $this->load->model('model_user', 'user');
+        $userData = $this->user->getUser(100000, 0, 'uname, phone', array('is_del' => '0'));
+
+        $this->load->model('model_staff', 'staff');
+        $staffData = $this->staff->getStaff(100000);
+
         $data = array(
-            'user_data' => array(),
-            'status' => '1',
-            'user_info' => array(),
+            'log_info' => $logInfo,
+            'user_data' => $userData,
+            'pageHtml' => $pageHtml,
+            'time' => $time,
+            'staff_data' => $staffData,
+            'uname' => $uname,
+            'staff_name' => $staffName,
         );
+
         $this->load->view('pay/pay_log', $data);
+    }
+
+    public function cancelBeUserPay()
+    {
+        $pId = $this->uri->segment(3);
+        if (empty ($pId)) {
+            show_error('充值记录ID为空!');
+        }
+
+        $this->load->model('model_pay', 'pay');
+        $logInfo = $this->pay->getBeUserPayLogById($pId);
+        if (empty ($logInfo)) {
+            show_error('给用户充值记录不存在!');
+        }
+
+        $s = $this->db->set(array('amount' => 'amount-'.$logInfo['pay_amount']), '', false)->where('uid', $logInfo['uid'])->update('user');
+        if (!$s) {
+            show_error('取消用户充值失败！');
+        }
+
+        $this->pay->saveBeUserPayLog(array('status' => '0'), $logInfo['id']);
+
+        $this->load->helper('url');
+        redirect('pay/payLog');
     }
 }

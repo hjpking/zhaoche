@@ -11,15 +11,15 @@
             <div class="page-header">
                 <h4>给用户充值</h4>
             </div>
-            <form class="form-horizontal" action="<?=url('admin');?>staff/save" method="post" onsubmit="return checkForm()">
-                <input type="hidden" name="staff_id" value="<?=isset($data['staff_id']) ? $data['staff_id'] : ''?>"/>
+            <form class="form-horizontal" action="<?=url('admin');?>pay/toPay" method="post" onsubmit="return checkForm()">
+                <input type="checkbox" name="uid[]" value="<?=$user_info['uid'];?>" checked="checked"/>
 
 
                 <fieldset>
                     <div class="control-group">
                         <label for="input01" class="control-label">用户名 </label>
                         <div class="controls">
-                            <input type="text" class="input-xlarge" name="name" value="hjpking" disabled="disabled">
+                            <input type="text" class="input-xlarge" name="name" value="<?=$user_info['uname'];?>" disabled="disabled">
                             <!--p class="help-block"> 字母、数字组合，不超过32个字符。 </p-->
                         </div>
                     </div>
@@ -28,7 +28,7 @@
                         <label for="input01" class="control-label">余额 </label>
                         <div class="controls">
                             <div class="input-append">
-                                <input class="span12" type="text" name="amount" value="10.10" disabled="disabled">
+                                <input class="span12" type="text" name="amount" value="<?=fPrice($user_info['amount']);?>" disabled="disabled">
                                 <span class="add-on">元</span>
                             </div>
                             <!--p class="help-block"> 字母、数字组合，不超过32个字符。 </p-->
@@ -39,10 +39,10 @@
                         <label for="input01" class="control-label">充值金额 </label>
                         <div class="controls">
                             <div class="input-append">
-                                <input class="span12" type="text" name="amount">
-                                <span class="add-on">元</span>
+                                <input class="span12" type="text" name="pay_amount" onkeyup="this.value=this.value.replace(/\D/g,'')">
+                                <span class="add-on">分</span>
                             </div>
-                            <!--p class="help-block"> 字母、数字组合，不超过32个字符。 </p-->
+                            <p class="help-block"> 充值金额不能超过20000元。 </p>
                         </div>
                     </div>
 

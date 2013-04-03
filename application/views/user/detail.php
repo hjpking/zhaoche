@@ -39,7 +39,7 @@
                 <tr>
                     <td></td>
                     <td>账号余额：</td>
-                    <td> <?=$data['amount']?> 元</td>
+                    <td> <?=fPrice($data['amount'])?> 元</td>
                     <td></td>
                     <td></td>
                 </tr>

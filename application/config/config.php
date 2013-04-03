@@ -508,7 +508,7 @@ $config['pay_channel'] = array(
 );
 
 //支付宝配置信息
-define('ALIPAY_PARTNER', '');//合作伙伴ID
+define('ALIPAY_PARTNER', '2088901264408851');//合作伙伴ID
 define('ALIPAY_SELLER', '');//签约支付宝账号或卖家支付宝帐户
 define('ALIPAY_NOTIFY_URL', $config['base_url'].'api/pay/payBack');//异步返回消息通知页面，用于告知商户订单状态
 define('ALIPAY_CALL_BACK_URL', $config['base_url'].'api/pay/aliPayCallbackUrl');//同步返回消息通知页面，用于提示商户订单状态
