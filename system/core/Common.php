@@ -575,6 +575,7 @@ function fPrice($price, $type = 1)
         case 1:  $p = ( $p /100 ); break;
         case 2:  $p = ( $p /10 ); break;
         case 3:  $p = ( $p /1 ); break;
+        case 4:  $p = ( $p *100 ); break;
         default: $p = ( $p /100 );
     }
 

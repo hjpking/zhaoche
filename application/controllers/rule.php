@@ -148,17 +148,22 @@ class rule extends MY_Controller
 
     public function save()
     {
-        $cityId = $this->input->get_post('city_id');
-        $sId = $this->input->get_post('sid');
-        $lId = $this->input->get_post('lid');
-        $basePrice = $this->input->get_post('base_price');
-        $kmPrice = $this->input->get_post('km_price');
-        $timePrice = $this->input->get_post('time_price');
-        $timeInt = $this->input->get_post('time_int');
-        $nightServiceCharge = $this->input->get_post('night_service_charge');
-        $kongshiFee = $this->input->get_post('kongshi_fee');
+        $cityId = intval($this->input->get_post('city_id'));
+        $sId = intval($this->input->get_post('sid'));
+        $lId = intval($this->input->get_post('lid'));
+        $basePrice = intval($this->input->get_post('base_price'));
+        $basePrice = fPrice($basePrice, 4);
+        $kmPrice = intval($this->input->get_post('km_price'));
+        $kmPrice = fPrice($kmPrice, 4);
+        $timePrice = intval($this->input->get_post('time_price'));
+        $timePrice = fPrice($timePrice, 4);
+        $timeInt = intval($this->input->get_post('time_int'));
+        $nightServiceCharge = intval($this->input->get_post('night_service_charge'));
+        $nightServiceCharge = fPrice($nightServiceCharge, 4);
+        $kongshiFee = intval($this->input->get_post('kongshi_fee'));
+        $kongshiFee = fPrice($kongshiFee, 4);
         $descr = $this->input->get_post('descr');
-        $ruleId = $this->input->get_post('rule_id');
+        $ruleId = intval($this->input->get_post('rule_id'));
 
         $data = array(
             'city_id' => $cityId,

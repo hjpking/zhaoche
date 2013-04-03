@@ -124,8 +124,8 @@ class chauffeur extends MY_Controller
                 $response = error(10020);//保存验证码错误
                 break;
             }
-
-            sendMessage($phone, $code);
+            $message = '欢迎使用智能招车，本次登陆验证码是：'.$code;
+            sendMessage($phone, $message);
         } while (false);
 
         $this->json_output($response);

@@ -200,8 +200,9 @@ class car extends MY_Controller
     {
         $name = $this->input->get_post('name');
         $descr = $this->input->get_post('descr');
-        $price = $this->input->get_post('price');
-        $lId = $this->input->get_post('lid');
+        $price = intval($this->input->get_post('price'));
+        $lId = intval($this->input->get_post('lid'));
+        $price = fPrice($price, 4);
 
         $data = array(
             'name' => $name,

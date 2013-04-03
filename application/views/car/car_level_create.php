@@ -28,7 +28,7 @@
                         <div class="controls">
                             <div class="input-append">
                                 <input type="text" id="1" class="input-xlarge" name="price" value="<?=isset($data['price']) ? $data['price'] : ''?>">
-                                <span class="add-on">分</span>
+                                <span class="add-on">元</span>
                             </div>
 
                             <!--p class="help-block"> 字母、数字组合，不超过32个字符。 </p-->

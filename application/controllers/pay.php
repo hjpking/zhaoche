@@ -257,6 +257,8 @@ class pay extends MY_Controller
             show_error('用户ID或充值金额为空！');
         }
 
+        $payAmount = fPrice($payAmount, 4);
+
         foreach ($uId as $v) {
             $this->load->model('model_user', 'user');
             $userInfo = $this->user->getUserById($v);

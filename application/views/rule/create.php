@@ -65,7 +65,7 @@
                         <div class="controls">
                             <div class="input-append">
                                 <input class="span12" type="text" name="base_price" value="<?=isset($data['base_price']) ? $data['base_price'] : ''?>">
-                                <span class="add-on">分</span>
+                                <span class="add-on">元</span>
                             </div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
                         <div class="controls">
                             <div class="input-append">
                                 <input class="span12" type="text" name="km_price" value="<?=isset($data['km_price']) ? $data['km_price'] : ''?>">
-                                <span class="add-on">分</span>
+                                <span class="add-on">元</span>
                             </div>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                         <div class="controls">
                             <div class="input-append">
                                 <input class="span12" type="text" name="time_price" value="<?=isset($data['time_price']) ? $data['time_price'] : ''?>">
-                                <span class="add-on">分</span>
+                                <span class="add-on">元</span>
                             </div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                         <div class="controls">
                             <div class="input-append">
                                 <input class="span12" type="text" name="night_service_charge" value="<?=isset($data['night_service_charge']) ? $data['night_service_charge'] : ''?>">
-                                <span class="add-on">分</span>
+                                <span class="add-on">元</span>
                             </div>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
                         <div class="controls">
                             <div class="input-append">
                                 <input class="span12" type="text" name="kongshi_fee" value="<?=isset($data['kongshi_fee']) ? $data['kongshi_fee'] : ''?>">
-                                <span class="add-on">分</span>
+                                <span class="add-on">元</span>
                             </div>
                         </div>
                     </div>

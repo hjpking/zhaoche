@@ -151,6 +151,9 @@ class order extends MY_Controller
             //判断返回的值是否为布尔值，如果不是则将订单号重置
             if (!is_bool($lastId)) $orderSn = $lastId;
 
+            //$message = '欢迎使用智能招车，本次登陆验证码是：'.$code;
+            //sendMessage($phone, $message);
+
             //$s = $this->user->save(array('amount' => "amount-$amount"), $uData['uid']);
             //$this->db->set(array('amount' => 'amount-'.$amount), '', false)->where('uid', $uData['uid'])->update('user');
             $response['data'] = $orderSn;

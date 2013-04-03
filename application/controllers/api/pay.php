@@ -20,7 +20,7 @@ class pay  extends MY_Controller
         $token = $this->input->get_post('token');
         $payType = $this->input->get_post('pay_type');
 
-        log_message('PAYLOG', $payType.'-'.$amount.'-'.$token);
+        log_message('PAYLOG', $payType.'-'.$amount.'-'.$token.'-'.print_r($_REQUEST,true));
 
         $response = array('code' => '0', 'msg' => '生成成功');
 
@@ -128,7 +128,7 @@ class pay  extends MY_Controller
             $xmlPost = file_get_contents('php://input', 'r');
         }
 
-        log_message("PAYLOG", print_r($xmlPost, true)."\n\n\n");
+        log_message("PAYLOG", print_r($_REQUEST, true)."\n\n".print_r($xmlPost, true)."\n\n\n");
 
         //$response = array('error' => '0', 'msg' => '支付成功', 'code' => 'pay_success');
 

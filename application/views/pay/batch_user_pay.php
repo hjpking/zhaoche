@@ -30,7 +30,7 @@
                         <div class="controls">
                             <div class="input-append">
                                 <input class="span12" type="text" name="pay_amount" onkeyup="this.value=this.value.replace(/\D/g,'')">
-                                <span class="add-on">分</span>
+                                <span class="add-on">元</span>
                             </div>
                             <p class="help-block"> 充值金额不能超过20000元。 </p>
                         </div>

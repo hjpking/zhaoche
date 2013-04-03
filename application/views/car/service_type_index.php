@@ -29,7 +29,7 @@
                     <td><?=$v['descr']?></td>
                     <td>
                         <a href="<?=url('admin')?>car/service_type_edit/<?=$v['sid']?>" title="编辑" ><i class="icon-edit"></i></a>
-                        <a href="<?=url('admin')?>car/service_type_delete/<?=$v['sid']?>" title="删除"><i class="icon-remove"></i></a>
+                        <a href="javascript:void (0);" onclick="opera('<?=url('admin')?>car/service_type_delete/<?=$v['sid']?>')" title="删除"><i class="icon-remove"></i></a>
                     </td>
                 </tr>
                 <?php }?>
@@ -91,5 +91,30 @@
             show:true
         });
     });
+    function opera(url)
+    {
+        if (url == '') return false;
+
+        if (window.confirm('确定操作!')) {
+            goToUrl(url);
+        }
+    }
+
+    function goToUrl (url)
+    {
+        //url = wx.base_url+url;
+
+        url = url.split('#');
+        url = url[0];
+        /*
+         if (wx.isUrl(url) ) {
+         alert ('不是一个正确的URL地址!');
+         return false;
+         }
+         //*/
+
+        window.location.href = url;
+    }
+
 </script>
 <?php require(APPPATH . 'views/footer.php');?>

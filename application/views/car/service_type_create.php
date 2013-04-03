@@ -12,13 +12,13 @@
                 <h4><?=isset($isEdit) ? '修改服务类别' : '添加服务类别'?></h4>
             </div>
 
-            <form class="form-horizontal" action="<?=url('admin');?>car/service_type_save" method="post">
+            <form class="form-horizontal" action="<?=url('admin');?>car/service_type_save" method="post" onsubmit="return checkForm()">
                 <input type="hidden" name="sid" value="<?=isset($data['sid']) ? $data['sid'] : '';?>"/>
                 <fieldset>
                     <div class="control-group">
                         <label for="input01" class="control-label">服务类别名称</label>
                         <div class="controls">
-                            <input type="text" id="input01" class="input-xlarge" name="name" value="<?=isset($data['name']) ? $data['name'] : '';?>">
+                            <input type="text" id="title" class="input-xlarge" name="name" value="<?=isset($data['name']) ? $data['name'] : '';?>">
                             <!--p class="help-block"> 字母、数字组合，不超过32个字符。 </p-->
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                     <div class="control-group">
                         <label for="textarea" class="control-label">服务类别描述</label>
                         <div class="controls">
-                            <textarea rows="3" id="textarea" class="input-xlarge" name="descr"><?=isset($data['descr']) ? $data['descr'] : '';?></textarea>
+                            <textarea rows="3" id="content" class="input-xlarge" name="descr"><?=isset($data['descr']) ? $data['descr'] : '';?></textarea>
                         </div>
                     </div>
 
@@ -41,6 +41,22 @@
     </div>
 </div>
 <script type="text/javascript">
-    $('.typeahead').typeahead()
+    $('.typeahead').typeahead();
+
+    function checkForm()
+    {
+        var content = $('#content').val();
+        var title = $('#title').val();
+
+        if (title == '' || title == undefined) {
+            alert('服务类别名称为空！');
+            return false;
+        }
+        if (content == '' || content.length > 100) {
+            alert('服务类别描述为空！');
+            return false;
+        }
+        return true;
+    }
 </script>
 <?php require(APPPATH . 'views/footer.php');?>
