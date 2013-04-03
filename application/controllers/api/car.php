@@ -129,4 +129,21 @@ class car extends MY_Controller
 
         $this->json_output($response);
     }
+
+    /**
+     * 获取车辆级别
+     */
+    public function getCarLevel()
+    {
+        $response = array('code' => '0', 'msg' => '获取成功');
+
+        do {
+            $this->load->model('model_car', 'car');
+            $data = $this->car->getCarLevel(1000);
+            $response['data'] = $data;
+        } while (false);
+
+        $this->json_output($response);
+
+    }
 }
