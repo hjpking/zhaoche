@@ -27,7 +27,7 @@ class model_rule extends MY_Model
         $this->db->limit($limit, $offset);
         //$this->db->group_by('style_no');
 
-        return $data = $this->db->get()->result_array('rule_id');
+         return $data = $this->db->get()->result_array('rule_id');
     }
 
     /**

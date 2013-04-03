@@ -94,6 +94,8 @@ class order extends MY_Controller
             $this->load->model('model_rule', 'rule');
             //$ruleData = $this->rule->getRuleById($carType, '*', array('sid' => $serviceType));
             $ruleData = $this->rule->getRule(1, 0, '*', array('sid' => $serviceType, 'lid' => $carType, 'city_id' => $cityId));
+            foreach ($ruleData as $v) { $ruleData = $v; }
+
             //$this->load->model('model_car', 'car');
             //$carData = $this->car->getCarById($carType);
             if (!$ruleData) {

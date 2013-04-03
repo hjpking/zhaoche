@@ -165,6 +165,10 @@ class rule extends MY_Controller
         $descr = $this->input->get_post('descr');
         $ruleId = intval($this->input->get_post('rule_id'));
 
+        if (empty ($cityId) || empty ($sId) || empty ($lId) || empty ($basePrice) || empty ($kmPrice) || empty ($timePrice) || empty ($timeInt) ) {
+            show_error('参数不全!');
+        }
+
         $data = array(
             'city_id' => $cityId,
             'sid' => $sId,
@@ -179,6 +183,15 @@ class rule extends MY_Controller
         );
 
         $this->load->model('model_rule', 'rule');
+
+        if (!$ruleId) {
+            $ruleData = $this->rule->getRule(1, 0, '*', array('sid' => $sId, 'lid' => $lId, 'city_id' => $cityId));
+            if (!empty ($ruleData)) {
+                show_error('一个城市、一个服务类别、一个车辆级别只能拥有一条计费规则！');
+            }
+        }
+        //$ruleData = $this->rule->getRuleById($carType, '*', array('sid' => $serviceType));
+
         $this->rule->save($data, $ruleId);
 
         $this->load->helper('url');
