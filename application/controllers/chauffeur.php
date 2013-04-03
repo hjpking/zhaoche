@@ -96,6 +96,8 @@ class chauffeur extends MY_Controller
             'pageHtml' => $pageHtml,
             'is_del_status' => $isDelStatus,
             'chauffeur' => $chauffeur,
+            'totalNum' => $totalNum,
+            'offset' => $offset,
             'url' => '/chauffeur/index/'.$isDelStatus.'?'.http_build_query($_REQUEST),
         );
 
@@ -127,18 +129,22 @@ class chauffeur extends MY_Controller
     public function save()
     {
         $isDeleteStatus = $this->uri->segment(3, 0);
-        $userName = $this->input->get_post('username');
-        $password = $this->input->get_post('password');
-        $realname = $this->input->get_post('realname');
-        $usersex = $this->input->get_post('usersex');
-        $phone = $this->input->get_post('phone');
-        $id_card = $this->input->get_post('id_card');
-        $city = $this->input->get_post('city');
-        $car_type = $this->input->get_post('car_type');
-        $car_no = $this->input->get_post('car_no');
-        $status = $this->input->get_post('status');
-        $descr = $this->input->get_post('descr');
-        $chauffeur_id = $this->input->get_post('chauffeur_id');
+        $userName = trim($this->input->get_post('username'));
+        $password = trim($this->input->get_post('password'));
+        $realname = trim($this->input->get_post('realname'));
+        $usersex = intval($this->input->get_post('usersex'));
+        $phone = trim($this->input->get_post('phone'));
+        $id_card = trim($this->input->get_post('id_card'));
+        $city = intval($this->input->get_post('city'));
+        $car_type = intval($this->input->get_post('car_type'));
+        $car_no = trim($this->input->get_post('car_no'));
+        $status = intval($this->input->get_post('status'));
+        $descr = trim($this->input->get_post('descr'));
+        $chauffeur_id = intval($this->input->get_post('chauffeur_id'));
+
+        if (empty ($userName) || empty ($password) || empty ($phone) || empty ($city) || empty ($car_type) || empty ($car_no) ) {
+            show_error('登陆名、密码、手机号、城市、车型、车牌号为空!');
+        }
 
         $data = array(
             'cname' => $userName,
@@ -155,6 +161,11 @@ class chauffeur extends MY_Controller
         $password && $data['password'] = md5($password);
 
         $this->load->model('model_chauffeur', 'cf');
+        $cInfo = $this->cf->getChauffeurByPhone($phone);
+        if (!empty ($cInfo)) {
+            show_error('此手机号码已存在!');
+        }
+
         $this->cf->save($data, $chauffeur_id);
 
         $this->load->helper('url');

@@ -227,7 +227,7 @@
 
     //是否为手机号码
     function isMobile(value) {
-        if (/^13\d{9}$/g.test(value) || (/^15[0-35-9]\d{8}$/g.test(value)) || (/^18[05-9]\d{8}$/g.test(value))) {
+        if (/^1[3-9]\d{9}$/.test(value)) {
             return true;
         } else {
             return false;

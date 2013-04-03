@@ -15,7 +15,8 @@
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>
-                    <th>ID</th>
+                    <!--th>ID</th-->
+                    <th></th>
                     <th>名称</th>
                     <th>描述</th>
                     <th>操作</th>
@@ -24,7 +25,8 @@
                 <tbody>
                 <?php foreach ($sf_data as $v) {?>
                 <tr>
-                    <td><?=$v['sid']?></td>
+                    <!--td><?=$v['sid']?></td-->
+                    <th></th>
                     <td><?=$v['name']?></td>
                     <td><?=$v['descr']?></td>
                     <td>

@@ -141,15 +141,19 @@ class user extends MY_Controller
     {
         $isDeleteStatus = $this->uri->segment(3);
 
-        $username = $this->input->get_post('username');
-        $password = $this->input->get_post('password');
-        $realname = $this->input->get_post('realname');
-        $sex = $this->input->get_post('sex');
-        $phone = $this->input->get_post('phone');
-        $binding_type = $this->input->get_post('binding_type');
-        $status = $this->input->get_post('status');
-        $descr = $this->input->get_post('descr');
-        $uid = $this->input->get_post('uid');
+        $username = trim($this->input->get_post('username'));
+        $password = trim($this->input->get_post('password'));
+        $realname = trim($this->input->get_post('realname'));
+        $sex = intval($this->input->get_post('sex'));
+        $phone = trim($this->input->get_post('phone'));
+        $binding_type = intval($this->input->get_post('binding_type'));
+        $status = intval($this->input->get_post('status'));
+        $descr = trim($this->input->get_post('descr'));
+        $uid = intval($this->input->get_post('uid'));
+
+        if (empty ($username) || empty ($password) || empty ($phone) ) {
+            show_error('用户名、密码、手机号为空!');
+        }
 
         $data = array(
             'uname' => $username,
@@ -164,6 +168,11 @@ class user extends MY_Controller
         $password && $data['password'] = md5($password);
 
         $this->load->model('model_user', 'user');
+        $uInfo = $this->user->getUserByName($username);
+        if (!empty($uInfo)) {
+            show_error('用户名已存在！');
+        }
+
         $this->user->save($data, $uid);
 
         $this->load->helper('url');

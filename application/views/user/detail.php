@@ -9,7 +9,7 @@
             <?php require(APPPATH . 'views/sub/user_subnav.php');?>
 
             <div class="page-header">
-                <h4>司机详细信息</h4>
+                <h4>用户详细信息</h4>
             </div>
 
             <table class="table table-hover">

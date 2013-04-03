@@ -12,13 +12,13 @@
                 <h4><?=isset($isDeleteStatus) ? '修改用户' : '添加用户'?></h4>
             </div>
 
-            <form class="form-horizontal" action="<?=url('admin');?>user/save/<?=isset($isDeleteStatus) ? $isDeleteStatus : 0?>" method="post">
+            <form class="form-horizontal" action="<?=url('admin');?>user/save/<?=isset($isDeleteStatus) ? $isDeleteStatus : 0?>" method="post" onsubmit="return checkForm()">
                 <input type="hidden" name="uid" value="<?=isset ($data['uid']) ? $data['uid'] : ''?>"/>
                 <fieldset>
                     <div class="control-group">
                         <label for="input01" class="control-label">用户名</label>
                         <div class="controls">
-                            <input type="text" id="input01" class="input-xlarge" name="username" value="<?=isset ($data['uname']) ? $data['uname'] : ''?>">
+                            <input type="text" id="name" class="input-xlarge" name="username" value="<?=isset ($data['uname']) ? $data['uname'] : ''?>">
                             <p class="help-block"> 字母、数字组合，不超过32个字符。 </p>
                         </div>
                     </div>
@@ -27,7 +27,7 @@
                     <div class="control-group">
                         <label for="input01" class="control-label">用户密码</label>
                         <div class="controls">
-                            <input type="password" id="input06" class="input-xlarge" name="password">
+                            <input type="password" id="password" class="input-xlarge" name="password">
                             <p class="help-block"> 字母、数字组合，不超过32个字符。 </p>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                     <div class="control-group">
                         <label for="input01" class="control-label">真实姓名</label>
                         <div class="controls">
-                            <input type="text" id="input02" class="input-xlarge" name="realname" value="<?=isset ($data['uname']) ? $data['uname'] : ''?>">
+                            <input type="text" id="realname" class="input-xlarge" name="realname" value="<?=isset ($data['uname']) ? $data['uname'] : ''?>">
                             <!--<p class="help-block"> 字母、数字组合，不超过32个字符。 </p>-->
                         </div>
                     </div>
@@ -52,7 +52,7 @@
                                 <input type="radio" value="2" id="inlineCheckbox4" name="sex" <?=isset($data['sex']) && $data['sex'] == 2 ? 'checked="checked"' : '';?>> 女
                             </label>
                             <label class="radio inline">
-                                <input type="radio" value="0" id="inlineCheckbox5" name="sex" <?=isset($data['sex']) && $data['sex'] == '0' ? 'checked="checked"' : '';?>> 保密
+                                <input type="radio" value="0" id="inlineCheckbox5" name="sex" <?=isset($data['sex']) ? ($data['sex'] == '0' ? 'checked="checked"' : '') : 'checked="checked"';?>> 保密
                             </label>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                     <div class="control-group">
                         <label for="input01" class="control-label">手机号码</label>
                         <div class="controls">
-                            <input type="text" id="input03" class="input-xlarge" name="phone" value="<?=isset ($data['phone']) ? $data['phone'] : ''?>">
+                            <input type="text" id="phone" class="input-xlarge" name="phone" value="<?=isset ($data['phone']) ? $data['phone'] : ''?>">
                             <!--<p class="help-block"> 字母、数字组合，不超过32个字符。 </p>-->
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                     <div class="control-group">
                         <label for="select01" class="control-label">账号绑定类型</label>
                         <div class="controls">
-                            <select id="select01" class="span2" name="binding_type">
+                            <select id="binding_type" class="span2" name="binding_type">
                                 <option value="0" >选择绑定类型</option>
                                 <?php foreach ($binding_status as $k=>$v){?>
                                 <option value="<?=$k?>" <?=isset ($data['binding_type']) && $data['binding_type'] == $k ? 'selected="selected"' : ''?>><?=$v?></option>
@@ -83,7 +83,7 @@
 
                         <div class="controls">
                             <label class="radio inline">
-                                <input type="radio" value="1" id="1" name="status" <?=isset ($data['status']) && $data['status'] == 1 ? 'checked="checked"' : '';?>> 白名单
+                                <input type="radio" value="1" id="1" name="status" <?=isset ($data['status']) ? ($data['status'] == 1 ? 'checked="checked"' : '') : 'checked="checked"';?>> 白名单
                             </label>
                             <label class="radio inline">
                                 <input type="radio" value="0" id="2" name="status" <?=isset ($data['status']) && $data['status'] == '0' ? 'checked="checked"' : '';?>> 黑名单
@@ -94,7 +94,7 @@
                     <div class="control-group">
                         <label for="textarea" class="control-label">用户描述</label>
                         <div class="controls">
-                            <textarea rows="3" id="textarea" class="input-xlarge" name="descr"><?=isset ($data['descr']) ? $data['descr'] : ''?></textarea>
+                            <textarea rows="3" id="descr" class="input-xlarge" name="descr"><?=isset ($data['descr']) ? $data['descr'] : ''?></textarea>
                         </div>
                     </div>
 
@@ -110,6 +110,46 @@
     </div>
 </div>
     <script type="text/javascript">
-        $('.typeahead').typeahead()
+        $('.typeahead').typeahead();
+
+        function checkForm()
+        {
+            var name = $('#name').val();
+            var password = $('#password').val();
+            var realname = $('#realname').val();
+            var phone = $('#phone').val();
+            var bind_type = $('#bind_type').val();
+
+            if (name == '' || name == undefined) {
+                alert('用户名称为空！');
+                return false;
+            }
+            if (password == '' || password == undefined) {
+                alert('用户密码为空！');
+                return false;
+            }
+            if (realname == '' || realname == undefined) {
+                //alert('用户真实姓名为空！');
+                //return false;
+            }
+            if (phone == '' || phone == undefined || !isMobile(phone)) {
+                alert('用户手机为空或格式不对！');
+                return false;
+            }
+            if (bind_type == '' || bind_type == undefined) {
+                alert('请选择绑定状态！');
+                return false;
+            }
+            return true;
+        }
+
+        //是否为手机号码
+        function isMobile(value) {console.log(value);
+            if (/^1[3-9]\d{9}$/.test(value)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     </script>
 <?php require(APPPATH . 'views/footer.php');?>

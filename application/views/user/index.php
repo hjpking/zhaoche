@@ -52,9 +52,11 @@
                 <a href="<?=$url;?>&is_export=1" class="btn"><i class="icon-download"></i> 导出</a>
             </form>
 
+            <form action="<?=url('admin')?>user/batchUserPay" method="post">
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>
+                    <th><input id="ckbSelectAll" type="checkbox" class="chk" onclick="checkAll()"></th>
                     <th>用户ID</th>
                     <th>用户名</th>
                     <th>真实姓名</th>
@@ -69,6 +71,7 @@
                 <tbody>
                 <?php foreach ($user_info as $v){?>
                 <tr>
+                    <td><input type="checkbox" name="uid[]" class="uid" value="<?=$v['uid']?>"/></td>
                     <td><?=$v['uid']?></td>
                     <td><?=$v['uname']?></td>
                     <td><?=$v['realname']?></td>
@@ -87,38 +90,14 @@
                     </td>
                 </tr>
                 <?php }?>
-                <!--tr>
-                    <td>2</td>
-                    <td>大佛爷</td>
-                    <td>刘佛佛</td>
-                    <td>15133256598</td>
-                    <td>银行卡</td>
-                    <td>15</td>
-                    <td>白名单</td>
-                    <td>2013-01-25 13:23:25</td>
-                    <td>
-                        <a href="<?=url('admin')?>/user/detail/"><i class="icon-eye-open"></i></a>
-                        <a href="<?=url('admin')?>/user/edit/"><i class="icon-pencil"></i></a>
-                        <a href="<?=url('admin')?>/user/del/"><i class="icon-remove"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>牛牛</td>
-                    <td>牛大春</td>
-                    <td>13600128848</td>
-                    <td>银行卡</td>
-                    <td>52</td>
-                    <td>白名单</td>
-                    <td>2013-01-25 13:21:25</td>
-                    <td>
-                        <a href="<?=url('admin')?>/user/detail/"><i class="icon-eye-open"></i></a>
-                        <a href="<?=url('admin')?>/user/edit/"><i class="icon-pencil"></i></a>
-                        <a href="<?=url('admin')?>/user/del/"><i class="icon-remove"></i></a>
-                    </td>
-                </tr-->
                 </tbody>
             </table>
+            <!--
+            <div class="pagination">
+                <button type="submit" class="btn btn-primary"><i class="icon-plus icon-white"></i> 批量充值</button>
+            </div>
+            -->
+            </form>
             <div class="pagination pagination-right"><ul><?php if(isset($pageHtml)) echo $pageHtml;?></ul></div>
         </div>
     </div>
@@ -139,6 +118,16 @@
             }
             $('#status')[0].value = 0;
             $('#status_text').text('黑名单');
+        }
+
+        function checkAll()
+        {
+            var currStatus = $("#ckbSelectAll").attr("checked");
+            if (currStatus == 'checked') {
+                jQuery(".uid").attr("checked", true);
+            } else {
+                jQuery(".uid").attr("checked", false);
+            }
         }
     </script>
 <?php require(APPPATH . 'views/footer.php');?>

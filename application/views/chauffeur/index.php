@@ -78,7 +78,7 @@
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>
-                    <th>司机ID</th>
+                    <th>#</th>
                     <th>用户名</th>
                     <th>真实姓名</th>
                     <th>车型</th>
@@ -97,10 +97,10 @@
                             <td colspan="9" style="text-align: center;height: 50px;"><strong>没有相关数据</strong></td>
                           </tr>';
                 } else {
-
+                $offset = $offset + 1;
                 foreach ($car_info as $v){?>
                 <tr>
-                    <td><?=$v['chauffeur_id']?></td>
+                    <td><?=$offset?></td>
                     <td><?=$v['cname']?></td>
                     <td><?=$v['realname']?></td>
                     <td><?=isset ($car[$v['car_id']]) ? $car[$v['car_id']]['name'] : '无'?></td>
@@ -117,9 +117,12 @@
                         <?php }?>
                     </td>
                 </tr>
-                <?php } }?>
+                <?php $offset++;} }?>
                 </tbody>
             </table>
+            <div class="pagination pagination-right  well form-inline">
+                <strong><?=$is_del_status ? '已删除司机：' : '司机总数：';?><?=(empty($totalNum) ? '0' : $totalNum)?></strong>
+            </div>
 
             <div class="pagination pagination-right">
                 <ul><?php if(isset($pageHtml)) echo $pageHtml;?></ul>

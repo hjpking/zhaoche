@@ -24,17 +24,17 @@
         this.dateLimit = false;
         this.opens = 'right';
         this.cb = function () { };
-        this.format = 'MM/dd/yyyy';
+        this.format = 'yyyy/MM/dd';
         this.separator = ' - ';
         this.showWeekNumbers = false;
         this.buttonClasses = ['btn-success'];
         this.applyClass = 'btn btn-small btn-success';
         this.clearClass = 'btn btn-small';
         this.locale = {
-            applyLabel: 'Apply',
-            clearLabel:"Clear",
-            fromLabel: 'From',
-            toLabel: 'To',
+            applyLabel: '应用',
+            clearLabel:"取消",
+            fromLabel: '从',
+            toLabel: '到',
             weekLabel: 'W',
             customRangeLabel: 'Custom Range',
             daysOfWeek: Date.CultureInfo.shortestDayNames,
