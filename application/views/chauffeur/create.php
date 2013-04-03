@@ -14,6 +14,7 @@
 
             <form class="form-horizontal" action="<?=url('admin');?>chauffeur/save/<?=isset ($isDeleteStatus) ? $isDeleteStatus : ''?>" method="post" onsubmit="return checkForm()">
                 <input type="hidden" name="chauffeur_id" value="<?=isset ($data['chauffeur_id']) ? $data['chauffeur_id'] : '';?>"/>
+                <input type="hidden" name="url" value="<?=isset ($url) ? $url : '';?>"/>
                 <fieldset>
                     <div class="control-group">
                         <label for="input01" class="control-label">司机登陆名</label>
@@ -162,8 +163,8 @@
                 return false;
             }
             if (password == '' || password == undefined || password.length < 6 || password.length > 32) {
-                alert('密码为空或大于32，小于6个字符!');
-                return false;
+                //alert('密码为空或大于32，小于6个字符!');
+                //return false;
             }
             if (realName == '' || realName == undefined) {
                 alert('真实姓名为空');

@@ -141,6 +141,10 @@
                 </div>
             </div>
 
+            <div class="well form-inline">
+                <a class="btn btn-primary" type="submit" href="javascript:history.go(-1);">返回</a>
+            </div>
+
         </div>
     </div>
 </div>
@@ -149,5 +153,7 @@
         $(document).ready(function() {
             $('#reservation').daterangepicker();
         });
+
+
     </script>
 <?php require(APPPATH . 'views/footer.php');?>

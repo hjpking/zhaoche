@@ -89,7 +89,7 @@
                     <td><?=$v['create_time']?></td>
                     <td><?=$v['opera_people']?></td>
                     <td><?=$is_post[$v['is_post']]?></td>
-                    <td><?=$post_mode[$v['post_mode']]?></td>
+                    <td><?=isset ($post_mode[$v['post_mode']]) ? $post_mode[$v['post_mode']] : '默认'?></td>
                     <td><?=$v['invoice']?></td>
                     <td><?=$v['post_address']?></td>
                     <td><?=$post_status[$v['post_status']]?></td>

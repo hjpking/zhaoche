@@ -299,7 +299,7 @@ class message extends MY_Controller
     {
         $this->load->model('model_message', 'message');
         $categoryData = $this->message->getMessageCategory(1000);
-
+        //p($categoryData);
         $data = array(
             'category' => $categoryData,
             'user_type' =>config_item('user_type'),

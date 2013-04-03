@@ -27,7 +27,8 @@
                 <select class="span2" onchange="getMessageBycId(this.value)" name="cid" id="cid">
                     <option value="0" selected="selected">选择所属分类</option>
                     <?php foreach ($category as $v){?>
-                    <option value="<?=$v['cid']?>" <?=isset ($data['cid']) && $data['cid'] == $v['cid'] ? 'selected="selected"' : '';?>>
+                    <option value="<?=$v['cid']?>" <?=isset ($data['cid']) && $data['cid'] == $v['cid'] ? 'selected="selected"' : '';?>
+                        <?=($v['parent_id'] == '0' || $v['floor'] == 0) ? 'disabled="disabled"' : '';?>>
                         <?=str_repeat("&nbsp;", $v['floor'] * 8), $v['name'];?>
                     </option>
                     <?php }?>

@@ -71,8 +71,10 @@
                     </ul>
                 </div-->
                 <button type="submit" class="btn btn-primary"><i class="icon-search icon-white"></i> 搜索</button>
+                <a href="chauffeur/index/<?=isset ($is_del_status) ? $is_del_status : ''?>" class="btn"><i class="icon-home"></i> 全部</a>
 
                 <a href="<?=$url?>&is_export=1" class="btn"><i class="icon-download"></i> 导出</a>
+
             </form>
 
             <table class="table table-striped table-hover">
@@ -110,10 +112,12 @@
                     <td><?=$v['recent_order']?></td>
                     <td>
                         <a href="<?=url('admin')?>chauffeur/detail/<?=$v['chauffeur_id']?>" title="查看"><i class="icon-eye-open"></i></a>
-                        <a href="<?=url('admin')?>chauffeur/edit/<?=$is_del_status?>/<?=$v['chauffeur_id']?>" title="编辑"><i class="icon-edit"></i></a>
-                        <a href="<?=url('admin')?>chauffeur/<?=$is_del_status ? 'recycle_delete' : 'delete'?>/<?=$v['chauffeur_id']?>" title="删除"><i class="icon-remove"></i></a>
+                        <?php if (!$is_del_status){?>
+                        <a href="<?=url('admin')?>chauffeur/edit/<?=$is_del_status?>/<?=$v['chauffeur_id'].'?url='.urlencode($url)?>" title="编辑"><i class="icon-edit"></i></a>
+                        <?php }?>
+                        <a href="javascript:opera('<?=url('admin')?>chauffeur/<?=$is_del_status ? 'recycle_delete' : 'delete'?>/<?=$v['chauffeur_id'].'?url='.urlencode($url)?>')" title="删除"><i class="icon-remove"></i></a>
                         <?php if ($is_del_status){?>
-                        <a href="<?=url('admin')?>chauffeur/restore/<?=$v['chauffeur_id']?>" type="恢复"><i class="icon-share-alt"></i></a>
+                        <a href="javascript:opera('<?=url('admin')?>chauffeur/restore/<?=$v['chauffeur_id'].'?url='.urlencode($url)?>')" type="恢复"><i class="icon-share-alt"></i></a>
                         <?php }?>
                     </td>
                 </tr>
@@ -142,6 +146,31 @@
             }
             $('#status')[0].value = 0;
             $('#status_text').text('暂停服务');
+        }
+
+        function opera(url)
+        {
+            if (url == '') return false;
+
+            if (window.confirm('确定操作!')) {
+                goToUrl(url);
+            }
+        }
+
+        function goToUrl (url)
+        {
+            //url = wx.base_url+url;
+
+            url = url.split('#');
+            url = url[0];
+            /*
+             if (wx.isUrl(url) ) {
+             alert ('不是一个正确的URL地址!');
+             return false;
+             }
+             //*/
+
+            window.location.href = url;
         }
     </script>
 <?php require(APPPATH . 'views/footer.php');?>

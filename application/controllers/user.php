@@ -151,8 +151,8 @@ class user extends MY_Controller
         $descr = trim($this->input->get_post('descr'));
         $uid = intval($this->input->get_post('uid'));
 
-        if (empty ($username) || empty ($password) || empty ($phone) ) {
-            show_error('用户名、密码、手机号为空!');
+        if (empty ($username) || empty ($phone) ) {
+            show_error('用户名、手机号为空!');
         }
 
         $data = array(
@@ -168,9 +168,11 @@ class user extends MY_Controller
         $password && $data['password'] = md5($password);
 
         $this->load->model('model_user', 'user');
-        $uInfo = $this->user->getUserByName($username);
-        if (!empty($uInfo)) {
-            show_error('用户名已存在！');
+        if (!$uid) {
+            $uInfo = $this->user->getUserByName($username);
+            if (!empty($uInfo)) {
+                show_error('用户名已存在！');
+            }
         }
 
         $this->user->save($data, $uid);

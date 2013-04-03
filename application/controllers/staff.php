@@ -259,6 +259,14 @@ class staff extends MY_Controller
         );
 
         $this->load->model('model_staff', 'staff');
+        if (!$departId) {
+            $dInfo = $this->staff->getDepartment(100, 0, '*', array('name' => $name));
+            if (!empty ($dInfo)) {
+                echo '<script>alert("部门已存在!");history.go(-1);</script>';
+                exit;
+            }
+        }
+
         $this->staff->departmentSave($data, $departId);
 
         $this->load->helper('url');

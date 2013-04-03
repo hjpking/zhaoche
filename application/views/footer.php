@@ -1,5 +1,5 @@
 <div id="gototop"><a href="#"><i class="icon-plane"></i>TOP</a></div>
-<footer>
+<footer class="pagination pagination-centered">
     <p>&copy;Copyright <?=date('Y');?> 智能招车有限公司</p>
 </footer>
 </body>

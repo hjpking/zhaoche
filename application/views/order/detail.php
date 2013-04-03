@@ -32,154 +32,154 @@
                 <tr>
                     <td></td>
                     <td>所属城市：</td>
-                    <td> <?=$cityInfo[$data['city_id']]['city_name']?></td>
+                    <td> <?=isset ($cityInfo[$data['city_id']]['city_name']) ? $cityInfo[$data['city_id']]['city_name'] : ''?></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>服务类别：</td>
-                    <td> <?=$sf_info[$data['sid']]['name']?></td>
+                    <td> <?=isset ($sf_info[$data['sid']]['name']) ? $sf_info[$data['sid']]['name'] : ''?></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>车辆级别：</td>
-                    <td> <?=$carLevelInfo[$data['lid']]['name']?></td>
+                    <td> <?=isset ($carLevelInfo[$data['lid']]['name']) ? $carLevelInfo[$data['lid']]['name'] : ''?></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>订单状态：</td>
-                    <td><?=$order_status[$data['status']]?></td>
+                    <td><?=isset ($order_status[$data['status']]) ? $order_status[$data['status']] : ''?></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>用户姓名：</td>
-                    <td> <?=$data['uname']?></td>
+                    <td> <?=isset ($data['uname']) ? $data['uname'] : ''?></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>用户手机：</td>
-                    <td> <?=$data['user_phone']?></td>
+                    <td> <?=isset ($data['user_phone']) ? $data['user_phone'] : ''?></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>用户性别：</td>
-                    <td> <?=$user_sex[$data['user_sex']]?></td>
+                    <td> <?=isset ($user_sex[$data['user_sex']]) ? $user_sex[$data['user_sex']] : ''?></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>司机用户名：</td>
-                    <td> <?=$data['chauffeur_login_name']?></td>
+                    <td> <?=isset ($data['chauffeur_login_name']) ? $data['chauffeur_login_name'] : ''?></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>司机手机：</td>
-                    <td> <?=$data['chauffeur_phone']?></td>
+                    <td> <?=isset ($data['chauffeur_phone']) ? $data['chauffeur_phone'] : ''?></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>上车地点：</td>
-                    <td> <?=$data['train_address']?></td>
+                    <td> <?=isset ($data['train_address']) ? $data['train_address'] : ''?></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>下车地点：</td>
-                    <td> <?=$data['getoff_address']?></td>
+                    <td> <?=isset ($data['getoff_address']) ? $data['getoff_address'] : ''?></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>订车时间：</td>
-                    <td> <?=$data['create_time']?></td>
+                    <td> <?=isset ($data['create_time']) ? $data['create_time'] : ''?></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>上车时间：</td>
-                    <td> <?=$data['train_time']?></td>
+                    <td> <?=isset ($data['train_time']) ? $data['train_time'] : ''?></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>下车时间：</td>
-                    <td> <?=$data['getoff_time']?></td>
+                    <td> <?=isset ($data['getoff_time']) ? $data['getoff_time'] : ''?></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>总金额：</td>
-                    <td> <?=$data['amount']?> 元</td>
+                    <td> <?=isset ($data['amount']) ? $data['amount'] : ''?> 元</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>车辆租金：</td>
-                    <td> <?=$data['car_rent']?> 元</td>
+                    <td> <?=isset ($data['car_rent']) ? $data['car_rent'] : ''?> 元</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>里程费：</td>
-                    <td> <?=$data['mileage_fee']?> 元</td>
+                    <td> <?=isset ($data['mileage_fee']) ? $data['mileage_fee'] : ''?> 元</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>司机佣金：</td>
-                    <td> <?=$data['chauffeur_commission']?> 元</td>
+                    <td> <?=isset ($data['chauffeur_commission']) ? $data['chauffeur_commission'] : ''?> 元</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>调车费：</td>
-                    <td> <?=$data['adjust_fares']?> 元</td>
+                    <td> <?=isset ($data['adjust_fares']) ? $data['adjust_fares'] : ''?> 元</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>减免调车费：</td>
-                    <td> <?=$data['reduce_adjust_fares']?> 元</td>
+                    <td> <?=isset ($data['reduce_adjust_fares']) ? $data['reduce_adjust_fares'] : ''?> 元</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>起步费：</td>
-                    <td> <?=$data['start_fee']?> 元</td>
+                    <td> <?=isset ($data['start_fee']) ? $data['start_fee'] : ''?> 元</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>空驶费：</td>
-                    <td> <?=$data['kongshi_fee']?> 元</td>
+                    <td> <?=isset ($data['kongshi_fee']) ? $data['kongshi_fee'] : ''?> 元</td>
                     <td></td>
                     <td></td>
                 </tr>

@@ -22,14 +22,18 @@ class login extends CI_Controller
         $password = $this->input->get_post('password');
 
         if (empty ($username) || empty ($password)) {
-            show_error('用户名或密码为空!', 500);
+            //show_error('用户名或密码为空!', 500);
+            echo '<script>alert("用户名或密码为空!");window.location.href="/login/index";</script>';
+            exit;
         }
 
         $this->load->model('model_staff', 'staff');
         $status = $this->staff->staffLogin($username, $password);
 
         if (!$status) {
-            show_error('用户名或密码错误!', 500);
+            //show_error('用户名或密码错误!', 500);
+            echo '<script>alert("用户名或密码错误!");window.location.href="/login/index";</script>';
+            exit;
         }
 
         if ($status) {

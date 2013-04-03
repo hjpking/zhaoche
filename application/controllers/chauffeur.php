@@ -141,9 +141,10 @@ class chauffeur extends MY_Controller
         $status = intval($this->input->get_post('status'));
         $descr = trim($this->input->get_post('descr'));
         $chauffeur_id = intval($this->input->get_post('chauffeur_id'));
+        $url = $this->input->get_post('url');
 
-        if (empty ($userName) || empty ($password) || empty ($phone) || empty ($city) || empty ($car_type) || empty ($car_no) ) {
-            show_error('登陆名、密码、手机号、城市、车型、车牌号为空!');
+        if (empty ($userName) || empty ($phone) || empty ($city) || empty ($car_type) || empty ($car_no) ) {
+            show_error('登陆名、手机号、城市、车型、车牌号为空!');
         }
 
         $data = array(
@@ -161,21 +162,25 @@ class chauffeur extends MY_Controller
         $password && $data['password'] = md5($password);
 
         $this->load->model('model_chauffeur', 'cf');
-        $cInfo = $this->cf->getChauffeurByPhone($phone);
-        if (!empty ($cInfo)) {
-            show_error('此手机号码已存在!');
+        if (!$chauffeur_id) {
+            $cInfo = $this->cf->getChauffeurByPhone($phone);
+            if (!empty ($cInfo)) {
+                show_error('此手机号码已存在!');
+            }
         }
 
         $this->cf->save($data, $chauffeur_id);
 
+        $url = empty ($url) ? 'chauffeur/index/'.$isDeleteStatus : $url;
         $this->load->helper('url');
-        redirect('chauffeur/index/'.$isDeleteStatus, 'refresh');
+        redirect($url, 'refresh');
     }
 
     public function edit()
     {
         $isDeleteStatus = $this->uri->segment(3);
         $chauffeurId = $this->uri->segment(4);
+        $url = $this->input->get_post('url');
 
         $this->load->model('model_chauffeur', 'cf');
         $chauffeurData = $this->cf->getChauffeurById($chauffeurId);
@@ -192,6 +197,7 @@ class chauffeur extends MY_Controller
             'car' => $car,
             'data' => $chauffeurData,
             'isDeleteStatus' => $isDeleteStatus,
+            'url' => $url,
         );
         $this->load->view('chauffeur/create', $data);
     }
@@ -247,25 +253,29 @@ class chauffeur extends MY_Controller
 
     public function delete()
     {
-        $chauffeurId = $this->uri->segment(3, 1);
+        $chauffeurId = $this->uri->segment(3);
+        $url = $this->input->get_post('url');
 
         $this->load->model('model_chauffeur', 'cf');
 
         $this->cf->delete($chauffeurId, 1);
 
+        $url = empty ($url) ? '/chauffeur/index/0' : $url;
         $this->load->helper('url');
-        redirect('/chauffeur/index/0');
+        redirect($url);
     }
 
     public function recycle_delete()
     {
         $chauffeurId = $this->uri->segment(3, 1);
+        $url = $this->input->get_post('url');
 
         $this->load->model('model_chauffeur', 'cf');
         $this->cf->delete($chauffeurId, 0);
 
+        $url = empty ($url) ? '/chauffeur/index/1' : $url;
         $this->load->helper('url');
-        redirect('/chauffeur/index/1');
+        redirect($url);
     }
 
     public function restore()
