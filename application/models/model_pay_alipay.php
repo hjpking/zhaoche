@@ -14,7 +14,7 @@ class model_pay_alipay extends MY_Model
         $arr = array(
             'partner' => ALIPAY_PARTNER,
             'seller' => ALIPAY_SELLER,
-            'out_trade_no' => $data['pay_id'],
+            'out_trade_no' => $data['order_sn'],
             'subject' => 'account_pay',
             'body' => 'pay',
             'total_fee' => $data['amount'],
@@ -78,7 +78,7 @@ class model_pay_alipay extends MY_Model
     private function aliPaySign($data)
     {
         //读取私钥文件
-        $priKey = file_get_contents(APPPATH.'key/rsa_private_key.pem');
+        $priKey = file_get_contents(APPPATH.'key/alipay/rsa_private_key.pem');
 
         //转换为openssl密钥，必须是没有经过pkcs8转换的私钥
         $res = openssl_get_privatekey($priKey);
@@ -104,7 +104,7 @@ class model_pay_alipay extends MY_Model
     private function aliPayVerify($data, $sign)
     {
         //读取支付宝公钥文件
-        $pubKey = file_get_contents('alipay_public_key.pem');
+        $pubKey = file_get_contents(APPPATH.'key/alipay/alipay_public_key.pem');
 
         //转换为openssl格式密钥
         $res = openssl_get_publickey($pubKey);
