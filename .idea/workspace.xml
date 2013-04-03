@@ -48,7 +48,7 @@
       <file leaf-file-name="model_pay_alipay.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/models/model_pay_alipay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="45" selection-start="3988" selection-end="3988" vertical-scroll-proportion="0.8165681">
+            <state line="23" column="8" selection-start="580" selection-end="580" vertical-scroll-proportion="0.30177516">
               <folding />
             </state>
           </provider>
@@ -628,7 +628,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/model_pay_alipay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="45" selection-start="3988" selection-end="3988" vertical-scroll-proportion="0.8165681">
+        <state line="23" column="8" selection-start="580" selection-end="580" vertical-scroll-proportion="0.30177516">
           <folding />
         </state>
       </provider>

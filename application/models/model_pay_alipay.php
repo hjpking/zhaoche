@@ -21,6 +21,7 @@ class model_pay_alipay extends MY_Model
             'notify_url' => ALIPAY_NOTIFY_URL,
         );
 
+        
         $str = http_build_query($arr);
         $sign = $this->aliPaySign($str);
 
