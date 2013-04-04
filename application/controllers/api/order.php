@@ -244,7 +244,6 @@ class order extends MY_Controller
      */
     public function chauffeurOrder()
     {
-        p($_REQUEST);
         $chauffeurId = intval($this->input->get_post('chauffeur_id'));
         $startTime = $this->input->get_post('start_time');
         $endTime = $this->input->get_post('end_time');
