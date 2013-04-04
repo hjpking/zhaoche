@@ -244,6 +244,7 @@ class order extends MY_Controller
      */
     public function chauffeurOrder()
     {
+        p($_REQUEST);
         $chauffeurId = intval($this->input->get_post('chauffeur_id'));
         $startTime = $this->input->get_post('start_time');
         $endTime = $this->input->get_post('end_time');
@@ -577,6 +578,15 @@ class order extends MY_Controller
                 $response = error(10031);//确认到达失败
                 break;
             }
+
+            $rData = array(
+                'total_price' => 15000,
+                'paid' => 5000,
+                'need_pay' => 10000,
+            );
+            $response['data'] = $rData;
+
+            sendMessage($data['user_phone'], '尊敬的：'.$data['user_phone'].', 你于'.date('Y-m-d H:i').'使用智能招车服务共消费：150元');
         } while (false);
 
         $this->json_output($response);

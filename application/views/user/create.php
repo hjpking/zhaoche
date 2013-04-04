@@ -118,7 +118,7 @@
             var password = $('#password').val();
             var realname = $('#realname').val();
             var phone = $('#phone').val();
-            var bind_type = $('#bind_type').val();
+            var bind_type = $('#binding_type').val();
 
             if (name == '' || name == undefined) {
                 alert('用户名称为空！');
