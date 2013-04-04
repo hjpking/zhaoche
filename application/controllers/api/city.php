@@ -88,6 +88,8 @@ class city extends MY_Controller
             $flightData = $this->xml->createArray($xmlData);
 
             $data = isset ($flightData['avlist']['FlightInfo']) ? $flightData['avlist']['FlightInfo'] : array();
+            $data['longitude'] = '40.077415';
+            $data['latitude'] = '116.591549';
             $response['data'] = $data;
         } while (false);
 
