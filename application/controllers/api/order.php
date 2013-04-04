@@ -218,7 +218,7 @@ class order extends MY_Controller
             }
 
             $this->load->model('model_order', 'order');
-            $field = 'order_sn,city_id,chauffeur_id,uid,uname,user_phone,chauffeur_login_name,chauffeur_phone,amount,status,sid,car_time,lid,
+            $field = 'order_sn,city_id,chauffeur_id,uid,uname,user_phone,chauffeur_login_name,chauffeur_phone,amount,status,sid,car_time,lid,car_length,
                 train_address,getoff_address,train_time,getoff_time,create_time,is_invoice,payable,content,mailing_address,leave_message, train_address_desc,getoff_address_desc';
             $orderData = $this->order->getOrder($defLimit, $defOffset, $field, array('uid' => $uId));
 
@@ -274,7 +274,7 @@ class order extends MY_Controller
                 break;
             }
 
-            $field = 'order_sn,city_id,chauffeur_id,uid,uname,user_phone,chauffeur_login_name,chauffeur_phone,amount,status,sid, 
+            $field = 'order_sn,city_id,chauffeur_id,uid,uname,user_phone,chauffeur_login_name,chauffeur_phone,amount,status,sid, car_length,
                 train_address,getoff_address,train_time,getoff_time,create_time,is_invoice,payable,content,mailing_address,leave_message, train_address_desc,getoff_address_desc';
             $where = array(
                 'chauffeur_id' => $chauffeurId,
