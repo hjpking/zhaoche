@@ -55,7 +55,16 @@
       <file leaf-file-name="order.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="246" column="21" selection-start="9310" selection-end="9310" vertical-scroll-proportion="0.21385176">
+            <state line="268" column="64" selection-start="10171" selection-end="10171" vertical-scroll-proportion="0.46658567">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model_pay_alipay.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/model_pay_alipay.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="48" column="0" selection-start="1331" selection-end="1331" vertical-scroll-proportion="-15.36">
               <folding />
             </state>
           </provider>
@@ -109,8 +118,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="238" />
-    <option name="y" value="26" />
+    <option name="x" value="318" />
+    <option name="y" value="11" />
     <option name="width" value="1649" />
     <option name="height" value="1024" />
   </component>
@@ -595,7 +604,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="238" y="26" width="1649" height="1024" extended-state="0" />
+    <frame x="318" y="11" width="1649" height="1024" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -678,11 +687,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="9" selection-start="946" selection-end="946" vertical-scroll-proportion="-17.5" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/chauffeur/detail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="144" column="88" selection-start="7266" selection-end="7280" vertical-scroll-proportion="-23.083334" />
@@ -755,9 +759,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/model_pay_alipay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="0" selection-start="1331" selection-end="1331" vertical-scroll-proportion="-15.36">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="246" column="21" selection-start="9310" selection-end="9310" vertical-scroll-proportion="0.21385176">
+        <state line="268" column="64" selection-start="10171" selection-end="10171" vertical-scroll-proportion="0.46658567">
           <folding />
         </state>
       </provider>
