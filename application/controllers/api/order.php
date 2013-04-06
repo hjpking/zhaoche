@@ -403,12 +403,11 @@ class order extends MY_Controller
     {
         function cmp($a, $b)
         {
-            $a = $a['distance'];
-            $b = $b['distance'];
-            if ($a == $b) {
+            if ($a['distance'] == $b['distance']) {
                 return 0;
             }
-            return ($a < $b) ? -1 : 1;
+            
+            return ($a['distance'] < $b['distance']) ? -1 : 1;
         }
 
         $cityId = intval($this->input->get_post('city_id'));
@@ -448,21 +447,21 @@ class order extends MY_Controller
             }
 
             //对距离进行升序排序
-            //uasort($data, "cmp");
+            uasort($data, "cmp");
 
-            /*
+            //*
             //对数据进行截取
             $rData = array();
             $i = 0;
-            foreach ($data as $v) {
-                if (!isset ($v['order_sn'])) continue;
+            foreach ($data as $value) {
+                if (!isset ($value['order_sn'])) continue;
 
-                if ($offset == $i || $i < $limit) $rData[] = $v;
+                if ($offset == $i || $i < $limit) $rData[] = $value;
 
                 $i++;
             }
-            p($data);
-            */
+
+            //*/
             $response['data'] = $data;
         } while (false);
 
