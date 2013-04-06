@@ -52,11 +52,12 @@
                         } else if ($status === '0') {
                             echo '暂停服务';
                         } else {
-                            echo '服务状态';
+                            echo '全部状态';
                         }
                         ?></strong> </a>
                     <a href="#" data-toggle="dropdown" class="btn  dropdown-toggle"><span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0);" onclick="changeStatus()"><i class="icon-ok"></i> 全部状态</a></li>
                         <li><a href="javascript:void(0);" onclick="changeStatus(1)"><i class="icon-ok"></i> 正常服务</a></li>
                         <li><a href="javascript:void(0);" onclick="changeStatus(0)"><i class="icon-remove"></i> 暂停服务</a></li>
                     </ul>
@@ -71,7 +72,7 @@
                     </ul>
                 </div-->
                 <button type="submit" class="btn btn-primary"><i class="icon-search icon-white"></i> 搜索</button>
-                <a href="chauffeur/index/<?=isset ($is_del_status) ? $is_del_status : ''?>" class="btn"><i class="icon-home"></i> 全部</a>
+                <!--<a href="chauffeur/index/<?=isset ($is_del_status) ? $is_del_status : ''?>" class="btn"><i class="icon-home"></i> 全部</a>-->
 
                 <a href="<?=$url?>&is_export=1" class="btn"><i class="icon-download"></i> 导出</a>
 
@@ -139,13 +140,20 @@
 
         function changeStatus(t)
         {
-            if (t) {
-                $('#status')[0].value = 1;
-                $('#status_text').text('正常服务');
-                return;
+            switch (t) {
+                case 1:
+                    $('#status')[0].value = 1;
+                    $('#status_text').text('正常服务');
+                    break;
+                case 0:
+                    $('#status')[0].value = 0;
+                    $('#status_text').text('暂停服务');
+                    break;
+                default :
+                    $('#status')[0].value = '';
+                    $('#status_text').text('全部状态');
+                    break;
             }
-            $('#status')[0].value = 0;
-            $('#status_text').text('暂停服务');
         }
 
         function opera(url)

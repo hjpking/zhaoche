@@ -92,6 +92,7 @@ class user extends MY_Controller
             'uname' => $uname,
             'phone' => $phone,
             'status' => $status,
+            'totalNum' => $totalNum,
             'url' => '/user/index/'.$isDelStatus.'?'.http_build_query($_REQUEST),
         );
 

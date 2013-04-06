@@ -39,9 +39,10 @@
 
                 <div class="btn-group">
                     <a href="javascript:void(0);" data-toggle="dropdown" class="btn ">
-                        <strong id="status_text"><?=isset($status) && $status === '1' ? '白名单' : ($status === '0' ? '黑名单' : '用户状态')?></strong> </a>
+                        <strong id="status_text"><?=isset($status) && $status === '1' ? '白名单' : ($status === '0' ? '黑名单' : '全部')?></strong> </a>
                     <a href="#" data-toggle="dropdown" class="btn dropdown-toggle"><span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0);" onclick="changeStatus()"><i class="icon-ok"></i> 全部</a></li>
                         <li><a href="javascript:void(0);" onclick="changeStatus(1)"><i class="icon-ok"></i> 白名单</a></li>
                         <li><a href="javascript:void(0);" onclick="changeStatus(0)"><i class="icon-remove"></i> 黑名单</a></li>
                     </ul>
@@ -92,6 +93,9 @@
                 <?php }?>
                 </tbody>
             </table>
+            <div class="pagination pagination-right  well form-inline">
+                <strong><?=$isDelStatus ? '已删除用户：' : '用户总数：';?><?=(empty($totalNum) ? '0' : $totalNum)?></strong>
+            </div>
             <!--
             <div class="pagination">
                 <button type="submit" class="btn btn-primary"><i class="icon-plus icon-white"></i> 批量充值</button>
@@ -111,13 +115,20 @@
 
         function changeStatus(t)
         {
-            if (t) {
-                $('#status')[0].value = 1;
-                $('#status_text').text('白名单');
-                return;
+            switch (t) {
+                case 1:
+                    $('#status')[0].value = 1;
+                    $('#status_text').text('白名单');
+                    break;
+                case 0:
+                    $('#status')[0].value = 0;
+                    $('#status_text').text('黑名单');
+                    break;
+                default :
+                    $('#status')[0].value = '';
+                    $('#status_text').text('全部');
+                    break;
             }
-            $('#status')[0].value = 0;
-            $('#status_text').text('黑名单');
         }
 
         function checkAll()

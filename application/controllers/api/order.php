@@ -448,8 +448,9 @@ class order extends MY_Controller
             }
 
             //对距离进行升序排序
-            uasort($data, "cmp");
+            //uasort($data, "cmp");
 
+            /*
             //对数据进行截取
             $rData = array();
             $i = 0;
@@ -460,8 +461,9 @@ class order extends MY_Controller
 
                 $i++;
             }
-
-            $response['data'] = $rData;
+            p($data);
+            */
+            $response['data'] = $data;
         } while (false);
 
         $this->json_output($response);

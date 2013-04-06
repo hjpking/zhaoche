@@ -42,7 +42,7 @@
                 <div class="btn-group">
                     <a href="#" class="btn " data-toggle="dropdown"> <strong id="status_text">
                         <?php
-                        $statusText = '订单状态';
+                        $statusText = '全部';
                         if ($status === '0') {
                             $statusText = '初始';
                         } elseif ($status === '1') {
@@ -55,9 +55,10 @@
                         </strong> </a>
                     <a href="#" data-toggle="dropdown" class="btn  dropdown-toggle"><span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="javascript:void(0);" onclick="changeStatus('0')"><i class="icon-off"></i> 初始</a></li>
-                        <li><a href="javascript:void(0);" onclick="changeStatus('1')"><i class="icon-ok"></i> 已完成</a></li>
-                        <li><a href="javascript:void(0);" onclick="changeStatus('2')"><i class="icon-remove"></i> 已取消</a></li>
+                        <li><a href="javascript:void(0);" onclick="changeStatus()"><i class="icon-off"></i> 全部</a></li>
+                        <li><a href="javascript:void(0);" onclick="changeStatus(0)"><i class="icon-off"></i> 初始</a></li>
+                        <li><a href="javascript:void(0);" onclick="changeStatus(1)"><i class="icon-ok"></i> 已完成</a></li>
+                        <li><a href="javascript:void(0);" onclick="changeStatus(2)"><i class="icon-remove"></i> 已取消</a></li>
                     </ul>
                 </div>
 
@@ -125,21 +126,21 @@
     function changeStatus(t)
     {
         switch (t) {
-            case '0':
+            case 0:
                 $('#status')[0].value = 0;
                 $('#status_text').text('初始');
                 break;
-            case '1':
+            case 1:
                 $('#status')[0].value = 1;
                 $('#status_text').text('已完成');
                 break;
-            case '2':
+            case 2:
                 $('#status')[0].value = 2;
                 $('#status_text').text('已取消');
                 break;
             default :
-                $('#status')[0].value = 0;
-                $('#status_text').text('初始');
+                $('#status')[0].value = '';
+                $('#status_text').text('全部');
                 break;
         }
     }
