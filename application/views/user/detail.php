@@ -82,21 +82,21 @@
                 <tr>
                     <td></td>
                     <td>充值数量：</td>
-                    <td> <a href="#" title="查看详细"> <?=$pay_number?> </a>笔</td>
+                    <td> <a href="<?=url('admin');?>pay/index?uid=<?=$data['uid']?>" title="查看详细"> <?=$pay_number?> </a>笔</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>订单数量：</td>
-                    <td> <a href="#" title="查看详细"><?=$order_number?></a> 笔</td>
+                    <td> <a href="<?=url('admin');?>order/index?uid=<?=$data['uid']?>" title="查看详细"><?=$order_number?></a> 笔</td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>投诉/建议数量：</td>
-                    <td> <a href="#" title="查看详细"><?=$feedback_number?></a> 次</td>
+                    <td> <a href="<?=url('admin');?>feedback/index?uid=<?=$data['uid']?>" title="查看详细"><?=$feedback_number?></a> 次</td>
                     <td></td>
                     <td></td>
                 </tr>

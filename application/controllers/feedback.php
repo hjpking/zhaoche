@@ -26,12 +26,14 @@ class feedback extends MY_Controller
         $time = $this->input->get_post('time');
         $categoryId = $this->input->get_post('category_id');
         $processStatus = $this->input->get_post('process_status');
+        $uId = intval($this->input->get_post('uid'));
 
         $where = array();
         $uname && $where['uname'] = $uname;
         //$time && $where['create_time'] = $time;
         $categoryId && $where['category_id'] = $categoryId;
         ($processStatus || $processStatus === '0') && $where['process_status'] = $processStatus;
+        $uId && $where['uid'] = $uId;
 
         if ($time) {
             $eTime = explode('-', $time);

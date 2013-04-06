@@ -25,7 +25,7 @@
             $pay_code = substr($pay_code, 0, -1);
             ?>
             <form class=" well form-inline" action="<?=url('admin')?>pay/index" method="post">
-                <input type="hidden" name="pay_status" id="pay_status" value="<?=isset($status) ? $status : ''?>"/>
+                <input type="hidden" name="pay_channel" id="pay_status" value="<?=isset($pay_channel) ? $pay_channel : ''?>"/>
                 <input type="text" class="input-small" placeholder="订单号" data-provide="typeahead" name="order_sn" value="<?=isset($orderSn) ? $orderSn : ''?>"
                        data-items="4" data-source='[<?=$pay_code?>]'>
                 <input type="text" class="input-small" placeholder="用户账号" data-provide="typeahead" name="uname" value="<?=isset($uname) ? $uname : ''?>"
@@ -38,10 +38,10 @@
                     <a href="javascript:void(0);" data-toggle="dropdown" class="btn ">
                         <strong id="status_text">
                             <?php
-                            $statusText = '充值方式';
-                            if ($status == '1') {
+                            $statusText = '全部';
+                            if ($pay_channel == '1') {
                                 $statusText = '支付宝';
-                            } elseif ($status == '2') {
+                            } elseif ($pay_channel == '2') {
                                 $statusText = '银行卡';
                             }
                             echo $statusText;
@@ -49,6 +49,7 @@
                             </strong> </a>
                     <a href="javascript:void(0);" data-toggle="dropdown" class="btn dropdown-toggle"><span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0);" onclick="changeStatus()"> 全部</a></li>
                         <li><a href="javascript:void(0);" onclick="changeStatus(2)"> 银行卡</a></li>
                         <li><a href="javascript:void(0);" onclick="changeStatus(1)"> 支付宝</a></li>
                     </ul>
@@ -129,8 +130,8 @@
                 $('#status_text').text('银行卡');
                 break;
             default :
-                $('#pay_status')[0].value = 1;
-                $('#status_text').text('支付宝');
+                $('#pay_status')[0].value = '';
+                $('#status_text').text('全部');
                 break;
         }
     }

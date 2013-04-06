@@ -26,11 +26,13 @@ class order extends MY_Controller
         $time = $this->input->get_post('time');
         $status = $this->input->get_post('status');
         $isExport = $this->input->get_post('is_export');
+        $uId = intval($this->input->get_post('uid'));
 
         $where = array();
         $orderSn && $where['order_sn'] = $orderSn;
         //$time && $where['city_id'] = $time;
         ($status || $status === '0') && $where['status'] = $status;
+        $uId && $where['uid'] = $uId;
 
         if ($time) {
             $eTime = explode('-', $time);//echo $eTime[0].'<br>';p(date('Y-m-d H:i:s', strtotime($eTime[0])));

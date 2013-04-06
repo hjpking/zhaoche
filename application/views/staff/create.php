@@ -21,8 +21,8 @@
                         <label for="input01" class="control-label">登陆名 <strong style="color: red;">*</strong></label>
                         <div class="controls">
                             <input type="text" class="input-xlarge" name="login_name" id="login_name"
-                                   value="<?=isset ($data['login_name']) ? $data['login_name'] : ''?>">
-                            <p class="help-block"> 字母、数字组合，不超过32个字符。 </p>
+                                   value="<?=isset ($data['login_name']) ? $data['login_name'] : ''?>" onkeypress="return limitString(this)">
+                            <p class="help-block"> 字母、数字组合，不超过32个字。 </p>
                         </div>
                     </div>
 
@@ -30,8 +30,8 @@
                     <div class="control-group">
                         <label for="input01" class="control-label">登陆密码 <strong style="color: red;">*</strong></label>
                         <div class="controls">
-                            <input type="password" id="password" class="input-xlarge" name="password">
-                            <p class="help-block"> 字母、数字组合，不超过32个字符。 </p>
+                            <input type="password" id="password" class="input-xlarge" name="password" onkeypress="return limitString(this)">
+                            <p class="help-block"> 字母、数字组合，不超过32个字。 </p>
                         </div>
                     </div>
                     <?php }?>
@@ -262,6 +262,14 @@
     function switchs(v)
     {
         $('.tr_'+v).toggle();
+    }
+
+    function limitString(t)
+    {
+        if (t.value.length >= 32) {
+            return false;
+        }
+        return true;
     }
 </script>
 <?php require(APPPATH . 'views/footer.php');?>

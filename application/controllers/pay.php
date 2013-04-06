@@ -25,14 +25,16 @@ class pay extends MY_Controller
         $orderSn = $this->input->get_post('order_sn');
         $uname = $this->input->get_post('uname');
         $time = $this->input->get_post('time');
-        $pay_status = $this->input->get_post('pay_status');
+        $pay_channel = $this->input->get_post('pay_channel');
         $isExport = $this->input->get_post('is_export');
+        $uId = intval($this->input->get_post('uid'));
 
         $where = array();
         $orderSn && $where['pay_id'] = $orderSn;
         //$time && $where['create_time'] = $time;
-        $pay_status && $where['pay_status'] = $pay_status;
+        $pay_channel && $where['pay_channel'] = $pay_channel;
         $uname && $where['uname'] = $uname;
+        $uId && $where['uid'] = $uId;
 
         if ($time) {
             $eTime = explode('-', $time);
@@ -93,7 +95,7 @@ class pay extends MY_Controller
         $data = array(
             'orderSn' => $orderSn,
             'time' => $time,
-            'status' => $pay_status,
+            'pay_channel' => $pay_channel,
             'uname' => $uname,
             'pageHtml' => $pageHtml,
             'pay' => $payInfo,

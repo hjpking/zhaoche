@@ -34,7 +34,7 @@
                 <div class="btn-group">
                     <a href="#" class="btn " data-toggle="dropdown"> <strong id="category_id_text">
                         <?php
-                        $categoryText = '分类';
+                        $categoryText = '全部';
                         if ($categoryId == '1') {
                             $categoryText = '投诉';
                         } elseif ($categoryId == '2') {
@@ -45,6 +45,7 @@
                         </strong> </a>
                     <a href="javascript:void(0);" data-toggle="dropdown" class="btn  dropdown-toggle"><span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0);" onclick="changeCategory()"><i class="icon-ok"></i> 全部</a></li>
                         <li><a href="javascript:void(0);" onclick="changeCategory(1)"><i class="icon-ok"></i> 投诉</a></li>
                         <li><a href="javascript:void(0);" onclick="changeCategory(2)"><i class="icon-remove"></i> 建议</a></li>
                     </ul>
@@ -52,7 +53,7 @@
                 <div class="btn-group">
                     <a href="javascript:void(0);" class="btn " data-toggle="dropdown"> <strong id="process_status_text">
                         <?php
-                        $processText = '处理状态';
+                        $processText = '全部';
                         if ($processStatus === '0') {
                             $processText = '未处理';
                         } elseif ($processStatus === '1') {
@@ -63,6 +64,7 @@
                         </strong> </a>
                     <a href="javascript:void(0);" data-toggle="dropdown" class="btn  dropdown-toggle"><span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0);" onclick="processStatus()"><i class="icon-ok"></i> 全部</a></li>
                         <li><a href="javascript:void(0);" onclick="processStatus(0)"><i class="icon-ok"></i> 未处理</a></li>
                         <li><a href="javascript:void(0);" onclick="processStatus(1)"><i class="icon-remove"></i> 已处理</a></li>
                     </ul>
@@ -170,20 +172,27 @@
                 $('#category_id_text').text('建议');
                 break;
             default :
-                $('#category_id')[0].value = 1;
-                $('#category_id_text').text('投诉');
+                $('#category_id')[0].value = '';
+                $('#category_id_text').text('全部');
                 break;
         }
     }
 
     function processStatus(t)
     {
-        if (t) {
-            $('#process_status')[0].value = 1;
-            $('#process_status_text').text('已处理');
-        } else {
-            $('#process_status')[0].value = 0;
-            $('#process_status_text').text('未处理');
+        switch (t) {
+            case 1:
+                $('#category_id')[0].value = 1;
+                $('#category_id_text').text('已处理');
+                break;
+            case 0:
+                $('#category_id')[0].value = 1;
+                $('#category_id_text').text('未处理');
+                break;
+            default :
+                $('#process_status')[0].value = '';
+                $('#process_status_text').text('全部');
+                break;
         }
     }
 </script>

@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
 <title>Error</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <link href="<?php echo url('admin');?>css/bootstrap.css" rel="stylesheet">
+    <link href="<?php echo url('admin');?>css/daterangepicker.css" rel="stylesheet">
+    <script src="<?=url('static')?>js/jquery.js"></script>
+    <script src="<?=url('static')?>js/bootstrap.js"></script>
+    <script src="<?=url('static')?>js/bootstrap-typeahead.js"></script>
+    <script src="<?=url('static')?>js/bootstrap-modal.js"></script>
+    <script src="<?=url('static')?>js/date.js"></script>
+    <script src="<?=url('static')?>js/daterangepicker.js"></script>
 <style type="text/css">
 
 ::selection{ background-color: #E13300; color: white; }
@@ -57,6 +66,10 @@ p {
 	<div id="container">
 		<h1><?php echo $heading; ?></h1>
 		<?php echo $message; ?>
+        <br/>&nbsp;&nbsp;
+        <a href="javascript:history.go(-1);" type="submit" class="btn btn-primary">返回</a>
+        <br/><br/>
 	</div>
+
 </body>
 </html>

@@ -95,14 +95,14 @@
                 <tr>
                     <td></td>
                     <td>上车地点：</td>
-                    <td> <?=isset ($data['train_address']) ? $data['train_address'] : ''?></td>
+                    <td> <?=isset ($data['train_address']) ? $data['train_address_desc'] : ''?></td>
                     <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>下车地点：</td>
-                    <td> <?=isset ($data['getoff_address']) ? $data['getoff_address'] : ''?></td>
+                    <td> <?=isset ($data['getoff_address']) ? $data['getoff_address_desc'] : ''?></td>
                     <td></td>
                     <td></td>
                 </tr>

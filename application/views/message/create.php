@@ -40,7 +40,7 @@
                         <label for="textarea" class="control-label">消息内容</label>
                         <div class="controls">
                             <textarea rows="3" id="content" class="input-xlarge" name="content" onkeydown="return limitChars('content', 100, 'content_notice')" onkeypress="return limitChars('content', 100, 'content_notice')" size="100" maxlength="100"><?=isset ($data['content']) ? $data['content'] : ''?></textarea>
-                            <p class="help-block" id="content_notice"> 消息字数限制为100个字符。 </p>
+                            <p class="help-block" id="content_notice"> 消息字数限制为100个字。 </p>
                         </div>
                     </div>
 
