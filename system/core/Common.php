@@ -695,7 +695,7 @@ function vPost($url, $data)
 //发送短信
 function sendMessage($phoneNumber, $content, $taskName = '')
 {
-    /*/
+    //
     $data = array(
         'userid' => '272',
         'account' => 'PF091',
