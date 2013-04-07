@@ -68,13 +68,30 @@
                     <div class="control-group">
                         <label for="select01" class="control-label">账号绑定类型</label>
                         <div class="controls">
-                            <select id="binding_type" class="span2" name="binding_type">
+                            <select id="binding_type" class="span2" name="binding_type[]" multiple="multiple">
                                 <option value="0" >选择绑定类型</option>
-                                <?php foreach ($binding_status as $k=>$v){?>
-                                <option value="<?=$k?>" <?=isset ($data['binding_type']) && $data['binding_type'] == $k ? 'selected="selected"' : ''?>><?=$v?></option>
+                                <?php foreach ($binding_status as $k=>$v){
+                                    if (isset ($data['binding_type']) && empty ($k)) {
+                                        continue;
+                                    }
+                                ?>
+                                <option value="<?=$k?>"
+                                    <?php
+                                    if (isset ($data['binding_type'])) {
+                                        $tmpArr = array();
+                                        $arr = explode(',', $data['binding_type']);
+                                        foreach ($arr as $aav) {
+                                            if ($aav) $tmpArr[] = $aav;
+                                        }
+                                        if (isset ($data['binding_type'])) {
+                                            echo in_array($k, $tmpArr) ? 'selected="selected"' : '';
+                                        }
+                                    }
+                                    ?>><?=$v?></option>
                                 <?php }?>
                                 <!--option value="类别" >支付宝</option-->
                             </select>
+                            <p class="help-block"> 按Ctrl键，可多选。 </p>
                         </div>
                     </div>
 
@@ -125,8 +142,8 @@
                 return false;
             }
             if (password == '' || password == undefined) {
-                alert('用户密码为空！');
-                return false;
+                //alert('用户密码为空！');
+                //return false;
             }
             if (realname == '' || realname == undefined) {
                 //alert('用户真实姓名为空！');

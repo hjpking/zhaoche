@@ -147,7 +147,8 @@ class user extends MY_Controller
         $realname = trim($this->input->get_post('realname'));
         $sex = intval($this->input->get_post('sex'));
         $phone = trim($this->input->get_post('phone'));
-        $binding_type = intval($this->input->get_post('binding_type'));
+        $binding_type = $this->input->get_post('binding_type');
+        $binding_type = implode(',', $binding_type);
         $status = intval($this->input->get_post('status'));
         $descr = trim($this->input->get_post('descr'));
         $uid = intval($this->input->get_post('uid'));

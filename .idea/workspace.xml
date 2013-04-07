@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a24abf45-d036-4377-bc30-f6c86df0e96e" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-02.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/core/Common.php" afterPath="$PROJECT_DIR$/system/core/Common.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/pay/batch_user_pay.php" afterPath="$PROJECT_DIR$/application/views/pay/batch_user_pay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/pay/be_user_pay.php" afterPath="$PROJECT_DIR$/application/views/pay/be_user_pay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/car.php" afterPath="$PROJECT_DIR$/application/controllers/api/car.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/chauffeur.php" afterPath="$PROJECT_DIR$/application/controllers/chauffeur.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/chauffeur/index.php" afterPath="$PROJECT_DIR$/application/views/chauffeur/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user/create.php" afterPath="$PROJECT_DIR$/application/views/user/create.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user/index.php" afterPath="$PROJECT_DIR$/application/views/user/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/pay/user_pay.php" afterPath="$PROJECT_DIR$/application/views/pay/user_pay.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/user.php" afterPath="$PROJECT_DIR$/application/controllers/user.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zhaoche.iws" />
@@ -35,9 +30,9 @@
     <file path="/car_level_create.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364972963758" ignored="false" />
     <file path="/car.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365299007533" ignored="false" />
     <file path="/rule.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364996494531" ignored="false" />
-    <file path="/create.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365260188158" ignored="false" />
-    <file path="/user.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364980902934" ignored="false" />
-    <file path="/index.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365302787890" ignored="false" />
+    <file path="/create.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365310007674" ignored="false" />
+    <file path="/user.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365309160768" ignored="false" />
+    <file path="/index.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365308983498" ignored="false" />
     <file path="/login.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364981587270" ignored="false" />
     <file path="/footer.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364982048165" ignored="false" />
     <file path="/staff.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364982922893" ignored="false" />
@@ -87,23 +82,54 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="batch_user_pay.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="batch_user_pay.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/pay/batch_user_pay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.46153846">
+            <state line="41" column="26" selection-start="1940" selection-end="1940" vertical-scroll-proportion="-25.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/user/create.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="60" selection-start="4753" selection-end="4753" vertical-scroll-proportion="0.69350964">
+              <folding>
+                <marker date="1365310025645" expanded="true" signature="5593:5879" placeholder="..." />
+                <marker date="1365310025645" expanded="true" signature="5722:5879" placeholder="..." />
+                <marker date="1365310025645" expanded="true" signature="5779:5879" placeholder="..." />
+                <marker date="1365310025645" expanded="true" signature="6065:6165" placeholder="..." />
+                <marker date="1365310025645" expanded="true" signature="6380:6617" placeholder="..." />
+                <marker date="1365310025645" expanded="true" signature="6508:6617" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="364" column="5" selection-start="12932" selection-end="12948" vertical-scroll-proportion="-1.875">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/chauffeur/index.php">
+        <entry file="file://$PROJECT_DIR$/application/views/user/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="23" selection-start="9296" selection-end="9296" vertical-scroll-proportion="-27.791666">
-              <folding>
-                <marker date="1365304419633" expanded="true" signature="5115:5261" placeholder="..." />
-                <marker date="1365304419633" expanded="false" signature="5168:5200" placeholder="..." />
-              </folding>
+            <state line="81" column="38" selection-start="4112" selection-end="4119" vertical-scroll-proportion="-18.166666">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/user.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="129" column="0" selection-start="4540" selection-end="4540" vertical-scroll-proportion="-9.375">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -126,9 +152,7 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/controllers/feedback.php" />
         <option value="$PROJECT_DIR$/application/views/user/detail.php" />
-        <option value="$PROJECT_DIR$/application/views/user/create.php" />
         <option value="$PROJECT_DIR$/application/views/staff/create.php" />
         <option value="$PROJECT_DIR$/application/views/chauffeur/create.php" />
         <option value="$PROJECT_DIR$/application/views/message/create.php" />
@@ -136,19 +160,21 @@
         <option value="$PROJECT_DIR$/application/errors/error_general.php" />
         <option value="$PROJECT_DIR$/system/core/Common.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/car.php" />
-        <option value="$PROJECT_DIR$/application/views/user/index.php" />
         <option value="$PROJECT_DIR$/application/controllers/chauffeur.php" />
         <option value="$PROJECT_DIR$/application/views/chauffeur/index.php" />
         <option value="$PROJECT_DIR$/application/views/pay/be_user_pay.php" />
         <option value="$PROJECT_DIR$/application/views/pay/user_pay.php" />
         <option value="$PROJECT_DIR$/application/views/pay/batch_user_pay.php" />
+        <option value="$PROJECT_DIR$/application/views/user/index.php" />
+        <option value="$PROJECT_DIR$/application/controllers/user.php" />
+        <option value="$PROJECT_DIR$/application/views/user/create.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="302" />
-    <option name="y" value="65" />
+    <option name="x" value="246" />
+    <option name="y" value="62" />
     <option name="width" value="1649" />
     <option name="height" value="1024" />
   </component>
@@ -523,7 +549,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="302" y="65" width="1649" height="1024" extended-state="0" />
+    <frame x="246" y="62" width="1649" height="1024" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -606,21 +632,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/city/useful_create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="11.52" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/message/category_create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/message/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="83" selection-start="2501" selection-end="2501" vertical-scroll-proportion="-19.2" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/rule/create.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="88" column="34" selection-start="4826" selection-end="4826" vertical-scroll-proportion="0.31105712" />
@@ -675,23 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="142" column="0" selection-start="6619" selection-end="6619" vertical-scroll-proportion="0.83774036">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/chauffeur/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="23" selection-start="9296" selection-end="9296" vertical-scroll-proportion="-27.791666">
-          <folding>
-            <marker date="1365304419633" expanded="true" signature="5115:5261" placeholder="..." />
-            <marker date="1365304419633" expanded="false" signature="5168:5200" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pay/be_user_pay.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="62" column="31" selection-start="3234" selection-end="3234" vertical-scroll-proportion="-14.041667">
@@ -710,8 +704,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pay/batch_user_pay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="1118" selection-end="1118" vertical-scroll-proportion="0.46153846">
+        <state line="41" column="26" selection-start="1940" selection-end="1940" vertical-scroll-proportion="-25.625">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/chauffeur/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="207" column="23" selection-start="9296" selection-end="9296" vertical-scroll-proportion="0.8016827">
+          <folding>
+            <marker date="1365304419633" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365304419633" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="0" selection-start="4540" selection-end="4540" vertical-scroll-proportion="-9.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="364" column="5" selection-start="12932" selection-end="12948" vertical-scroll-proportion="-1.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="38" selection-start="4112" selection-end="4119" vertical-scroll-proportion="-18.166666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="60" selection-start="4753" selection-end="4753" vertical-scroll-proportion="0.69350964">
+          <folding>
+            <marker date="1365310025645" expanded="true" signature="5593:5879" placeholder="..." />
+            <marker date="1365310025645" expanded="true" signature="5722:5879" placeholder="..." />
+            <marker date="1365310025645" expanded="true" signature="5779:5879" placeholder="..." />
+            <marker date="1365310025645" expanded="true" signature="6065:6165" placeholder="..." />
+            <marker date="1365310025645" expanded="true" signature="6380:6617" placeholder="..." />
+            <marker date="1365310025645" expanded="true" signature="6508:6617" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

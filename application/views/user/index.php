@@ -77,7 +77,15 @@
                     <td><?=$v['uname']?></td>
                     <td><?=$v['realname']?></td>
                     <td><?=$v['phone']?></td>
-                    <td><?=$binding_status[$v['binding_type']]?></td>
+                    <td><?php
+                        $str = '';
+                        $arr = explode(',', $v['binding_type']);
+                        foreach ($arr as $av) {
+                            if (empty ($av)) continue;
+                            $str .= $binding_status[$av].'/';
+                        }
+                        echo substr($str, 0, -1);
+                        ?></td>
                     <td><?=fPrice($v['amount'])?>元</td>
                     <td><?=$v['status'] ? '白名单' : '黑名单'?></td>
                     <td><?=$v['create_time']?></td>
