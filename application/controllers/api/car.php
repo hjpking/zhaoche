@@ -8,6 +8,10 @@
  */
 class car extends MY_Controller
 {
+    public function test()
+    {
+        echo sendMessage('13811508022', '王振生收');
+    }
     /**39.903021,116.440487
      * 获取周围车辆 -- 通过GPS
      */

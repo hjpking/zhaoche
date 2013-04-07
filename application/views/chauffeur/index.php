@@ -1,6 +1,6 @@
 <?php require(APPPATH . 'views/header.php');?>
 <?php require(APPPATH . 'views/navbar.php');?>
-<div class="container-fluid" >
+<div class="container-fluid" xmlns="http://www.w3.org/1999/html">
     <div class="row-fluid">
         <div class="span2">
             <?php require(APPPATH . 'views/left/chauffeur_leftnav.php');?>
@@ -78,9 +78,11 @@
 
             </form>
 
+            <form action="<?=url('admin')?>chauffeur/batch_delete/<?=$is_del_status?>" method="post" onsubmit="return checkBatchForm()">
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>
+                    <th><input id="ckbSelectAll" type="checkbox" class="chk" onclick="checkAll()"></th>
                     <th>#</th>
                     <th>用户名</th>
                     <th>真实姓名</th>
@@ -103,6 +105,7 @@
                 $offset = $offset + 1;
                 foreach ($car_info as $v){?>
                 <tr>
+                    <td><input type="checkbox" name="chauffeur_id[]" class="chauffeur_id" value="<?=$v['chauffeur_id']?>"/></td>
                     <td><?=$offset?></td>
                     <td><?=$v['cname']?></td>
                     <td><?=$v['realname']?></td>
@@ -125,9 +128,12 @@
                 <?php $offset++;} }?>
                 </tbody>
             </table>
-            <div class="pagination pagination-right  well form-inline">
-                <strong><?=$is_del_status ? '已删除司机：' : '司机总数：';?><?=(empty($totalNum) ? '0' : $totalNum)?></strong>
+
+            <div class="pagination well form-inline">
+                <button type="submit" class="btn btn-primary"><i class="icon-search icon-white"></i> 批量删除 </button>
+                <strong class="pull-right"><?=$is_del_status ? '已删除司机：' : '司机总数：';?><?=(empty($totalNum) ? '0' : $totalNum)?></strong>
             </div>
+            </form>
 
             <div class="pagination pagination-right">
                 <ul><?php if(isset($pageHtml)) echo $pageHtml;?></ul>
@@ -171,14 +177,36 @@
 
             url = url.split('#');
             url = url[0];
-            /*
-             if (wx.isUrl(url) ) {
-             alert ('不是一个正确的URL地址!');
-             return false;
-             }
-             //*/
 
             window.location.href = url;
+        }
+
+        function checkAll()
+        {
+            var currStatus = $("#ckbSelectAll").attr("checked");
+            if (currStatus == 'checked') {
+                jQuery(".chauffeur_id").attr("checked", true);
+            } else {
+                jQuery(".chauffeur_id").attr("checked", false);
+            }
+        }
+
+        function checkBatchForm()
+        {
+            var checkStatus = false;
+
+            $('.chauffeur_id').each(function(k,v){
+                //console.log(v.checked);
+                if (v.checked) {
+                    checkStatus = true;
+                }
+            })
+            //var a = $('.chauffeur_id');
+
+            if (checkStatus) return true;
+
+            alert('请选择要删除的司机！');
+            return false;
         }
     </script>
 <?php require(APPPATH . 'views/footer.php');?>

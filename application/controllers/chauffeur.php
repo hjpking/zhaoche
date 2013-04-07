@@ -271,9 +271,32 @@ class chauffeur extends MY_Controller
         $url = $this->input->get_post('url');
 
         $this->load->model('model_chauffeur', 'cf');
+
         $this->cf->delete($chauffeurId, 0);
 
         $url = empty ($url) ? '/chauffeur/index/1' : $url;
+        $this->load->helper('url');
+        redirect($url);
+    }
+
+    public function batch_delete()
+    {
+        $deleteStatus = $this->uri->segment(3);
+        $chauffeurId = $this->input->get_post('chauffeur_id');
+        $url = $this->input->get_post('url');
+
+        if (empty ($chauffeurId) || !is_array($chauffeurId)) {
+            show_error('未选择要删除的司机！');
+        }
+
+        $s = $deleteStatus ? 0 : 1;
+        $this->load->model('model_chauffeur', 'cf');
+
+        foreach ($chauffeurId as $v) {
+            $this->cf->delete($v, $s);
+        }
+
+        $url = empty ($url) ? '/chauffeur/index/'.$deleteStatus : $url;
         $this->load->helper('url');
         redirect($url);
     }

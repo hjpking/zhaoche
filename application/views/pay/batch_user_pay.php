@@ -29,7 +29,7 @@
                         <label for="input01" class="control-label">充值金额 </label>
                         <div class="controls">
                             <div class="input-append">
-                                <input class="span12" type="text" name="pay_amount" onkeyup="this.value=this.value.replace(/\D/g,'')">
+                                <input class="span12" type="text" name="pay_amount" id="pay_amount" onkeyup="this.value=this.value.replace(/\D/g,'')">
                                 <span class="add-on">元</span>
                             </div>
                             <p class="help-block"> 充值金额不能超过20000元。 </p>
@@ -70,6 +70,21 @@
         } else {
             jQuery(".uid").attr("checked", false);
         }
+    }
+
+    function checkForm()
+    {
+        var payAmount = $('#pay_amount').val();
+        if (payAmount == '' || payAmount == undefined || payAmount < 0) {
+            alert('请输入充值金额！');
+            return false;
+        }
+
+        if (window.confirm('确定要进行充值！')) {
+            return true;
+        }
+
+        return false;
     }
 </script>
 <?php require(APPPATH . 'views/footer.php');?>

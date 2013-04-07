@@ -50,7 +50,7 @@
                 <button type="submit" class="btn btn-primary"><i class="icon-search icon-white"></i> 搜索</button>
             </form>
 
-            <form action="<?=url('admin')?>pay/batchUserPay" method="post">
+            <form action="<?=url('admin')?>pay/batchUserPay" method="post" onsubmit="return checkBatchForm()">
             <table class="table table-striped table-hover">
                 <thead>
                 <tr>
@@ -118,6 +118,23 @@
             } else {
                 jQuery(".uid").attr("checked", false);
             }
+        }
+        function checkBatchForm()
+        {
+            var checkStatus = false;
+
+            $('.uid').each(function(k,v){
+                //console.log(v.checked);
+                if (v.checked) {
+                    checkStatus = true;
+                }
+            })
+            //var a = $('.chauffeur_id');
+
+            if (checkStatus) return true;
+
+            alert('请选择要充值用户！');
+            return false;
         }
     </script>
 <?php require(APPPATH . 'views/footer.php');?>

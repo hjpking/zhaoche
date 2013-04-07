@@ -696,6 +696,21 @@ function vPost($url, $data)
 function sendMessage($phoneNumber, $content, $taskName = '')
 {
     $data = array(
+        'userid' => '272',
+        'account' => 'PF091',
+        'password' => 'abc12345',
+        'mobile' => $phoneNumber,
+        'content' => $content,
+        'sendTime' => date('Y-m-d H:i:s', TIMESTAMP),
+        'checkcontent' => '0',
+        'taskName' => $taskName,
+        'countnumber' => 1,
+        'mobilenumber' => 1,
+        'telephonenumber' => 0,
+    );
+
+    return vPost('http://p1.ipyy.com:8888/sms.aspx?action=send', http_build_query($data));
+    $data = array(
         'action' => 'send',
         'userid' => M_ID,
         'account' => M_ACCOUNT,

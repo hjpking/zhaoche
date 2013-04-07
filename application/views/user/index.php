@@ -140,5 +140,6 @@
                 jQuery(".uid").attr("checked", false);
             }
         }
+
     </script>
 <?php require(APPPATH . 'views/footer.php');?>
