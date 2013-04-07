@@ -87,6 +87,7 @@
                     <th>用户名</th>
                     <th>真实姓名</th>
                     <th>车型</th>
+                    <th>车颜色</th>
                     <th>所在城市</th>
                     <th>手机号</th>
                     <th>服务状态</th>
@@ -110,6 +111,7 @@
                     <td><?=$v['cname']?></td>
                     <td><?=$v['realname']?></td>
                     <td><?=isset ($car[$v['car_id']]) ? $car[$v['car_id']]['name'] : '无'?></td>
+                    <td><?=$color[$v['color_id']]['name']?></td>
                     <td><?=isset ($city[$v['city_id']]) ? $city[$v['city_id']]['city_name'] : '未知'?></td>
                     <td><?=$v['phone']?></td>
                     <td><?=$v['status'] ? '正常服务' : '暂时服务'?></td>

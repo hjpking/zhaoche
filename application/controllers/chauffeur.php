@@ -99,6 +99,7 @@ class chauffeur extends MY_Controller
             'totalNum' => $totalNum,
             'offset' => $offset,
             'url' => '/chauffeur/index/'.$isDelStatus.'?'.http_build_query($_REQUEST),
+            'color' => config_item('color'),
         );
 
         if ($isExport) {
@@ -123,7 +124,7 @@ class chauffeur extends MY_Controller
         $city = $this->city->getCity(10000, 0, '*', array('is_del' => '0'));
         $car = $this->car->getCar(10000);
 
-        $this->load->view('chauffeur/create', array('city'=> $city, 'car' => $car));
+        $this->load->view('chauffeur/create', array('city'=> $city, 'car' => $car,'color' => config_item('color'),));
     }
 
     public function save()
@@ -141,6 +142,7 @@ class chauffeur extends MY_Controller
         $status = intval($this->input->get_post('status'));
         $descr = trim($this->input->get_post('descr'));
         $chauffeur_id = intval($this->input->get_post('chauffeur_id'));
+        $colorId = intval($this->input->get_post('color_id'));
         $url = $this->input->get_post('url');
 
         if (empty ($userName) || empty ($phone) || empty ($city) || empty ($car_type) || empty ($car_no) ) {
@@ -155,6 +157,7 @@ class chauffeur extends MY_Controller
             'id_card' => $id_card,
             'city_id' => $city,
             'car_id' => $car_type,
+            'color_id' => $colorId,
             'car_no' => $car_no,
             'status' => $status,
             'descr' => $descr,
@@ -198,6 +201,7 @@ class chauffeur extends MY_Controller
             'data' => $chauffeurData,
             'isDeleteStatus' => $isDeleteStatus,
             'url' => $url,
+            'color' => config_item('color'),
         );
         $this->load->view('chauffeur/create', $data);
     }
@@ -236,6 +240,7 @@ class chauffeur extends MY_Controller
             'time' => $time,
             'order_status' => $orderStatus,
             'url' => '/chauffeur/detail?'.http_build_query($_REQUEST),
+            'color' => config_item('color'),
         );
 
         if ($isExport) {

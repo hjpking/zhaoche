@@ -507,6 +507,18 @@ $config['pay_channel'] = array(
     '2' => 'unionpay',
 );
 
+$config['color'] = array(
+    '1' => array('name' => '红色', 'code' => '#FF0000;', 'font_code' => '#ffffff;'),
+    '2' => array('name' => '黑色', 'code' => '#000000;', 'font_code' => '#ffffff;'),
+    '3' => array('name' => '蓝色', 'code' => '#0000FF;', 'font_code' => '#ffffff;'),
+    '4' => array('name' => '黄色', 'code' => '#FFFF00;', 'font_code' => '#000000;'),
+    '5' => array('name' => '银色', 'code' => '#E6E8FA;', 'font_code' => '#000000;'),
+    '6' => array('name' => '棕色', 'code' => '#A67D3D;', 'font_code' => '#ffffff;'),
+    '7' => array('name' => '紫色', 'code' => '#CC33CC;', 'font_code' => '#ffffff;'),
+    '8' => array('name' => '白色', 'code' => '#ffffff;', 'font_code' => '#000000;'),
+    '9' => array('name' => '绿色', 'code' => '#00FF00;', 'font_code' => '#000000;'),
+);
+
 //支付宝配置信息
 define('ALIPAY_PARTNER', '2088901264408851');//合作伙伴ID
 define('ALIPAY_SELLER', 'meiyi@meiyiad.com');//签约支付宝账号或卖家支付宝帐户
@@ -525,6 +537,14 @@ define('UNIONPAY_MY_PUBLIC_KEY', APPPATH.'key/unionpay_test/898000000000002.cer'
 define('UNIONPAY_MY_PRIVATE_KEY', APPPATH.'key/unionpay_test/898000000000002.p12');//商户私钥
 define('UNIONPAY_MY_PRIKEY_PASSWORD', '898000000000002');//商户私钥密码
 define('UNIONPAY_NOTIFY_URL', $config['base_url'].'api/pay/payBack');//回调地址
+
+
+//应用名称
+define('APP_NAME', '智通招车');
+
+//订单超时时间
+define('ORDER_TIMEOUT', 1800);
+
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */

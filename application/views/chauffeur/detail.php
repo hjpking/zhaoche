@@ -63,7 +63,10 @@
                                 <label for="select01" class="control-label">车型</label>
                                 <div class="controls"><?=$car[$data['car_id']]['name']?></div>
                             </div>
-
+                            <div class="control-group">
+                                <label for="select01" class="control-label">车颜色</label>
+                                <div class="controls"><?=$color[$data['color_id']]['name']?></div>
+                            </div>
                             <div class="control-group">
                                 <label for="input06" class="control-label">车牌号</label>
                                 <div class="controls"><?=$data['car_no']?></div>

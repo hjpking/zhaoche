@@ -14,6 +14,7 @@ class model_order extends MY_Model
      * @param $chauffeurId
      * @param int $limit
      * @param int $offset
+     * @param array $where
      * @return mixed
      */
     public function getChauffeurOrder($chauffeurId, $limit = 20, $offset = 0, $where = array())

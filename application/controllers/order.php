@@ -141,4 +141,5 @@ class order extends MY_Controller
 
         $this->load->view('order/detail', $data);
     }
+
 }

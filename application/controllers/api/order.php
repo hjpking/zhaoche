@@ -513,16 +513,26 @@ class order extends MY_Controller
                 break;
             }
 
+            $code = rand(100000, 999999);
             $cData = array(
                 'chauffeur_id' => $chauffeurData['chauffeur_id'],
                 'chauffeur_login_name' => $chauffeurData['cname'],
                 'chauffeur_phone' => $chauffeurData['phone'],
+                'pay_password' => $code,
             );
             $s = $this->order->chauffeurDetermineOrder($cData, $orderSn);
             if (!$s) {
                 $response = error(10029);//接单失败
                 break;
             }
+
+            $color = config_item('color');
+            if (!empty ($data['user_phone'])) {
+                $msg = '司机'.$chauffeurData['realname'].'电话：'.$chauffeurData['phone'].'驾驶. '.$color[$chauffeurData['color_id']]['name'];
+                $msg .= '车牌号:'.$chauffeurData['car_no'].'已经出发，您可以随时登陆客户端查看车辆的行驶轨迹。支付密码：'.$code.'。';
+                sendMessage($data['user_phone'], $msg);
+            }
+
         } while (false);
 
         $this->json_output($response);
@@ -938,4 +948,25 @@ class order extends MY_Controller
         $this->json_output($response);
     }
 
+    /**
+     * 系统检查订单是否超过35分钟，如果超过则给用户发短信并取消订单
+     */
+    public function systemCheckOrder()
+    {
+        $this->load->model('model_order', 'order');
+        $data = $this->order->getOrder(1000, 0, $field= '*', array('status' => '0'));
+
+        foreach ($data as $v) {
+            $orderTime = strtotime($v['create_time']);
+            $diffTime = TIMESTAMP - $orderTime;
+            if ($diffTime > ORDER_TIMEOUT) {
+                if (!empty ($data['user_phone'])) {
+                    $msg = '已经半个多小时了，附近没有符合你要要求的车型，订单被取消。';
+                    sendMessage($data['user_phone'], $msg);
+                }
+
+                $this->order->saveOrder(array('status' => '2'), $v['order_sn']);
+            }
+        }
+    }
 }

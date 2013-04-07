@@ -277,6 +277,11 @@ class pay extends MY_Controller
                 show_error('充值失败');
             }
 
+            if (!empty ($userInfo['phone'])) {
+                $msg = '您的账号收到通过 '.APP_NAME.' 官网的充值：'.$payAmount.'元,当前余额为：'.($userInfo['amount']+$payAmount).'元。';
+                sendMessage($userInfo['phone'], $msg);
+            }
+
             $logData = array(
                 'uid' => $userInfo['uid'],
                 'uname' => $userInfo['uname'],

@@ -105,6 +105,19 @@
                     </div>
 
                     <div class="control-group">
+                        <label for="select01" class="control-label">车颜色</label>
+                        <div class="controls">
+                            <select id="car" class="span3" name="color_id">
+                                <option value="0" selected="selected">选择车颜色</option>
+                                <?php foreach ($color as $k=>$v){?>
+                                    <option value="<?=$k?>" <?=isset ($data['color_id']) && $k == $data['color_id'] ? 'selected="selected"' : '';?>
+                                        style="background-color: <?=$v['code']?>;color: <?=$v['font_code']?>;"><?=$v['name']?></option>
+                                <?php }?>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
                         <label for="input01" class="control-label">车牌号</label>
                         <div class="controls">
                             <input type="text" id="car_no" class="input-xlarge" name="car_no" value="<?=isset ($data['car_no']) ? $data['car_no'] : '';?>">
