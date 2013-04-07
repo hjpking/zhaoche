@@ -546,5 +546,8 @@ define('APP_NAME', '智通招车');
 define('ORDER_TIMEOUT', 1800);
 
 
+//司机到达用户目的地，超时时候。
+define('CHAUFFEUR_TIMEOUT', 1800);
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */

@@ -390,7 +390,40 @@ class order extends MY_Controller
                 break;
             }
 
-            $this->db->set(array('amount' => 'amount+'.$orderData['amount']), '', false)->where('uid', $uData['uid'])->update('user');
+            //$this->db->set(array('amount' => 'amount+'.$orderData['amount']), '', false)->where('uid', $uData['uid'])->update('user');
+
+            $orderTime = strtotime($orderData['create_time']);
+            $times = TIMESTAMP - $orderTime;
+
+            //判断用户是在司机接单前取消订单还是接单后取消订单
+            if (empty ($orderData['chauffeur_id'])) {
+                if (!empty ($orderData['user_phone'])) {
+                    $msg = '您的订单已取消，感谢你选择'.APP_NAME.'。';
+                    sendMessage($orderData['user_phone'], $msg);
+                }
+            } else {
+
+                //计算订单产生的劳务费用
+                if ($times > CHAUFFEUR_TIMEOUT) {
+                    $uText = '因这司机迟到，将不产生费用。';
+                    $cText = '因为您的迟到，没有相应佣金。';
+                } else {
+                    $laborCost = $orderData['status'] == 7 ? 20 : 10;
+                    $uText = '取消订单产生的司机劳务费 '.$laborCost.' 元。已从你的账号内扣除。';
+                    $cText = '您此次出车将获得 '.$laborCost.' 元 佣金。';
+                }
+
+                if (!empty ($orderData['user_phone'])) {
+                    $msg = '您的订单已取消，'.$uText;
+                    sendMessage($orderData['user_phone'], $msg);
+                }
+
+                if (!empty ($orderData['chauffeur_phone'])) {
+                    $msg = '用户已取消订单，'.$cText;
+                    sendMessage($orderData['chauffeur_phone'], $msg);
+                }
+            }
+
         } while (false);
 
         $this->json_output($response);
@@ -657,6 +690,8 @@ class order extends MY_Controller
                 $response = error(10034);//取消订单失败
                 break;
             }
+
+
         } while (false);
 
         $this->json_output($response);
@@ -789,12 +824,18 @@ class order extends MY_Controller
                 break;
             }
 
-            $content = $data['uname'].' 您好，司机：'.$data['chauffeur_login_name'].'已达到你要上车的地点。请与其联系：'.$data['chauffeur_phone'];
-            sendMessage($data['user_phone'], $content);
+            $color = config_item('color');
+            $msg = $data['uname'].' 您好，接您的车已到达您的上车位点，您可以出发了。司机：'.$chauffeurData['realname'].'，车牌号：'.$chauffeurData['car_no'];
+            $msg .= ',车颜色：'.$color[$chauffeurData['color_id']]['name'].'。';
+            sendMessage($data['user_phone'], $msg);
 
+            $upData = array(
+                'status' => '7',
+                'arrival_time' => date('Y-m-d H:i:s', TIMESTAMP)
+                );
             $this->db->where('order_sn', $orderSn);
             $this->db->where('chauffeur_id', $chauffeurId);
-            $this->db->update('order', array('status' => '7'));
+            $this->db->update('order', $upData);
         } while (false);
 
         $this->json_output($response);
@@ -961,7 +1002,7 @@ class order extends MY_Controller
             $diffTime = TIMESTAMP - $orderTime;
             if ($diffTime > ORDER_TIMEOUT) {
                 if (!empty ($data['user_phone'])) {
-                    $msg = '已经半个多小时了，附近没有符合你要要求的车型，订单被取消。';
+                    $msg = '已经半个多小时了，附近没有符合你要要求的车型，订单被取消,十分抱歉。';
                     sendMessage($data['user_phone'], $msg);
                 }
 
