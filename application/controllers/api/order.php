@@ -154,8 +154,8 @@ class order extends MY_Controller
             //判断返回的值是否为布尔值，如果不是则将订单号重置
             if (!is_bool($lastId)) $orderSn = $lastId;
 
-            //$message = '欢迎使用智能招车，本次登陆验证码是：'.$code;
-            //sendMessage($phone, $message);
+            $message = '您在'.APP_NAME.'成功下单，正在为您分配车辆。';
+            sendMessage($uData['phone'], $message);
 
             //$s = $this->user->save(array('amount' => "amount-$amount"), $uData['uid']);
             //$this->db->set(array('amount' => 'amount-'.$amount), '', false)->where('uid', $uData['uid'])->update('user');
@@ -561,7 +561,7 @@ class order extends MY_Controller
 
             $color = config_item('color');
             if (!empty ($data['user_phone'])) {
-                $msg = '司机'.$chauffeurData['realname'].'电话：'.$chauffeurData['phone'].'驾驶. '.$color[$chauffeurData['color_id']]['name'];
+                $msg = '您的订单分配车辆成功，司机'.$chauffeurData['realname'].'电话：'.$chauffeurData['phone'].'驾驶. '.$color[$chauffeurData['color_id']]['name'].'车,';
                 $msg .= '车牌号:'.$chauffeurData['car_no'].'已经出发，您可以随时登陆客户端查看车辆的行驶轨迹。支付密码：'.$code.'。';
                 sendMessage($data['user_phone'], $msg);
             }
@@ -629,7 +629,9 @@ class order extends MY_Controller
             );
             $response['data'] = $rData;
 
-            sendMessage($data['user_phone'], '尊敬的：'.$data['user_phone'].', 你于'.date('Y-m-d H:i').'使用智能招车服务共消费：150元');
+            $msg = '尊敬的：'.$data['user_phone'].', 您于'.date('Y-m-d H:i').'使用'.APP_NAME.'服务共消费：'.fPrice($rData['total_price']).'元,您需要支付：';
+            $msg .= fPrice($rData['total_price']).'元。';
+            sendMessage($data['user_phone'], $msg);
         } while (false);
 
         $this->json_output($response);
