@@ -380,8 +380,8 @@ class order extends MY_Controller
                 break;
             }
 
-            if ($orderData['status'] == 4) {
-                $response = error(10041);//服务中不可取消订单
+            if ($orderData['status'] == 1) {
+                $response = error(10027);//此订单已完成
                 break;
             }
 
@@ -391,6 +391,11 @@ class order extends MY_Controller
 
             if ($orderData['uid'] != $uData['uid']) {
                 $response = error(10033);//订单不属于您
+                break;
+            }
+
+            if ($orderData['status'] == 4) {
+                $response = error(10041);//服务中不可取消订单
                 break;
             }
 
@@ -697,6 +702,11 @@ class order extends MY_Controller
                 //break;
             }
 
+            if ($data['status'] != '4') {
+                $response = error(10041);//服务中不可取消订单
+                break;
+            }
+
             $s = $this->order->cancelOrderByChauffeur($chauffeurId, $orderSn);
             if (!$s) {
                 $response = error(10034);//取消订单失败
@@ -834,18 +844,38 @@ class order extends MY_Controller
                 break;
             }
 
-            if ($chauffeurData['chauffeur_id'] != $data['chauffeur_id']) {
-                $response = error(10033);//订单不属于您
+            if ($data['status'] == '1') {
+                $response = error(10027);//此订单已完成
                 break;
             }
 
-            //if ($data['status'] != '3') {
+            if ($data['status'] == '2') {
+                $response = error(10028);//此订单已取消
+                break;
+            }
+
+            if ($data['status'] != '3') {
                 //$response = error(10030);//此订单未被接单
                 //break;
-            //}
+            }
 
-            if ($data['status'] != '4') {
-                $response = error(10041);//服务中不可取消订单
+            if ($data['status'] == '4') {
+                $response = error(10042);//此订单未开始服务
+                break;
+            }
+
+            if ($data['status'] == '6') {
+                $response = error(10043);//司机未出发
+                break;
+            }
+
+            if ($data['status'] == '7') {
+                $response = error(10044);//用户未上车
+                break;
+            }
+
+            if ($chauffeurData['chauffeur_id'] != $data['chauffeur_id']) {
+                $response = error(10033);//订单不属于您
                 break;
             }
 

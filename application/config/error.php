@@ -84,5 +84,11 @@ $error[10040] = array('code' => '10040', 'msg' => '支付渠道不存在');
 
 $error[10041] = array('code' => '10041', 'msg' => '服务中不可取消订单');
 
+$error[10042] = array('code' => '10042', 'msg' => '此订单未开始服务');
+
+$error[10043] = array('code' => '10043', 'msg' => '司机未出发');
+
+$error[10044] = array('code' => '10044', 'msg' => '用户未上车');
+
 
 return $error;
