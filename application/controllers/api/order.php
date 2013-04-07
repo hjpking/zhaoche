@@ -683,8 +683,8 @@ class order extends MY_Controller
             }
 
             if ($data['status'] != '3') {
-                $response = error(10030);//此订单未被接单
-                break;
+                //$response = error(10030);//此订单未被接单
+                //break;
             }
 
             $s = $this->order->cancelOrderByChauffeur($chauffeurId, $orderSn);

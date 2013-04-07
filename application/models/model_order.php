@@ -160,6 +160,7 @@ class model_order extends MY_Model
             'chauffeur_id' => $chauffeurData['chauffeur_id'],
             'chauffeur_login_name' => $chauffeurData['chauffeur_login_name'],
             'chauffeur_phone' => $chauffeurData['chauffeur_phone'],
+            'pay_password' => $chauffeurData['pay_password'],
             'status' => 3,
         );
 
