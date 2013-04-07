@@ -176,7 +176,7 @@ class model_order extends MY_Model
      * @param $orderSn
      * @return mixed
      */
-    public function confirmArrival($chauffeurId, $orderSn)
+    public function confirmArrival($chauffeurId, $orderSn, $amount)
     {
         $this->db->where('order_sn', $orderSn);
         $this->db->where('chauffeur_id', $chauffeurId);

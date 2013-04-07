@@ -631,14 +631,15 @@ class order extends MY_Controller
                 break;
             }
 
-            $s = $this->order->confirmArrival($chauffeurId, $orderSn);
+            $totalPrice = 15000;
+            $s = $this->order->confirmArrival($chauffeurId, $orderSn, $totalPrice);
             if (!$s) {
                 $response = error(10031);//确认到达失败
                 break;
             }
 
             $rData = array(
-                'total_price' => 15000,
+                'total_price' => $totalPrice,
                 'paid' => 5000,
                 'need_pay' => 10000,
             );
