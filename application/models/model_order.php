@@ -143,7 +143,7 @@ class model_order extends MY_Model
             'chauffeur_id' => '',
             'chauffeur_login_name' => '',
             'chauffeur_phone' => '',
-            'status' => '0',
+            'status' => '2',
         );
 
         $this->db->where('order_sn', $orderSn);
