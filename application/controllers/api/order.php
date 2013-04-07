@@ -865,8 +865,8 @@ class order extends MY_Controller
             }
 
             if ($data['status'] == '6') {
-                $response = error(10043);//司机未出发
-                break;
+                //$response = error(10043);//司机未出发
+                //break;
             }
 
             if ($data['status'] == '7') {
