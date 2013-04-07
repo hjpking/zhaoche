@@ -691,7 +691,32 @@ class order extends MY_Controller
                 break;
             }
 
+            if (empty ($data['arrival_time'])) {
+                if (!empty ($data['user_phone'])) {
+                    $msg = '接您的司机 '.$chauffeurData['realname'].' 因故无法到达，司机已取消订单。';
+                    sendMessage($data['user_phone'], $msg);
+                }
 
+                if (!empty ($data['chauffeur_phone'])) {
+                    $msg = '您已成功取消订单，系统将扣除您账号内10元，赔偿给用户。';
+                    sendMessage($data['chauffeur_phone'], $msg);
+                }
+            } else {
+                $arrivalTime = strtotime($data['arrival_time']);
+                $arrivalTime = TIMESTAMP - $arrivalTime;
+                if ($arrivalTime > CHAUFFEUR_USER_TRAIN_TIMEOUT) {
+                    if (!empty ($data['user_phone'])) {
+                        $t = intval(CHAUFFEUR_USER_TRAIN_TIMEOUT / 60);
+                        $msg = '由于等候的时间已经超过'.$t.'分钟,并且您也不同意开始计费。司机'.$chauffeurData['realname'].'已离开，此次将产生10元司机服务费，敬请谅解！';
+                        sendMessage($data['user_phone'], $msg);
+                    }
+
+                    if (!empty ($data['chauffeur_phone'])) {
+                        $msg = '您已成功取消订单，由于用户长时间不车。';
+                        sendMessage($data['chauffeur_phone'], $msg);
+                    }
+                }
+            }
         } while (false);
 
         $this->json_output($response);

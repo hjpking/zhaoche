@@ -549,5 +549,9 @@ define('ORDER_TIMEOUT', 1800);
 //司机到达用户目的地，超时时候。
 define('CHAUFFEUR_TIMEOUT', 1800);
 
+//司机到达用户目的地，用户上车超时时间
+define('CHAUFFEUR_USER_TRAIN_TIMEOUT', 1800);
+
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */
