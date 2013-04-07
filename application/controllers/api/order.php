@@ -702,7 +702,7 @@ class order extends MY_Controller
                 //break;
             }
 
-            if ($data['status'] != '4') {
+            if ($data['status'] == '4') {
                 $response = error(10041);//服务中不可取消订单
                 break;
             }
@@ -851,16 +851,6 @@ class order extends MY_Controller
 
             if ($data['status'] == '2') {
                 $response = error(10028);//此订单已取消
-                break;
-            }
-
-            if ($data['status'] != '3') {
-                //$response = error(10030);//此订单未被接单
-                //break;
-            }
-
-            if ($data['status'] == '4') {
-                $response = error(10042);//此订单未开始服务
                 break;
             }
 
