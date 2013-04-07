@@ -180,7 +180,7 @@ class model_order extends MY_Model
     {
         $this->db->where('order_sn', $orderSn);
         $this->db->where('chauffeur_id', $chauffeurId);
-        return $this->db->update('order', array('status' => '1'));
+        return $this->db->update('order', array('status' => '1', 'getoff_time' => date('Y-m-d H:i:s', TIMESTAMP)));
     }
 
     /**
