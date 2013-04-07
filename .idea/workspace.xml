@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a24abf45-d036-4377-bc30-f6c86df0e96e" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-02.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user/create.php" afterPath="$PROJECT_DIR$/application/views/user/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user/index.php" afterPath="$PROJECT_DIR$/application/views/user/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/user.php" afterPath="$PROJECT_DIR$/application/controllers/user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/order.php" afterPath="$PROJECT_DIR$/application/controllers/api/order.php" />
     </list>
     <ignored path="zhaoche.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,10 +88,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="create.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/user/create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="60" selection-start="4753" selection-end="4753" vertical-scroll-proportion="0.69350964">
+            <state line="77" column="55" selection-start="4518" selection-end="4518" vertical-scroll-proportion="-21.541666">
               <folding>
                 <marker date="1365310025645" expanded="true" signature="5593:5879" placeholder="..." />
                 <marker date="1365310025645" expanded="true" signature="5722:5879" placeholder="..." />
@@ -103,6 +100,15 @@
                 <marker date="1365310025645" expanded="true" signature="6380:6617" placeholder="..." />
                 <marker date="1365310025645" expanded="true" signature="6508:6617" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="order.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="464" column="39" selection-start="16380" selection-end="16380" vertical-scroll-proportion="0.8004957">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -152,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/views/user/detail.php" />
         <option value="$PROJECT_DIR$/application/views/staff/create.php" />
         <option value="$PROJECT_DIR$/application/views/chauffeur/create.php" />
         <option value="$PROJECT_DIR$/application/views/message/create.php" />
@@ -168,6 +173,7 @@
         <option value="$PROJECT_DIR$/application/views/user/index.php" />
         <option value="$PROJECT_DIR$/application/controllers/user.php" />
         <option value="$PROJECT_DIR$/application/views/user/create.php" />
+        <option value="$PROJECT_DIR$/application/controllers/api/order.php" />
       </list>
     </option>
   </component>
@@ -632,11 +638,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/rule/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="34" selection-start="4826" selection-end="4826" vertical-scroll-proportion="0.31105712" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/order/detail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="104" column="88" selection-start="3901" selection-end="3901" vertical-scroll-proportion="0.0">
@@ -742,7 +743,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/user/create.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="60" selection-start="4753" selection-end="4753" vertical-scroll-proportion="0.69350964">
+        <state line="77" column="55" selection-start="4518" selection-end="4518" vertical-scroll-proportion="-21.541666">
           <folding>
             <marker date="1365310025645" expanded="true" signature="5593:5879" placeholder="..." />
             <marker date="1365310025645" expanded="true" signature="5722:5879" placeholder="..." />
@@ -751,6 +752,13 @@
             <marker date="1365310025645" expanded="true" signature="6380:6617" placeholder="..." />
             <marker date="1365310025645" expanded="true" signature="6508:6617" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="464" column="39" selection-start="16380" selection-end="16380" vertical-scroll-proportion="0.8004957">
+          <folding />
         </state>
       </provider>
     </entry>

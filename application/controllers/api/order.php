@@ -462,7 +462,7 @@ class order extends MY_Controller
             }
 
             //*/
-            $response['data'] = $data;
+            $response['data'] = $rData;
         } while (false);
 
         $this->json_output($response);
