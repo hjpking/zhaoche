@@ -174,13 +174,19 @@ class model_order extends MY_Model
      *
      * @param $chauffeurId
      * @param $orderSn
+     * @param $amount
      * @return mixed
      */
     public function confirmArrival($chauffeurId, $orderSn, $amount)
     {
+        $where = array(
+            'status' => '1',
+            'getoff_time' => date('Y-m-d H:i:s', TIMESTAMP),
+            'amount' => $amount,
+        );
         $this->db->where('order_sn', $orderSn);
         $this->db->where('chauffeur_id', $chauffeurId);
-        return $this->db->update('order', array('status' => '1', 'getoff_time' => date('Y-m-d H:i:s', TIMESTAMP)));
+        return $this->db->update('order', $where);
     }
 
     /**
