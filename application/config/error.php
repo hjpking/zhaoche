@@ -82,4 +82,7 @@ $error[10039] = array('code' => '10039', 'msg' => '生成订单失败');
 
 $error[10040] = array('code' => '10040', 'msg' => '支付渠道不存在');
 
+$error[10041] = array('code' => '10041', 'msg' => '服务中不可取消订单');
+
+
 return $error;
