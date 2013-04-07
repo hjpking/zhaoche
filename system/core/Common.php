@@ -695,6 +695,7 @@ function vPost($url, $data)
 //发送短信
 function sendMessage($phoneNumber, $content, $taskName = '')
 {
+    /*/
     $data = array(
         'userid' => '272',
         'account' => 'PF091',
@@ -710,6 +711,7 @@ function sendMessage($phoneNumber, $content, $taskName = '')
     );
 
     return vPost('http://p1.ipyy.com:8888/sms.aspx?action=send', http_build_query($data));
+    //*/
     $data = array(
         'action' => 'send',
         'userid' => M_ID,

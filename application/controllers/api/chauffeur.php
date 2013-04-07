@@ -112,12 +112,20 @@ class chauffeur extends MY_Controller
                 break;
             }
 
+            $this->load->model('model_chauffeur', 'chauffeur');
+            $field = 'chauffeur_id, cname, realname, sex, phone, id_card, car_id, city_id, car_no, descr, status';
+            $data = $this->chauffeur->getChauffeurByPhone($phone, $field);
+            if (empty ($data)) {
+                $response = error(10012);//司机不存在
+                break;
+            }
+
             $code = rand(100000, 999999);
             $data = array(
                 'phone' => $phone,
                 'verify_code' => $code,
             );
-            $this->load->model('model_chauffeur', 'chauffeur');
+
             $s = $this->chauffeur->verifySave($data);
 
             if (!$s) {
@@ -125,7 +133,7 @@ class chauffeur extends MY_Controller
                 break;
             }
             $message = '欢迎使用'.APP_NAME.'，您本次登陆验证码：'.$code;
-            sendMessage($phone, $message);
+            echo sendMessage($phone, $message);
         } while (false);
 
         $this->json_output($response);
@@ -167,6 +175,10 @@ class chauffeur extends MY_Controller
 
             $field = 'chauffeur_id, cname, realname, sex, phone, id_card, car_id, city_id, car_no, descr, status';
             $data = $this->chauffeur->getChauffeurByPhone($phone, $field);
+            if (empty ($data)) {
+                $response = error(10012);//司机不存在
+                break;
+            }
             $response['data'] = $data;
         } while (false);
 
