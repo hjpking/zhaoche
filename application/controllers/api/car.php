@@ -28,11 +28,11 @@ class car extends MY_Controller
         //$statusCode = $client->login();
 //echo $statusCode;exit;
 
-        $this->load->library('clients');
-        $this->clients->client($gwUrl,$serialNumber,$password,$sessionKey,$proxyhost,$proxyport,$proxyusername,$proxypassword,$connectTimeOut,$readTimeOut);
-        $this->clients->setOutgoingEncoding("utf-8");
-        echo $statusCode = $this->clients->sendSMS(array('13811508022'), "王振生收");
-        //echo $statusCode = $this->clients->login();
+        $this->load->library('client');
+        $this->client->clients($gwUrl,$serialNumber,$password,$sessionKey,$proxyhost,$proxyport,$proxyusername,$proxypassword,$connectTimeOut,$readTimeOut);
+        $this->client->setOutgoingEncoding("utf-8");
+        //echo $statusCode = $this->client->sendSMS(array('13811508022'), "王振生收");
+        echo $statusCode = $this->client->login();
         //echo sendMessage('13811508022', '王振生收');
     }
     /**39.903021,116.440487

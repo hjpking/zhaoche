@@ -27,7 +27,7 @@ class model_pay_alipay extends MY_Model
 
         $string = "<result><is_success>T</is_success><content>" . $str . "</content><sign>" . $sign . "</sign></result>";
 
-        return $data['order_sn'];
+        //return $data['order_sn'];
         return $string;
     }
 
@@ -37,8 +37,8 @@ class model_pay_alipay extends MY_Model
         $sign = $this->input->get_post('sign');
 
         //*
-        $notify_data = '<notify><seller_email>meiyi@meiyiad.com</seller_email><partner>2088901264408851</partner><payment_type>1</payment_type><buyer_email>18610687243</buyer_email><trade_no>2013040872272597</trade_no><buyer_id>2088702616318972</buyer_id><quantity>1</quantity><total_fee>0.01</total_fee><use_coupon>N</use_coupon><is_total_fee_adjust>Y</is_total_fee_adjust><price>0.01</price><out_trade_no>10000000</out_trade_no><gmt_create>2013-04-08 11:03:38</gmt_create><seller_id>2088901264408851</seller_id><subject>AA用车充值</subject><trade_status>WAIT_BUYER_PAY</trade_status><discount>0.00</discount></notify>';
-        $sign = 'V+543SYFuzA2rmG77eqsssjb2wQ1vTP7SWPvDC1inF7iS3x0TdA4oI1fmZIGe1xNAX5nD/cox6793v1/XDeq0kYhUNI6q807grsrNjvfVRFOqKnZSnrSUqBw1oZmKA2naSSi2X1m2q4cLNWnh5FsepVvsUGiKkvysp3c1HOWmG8=';
+        $notify_data = '<notify><seller_email>meiyi@meiyiad.com</seller_email><partner>2088901264408851</partner><payment_type>1</payment_type><buyer_email>18610687243</buyer_email><trade_no>2013040872796697</trade_no><buyer_id>2088702616318972</buyer_id><quantity>1</quantity><total_fee>0.01</total_fee><use_coupon>N</use_coupon><is_total_fee_adjust>Y</is_total_fee_adjust><price>0.01</price><out_trade_no>1</out_trade_no><gmt_create>2013-04-08 14:33:54</gmt_create><seller_id>2088901264408851</seller_id><subject>AA用车充值</subject><trade_status>WAIT_BUYER_PAY</trade_status><discount>0.00</discount></notify>';
+        $sign = 'esc4zLKCwb09JH48wZpcj4rIqFYPnm1ZvI9muQwvBIekuPVRzJq8SL6Gw2qxac5XZVnoA5CtdEEqi/fjPWjycrhgrjDJzMLr4qRTpb7SvCLya3EWjdqnokWc9qUZ/CDZjLSAU84WkAKN9Ids/p+5mQJ5PsH9kMYPUjqDXU63AeQ=';
         $sign_type = 'RSA';
         //*/
 
@@ -111,7 +111,7 @@ class model_pay_alipay extends MY_Model
 
         //调用openssl内置方法验签，返回bool值
         $result = (bool)openssl_verify($data, base64_decode($sign), $pubKey);
-
+d($result);
         //释放资源
         openssl_free_key($res);
 
