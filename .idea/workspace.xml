@@ -6,14 +6,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-02.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-03.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-06.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/core/Common.php" afterPath="$PROJECT_DIR$/system/core/Common.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/key/alipay/alipay_public_key.pem" afterPath="$PROJECT_DIR$/application/key/alipay/alipay_public_key.pem" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/car.php" afterPath="$PROJECT_DIR$/application/controllers/api/car.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/model_pay_alipay.php" afterPath="$PROJECT_DIR$/application/models/model_pay_alipay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/pay.php" afterPath="$PROJECT_DIR$/application/controllers/api/pay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/key/alipay/rsa_public_key.pem" afterPath="$PROJECT_DIR$/application/key/alipay/rsa_public_key.pem" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/user.php" afterPath="$PROJECT_DIR$/application/controllers/api/user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zhaoche.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,7 +81,7 @@
       <file leaf-file-name="model_pay_alipay.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/models/model_pay_alipay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="10" selection-start="787" selection-end="787" vertical-scroll-proportion="0.41466346">
+            <state line="29" column="30" selection-start="799" selection-end="807" vertical-scroll-proportion="0.41466346">
               <folding />
             </state>
           </provider>
@@ -608,7 +601,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/model_pay_alipay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="10" selection-start="787" selection-end="787" vertical-scroll-proportion="0.41466346">
+        <state line="29" column="30" selection-start="799" selection-end="807" vertical-scroll-proportion="0.41466346">
           <folding />
         </state>
       </provider>
