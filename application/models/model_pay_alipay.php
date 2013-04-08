@@ -11,6 +11,7 @@ class model_pay_alipay extends MY_Model
 {
     public function request(array $data)
     {
+        /*
         $arr = array(
             'partner' => ALIPAY_PARTNER,
             'seller' => ALIPAY_SELLER,
@@ -20,8 +21,23 @@ class model_pay_alipay extends MY_Model
             'total_fee' => $data['amount'],
             'notify_url' => ALIPAY_NOTIFY_URL,
         );
+        //*/
 
-        $str = http_build_query($arr);
+        $signData = "partner=" . "\"" . ALIPAY_PARTNER ."\"";
+        $signData .= "&";
+        $signData .= "seller=" . "\"" .ALIPAY_SELLER . "\"";
+        $signData .= "&";
+        $signData .= "out_trade_no=" . "\"" . $data['order_sn'] ."\"";
+        $signData .= "&";
+        $signData .= "subject=" . "\"" . 'account_pay' ."\"";
+        $signData .= "&";
+        $signData .= "body=" . "\"" . 'pay' ."\"";
+        $signData .= "&";
+        $signData .= "total_fee=" . "\"" . $data['amount'] ."\"";
+        $signData .= "&";
+        $signData .= "notify_url=" . "\"" . ALIPAY_NOTIFY_URL ."\"";
+
+        $str = ($signData);
         $sign = $this->aliPaySign($str);
 
         //$string = "<result><is_success>T</is_success><content>" . $str . "</content><sign>" . $sign . "</sign></result>";
