@@ -133,7 +133,7 @@ class chauffeur extends MY_Controller
                 break;
             }
             $message = '欢迎使用'.APP_NAME.'，您本次登陆验证码：'.$code;
-            sendMessage($phone, $message);
+            $this->sendMessage($phone, $message);
         } while (false);
 
         $this->json_output($response);

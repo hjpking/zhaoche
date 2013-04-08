@@ -155,7 +155,7 @@ class order extends MY_Controller
             if (!is_bool($lastId)) $orderSn = $lastId;
 
             $message = '您在'.APP_NAME.'成功下单，正在为您分配车辆。';
-            sendMessage($uData['phone'], $message);
+            $this->sendMessage($uData['phone'], $message);
 
             //$s = $this->user->save(array('amount' => "amount-$amount"), $uData['uid']);
             //$this->db->set(array('amount' => 'amount-'.$amount), '', false)->where('uid', $uData['uid'])->update('user');
@@ -414,7 +414,7 @@ class order extends MY_Controller
             if (empty ($orderData['chauffeur_id'])) {
                 if (!empty ($orderData['user_phone'])) {
                     $msg = '您的订单已取消，感谢你选择'.APP_NAME.'。';
-                    sendMessage($orderData['user_phone'], $msg);
+                    $this->sendMessage($orderData['user_phone'], $msg);
                 }
             } else {
 
@@ -430,12 +430,12 @@ class order extends MY_Controller
 
                 if (!empty ($orderData['user_phone'])) {
                     $msg = '您的订单已取消，'.$uText;
-                    sendMessage($orderData['user_phone'], $msg);
+                    $this->sendMessage($orderData['user_phone'], $msg);
                 }
 
                 if (!empty ($orderData['chauffeur_phone'])) {
                     $msg = '用户已取消订单，'.$cText;
-                    sendMessage($orderData['chauffeur_phone'], $msg);
+                    $this->sendMessage($orderData['chauffeur_phone'], $msg);
                 }
             }
 
@@ -578,7 +578,7 @@ class order extends MY_Controller
             if (!empty ($data['user_phone'])) {
                 $msg = '您的订单分配车辆成功，司机'.$chauffeurData['realname'].'电话：'.$chauffeurData['phone'].'驾驶. '.$color[$chauffeurData['color_id']]['name'].'车,';
                 $msg .= '车牌号:'.$chauffeurData['car_no'].'已经出发，您可以随时登陆客户端查看车辆的行驶轨迹。支付密码：'.$code.'。';
-                sendMessage($data['user_phone'], $msg);
+                $this->sendMessage($data['user_phone'], $msg);
             }
 
         } while (false);
@@ -647,7 +647,7 @@ class order extends MY_Controller
 
             $msg = '尊敬的：'.$data['user_phone'].', 您于'.date('Y-m-d H:i').'使用'.APP_NAME.'服务共消费：'.fPrice($rData['total_price']).'元,您需要支付：';
             $msg .= fPrice($rData['total_price']).'元。';
-            sendMessage($data['user_phone'], $msg);
+            $this->sendMessage($data['user_phone'], $msg);
         } while (false);
 
         $this->json_output($response);
@@ -717,12 +717,12 @@ class order extends MY_Controller
             if (empty ($data['arrival_time'])) {
                 if (!empty ($data['user_phone'])) {
                     $msg = '接您的司机 '.$chauffeurData['realname'].' 因故无法到达，司机已取消订单。';
-                    sendMessage($data['user_phone'], $msg);
+                    $this->sendMessage($data['user_phone'], $msg);
                 }
 
                 if (!empty ($data['chauffeur_phone'])) {
                     $msg = '您已成功取消订单，系统将扣除您账号内10元，赔偿给用户。';
-                    sendMessage($data['chauffeur_phone'], $msg);
+                    $this->sendMessage($data['chauffeur_phone'], $msg);
                 }
             } else {
                 $arrivalTime = strtotime($data['arrival_time']);
@@ -731,12 +731,12 @@ class order extends MY_Controller
                     if (!empty ($data['user_phone'])) {
                         $t = intval(CHAUFFEUR_USER_TRAIN_TIMEOUT / 60);
                         $msg = '由于等候的时间已经超过'.$t.'分钟,并且您也不同意开始计费。司机'.$chauffeurData['realname'].'已离开，此次将产生10元司机服务费，敬请谅解！';
-                        sendMessage($data['user_phone'], $msg);
+                        $this->sendMessage($data['user_phone'], $msg);
                     }
 
                     if (!empty ($data['chauffeur_phone'])) {
                         $msg = '您已成功取消订单，由于用户长时间不车。';
-                        sendMessage($data['chauffeur_phone'], $msg);
+                        $this->sendMessage($data['chauffeur_phone'], $msg);
                     }
                 }
             }
@@ -890,7 +890,7 @@ class order extends MY_Controller
             $color = config_item('color');
             $msg = $data['uname'].' 您好，接您的车已到达您的上车位点，您可以出发了。司机：'.$chauffeurData['realname'].'，车牌号：'.$chauffeurData['car_no'];
             $msg .= ',车颜色：'.$color[$chauffeurData['color_id']]['name'].'。';
-            sendMessage($data['user_phone'], $msg);
+            $this->sendMessage($data['user_phone'], $msg);
 
             $upData = array(
                 'status' => '7',
@@ -1066,7 +1066,7 @@ class order extends MY_Controller
             if ($diffTime > ORDER_TIMEOUT) {
                 if (!empty ($data['user_phone'])) {
                     $msg = '已经半个多小时了，附近没有符合你要要求的车型，订单被取消,十分抱歉。';
-                    sendMessage($data['user_phone'], $msg);
+                    $this->sendMessage($data['user_phone'], $msg);
                 }
 
                 $this->order->saveOrder(array('status' => '2'), $v['order_sn']);

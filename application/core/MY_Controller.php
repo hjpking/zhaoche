@@ -253,6 +253,6 @@ class MY_Controller extends CI_Controller
         $this->load->library('client');
         $this->client->clients($gwUrl,$serialNumber,$password,$sessionKey,$proxyhost,$proxyport,$proxyusername,$proxypassword,$connectTimeOut,$readTimeOut);
         $this->client->setOutgoingEncoding("utf-8");
-        echo $statusCode = $this->client->sendSMS(array($phoneNumber), $content);
+        return $statusCode = $this->client->sendSMS(array($phoneNumber), $content);
     }
 }
