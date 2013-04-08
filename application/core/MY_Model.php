@@ -148,7 +148,7 @@ class MY_Model extends CI_Model
 
     function __destruct()
     {
-        //
+        /*/
         --self::$obj_num;
         if (ENVIRONMENT === 'development' && self::$obj_num === 0 && ! $this->input->is_ajax_request() && ! $this->input->is_cli_request() ) {
             if (count($this->db->queries)) {
