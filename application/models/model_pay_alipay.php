@@ -54,35 +54,34 @@ class model_pay_alipay extends MY_Model
         $notify_data = $this->input->get_post('notify_data');
         $sign = $this->input->get_post('sign');
 
-        //*
-        $notify_data = '<notify><seller_email>meiyi@meiyiad.com</seller_email><partner>2088901264408851</partner><payment_type>1</payment_type><buyer_email>18610687243</buyer_email><trade_no>2013040872796697</trade_no><buyer_id>2088702616318972</buyer_id><quantity>1</quantity><total_fee>0.01</total_fee><use_coupon>N</use_coupon><is_total_fee_adjust>Y</is_total_fee_adjust><price>0.01</price><out_trade_no>1</out_trade_no><gmt_create>2013-04-08 14:33:54</gmt_create><seller_id>2088901264408851</seller_id><subject>AA用车充值</subject><trade_status>WAIT_BUYER_PAY</trade_status><discount>0.00</discount></notify>';
-        $sign = 'esc4zLKCwb09JH48wZpcj4rIqFYPnm1ZvI9muQwvBIekuPVRzJq8SL6Gw2qxac5XZVnoA5CtdEEqi/fjPWjycrhgrjDJzMLr4qRTpb7SvCLya3EWjdqnokWc9qUZ/CDZjLSAU84WkAKN9Ids/p+5mQJ5PsH9kMYPUjqDXU63AeQ=';
+        //
+        $notify_data = '<notify><partner>2088901264408851</partner><discount>0.00</discount><payment_type>1</payment_type><subject>account_pay</subject><trade_no>2013040873158397</trade_no><buyer_email>18610687243</buyer_email><gmt_create>2013-04-08 17:00:21</gmt_create><quantity>1</quantity><out_trade_no>3</out_trade_no><seller_id>2088901264408851</seller_id><trade_status>TRADE_FINISHED</trade_status><is_total_fee_adjust>N</is_total_fee_adjust><total_fee>0.01</total_fee><gmt_payment>2013-04-08 17:00:22</gmt_payment><seller_email>meiyi@meiyiad.com</seller_email><gmt_close>2013-04-08 17:00:22</gmt_close><price>0.01</price><buyer_id>2088702616318972</buyer_id><use_coupon>N</use_coupon></notify>';
+        $sign = 'NZk3dBqMMWA+XdzgF33TdcohRVday9bzDs5HATQzFPRzNnu7wLHBo8caBLluQfX2m6I2exmqrDOTx2+zpVxIUG38ZhcKxMuesJinhF1IBCB1TVUJQXC1oahhjjWjv6wsXd6ElftI0DwFb2Ud125QvEDqQx7EW7pRpqI70+TGlgs=';
         $sign_type = 'RSA';
         //*/
 
         $rData = array();
-        $isVerify = $this->aliPayVerify($notify_data, $sign);
+        $isVerify = $this->aliPayVerify('notify_data='.$notify_data, $sign);
         if (!$isVerify) {
             $rData['status'] = '0';
             return $rData;
         }
 
         //获取交易状态
-        $trade_status = getDataForXML($notify_data , '/notify/trade_status');
-        $nData = getDataForXML($notify_data , '/notify');
+        $nData = (array)$this->aliPayGetDataForXML($notify_data , '/notify');
 
+        //p($nData['seller_email']);
 
+        $data['merchant_id'] = $nData['partner'];
+        $data['order_sn'] = $nData['out_trade_no'];
+        $data['amount'] = ($nData['total_fee'] * 100);
+        $data['bank_order_sn'] = $nData['trade_no'];
+        $data['buy_email'] = $nData['buyer_email'];
+        $data['pay_type'] = 'alipay';
 
-        $rData['merchant_id'] = $nData['partner'];
-        $rData['order_sn'] = $nData['out_trade_no'];
-        $rData['amount'] = $nData['total_fee'];
-        $rData['bank_order_sn'] = $nData['trade_no'];
-        $rData['buy_email'] = $nData['buyer_email'];
-        $rData['pay_type'] = 'alipay';
+        $data['status'] = ($nData['trade_status'] == "TRADE_FINISHED") ? 1 : 2;
 
-        $rData['status'] = ($trade_status == "TRADE_FINISHED") ? 1 : 2;
-
-        return $rData;
+        return $data;
     }
 
     /**

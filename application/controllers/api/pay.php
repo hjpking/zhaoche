@@ -142,10 +142,10 @@ class pay  extends MY_Controller
             }
 
             $this->load->model('model_pay', 'pay');
-            //$this->load->model("model_pay_{$paymentChannel}", 'payment_channel');
-            $this->load->model("model_pay_alipay", 'payment_channel');
+            $this->load->model("model_pay_{$paymentChannel}", 'payment_channel');
+            //$this->load->model("model_pay_alipay", 'payment_channel');
             $payResult = $this->payment_channel->response();
-exit;
+
             //0 签名错误
             if ($payResult['status'] == '0') {
                 $this->pay->savePay(array('pay_status' => '3'), $payResult['order_sn']);
@@ -178,7 +178,9 @@ exit;
             }
 
             $this->pay->savePay(array('pay_status' => '1'), $payResult['order_sn']);
-            //echo 'success';
+            if (strtolower($paymentChannel) == 'alipay') {
+                echo 'success';
+            }
         } while (false);
 
     }
