@@ -181,6 +181,8 @@ class pay  extends MY_Controller
             if (strtolower($paymentChannel) == 'alipay') {
                 echo 'success';
             }
+
+            $s = $this->db->set(array('amount' => 'amount+'.$orderInfo['pay_amount']), '', false)->where('uid', $orderInfo['uid'])->update('user');
         } while (false);
 
     }

@@ -7,7 +7,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-02.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-03.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-06.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/pay.php" afterPath="$PROJECT_DIR$/application/controllers/api/pay.php" />
     </list>
     <ignored path="zhaoche.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -71,10 +71,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pay.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pay.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/pay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="102" column="25" selection-start="3292" selection-end="3300" vertical-scroll-proportion="-26.25">
+            <state line="181" column="31" selection-start="6292" selection-end="6292" vertical-scroll-proportion="0.6035503">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pay.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/pay.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="274" column="132" selection-start="9450" selection-end="9570" vertical-scroll-proportion="-13.416667">
               <folding />
             </state>
           </provider>
@@ -89,10 +98,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="535" column="59" selection-start="18321" selection-end="18321" vertical-scroll-proportion="0.54911244">
+            <state line="542" column="27" selection-start="18619" selection-end="18619" vertical-scroll-proportion="-23.708334">
               <folding />
             </state>
           </provider>
@@ -128,10 +137,10 @@
         <option value="$PROJECT_DIR$/system/core/Common.php" />
         <option value="$PROJECT_DIR$/application/models/model_pay_alipay.php" />
         <option value="$PROJECT_DIR$/application/models/model_pay.php" />
-        <option value="$PROJECT_DIR$/application/controllers/api/pay.php" />
         <option value="$PROJECT_DIR$/application/core/MY_Model.php" />
         <option value="$PROJECT_DIR$/application/models/model_pay_unionpay.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/application/controllers/api/pay.php" />
       </list>
     </option>
   </component>
@@ -460,13 +469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/pay.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="281" column="16" selection-start="9823" selection-end="9830" vertical-scroll-proportion="-4.5416665">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/chauffeur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="135" column="19" selection-start="4175" selection-end="4175" vertical-scroll-proportion="-4.7083335">
@@ -539,9 +541,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/api/pay.php">
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="102" column="25" selection-start="3292" selection-end="3300" vertical-scroll-proportion="-26.25">
+        <state line="542" column="27" selection-start="18619" selection-end="18619" vertical-scroll-proportion="-23.708334">
           <folding />
         </state>
       </provider>
@@ -553,9 +555,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/pay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="535" column="59" selection-start="18321" selection-end="18321" vertical-scroll-proportion="0.54911244">
+        <state line="274" column="132" selection-start="9450" selection-end="9570" vertical-scroll-proportion="-13.416667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/api/pay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="181" column="31" selection-start="6292" selection-end="6292" vertical-scroll-proportion="0.6035503">
           <folding />
         </state>
       </provider>
