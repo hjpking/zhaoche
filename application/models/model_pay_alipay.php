@@ -28,7 +28,7 @@ class model_pay_alipay extends MY_Model
         //$string = "<result><is_success>T</is_success><content>" . $str . "</content><sign>" . $sign . "</sign></result>";
         $string = array(
             'content' => urlencode($str),
-            'sign' => $sign,
+            'sign' => urlencode($sign),
         );
         //return $data['order_sn'];
         return $string;
