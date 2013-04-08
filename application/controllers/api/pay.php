@@ -141,27 +141,27 @@ class pay  extends MY_Controller
             }
 
             $this->load->model('model_pay', 'pay');
-            //$this->load->model("model_pay_{$paymentChannel}", 'payment_channel');
-            $this->load->model("model_pay_unionpay", 'payment_channel');
+            $this->load->model("model_pay_{$paymentChannel}", 'payment_channel');
+            //$this->load->model("model_pay_unionpay", 'payment_channel');
             $payResult = $this->payment_channel->response();
 
             //0 签名错误
             if ($payResult['status'] == '0') {
                 $this->pay->savePay(array('pay_status' => '3'), $payResult['order_sn']);
-                log_message("PAYLOG", print_r($xmlPost, true).'sign_error!'."\n\n\n");
+                log_message("PAYLOG", print_r($_REQUEST, true)."\n\n".print_r($xmlPost, true).'sign_error!'."\n\n\n");
                 break;
             }
 
             //2 订单支付失败
             if ($payResult['status'] == '2') {
-                log_message("PAYLOG", print_r($xmlPost, true).'order_failed!'."\n\n\n");
+                log_message("PAYLOG", print_r($_REQUEST, true)."\n\n".print_r($xmlPost, true).'order_failed!'."\n\n\n");
                 break;
             }
 
             //未知的订单
             $orderInfo = $this->pay->getPayById($payResult['order_sn']);
             if (empty ($orderInfo)) {
-                log_message("PAYLOG", print_r($xmlPost, true).'unknown_order!'."\n\n\n");
+                log_message("PAYLOG", print_r($_REQUEST, true)."\n\n".print_r($xmlPost, true).'unknown_order!'."\n\n\n");
                 break;
             }
 
@@ -172,7 +172,7 @@ class pay  extends MY_Controller
 
             //支付金额有误 此处判断用于金额是否相等，如果用户多支付了钱则不理会，直接更新订单成功
             if ($payResult['amount'] < ($orderInfo['pay_amount'])) {
-                log_message("PAYLOG", print_r($xmlPost, true).'amount_error!'."\n\n\n");
+                log_message("PAYLOG", print_r($_REQUEST, true)."\n\n".print_r($xmlPost, true).'amount_error!'."\n\n\n");
                 break;
             }
 
@@ -189,22 +189,14 @@ class pay  extends MY_Controller
      */
     private function checkPaymentChannel()
     {
-        $payChannel = '';
-
         do {
-            $merchantId = $this->input->get_post('p1_MerId');
-            $yeePayMerchantId = config_item('yeepay_merchant_id');
-            if ( ($merchantId !== false) && ($merchantId == $yeePayMerchantId) )
-            {
+            $notifyData = $this->input->get_post('notify_data');
+
+            if (!empty ($notifyData)) {
+                $payChannel = 'alipay';
+            } else {
                 $payChannel = 'unionpay';
             }
-
-            $merchantId = $this->input->get_post('seller_id');
-            $aliPayMerchantId = config_item('alipay_merchant_id');
-            if ( ($merchantId !== false) && $merchantId == $aliPayMerchantId) {
-                $payChannel = 'Alipay';
-            }
-
         } while (false);
 
         return $payChannel;
