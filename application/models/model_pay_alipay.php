@@ -33,7 +33,7 @@ class model_pay_alipay extends MY_Model
         $signData .= "&";
         $signData .= "body=" . "\"" . 'pay' ."\"";
         $signData .= "&";
-        $signData .= "total_fee=" . "\"" . $data['amount'] ."\"";
+        $signData .= "total_fee=" . "\"" . fPrice($data['amount']) ."\"";
         $signData .= "&";
         $signData .= "notify_url=" . "\"" . ALIPAY_NOTIFY_URL ."\"";
 
