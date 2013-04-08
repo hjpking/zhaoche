@@ -146,7 +146,7 @@ class user extends MY_Controller
             }
 
             $this->load->model('model_user', 'user');
-            $uData = $this->user->getUserById($uId, 'uname, password, realname, amount, sex, phone,binding_type, is_del, create_time');
+            $uData = $this->user->getUserById($uId, 'uid, uname, password, realname, amount, sex, phone,binding_type, is_del, create_time');
             if (empty ($uData)) {
                 $response = error(10007);//用户不存在
                 break;

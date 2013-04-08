@@ -709,7 +709,7 @@ function sendMessage($phoneNumber, $content, $taskName = '')
         'mobilenumber' => 1,
         'telephonenumber' => 0,
     );
-
+//echo 'http://p1.ipyy.com:8888/sms.aspx?action=send'.http_build_query($data);exit;
     return vPost('http://p1.ipyy.com:8888/sms.aspx?action=send', http_build_query($data));
     //*/
     $data = array(

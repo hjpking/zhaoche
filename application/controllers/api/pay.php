@@ -141,10 +141,10 @@ class pay  extends MY_Controller
             }
 
             $this->load->model('model_pay', 'pay');
-            $this->load->model("model_pay_{$paymentChannel}", 'payment_channel');
-            //$this->load->model("model_pay_unionpay", 'payment_channel');
+            //$this->load->model("model_pay_{$paymentChannel}", 'payment_channel');
+            $this->load->model("model_pay_alipay", 'payment_channel');
             $payResult = $this->payment_channel->response();
-
+exit;
             //0 签名错误
             if ($payResult['status'] == '0') {
                 $this->pay->savePay(array('pay_status' => '3'), $payResult['order_sn']);
@@ -200,6 +200,77 @@ class pay  extends MY_Controller
         } while (false);
 
         return $payChannel;
+    }
+
+    /**
+     * 用户充值记录
+     */
+    public function userPayRecord()
+    {
+        $token = trim($this->input->get_post('token'));
+        $start = intval($this->input->get_post('limit'));
+        $number = intval($this->input->get_post('offset'));
+
+        $limit = 20;
+        $offset = 0;
+        $start && $limit = $start;
+        $number && $offset = $number;
+
+        $response = array('code' => '0', 'msg' => '获取成功');
+
+        do {
+            if (empty ($token)) {
+                $response = error(10001);//参数不全
+                break;
+            }
+
+            $uInfo = $this->analyzeToken($token);
+            if (!$uInfo) {
+                $response = error(10011);//用户未登陆
+                break;
+            }
+
+            $uId = $uInfo[0];
+            if (!$uId) {
+                $response = error(10009);//错误的token
+                break;
+            }
+
+            $this->load->model('model_user', 'user');
+            $uData = $this->user->getUserById($uId, 'uid, uname, password, realname, amount, sex, phone,binding_type, is_del, create_time');
+            if (empty ($uData)) {
+                $response = error(10007);//用户不存在
+                break;
+            }
+
+            if ($uData['password'] != $uInfo[2]) {
+                $response = error(10008);//密码错误
+                break;
+            }
+
+            if ($uData['is_del'] == '1') {
+                $response = error(10010);//用户已禁用
+                break;
+            }
+
+            unset($uData['password'], $uData['is_del']);
+
+            $this->load->model('model_pay', 'pay');
+            $payData = $this->pay->getPay($limit, $offset, '*', array('uid' => $uData['uid']));
+            /*
+            //$this->load->model('model_invoice', 'user');
+            $invoice = $this->user->getInvoiceByUid($uId);
+
+            $this->load->model('model_card', 'card');
+            $card = $this->card->getCardByuId($uId);
+
+            $uData['invoice'] = $invoice;
+            $uData['card'] = $card;
+            //*/
+            $response['data'] = $payData;
+        } while (false);
+
+        $this->json_output($response);
     }
 
 

@@ -27,7 +27,7 @@ class model_pay_alipay extends MY_Model
 
         $string = "<result><is_success>T</is_success><content>" . $str . "</content><sign>" . $sign . "</sign></result>";
 
-        return $data['order_sn'];
+        //return $data['order_sn'];
         return $string;
     }
 
@@ -35,6 +35,12 @@ class model_pay_alipay extends MY_Model
     {
         $notify_data = $this->input->get_post('notify_data');
         $sign = $this->input->get_post('sign');
+
+        //*
+        $notify_data = '<notify><seller_email>meiyi@meiyiad.com</seller_email><partner>2088901264408851</partner><payment_type>1</payment_type><buyer_email>18610687243</buyer_email><trade_no>2013040872272597</trade_no><buyer_id>2088702616318972</buyer_id><quantity>1</quantity><total_fee>0.01</total_fee><use_coupon>N</use_coupon><is_total_fee_adjust>Y</is_total_fee_adjust><price>0.01</price><out_trade_no>10000000</out_trade_no><gmt_create>2013-04-08 11:03:38</gmt_create><seller_id>2088901264408851</seller_id><subject>AA用车充值</subject><trade_status>WAIT_BUYER_PAY</trade_status><discount>0.00</discount></notify>';
+        $sign = 'V+543SYFuzA2rmG77eqsssjb2wQ1vTP7SWPvDC1inF7iS3x0TdA4oI1fmZIGe1xNAX5nD/cox6793v1/XDeq0kYhUNI6q807grsrNjvfVRFOqKnZSnrSUqBw1oZmKA2naSSi2X1m2q4cLNWnh5FsepVvsUGiKkvysp3c1HOWmG8=';
+        $sign_type = 'RSA';
+        //*/
 
         $rData = array();
         $isVerify = $this->aliPayVerify($notify_data, $sign);
@@ -47,16 +53,7 @@ class model_pay_alipay extends MY_Model
         $trade_status = getDataForXML($notify_data , '/notify/trade_status');
         $nData = getDataForXML($notify_data , '/notify');
 
-        /*
-        $notify_data = 'notify_data=<notify><partner>2088702043538774</partner><discount>0.00</discount>
-        <payment_type>1</payment_type><subject>骨头1</subject>
-        <trade_no>2011102716746901</trade_no><buyer_email>4157874@qq.com</buyer_email>
-        <gmt_create>2011-10-27 12:10:51</gmt_create><quantity>1</quantity><out_trade_no>1027040323-9215</out_trade_no>
-        <seller_id>2088702043538774</seller_id><trade_status>TRADE_FINISHED</trade_status><is_total_fee_adjust>N</is_total_fee_adjust>
-        <total_fee>0.01</total_fee><gmt_payment>2011-10-27 12:10:52</gmt_payment><seller_email>17648787@qq.com</seller_email>
-        <gmt_close>2011-10-27 12:10:52</gmt_close><price>0.01</price><buyer_id>2088002456173013</buyer_id>
-        <use_coupon>N</use_coupon></notify>';
-        //*/
+
 
         $rData['merchant_id'] = $nData['partner'];
         $rData['order_sn'] = $nData['out_trade_no'];
@@ -107,12 +104,13 @@ class model_pay_alipay extends MY_Model
     {
         //读取支付宝公钥文件
         $pubKey = file_get_contents(APPPATH.'key/alipay/alipay_public_key.pem');
-
+        //echo $pubKey;exit;
         //转换为openssl格式密钥
+
         $res = openssl_get_publickey($pubKey);
 
         //调用openssl内置方法验签，返回bool值
-        $result = (bool)openssl_verify($data, base64_decode($sign), $res);
+        $result = (bool)openssl_verify($data, base64_decode($sign), $pubKey);
 
         //释放资源
         openssl_free_key($res);
