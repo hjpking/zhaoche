@@ -561,7 +561,7 @@ class order extends MY_Controller
                 break;
             }
 
-            $code = rand(100000, 999999);
+            $code = rand(1000, 9999);
             $cData = array(
                 'chauffeur_id' => $chauffeurData['chauffeur_id'],
                 'chauffeur_login_name' => $chauffeurData['cname'],
@@ -883,8 +883,8 @@ class order extends MY_Controller
             $distance = getDistance($longitude, $latitude, $arr[0], $arr[1]);
 
             if ($distance > 1000) {
-                $response = error(10036);//您离用户上车地点超过1000米
-                break;
+                //$response = error(10036);//您离用户上车地点超过1000米
+                //bin_addressreak;
             }
 
             $color = config_item('color');
@@ -1047,6 +1047,9 @@ class order extends MY_Controller
             $this->db->where('order_sn', $orderSn);
             $this->db->where('chauffeur_id', $chauffeurId);
             $this->db->update('order', array('status' => '6'));
+
+		$msg = '车辆已出发，登陆客户端查看车辆行驶路线。';
+		$this->sendMessage($data['user_phone'], $msg);
         } while (false);
 
         $this->json_output($response);
