@@ -530,10 +530,10 @@ define('ALIPAY_INPUT_CHARSET', 'utf-8');//字符编码格式
 //银联配置信息
 define('UNIONPAY_SUBMIT_URL', 'http://211.154.166.219/qzjy/MerOrderAction/deal.action');//前置请求地址
 define('UNIONPAY_UPOMP_PUBLIC_KEY', '');//前置密钥
-define('UNIONPAY_NOTIFY_PUBLIC_KEY', APPPATH."key/unionpay/898000000000001.cer");//前置密钥
+define('UNIONPAY_NOTIFY_PUBLIC_KEY', APPPATH."key/unionpay_test/898000000000001.cer");//前置密钥
 define('UNIONPAY_MY_ID', '898000000000002');//商户ID
 define('UNIONPAY_MY_NAME', '联通华建');//商户名称
-define('UNIONPAY_MY_PUBLIC_KEY', APPPATH.'key/unionpay/898000000000002.cer');//商户公钥
+define('UNIONPAY_MY_PUBLIC_KEY', APPPATH.'key/unionpay_test/898000000000002.cer');//商户公钥
 define('UNIONPAY_MY_PRIVATE_KEY', APPPATH.'key/unionpay_test/898000000000002.p12');//商户私钥
 define('UNIONPAY_MY_PRIKEY_PASSWORD', '898000000000002');//商户私钥密码
 define('UNIONPAY_NOTIFY_URL', $config['base_url'].'api/pay/payBack');//回调地址
