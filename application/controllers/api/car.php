@@ -10,10 +10,12 @@ class car extends MY_Controller
 {
     public function test()
     {
+        $this->sendMessage('13811508022', '王振生收');
+        /*/
         $gwUrl = 'http://sdkhttp.eucp.b2m.cn/sdk/SDKService?wsdl';
         $serialNumber = '0SDK-EBB-0130-NETLK';
         $password = '119165';
-        $sessionKey = '10';
+        $sessionKey = '123456';
         $connectTimeOut = 2;
         $readTimeOut = 10;
 
@@ -31,9 +33,11 @@ class car extends MY_Controller
         $this->load->library('client');
         $this->client->clients($gwUrl,$serialNumber,$password,$sessionKey,$proxyhost,$proxyport,$proxyusername,$proxypassword,$connectTimeOut,$readTimeOut);
         $this->client->setOutgoingEncoding("utf-8");
-        //echo $statusCode = $this->client->sendSMS(array('13811508022'), "王振生收");
-        echo $statusCode = $this->client->login();
+        echo $statusCode = $this->client->sendSMS(array('13811508022'), "老郭收");
+        echo '<br>'.date('Y-m-d H:i:s', TIMESTAMP);
+        //echo $statusCode = $this->client->login();
         //echo sendMessage('13811508022', '王振生收');
+        //*/
     }
     /**39.903021,116.440487
      * 获取周围车辆 -- 通过GPS

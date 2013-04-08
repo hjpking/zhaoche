@@ -235,4 +235,24 @@ class MY_Controller extends CI_Controller
 
         return $tokenInfo;
     }
+
+    public function sendMessage($phoneNumber, $content)
+    {
+        $gwUrl = 'http://sdkhttp.eucp.b2m.cn/sdk/SDKService?wsdl';
+        $serialNumber = '0SDK-EBB-0130-NETLK';
+        $password = '119165';
+        $sessionKey = '123456';
+        $connectTimeOut = 2;
+        $readTimeOut = 10;
+
+        $proxyhost = false;
+        $proxyport = false;
+        $proxyusername = false;
+        $proxypassword = false;
+
+        $this->load->library('client');
+        $this->client->clients($gwUrl,$serialNumber,$password,$sessionKey,$proxyhost,$proxyport,$proxyusername,$proxypassword,$connectTimeOut,$readTimeOut);
+        $this->client->setOutgoingEncoding("utf-8");
+        echo $statusCode = $this->client->sendSMS(array($phoneNumber), $content);
+    }
 }

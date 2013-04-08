@@ -25,8 +25,11 @@ class model_pay_alipay extends MY_Model
         $str = http_build_query($arr);
         $sign = $this->aliPaySign($str);
 
-        $string = "<result><is_success>T</is_success><content>" . $str . "</content><sign>" . $sign . "</sign></result>";
-
+        //$string = "<result><is_success>T</is_success><content>" . $str . "</content><sign>" . $sign . "</sign></result>";
+        $string = array(
+            'content' => $str,
+            'sign' => $sign,
+        );
         //return $data['order_sn'];
         return $string;
     }

@@ -12,13 +12,14 @@ class pay  extends MY_Controller
     public function index()
     {
         $amount = intval($this->input->get_post('amount'));
+        $token = $this->input->get_post('token');
+        $payType = $this->input->get_post('pay_type');
+
         $isInvoice = intval($this->input->get_post('is_invoice'));
         $postMode = intval($this->input->get_post('post_mode'));
         $payable = $this->input->get_post('payable');
         $content = $this->input->get_post('content');
         $mailingAddress = $this->input->get_post('mailing_address');
-        $token = $this->input->get_post('token');
-        $payType = $this->input->get_post('pay_type');
 
         log_message('PAYLOG', $payType.'-'.$amount.'-'.$token.'-'.print_r($_REQUEST,true));
 
