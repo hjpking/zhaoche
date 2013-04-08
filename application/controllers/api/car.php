@@ -10,7 +10,11 @@ class car extends MY_Controller
 {
     public function test()
     {
-        $this->sendMessage('13811508022', '王振生收');
+        $j = '{"code":"0","msg":"\u751f\u6210\u6210\u529f","data":{"content":"partner%3D%25222088901264408851%2522%26seller%3D%2522meiyi%2540meiyiad.com%2522%26out_trade_no%3D%252210000046%2522%26subject%3D%2522account_pay%2522%26body%3D%2522pay%2522%26total_fee%3D%2522100%2522%26notify_url%3D%2522http%253A%252F%252Fyongche.aayongche.com%252Fapi%252Fpay%252FpayBack%2522","sign":"k0LAxUi8L2zkiKZ%2F2MOr1lX0b4KMmTwzFJUC9QYlzvAkwANClWl6ARCj7v96ho6bTJoUJrMms%2B8p%2FgKVg2ovtnTMo5sctO%2BhJ%2FthH%2B%2FkXktMbJS9Zd6kVE5H3GKQG1xOOXgagFot29aFAv%2Fyr%2Fo7yJhRtqAfj%2BJFfKWO8cMXVRs%3D"}}';
+
+        $a = json_decode($j, true);
+        p(urldecode($a['data']['content']));
+        //$this->sendMessage('13811508022', '王振生收');
         /*/
         $gwUrl = 'http://sdkhttp.eucp.b2m.cn/sdk/SDKService?wsdl';
         $serialNumber = '0SDK-EBB-0130-NETLK';

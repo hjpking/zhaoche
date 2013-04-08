@@ -12,13 +12,13 @@ class model_pay_alipay extends MY_Model
     public function request(array $data)
     {
         $arr = array(
-            'partner' => ALIPAY_PARTNER,
-            'seller' => ALIPAY_SELLER,
-            'out_trade_no' => $data['order_sn'],
-            'subject' => 'account_pay',
-            'body' => 'pay',
-            'total_fee' => $data['amount'],
-            'notify_url' => ALIPAY_NOTIFY_URL,
+            'partner' => '"'.ALIPAY_PARTNER.'"',
+            'seller' => '"'.ALIPAY_SELLER.'"',
+            'out_trade_no' => '"'.$data['order_sn'].'"',
+            'subject' => '"'.'account_pay'.'"',
+            'body' => '"'.'pay'.'"',
+            'total_fee' => '"'.$data['amount'].'"',
+            'notify_url' => '"'.ALIPAY_NOTIFY_URL.'"',
         );
 
 
@@ -27,8 +27,8 @@ class model_pay_alipay extends MY_Model
 
         //$string = "<result><is_success>T</is_success><content>" . $str . "</content><sign>" . $sign . "</sign></result>";
         $string = array(
-            'content' => ($str),
-            'sign' => ($sign),
+            'content' => urlencode($str),
+            'sign' => urlencode($sign),
         );
         //return $data['order_sn'];
         return $string;
