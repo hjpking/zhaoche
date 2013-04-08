@@ -12,15 +12,14 @@ class model_pay_alipay extends MY_Model
     public function request(array $data)
     {
         $arr = array(
-            'partner' => '"'.ALIPAY_PARTNER.'"',
-            'seller' => '"'.ALIPAY_SELLER.'"',
-            'out_trade_no' => '"'.$data['order_sn'].'"',
-            'subject' => '"'.'account_pay'.'"',
-            'body' => '"'.'pay'.'"',
-            'total_fee' => '"'.$data['amount'].'"',
-            'notify_url' => '"'.ALIPAY_NOTIFY_URL.'"',
+            'partner' => ALIPAY_PARTNER,
+            'seller' => ALIPAY_SELLER,
+            'out_trade_no' => $data['order_sn'],
+            'subject' => 'account_pay',
+            'body' => 'pay',
+            'total_fee' => $data['amount'],
+            'notify_url' => ALIPAY_NOTIFY_URL,
         );
-
 
         $str = http_build_query($arr);
         $sign = $this->aliPaySign($str);
@@ -114,7 +113,7 @@ class model_pay_alipay extends MY_Model
 
         //调用openssl内置方法验签，返回bool值
         $result = (bool)openssl_verify($data, base64_decode($sign), $pubKey);
-d($result);
+
         //释放资源
         openssl_free_key($res);
 

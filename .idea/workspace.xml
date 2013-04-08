@@ -7,7 +7,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-02.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-03.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-06.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/car.php" afterPath="$PROJECT_DIR$/application/controllers/api/car.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/model_pay_alipay.php" afterPath="$PROJECT_DIR$/application/models/model_pay_alipay.php" />
     </list>
     <ignored path="zhaoche.iws" />
@@ -18,7 +17,7 @@
     <file path="/pay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365406548287" ignored="false" />
     <file path="/config.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365327766435" ignored="false" />
     <file path="/model_pay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364956747297" ignored="false" />
-    <file path="/model_pay_alipay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365408414132" ignored="false" />
+    <file path="/model_pay_alipay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365409307887" ignored="false" />
     <file path="/model_pay_unionpay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364900461578" ignored="false" />
     <file path="/Log.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364875697483" ignored="false" />
     <file path="/user_pay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365305426725" ignored="false" />
@@ -84,7 +83,7 @@
       <file leaf-file-name="model_pay_alipay.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/models/model_pay_alipay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="38" selection-start="897" selection-end="897" vertical-scroll-proportion="0.41466346">
+            <state line="122" column="0" selection-start="3898" selection-end="3898" vertical-scroll-proportion="2.0913463">
               <folding />
             </state>
           </provider>
@@ -140,8 +139,8 @@
         <option value="$PROJECT_DIR$/application/controllers/api/chauffeur.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/order.php" />
         <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
-        <option value="$PROJECT_DIR$/application/models/model_pay_alipay.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/car.php" />
+        <option value="$PROJECT_DIR$/application/models/model_pay_alipay.php" />
       </list>
     </option>
   </component>
@@ -581,7 +580,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/model_pay_alipay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="38" selection-start="897" selection-end="897" vertical-scroll-proportion="0.41466346">
+        <state line="122" column="0" selection-start="3898" selection-end="3898" vertical-scroll-proportion="2.0913463">
           <folding />
         </state>
       </provider>
