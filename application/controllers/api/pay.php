@@ -32,8 +32,8 @@ class pay  extends MY_Controller
             }
 
             if ($amount < 100) {
-                $response = error(10038);//金额大小(低于1元)
-                break;
+                //$response = error(10038);//金额大小(低于1元)
+                //break;
             }
 
             $payChannel = config_item('pay_channel');
