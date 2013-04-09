@@ -7,13 +7,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-02.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-03.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-06.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/core/Common.php" afterPath="$PROJECT_DIR$/system/core/Common.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/core/MY_Controller.php" afterPath="$PROJECT_DIR$/application/core/MY_Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/chauffeur.php" afterPath="$PROJECT_DIR$/application/controllers/api/chauffeur.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/city.php" afterPath="$PROJECT_DIR$/application/controllers/api/city.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/model_city.php" afterPath="$PROJECT_DIR$/application/models/model_city.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/rule.php" afterPath="$PROJECT_DIR$/application/controllers/rule.php" />
     </list>
     <ignored path="zhaoche.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,7 +30,7 @@
     <file path="/Common.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365482041764" ignored="false" />
     <file path="/car_level_create.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364972963758" ignored="false" />
     <file path="/car.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365408530772" ignored="false" />
-    <file path="/rule.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364996494531" ignored="false" />
+    <file path="/rule.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365492966667" ignored="false" />
     <file path="/create.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365316896131" ignored="false" />
     <file path="/user.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365480206075" ignored="false" />
     <file path="/index.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365315915843" ignored="false" />
@@ -88,10 +82,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="city.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="city.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/city.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="47" selection-start="3859" selection-end="3864" vertical-scroll-proportion="0.5029586">
+            <state line="138" column="47" selection-start="3859" selection-end="3864" vertical-scroll-proportion="-17.708334">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rule.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/rule.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="27" selection-start="326" selection-end="326" vertical-scroll-proportion="0.27784577">
               <folding />
             </state>
           </provider>
@@ -133,7 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/models/model_pay_alipay.php" />
         <option value="$PROJECT_DIR$/application/models/model_pay.php" />
         <option value="$PROJECT_DIR$/application/core/MY_Model.php" />
         <option value="$PROJECT_DIR$/application/models/model_pay_unionpay.php" />
@@ -149,6 +151,7 @@
         <option value="$PROJECT_DIR$/application/controllers/api/chauffeur.php" />
         <option value="$PROJECT_DIR$/application/models/model_city.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/city.php" />
+        <option value="$PROJECT_DIR$/application/controllers/rule.php" />
       </list>
     </option>
   </component>
@@ -481,13 +484,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/model_pay_unionpay.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="38" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/pay.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="274" column="132" selection-start="9450" selection-end="9570" vertical-scroll-proportion="0.0">
@@ -588,7 +584,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/city.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="47" selection-start="3859" selection-end="3864" vertical-scroll-proportion="0.5029586">
+        <state line="138" column="47" selection-start="3859" selection-end="3864" vertical-scroll-proportion="-17.708334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/rule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="27" selection-start="326" selection-end="326" vertical-scroll-proportion="0.27784577">
           <folding />
         </state>
       </provider>

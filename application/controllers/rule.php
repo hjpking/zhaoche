@@ -15,6 +15,7 @@ class rule extends MY_Controller
 
     public function index()
     {
+        $this->load->helper('url');
         $Limit = 20;
         $currentPage = $this->uri->segment(3, 1);
         $offset = ($currentPage - 1) * $Limit;
