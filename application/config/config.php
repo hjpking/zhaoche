@@ -540,7 +540,7 @@ define('UNIONPAY_NOTIFY_URL', $config['base_url'].'api/pay/payBack');//回调地
 
 
 //应用名称
-define('APP_NAME', '智通招车');
+define('APP_NAME', 'AA用车');
 
 //订单超时时间
 define('ORDER_TIMEOUT', 1800);

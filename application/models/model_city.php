@@ -142,6 +142,30 @@ class model_city extends MY_Model
     }
 
     /**
+     * 搜索常用地址
+     *
+     * @param $cityId
+     * @param $keyWord
+     * @param int $limit
+     * @param int $offset
+     * @return mixed
+     */
+    public function searchUseFul($cityId, $keyWord, $limit = 20, $offset = 0)
+    {
+        $where['city_id'] = $cityId;
+
+        $this->db->select('*');
+        $this->db->from('city_useful_addresse');
+        $this->db->where($where);
+        $this->db->like('name', $keyWord);
+        $this->db->limit($limit, $offset);
+
+        $data = $this->db->get()->result_array();//echo '<pre>';print_r($data);exit;
+
+        return $data;
+    }
+
+    /**
      * 获取常用地址数量
      *
      * @param array $where

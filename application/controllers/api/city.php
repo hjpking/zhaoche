@@ -125,4 +125,36 @@ class city extends MY_Controller
 
         $this->json_output($response);
     }
+
+    /**
+     * 推荐下车地址搜索
+     */
+    public function recommendAddressSearch()
+    {
+        $limit = 20;
+        $offset = 0;
+
+        $cityId = intval($this->input->get_post('city_id'));
+        $keyWord = $this->input->get_post('keyword');
+        $number = $this->input->get_post('limit');
+        $start = $this->input->get_post('offset');
+
+        $number && $limit = $number;
+        $start && $offset = $start;
+
+        $response = array('code' => '0', 'msg' => '搜索成功');
+
+        do {
+            if (empty ($cityId)) {
+                $response = error(10001);//参数不全
+                break;
+            }
+
+            $this->load->model('model_city', 'city');
+            $data = $this->city->searchUseFul($cityId, $keyWord, $limit, $offset);
+            $response['data'] = $data;
+        } while (false);
+
+        $this->json_output($response);
+    }
 }

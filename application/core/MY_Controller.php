@@ -238,6 +238,7 @@ class MY_Controller extends CI_Controller
 
     public function sendMessage($phoneNumber, $content)
     {
+        $content = '【'.$content.'】';
         $gwUrl = 'http://sdkhttp.eucp.b2m.cn/sdk/SDKService?wsdl';
         $serialNumber = '0SDK-EBB-0130-NETLK';
         $password = '119165';

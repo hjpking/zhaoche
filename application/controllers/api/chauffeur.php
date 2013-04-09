@@ -9,11 +9,41 @@
 class chauffeur extends MY_Controller
 {
     /**
+     * 获取司机当前位置
+     */
+    public function chauffeurCurrentLocation()
+    {
+        $chauffeurId = intval($this->input->get_post('chauffeur_id'));
+
+        $response = array('code' => '0', 'msg' => '获取成功');
+
+        do {
+            if (empty ($chauffeurId)) {
+                $response = error(10001);//参数不全
+                break;
+            }
+
+            $this->load->model('model_chauffeur', 'chauffeur');
+            $chauffeurData = $this->chauffeur->getChauffeurById($chauffeurId);
+            if (empty ($chauffeurData)) {
+                $response = error(10012);//司机不存在
+                break;
+            }
+
+            $locationData = $this->chauffeur->isCurrentLocation($chauffeurId);
+            $response['data'] = $locationData;
+        } while (false);
+
+        $this->json_output($response);
+    }
+
+
+    /**
      * 回报当前所在位置
      */
     public function reportCurrentLocation()
     {
-        $chauffeurId = $this->input->get_post('chauffeur_id');
+        $chauffeurId = intval($this->input->get_post('chauffeur_id'));
         $longitude = $this->input->get_post('longitude');
         $latitude = $this->input->get_post('latitude');
 
