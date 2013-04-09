@@ -264,8 +264,8 @@ class order extends MY_Controller
                 break;
             }
 
-            //$startTime = date('Y-m-d', strtotime($startTime)).' 00:00:00';
-            //$endTime = date('Y-m-d', strtotime($endTime)).' 23:59:59';
+            $startTime = date('Y-m-d H:i:s', strtotime($startTime));//.' 00:00:00';
+            $endTime = date('Y-m-d H:i:s', strtotime($endTime));//.' 23:59:59';
 
             $this->load->model('model_chauffeur', 'chauffeur');
             $chauffeurData = $this->chauffeur->getChauffeurById($chauffeurId);
