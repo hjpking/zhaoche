@@ -240,12 +240,20 @@ class city extends MY_Controller
         $name = $this->input->get_post('name');
         $cityId = $this->input->get_post('city_id');
         $descr = $this->input->get_post('descr');
+        $longitude = $this->input->get_post('longitude');
+        //$latitude = $this->input->get_post('latitude');
         $uaId = $this->input->get_post('ua_id');
+
+        $tmp = explode(",", $longitude);
+        $longitude = $tmp[0];
+        $latitude = $tmp[1];
 
         $data = array(
             'name' => $name,
             'city_id' => $cityId,
             'descr' => $descr,
+            'longitude' => $longitude,
+            'latitude' => $latitude,
         );
 
         $this->load->model('model_city', 'city');

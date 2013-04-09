@@ -40,6 +40,15 @@
                     </div>
 
                     <div class="control-group">
+                        <label for="input01" class="control-label">经纬度</label>
+                        <div class="controls">
+                            <input type="text" id="input01" class="input-xlarge" name="longitude"
+                                   value="<?=isset ($data['longitude']) ? $data['longitude'] : '';?>">
+                            <p class="help-block"> 例如：114.522091,38.059067。 </p>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
                         <label for="textarea" class="control-label">城市描述</label>
                         <div class="controls">
                             <textarea rows="3" id="textarea" class="input-xlarge" name="descr"><?=isset ($data['descr']) ? $data['descr'] : '';?></textarea>

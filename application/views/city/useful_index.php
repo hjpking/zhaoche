@@ -34,6 +34,7 @@
                     <th>ID</th>
                     <th>所属城市</th>
                     <th>名称</th>
+                    <th>经纬度</th>
                     <th>描述</th>
                     <th>添加时间</th>
                     <th>操作</th>
@@ -45,6 +46,7 @@
                     <td><?=$v['ua_id'];?></td>
                     <td><?=$city[$v['city_id']]['city_name'];?></td>
                     <td><?=$v['name'];?></td>
+                    <td><?=$v['longitude'];?>,<?=$v['latitude'];?></td>
                     <td><?=$v['descr'];?></td>
                     <td><?=$v['create_time'];?></td>
                     <td>
