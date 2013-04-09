@@ -245,6 +245,7 @@ class MY_Controller extends CI_Controller
      */
     public function sendMessage($phoneNumber, $content)
     {
+        $content = $content.'【AA用车】';
         $arr = array(
             'PHONE' => $phoneNumber,
             'MOID' => '0',
@@ -259,7 +260,7 @@ class MY_Controller extends CI_Controller
     /*/
     public function sendMessage($phoneNumber, $content)
     {
-        $content = '【'.$content.'】';
+        $content = $content.'【AA用车】';
         $gwUrl = 'http://sdkhttp.eucp.b2m.cn/sdk/SDKService?wsdl';
         $serialNumber = '0SDK-EBB-0130-NETLK';
         $password = '119165';
@@ -282,7 +283,7 @@ class MY_Controller extends CI_Controller
     /*/发送短信
     function sendMessage($phoneNumber, $content, $taskName = '')
     {
-        $content = '['.$content.']';
+        $content = $content.'[AA用车]';
 
         $data = array(
             'userid' => '272',

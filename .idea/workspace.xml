@@ -8,7 +8,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-03.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-06.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/core/MY_Controller.php" afterPath="$PROJECT_DIR$/application/core/MY_Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/car.php" afterPath="$PROJECT_DIR$/application/controllers/api/car.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zhaoche.iws" />
@@ -40,7 +39,7 @@
     <file path="/footer.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364982048165" ignored="false" />
     <file path="/staff.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364982922893" ignored="false" />
     <file path="/push.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364985911558" ignored="false" />
-    <file path="/Dummy.txt" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365499022595" ignored="false" />
+    <file path="/Dummy.txt" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365499912207" ignored="false" />
     <file path="/model_rule.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364997195717" ignored="false" />
     <file path="/city.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365495230882" ignored="false" />
     <file path="/feedback.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365259261267" ignored="false" />
@@ -80,7 +79,7 @@
       <file leaf-file-name="MY_Controller.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="256" column="36" selection-start="6761" selection-end="6764" vertical-scroll-proportion="0.53125">
+            <state line="247" column="37" selection-start="6534" selection-end="6534" vertical-scroll-proportion="0.296875">
               <folding />
             </state>
           </provider>
@@ -89,7 +88,7 @@
       <file leaf-file-name="car.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/car.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="40" selection-start="331" selection-end="331" vertical-scroll-proportion="-8.125">
+            <state line="13" column="40" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -134,8 +133,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="558" />
-    <option name="y" value="79" />
+    <option name="x" value="559" />
+    <option name="y" value="108" />
     <option name="width" value="1649" />
     <option name="height" value="1024" />
   </component>
@@ -165,6 +164,9 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files" />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -365,9 +367,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files" />
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -376,8 +375,8 @@
     <property name="options.lastSelected" value="reference.settings.php.debug.xdebug.proxy" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -418,14 +417,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="558" y="79" width="1649" height="1024" extended-state="0" />
+    <frame x="559" y="108" width="1649" height="1024" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329581" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23014385" sideWeight="0.670045" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29330832" sideWeight="0.44048944" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29768604" sideWeight="0.44048944" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289556" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -510,9 +509,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="542" column="24" selection-start="18616" selection-end="18616" vertical-scroll-proportion="-121.458336">
-          <folding />
-        </state>
+        <state line="542" column="24" selection-start="18616" selection-end="18616" vertical-scroll-proportion="-121.458336" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/error.php">
@@ -527,9 +524,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/model_chauffeur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="37" selection-start="3881" selection-end="3898" vertical-scroll-proportion="-10.115385">
-          <folding />
-        </state>
+        <state line="158" column="37" selection-start="3881" selection-end="3898" vertical-scroll-proportion="-10.115385" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/chauffeur.php">
@@ -541,9 +536,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/model_city.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="27" selection-start="3565" selection-end="3565" vertical-scroll-proportion="-21.875">
-          <folding />
-        </state>
+        <state line="152" column="27" selection-start="3565" selection-end="3565" vertical-scroll-proportion="-21.875" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/rule.php">
@@ -597,14 +590,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/car.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="40" selection-start="331" selection-end="331" vertical-scroll-proportion="-8.125">
+        <state line="13" column="40" selection-start="331" selection-end="331" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="256" column="36" selection-start="6761" selection-end="6764" vertical-scroll-proportion="0.53125">
+        <state line="247" column="37" selection-start="6534" selection-end="6534" vertical-scroll-proportion="0.296875">
           <folding />
         </state>
       </provider>
