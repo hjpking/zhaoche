@@ -8,6 +8,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-03.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-06.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/order.php" afterPath="$PROJECT_DIR$/application/controllers/api/order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/user.php" afterPath="$PROJECT_DIR$/application/controllers/user.php" />
     </list>
     <ignored path="zhaoche.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +33,7 @@
     <file path="/car.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365408530772" ignored="false" />
     <file path="/rule.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364996494531" ignored="false" />
     <file path="/create.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365316896131" ignored="false" />
-    <file path="/user.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365476678993" ignored="false" />
+    <file path="/user.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365480206075" ignored="false" />
     <file path="/index.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365315915843" ignored="false" />
     <file path="/login.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364981587270" ignored="false" />
     <file path="/footer.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364982048165" ignored="false" />
@@ -75,7 +76,7 @@
       <file leaf-file-name="user.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/user.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="26" selection-start="3039" selection-end="3039" vertical-scroll-proportion="-23.125">
+            <state line="93" column="13" selection-start="2566" selection-end="2566" vertical-scroll-proportion="-13.125">
               <folding />
             </state>
           </provider>
@@ -84,7 +85,16 @@
       <file leaf-file-name="order.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="266" column="40" selection-start="10076" selection-end="10077" vertical-scroll-proportion="0.33333334">
+            <state line="890" column="52" selection-start="30443" selection-end="30456" vertical-scroll-proportion="0.59452736">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chauffeur.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/api/chauffeur.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="52" selection-start="764" selection-end="764" vertical-scroll-proportion="-0.625">
               <folding />
             </state>
           </provider>
@@ -126,7 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/libraries/clients.php" />
         <option value="$PROJECT_DIR$/application/controllers/pay.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/chauffeur.php" />
         <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
@@ -141,6 +150,7 @@
         <option value="$PROJECT_DIR$/application/models/model_user.php" />
         <option value="$PROJECT_DIR$/application/config/error.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/user.php" />
+        <option value="$PROJECT_DIR$/application/controllers/user.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/order.php" />
       </list>
     </option>
@@ -474,11 +484,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php.bak">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="757" column="12" selection-start="25133" selection-end="25133" vertical-scroll-proportion="0.12733644" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="238" column="28" selection-start="6350" selection-end="6350" vertical-scroll-proportion="-19.416666">
@@ -557,23 +562,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="185" column="0" selection-start="6341" selection-end="6341" vertical-scroll-proportion="0.703125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="26" selection-start="3039" selection-end="3039" vertical-scroll-proportion="-23.125">
+        <state line="93" column="13" selection-start="2566" selection-end="2566" vertical-scroll-proportion="-13.125">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/chauffeur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="52" selection-start="764" selection-end="764" vertical-scroll-proportion="-0.37278107">
+        <state line="27" column="52" selection-start="764" selection-end="764" vertical-scroll-proportion="-0.625">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="266" column="40" selection-start="10076" selection-end="10077" vertical-scroll-proportion="0.33333334">
+        <state line="890" column="52" selection-start="30443" selection-end="30456" vertical-scroll-proportion="0.59452736">
           <folding />
         </state>
       </provider>

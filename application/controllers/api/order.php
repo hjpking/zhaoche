@@ -888,8 +888,8 @@ class order extends MY_Controller
             }
 
             $color = config_item('color');
-            $msg = $data['uname'].' 您好，接您的车已到达您的上车位点，您可以出发了。司机：'.$chauffeurData['realname'].'，车牌号：'.$chauffeurData['car_no'];
-            $msg .= ',车颜色：'.$color[$chauffeurData['color_id']]['name'].'。';
+            $msg = $data['uname'].' 您好，接您的车已到达您的上车位点，您可以出发了。';//'司机：'.$chauffeurData['realname'].'，车牌号：'.$chauffeurData['car_no'];
+            //$msg .= ',车颜色：'.$color[$chauffeurData['color_id']]['name'].'。';
             $this->sendMessage($data['user_phone'], $msg);
 
             $upData = array(
