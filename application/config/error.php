@@ -90,5 +90,7 @@ $error[10043] = array('code' => '10043', 'msg' => '司机未出发');
 
 $error[10044] = array('code' => '10044', 'msg' => '用户未上车');
 
+$error[10045] = array('code' => '10045', 'msg' => '手机号码已注册');
+
 
 return $error;

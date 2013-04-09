@@ -94,6 +94,12 @@ class user extends MY_Controller
             }
 
             $this->load->model('model_user', 'user');
+            $tmp = $this->user->getUserByPhone($phone);
+            if (!empty ($tmp)) {
+                $response = error(10045);//手机号码已注册
+                break;
+            }
+
             $uData = $this->user->getUserByName($userName);
             if ($uData) {
                 $response = error(10006);//用户已存在

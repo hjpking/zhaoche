@@ -278,8 +278,8 @@ class order extends MY_Controller
                 train_address,getoff_address,train_time,getoff_time,create_time,is_invoice,payable,content,mailing_address,leave_message, train_address_desc,getoff_address_desc';
             $where = array(
                 'chauffeur_id' => $chauffeurId,
-                'create_time >=' => $startTime,
-                'create_time <=' => $endTime,
+                'create_time >' => $startTime,
+                'create_time <' => $endTime,
             );
             $status && $where['status'] = $status;
 

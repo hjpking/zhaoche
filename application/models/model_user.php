@@ -76,6 +76,22 @@ class model_user extends MY_Model
     }
 
     /**
+     * 获取用户信息－－ 通过手机号码
+     *
+     * @param $phone
+     * @param string $field
+     * @param array $where
+     * @return mixed
+     */
+    public function getUserByPhone($phone, $field = '*', $where = array())
+    {
+        $where['phone'] = $phone;
+        $data = $this->db->select($field)->get_where('user', $where)->row_array();
+
+        return $data;
+    }
+
+    /**
      * 保存用户信息
      *
      * @param array $data
