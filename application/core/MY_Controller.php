@@ -249,10 +249,12 @@ class MY_Controller extends CI_Controller
             'PHONE' => $phoneNumber,
             'MOID' => '0',
             'MSG' => $content,
-            'PRODUCTID' => '',
+            'PRODUCTID' => '70',
             'AUTHCODE' => '0000',
+            'ProCODE' => 10690097,
         );
-        return vPost('', http_build_query($arr));
+
+        return vPost('http://220.194.61.112:8085/isms/MtInterface.aspx', http_build_query($arr));
     }
     /*/
     public function sendMessage($phoneNumber, $content)
