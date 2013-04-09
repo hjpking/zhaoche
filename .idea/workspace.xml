@@ -7,11 +7,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-02.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-03.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-06.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/error.php" afterPath="$PROJECT_DIR$/application/config/error.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/model_user.php" afterPath="$PROJECT_DIR$/application/models/model_user.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/order.php" afterPath="$PROJECT_DIR$/application/controllers/api/order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/user.php" afterPath="$PROJECT_DIR$/application/controllers/api/user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zhaoche.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,7 +84,7 @@
       <file leaf-file-name="order.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="452" column="9" selection-start="16173" selection-end="16173" vertical-scroll-proportion="0.24193548">
+            <state line="266" column="38" selection-start="10070" selection-end="10075" vertical-scroll-proportion="0.33333334">
               <folding />
             </state>
           </provider>
@@ -577,7 +573,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="452" column="9" selection-start="16173" selection-end="16173" vertical-scroll-proportion="0.24193548">
+        <state line="266" column="38" selection-start="10070" selection-end="10075" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>
