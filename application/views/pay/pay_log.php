@@ -72,6 +72,9 @@
                 <?php }?>
                 </tbody>
             </table>
+                <div class="pagination pagination-right  well form-inline">
+                    <strong>充值日志数量:<?=(empty($totalNum) ? '0' : $totalNum)?></strong>
+                </div>
             <div class="pagination">
                 <button type="submit" class="btn btn-primary"><i class="icon-plus icon-white"></i> 批量充值</button>
             </div>

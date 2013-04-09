@@ -81,6 +81,7 @@ class staff extends MY_Controller
             'departmentInfo' => $departmentInfo,
             'user_sex' => config_item('user_sex'),
             'isDelStatus' => $isDelStatus,
+            'totalNum' => $totalNum,
         );
         $this->load->view('staff/index', $data);
     }

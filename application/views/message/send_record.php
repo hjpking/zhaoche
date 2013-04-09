@@ -43,6 +43,9 @@
                     <?php }?>
                 </tbody>
             </table>
+            <div class="pagination pagination-right  well form-inline">
+                <strong>推送记录数量:<?=(empty($totalNum) ? '0' : $totalNum)?></strong>
+            </div>
             <div class="pagination pagination-right">
                 <ul><?php if(isset($pageHtml)) echo $pageHtml;?></ul>
             </div>

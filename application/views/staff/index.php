@@ -69,37 +69,14 @@
                     </td>
                 </tr>
                 <?php }?>
-                <!--tr>
-                    <td>1</td>
-                    <td>hjpking</td>
-                    <td>产品部</td>
-                    <td>花心油</td>
-                    <td>男</td>
-                    <td>15101559313</td>
-                    <td>hjpking@gmail.com</td>
-                    <td>
-                        <a href="<?=url('admin')?>staff/detail" title="查看"><i class="icon-eye-open"></i></a>
-                        <a href="<?=url('admin')?>staff/edit" title="编辑"><i class="icon-edit"></i></a>
-                        <a href="<?=url('admin')?>staff/recycle_delete" title="删除"><i class="icon-remove"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>hjpking</td>
-                    <td>产品部</td>
-                    <td>花心油</td>
-                    <td>男</td>
-                    <td>15101559313</td>
-                    <td>hjpking@gmail.com</td>
-                    <td>
-                        <a href="<?=url('admin')?>staff/detail" title="查看"><i class="icon-eye-open"></i></a>
-                        <a href="<?=url('admin')?>staff/edit" title="编辑"><i class="icon-edit"></i></a>
-                        <a href="<?=url('admin')?>staff/recycle_delete" title="删除"><i class="icon-remove"></i></a>
-                    </td>
-                </tr-->
                 </tbody>
             </table>
-            <?php if(isset($page)) echo $page;?>
+            <div class="pagination pagination-right  well form-inline">
+                <strong><?=$isDelStatus ? '已删员工数量' : '员工数量'?>:<?=(empty($totalNum) ? '0' : $totalNum)?></strong>
+            </div>
+            <div class="pagination pagination-right">
+                <ul><?php if (isset($pageHtml)) echo $pageHtml;?></ul>
+            </div>
         </div>
     </div>
 </div>

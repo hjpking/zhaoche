@@ -82,6 +82,7 @@ class message extends MY_Controller
             'cid' => $categoryId,
             'isDelStatus' => $isDelStatus,
             'staffData' => $staffData,
+            'totalNum' => $totalNum,
         );
 
         $this->load->view('message/index', $data);
@@ -405,6 +406,7 @@ class message extends MY_Controller
             'user_type' => config_item('user_type'),
             'message_type' => config_item('message_type'),
             'staffData' => $staffData,
+            'totalNum' => $totalNum,
         );
 
         $this->load->view('message/send_record', $data);

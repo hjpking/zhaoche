@@ -99,6 +99,7 @@ class order extends MY_Controller
             'carLevelInfo' => $carLevelInfo,
             'cityInfo' => $city,
             'url' => '/order/index/?'.http_build_query($_REQUEST),
+            'totalNum' => $totalNum,
         );
 
         if ($isExport) {

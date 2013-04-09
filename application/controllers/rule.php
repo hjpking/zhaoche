@@ -91,6 +91,7 @@ class rule extends MY_Controller
             'city_id' => $city_id,
             'sId' => $sId,
             'lId' => $lId,
+            'totalNum' => $totalNum,
             //'ruleData' => $ruleData,
         );
         $this->load->view('rule/index', $data);

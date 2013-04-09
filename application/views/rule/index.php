@@ -79,38 +79,11 @@
                     </td>
                 </tr>
                 <?php }?>
-                <!--tr>
-                    <td>2</td>
-                    <td>送机服务</td>
-                    <td>经济适用型</td>
-                    <td>100元</td>
-                    <td>3元</td>
-                    <td>30元</td>
-                    <td>5元</td>
-                    <td>10元</td>
-                    <td>2013-03-07 19:03:02</td>
-                    <td>
-                        <a href="<?=url('admin')?>rule/edit" title="编辑"><i class="icon-edit"></i></a>
-                        <a href="<?=url('admin')?>rule/delete" title="删除"><i class="icon-remove"></i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>送机服务</td>
-                    <td>经济适用型</td>
-                    <td>100元</td>
-                    <td>3元</td>
-                    <td>30元</td>
-                    <td>5元</td>
-                    <td>10元</td>
-                    <td>2013-03-07 19:03:02</td>
-                    <td>
-                        <a href="<?=url('admin')?>rule/edit" title="编辑"><i class="icon-edit"></i></a>
-                        <a href="<?=url('admin')?>rule/delete" title="删除"><i class="icon-remove"></i></a>
-                    </td>
-                </tr-->
                 </tbody>
             </table>
+            <div class="pagination pagination-right  well form-inline">
+                <strong>计费规则数量:<?=(empty($totalNum) ? '0' : $totalNum)?></strong>
+            </div>
             <div class="pagination pagination-right">
                 <ul><?php if(isset($pageHtml)) echo $pageHtml;?></ul>
             </div>

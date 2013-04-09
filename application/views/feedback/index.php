@@ -117,7 +117,12 @@
                 <?php }?>
                 </tbody>
             </table>
-            <?php if(isset($page)) echo $page;?>
+            <div class="pagination pagination-right  well form-inline">
+                <strong>投诉数量:<?=(empty($totalNum) ? '0' : $totalNum)?></strong>
+            </div>
+            <div class="pagination pagination-right">
+                <ul><?php if (isset($pageHtml)) echo $pageHtml;?></ul>
+            </div>
         </div>
     </div>
 </div>

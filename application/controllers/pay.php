@@ -108,6 +108,7 @@ class pay extends MY_Controller
             'userData' => $userData,
             'url' => '/pay/index?'.http_build_query($_REQUEST),
             //'orderData' => $orderData,
+            'totalNum' => $totalNum,
         );
 
         if ($isExport) {
@@ -373,6 +374,7 @@ class pay extends MY_Controller
             'staff_data' => $staffData,
             'uname' => $uname,
             'staff_name' => $staffName,
+            'totalNum' => $totalNum,
         );
 
         $this->load->view('pay/pay_log', $data);

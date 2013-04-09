@@ -93,6 +93,7 @@ class feedback extends MY_Controller
             'userData' => $userData,
             'user_type' => config_item('user_type'),
             'process_status' => config_item('process_status'),
+            'totalNum' => $totalNum,
         );
         $this->load->view('feedback/index', $data);
     }
