@@ -236,6 +236,25 @@ class MY_Controller extends CI_Controller
         return $tokenInfo;
     }
 
+    /**
+     * 发送短信
+     *
+     * @param $phoneNumber
+     * @param $content
+     * @return mixed|string
+     */
+    public function sendMessage($phoneNumber, $content)
+    {
+        $arr = array(
+            'PHONE' => $phoneNumber,
+            'MOID' => '0',
+            'MSG' => $content,
+            'PRODUCTID' => '',
+            'AUTHCODE' => '0000',
+        );
+        return vPost('', http_build_query($arr));
+    }
+    /*/
     public function sendMessage($phoneNumber, $content)
     {
         $content = '【'.$content.'】';
@@ -256,4 +275,48 @@ class MY_Controller extends CI_Controller
         $this->client->setOutgoingEncoding("utf-8");
         return $statusCode = $this->client->sendSMS(array($phoneNumber), $content);
     }
+    //*/
+
+    /*/发送短信
+    function sendMessage($phoneNumber, $content, $taskName = '')
+    {
+        $content = '['.$content.']';
+
+        $data = array(
+            'userid' => '272',
+            'account' => 'PF091',
+            'password' => 'abc12345',
+            'mobile' => $phoneNumber,
+            'content' => $content. APP_NAME,
+            'sendTime' => date('Y-m-d H:i:s', TIMESTAMP),
+            'checkcontent' => '0',
+            'taskName' => $taskName,
+            'countnumber' => 1,
+            'mobilenumber' => 1,
+            'telephonenumber' => 0,
+        );
+    //echo 'http://p1.ipyy.com:8888/sms.aspx?action=send'.http_build_query($data);exit;
+        return vPost('http://p1.ipyy.com:8888/sms.aspx?action=send', http_build_query($data));
+
+
+
+        $data = array(
+            'action' => 'send',
+            'userid' => M_ID,
+            'account' => M_ACCOUNT,
+            'password' => M_PASSWORD,
+            'mobile' => $phoneNumber,
+            'content' => $content,
+            'sendtime' => date('Y-m-d H:i:s'),
+            'checkcontent' => '0',
+            'taskname' => $taskName,
+            'countnumber' => '1',
+            'mobilenumber' => '1',
+            'telephonenumber' => '',
+        );
+
+        return vPost(M_URL, http_build_query($data));
+
+    }
+    //*/
 }

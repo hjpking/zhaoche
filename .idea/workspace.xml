@@ -7,7 +7,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-02.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-03.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-06.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/city/useful_create.php" afterPath="$PROJECT_DIR$/application/views/city/useful_create.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/core/Common.php" afterPath="$PROJECT_DIR$/system/core/Common.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/core/MY_Controller.php" afterPath="$PROJECT_DIR$/application/core/MY_Controller.php" />
     </list>
     <ignored path="zhaoche.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +47,7 @@
     <file path="/be_user_pay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365304350962" ignored="false" />
     <file path="/Client.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365401010643" ignored="false" />
     <file path="/clients.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365401366225" ignored="false" />
-    <file path="/MY_Controller.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365406664061" ignored="false" />
+    <file path="/MY_Controller.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365496746169" ignored="false" />
     <file path="/model_user.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365476611100" ignored="false" />
     <file path="/model_city.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365489930824" ignored="false" />
     <file path="/useful_create.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365495538923" ignored="false" />
@@ -75,67 +76,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="chauffeur.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/api/chauffeur.php">
+      <file leaf-file-name="MY_Controller.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="43" selection-start="881" selection-end="881" vertical-scroll-proportion="-16.25">
+            <state line="257" column="55" selection-start="6809" selection-end="6809" vertical-scroll-proportion="0.47716346">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="city.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/api/city.php">
+      <file leaf-file-name="Common.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/core/Common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="138" column="47" selection-start="3859" selection-end="3864" vertical-scroll-proportion="-17.708334">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rule.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/rule.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="51" selection-start="1172" selection-end="1172" vertical-scroll-proportion="-10.711538">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="city.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/city.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="255" column="36" selection-start="8192" selection-end="8192" vertical-scroll-proportion="-17.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="useful_create.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/city/useful_create.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="35" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.5576208">
-              <folding>
-                <marker date="1365495574751" expanded="true" signature="2750:2990" placeholder="..." />
-                <marker date="1365495574751" expanded="true" signature="2878:2990" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="model_city.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/model_city.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="152" column="27" selection-start="3565" selection-end="3565" vertical-scroll-proportion="-21.875">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="model_chauffeur.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/model_chauffeur.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="158" column="37" selection-start="3881" selection-end="3898" vertical-scroll-proportion="-10.115385">
+            <state line="694" column="0" selection-start="17070" selection-end="17070" vertical-scroll-proportion="-4.9166665">
               <folding />
             </state>
           </provider>
@@ -166,8 +119,6 @@
         <option value="$PROJECT_DIR$/application/controllers/user.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/order.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
-        <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
-        <option value="$PROJECT_DIR$/system/core/Common.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/chauffeur.php" />
         <option value="$PROJECT_DIR$/application/models/model_city.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/city.php" />
@@ -175,13 +126,15 @@
         <option value="$PROJECT_DIR$/application/views/city/useful_index.php" />
         <option value="$PROJECT_DIR$/application/controllers/city.php" />
         <option value="$PROJECT_DIR$/application/views/city/useful_create.php" />
+        <option value="$PROJECT_DIR$/system/core/Common.php" />
+        <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="138" />
-    <option name="y" value="60" />
+    <option name="x" value="443" />
+    <option name="y" value="59" />
     <option name="width" value="1649" />
     <option name="height" value="1024" />
   </component>
@@ -464,7 +417,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="138" y="60" width="1649" height="1024" extended-state="0" />
+    <frame x="443" y="59" width="1649" height="1024" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -575,20 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="239" column="5" selection-start="6383" selection-end="6383" vertical-scroll-proportion="0.54927886">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/core/Common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="715" column="0" selection-start="17764" selection-end="17764" vertical-scroll-proportion="0.5048077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/error.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="92" column="12" selection-start="2947" selection-end="2952" vertical-scroll-proportion="0.87573963">
@@ -638,13 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/api/city.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="47" selection-start="3859" selection-end="3864" vertical-scroll-proportion="-17.708334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/city.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="255" column="36" selection-start="8192" selection-end="8192" vertical-scroll-proportion="-17.5">
@@ -654,11 +586,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/city/useful_create.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="35" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.5576208">
+        <state line="45" column="35" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.54086536">
           <folding>
-            <marker date="1365495574751" expanded="true" signature="2750:2990" placeholder="..." />
-            <marker date="1365495574751" expanded="true" signature="2878:2990" placeholder="..." />
+            <marker date="1365495574751" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1365495574751" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/api/city.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="138" column="47" selection-start="3859" selection-end="3864" vertical-scroll-proportion="0.5029586">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/core/Common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="694" column="0" selection-start="17070" selection-end="17070" vertical-scroll-proportion="-4.9166665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="257" column="55" selection-start="6809" selection-end="6809" vertical-scroll-proportion="0.47716346">
+          <folding />
         </state>
       </provider>
     </entry>
