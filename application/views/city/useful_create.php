@@ -43,7 +43,7 @@
                         <label for="input01" class="control-label">经纬度</label>
                         <div class="controls">
                             <input type="text" id="input01" class="input-xlarge" name="longitude"
-                                   value="<?=isset ($data['longitude']) ? $data['longitude'] : '';?>">
+                                   value="<?=(isset ($data['longitude']) && isset ($data['latitude']) ) ? $data['longitude'].','.$data['latitude'] : '';?>">
                             <p class="help-block"> 例如：114.522091,38.059067。 </p>
                         </div>
                     </div>

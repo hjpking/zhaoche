@@ -7,9 +7,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-02.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-03.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-06.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/city.php" afterPath="$PROJECT_DIR$/application/controllers/city.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/city/useful_create.php" afterPath="$PROJECT_DIR$/application/views/city/useful_create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/city/useful_index.php" afterPath="$PROJECT_DIR$/application/views/city/useful_index.php" />
     </list>
     <ignored path="zhaoche.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,7 +49,7 @@
     <file path="/MY_Controller.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365406664061" ignored="false" />
     <file path="/model_user.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365476611100" ignored="false" />
     <file path="/model_city.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365489930824" ignored="false" />
-    <file path="/useful_create.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365495126509" ignored="false" />
+    <file path="/useful_create.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365495538923" ignored="false" />
     <file path="/useful_index.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365495066837" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,20 +102,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="city.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="city.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/city.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="248" column="28" selection-start="7998" selection-end="7998" vertical-scroll-proportion="0.38414633">
+            <state line="255" column="36" selection-start="8192" selection-end="8192" vertical-scroll-proportion="-17.5">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="useful_create.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="useful_create.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/city/useful_create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="96" selection-start="2396" selection-end="2405" vertical-scroll-proportion="-18.125">
-              <folding />
+            <state line="45" column="35" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.5576208">
+              <folding>
+                <marker date="1365495574751" expanded="true" signature="2750:2990" placeholder="..." />
+                <marker date="1365495574751" expanded="true" signature="2878:2990" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -172,8 +173,8 @@
         <option value="$PROJECT_DIR$/application/controllers/api/city.php" />
         <option value="$PROJECT_DIR$/application/controllers/rule.php" />
         <option value="$PROJECT_DIR$/application/views/city/useful_index.php" />
-        <option value="$PROJECT_DIR$/application/views/city/useful_create.php" />
         <option value="$PROJECT_DIR$/application/controllers/city.php" />
+        <option value="$PROJECT_DIR$/application/views/city/useful_create.php" />
       </list>
     </option>
   </component>
@@ -644,17 +645,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/city/useful_create.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/city.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="96" selection-start="2396" selection-end="2405" vertical-scroll-proportion="-18.125">
+        <state line="255" column="36" selection-start="8192" selection-end="8192" vertical-scroll-proportion="-17.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/city.php">
+    <entry file="file://$PROJECT_DIR$/application/views/city/useful_create.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="248" column="28" selection-start="7998" selection-end="7998" vertical-scroll-proportion="0.38414633">
-          <folding />
+        <state line="45" column="35" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.5576208">
+          <folding>
+            <marker date="1365495574751" expanded="true" signature="2750:2990" placeholder="..." />
+            <marker date="1365495574751" expanded="true" signature="2878:2990" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
