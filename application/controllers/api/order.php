@@ -477,6 +477,9 @@ class order extends MY_Controller
                 break;
             }
 
+            $this->load->model('model_service_type', 'service');
+            $serviceData = $this->service->getServiceType(1000);
+
             $this->load->model('model_order', 'order');
             $data = $this->order->getOrder(1000, 0, '*', array('status' => '0', 'city_id' => $cityId));
 
@@ -504,6 +507,10 @@ class order extends MY_Controller
             foreach ($data as $value) {
                 if (!isset ($value['order_sn'])) continue;
 
+                foreach ($serviceData as $sd) {
+                    if ($sd['sid'] == $value['sid'])
+                        $value['service_name'] = $sd['name'];
+                }
                 if ($offset == $i || $i < $limit) $rData[] = $value;
 
                 $i++;
