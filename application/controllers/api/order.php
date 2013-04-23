@@ -280,6 +280,9 @@ class order extends MY_Controller
                 train_address,getoff_address,train_time,getoff_time,create_time,is_invoice,payable,content,mailing_address,leave_message, train_address_desc,getoff_address_desc,
                 base_price, night_service_charge, kongshi_fee, km_price';
 
+            $this->load->model('model_service_type', 'service');
+            $serviceData = $this->service->getServiceType(1000);
+
             //$field = '*';
             $where = array(
                 'chauffeur_id' => $chauffeurId,
@@ -290,6 +293,14 @@ class order extends MY_Controller
 
             $this->load->model('model_order', 'order');
             $orderData = $this->order->getOrder($limit, $offset, $field, $where);
+
+            foreach ($orderData as &$value) {
+                foreach ($serviceData as $sd) {
+                    if ($sd['sid'] == $value['sid'])
+                        $value['service_name'] = $sd['name'];
+                }
+            }
+
             $response['data'] = $orderData;
         } while (false);
 
@@ -319,8 +330,16 @@ class order extends MY_Controller
                 break;
             }
 
+            $this->load->model('model_service_type', 'service');
+            $serviceData = $this->service->getServiceType(1000);
+
             $this->load->model('model_order', 'order');
             $data = $this->order->getOrderById($orderSn, '*', array('chauffeur_id' => $chauffeurId));
+            foreach ($serviceData as $sd) {
+                if ($sd['sid'] == $data['sid'])
+                    $data['service_name'] = $sd['name'];
+            }
+
             if (!$data) {
                 $response = error(10018);//订单不存在
                 break;

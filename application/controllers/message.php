@@ -337,6 +337,14 @@ class message extends MY_Controller
             show_error('消息不存在!');
         }
 
+        if (empty ($recipient)) {
+            $this->load->model('model_user', 'user');
+            $userList = $this->user->getUser(10000000, 0, '*', array('status' => '1', 'is_del' => '0'));
+        } else {
+            $arr = explode(',', $recipient);
+            p($arr);
+        }
+exit;
         $data = array(
             'user_type' => $userType,
             'mid' => $mId,

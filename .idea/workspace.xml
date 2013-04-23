@@ -9,22 +9,12 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-03.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-06.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-08.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/chauffeur.php" afterPath="$PROJECT_DIR$/application/controllers/api/chauffeur.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/rule/create.php" afterPath="$PROJECT_DIR$/application/views/rule/create.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/error.php" afterPath="$PROJECT_DIR$/application/config/error.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/rule/index.php" afterPath="$PROJECT_DIR$/application/views/rule/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/model_order.php" afterPath="$PROJECT_DIR$/application/models/model_order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/model_pay.php" afterPath="$PROJECT_DIR$/application/models/model_pay.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/message.php" afterPath="$PROJECT_DIR$/application/controllers/message.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/order.php" afterPath="$PROJECT_DIR$/application/controllers/api/order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/other.php" afterPath="$PROJECT_DIR$/application/controllers/api/other.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/pay.php" afterPath="$PROJECT_DIR$/application/controllers/api/pay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/rule.php" afterPath="$PROJECT_DIR$/application/controllers/rule.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zhaoche.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/order.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1366691386053" ignored="false" />
+    <file path="/order.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1366701743409" ignored="false" />
     <file path="/a.dummy" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1366692151889" ignored="false" />
     <file path="/model_order.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1366690505420" ignored="false" />
     <file path="/pay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1366699791901" ignored="false" />
@@ -73,6 +63,7 @@
     <file path="/send_record.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365512219571" ignored="false" />
     <file path="/error.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1366695341680" ignored="false" />
     <file path="/other.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1366700820102" ignored="false" />
+    <file path="/message.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1366701575533" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,73 +88,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="message.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/message.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="343" column="40" selection-start="9929" selection-end="9939" vertical-scroll-proportion="-22.708334">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model_user.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/model_user.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="40" column="45" selection-start="990" selection-end="990" vertical-scroll-proportion="-25.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="order.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="485" column="14" selection-start="17305" selection-end="17305" vertical-scroll-proportion="0.6754808">
+            <state line="778" column="20" selection-start="27079" selection-end="27079" vertical-scroll-proportion="0.33293268">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pay.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/api/pay.php">
+      <file leaf-file-name="model_message.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/model_message.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="333" column="5" selection-start="10976" selection-end="10976" vertical-scroll-proportion="-26.541666">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="other.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/api/other.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="1" selection-start="244" selection-end="244" vertical-scroll-proportion="-6.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="model_chauffeur.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/model_chauffeur.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="8" selection-start="1533" selection-end="1612" vertical-scroll-proportion="-3.7884614">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chauffeur.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/api/chauffeur.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="224" column="35" selection-start="6602" selection-end="6604" vertical-scroll-proportion="-22.291666">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="model_pay.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/model_pay.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="97" selection-start="3841" selection-end="3841" vertical-scroll-proportion="-28.333334">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/api/user.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="153" column="0" selection-start="4127" selection-end="4441" vertical-scroll-proportion="-26.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="error.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config/error.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="57" selection-start="617" selection-end="623" vertical-scroll-proportion="-3.1923077">
+            <state line="225" column="5" selection-start="5146" selection-end="5146" vertical-scroll-proportion="-13.125">
               <folding />
             </state>
           </provider>
@@ -187,7 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/controllers/message.php" />
         <option value="$PROJECT_DIR$/application/views/message/send_record.php" />
         <option value="$PROJECT_DIR$/application/controllers/staff.php" />
         <option value="$PROJECT_DIR$/application/views/staff/index.php" />
@@ -197,12 +151,13 @@
         <option value="$PROJECT_DIR$/application/controllers/rule.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/models/model_order.php" />
-        <option value="$PROJECT_DIR$/application/controllers/api/order.php" />
         <option value="$PROJECT_DIR$/application/config/error.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/chauffeur.php" />
         <option value="$PROJECT_DIR$/application/models/model_pay.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/pay.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/other.php" />
+        <option value="$PROJECT_DIR$/application/controllers/message.php" />
+        <option value="$PROJECT_DIR$/application/controllers/api/order.php" />
       </list>
     </option>
   </component>
@@ -443,13 +398,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="270" y="53" width="1649" height="1024" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5595106" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329581" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2332708" sideWeight="0.670045" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2332708" sideWeight="0.670045" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31394622" sideWeight="0.44048944" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289556" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -525,20 +480,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/rule/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="26" selection-start="5424" selection-end="5424" vertical-scroll-proportion="-15.291667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/rule/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="49" selection-start="3417" selection-end="3417" vertical-scroll-proportion="-25.583334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="557" column="22" selection-start="18836" selection-end="18850" vertical-scroll-proportion="-31.458334">
@@ -560,34 +501,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/api/user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="0" selection-start="4127" selection-end="4441" vertical-scroll-proportion="-26.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/model_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="34" selection-start="1967" selection-end="1981" vertical-scroll-proportion="-23.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/error.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="57" selection-start="617" selection-end="623" vertical-scroll-proportion="-3.1923077">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/model_chauffeur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="60" column="8" selection-start="1533" selection-end="1612" vertical-scroll-proportion="-3.7884614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="32" selection-start="390" selection-end="390" vertical-scroll-proportion="0.31598514">
@@ -602,37 +515,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/api/chauffeur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="224" column="35" selection-start="6602" selection-end="6604" vertical-scroll-proportion="-22.291666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/model_pay.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="97" selection-start="3841" selection-end="3841" vertical-scroll-proportion="-28.333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/pay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="333" column="5" selection-start="10976" selection-end="10976" vertical-scroll-proportion="-26.541666">
+        <state line="333" column="5" selection-start="10976" selection-end="10976" vertical-scroll-proportion="0.7692308">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/other.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="1" selection-start="244" selection-end="244" vertical-scroll-proportion="-6.25">
+        <state line="16" column="1" selection-start="244" selection-end="244" vertical-scroll-proportion="0.17751479">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/model_chauffeur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="8" selection-start="1533" selection-end="1612" vertical-scroll-proportion="0.24112608">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/api/chauffeur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="224" column="35" selection-start="6602" selection-end="6604" vertical-scroll-proportion="0.6331361">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/model_pay.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="145" column="97" selection-start="3841" selection-end="3841" vertical-scroll-proportion="0.80473375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/api/user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="0" selection-start="4127" selection-end="4441" vertical-scroll-proportion="0.74556214">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="57" selection-start="617" selection-end="623" vertical-scroll-proportion="0.20318237">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/model_message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="225" column="5" selection-start="5146" selection-end="5146" vertical-scroll-proportion="-13.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="343" column="40" selection-start="9929" selection-end="9939" vertical-scroll-proportion="-22.708334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/model_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="45" selection-start="990" selection-end="990" vertical-scroll-proportion="-25.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="485" column="14" selection-start="17305" selection-end="17305" vertical-scroll-proportion="0.6754808">
+        <state line="778" column="20" selection-start="27079" selection-end="27079" vertical-scroll-proportion="0.33293268">
           <folding />
         </state>
       </provider>
