@@ -14,6 +14,9 @@ $subNav = array(
     '33' => array(
         array('title' => '给用户充值记录', 'url' => 'pay/payLog'),
     ),
+    '34' => array(
+        array('title' => '司机给用户充值记录', 'url' => 'pay/chauffeur_pay_log'),
+    ),
 );
 ?>
 <div class="subnav">

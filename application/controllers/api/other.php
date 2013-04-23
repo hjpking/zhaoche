@@ -15,6 +15,8 @@ class other extends MY_Controller
     public function getNotice()
     {
         $chauffeurId = intval($this->input->get_post('chauffeur_id'));
+        $startTime = $this->input->get_post('start_time');
+        $endTime = $this->input->get_post('end_time');
 
         $start = intval($this->input->get_post('limit'));
         $number = intval($this->input->get_post('offset'));
@@ -32,12 +34,26 @@ class other extends MY_Controller
                 break;
             }
 
+            $startTime && $startTime = date('Y-m-d H:i:s', strtotime($startTime));//.' 00:00:00';
+            $endTime && $endTime = date('Y-m-d H:i:s', strtotime($endTime));//.' 23:59:59';
+
             $field = 'id, title, content, create_time';
             $this->load->model('model_message', 'message');
-            $where = array(
-                'recipient_id' => $chauffeurId,
-                'user_type' => '2',
-            );
+
+            if ($startTime && $endTime) {
+                $where = array(
+                    'recipient_id' => $chauffeurId,
+                    'user_type' => '2',
+                    'create_time >' => $startTime,
+                    'create_time <' => $endTime,
+                );
+            } else {
+                $where = array(
+                    'recipient_id' => $chauffeurId,
+                    'user_type' => '2',
+                );
+            }
+
 
             $data = $this->message->getMessageSendRecord($limit, $offset, $field, $where);
             $response['data'] = $data;

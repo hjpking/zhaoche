@@ -203,12 +203,24 @@ class chauffeur extends MY_Controller
                 break;
             }
 
-            $field = 'chauffeur_id, cname, realname, sex, phone, id_card, car_id, city_id, car_no, descr, status';
+            $field = 'chauffeur_id, cname, realname, sex, phone, id_card, car_id, city_id, color_id, car_no, descr, status';
             $data = $this->chauffeur->getChauffeurByPhone($phone, $field);
+
             if (empty ($data)) {
                 $response = error(10012);//司机不存在
                 break;
             }
+            $this->load->model('model_car', 'car');
+            $carInfo = $this->car->getCarById($data['car_id']);
+            $data['car_name'] = $carInfo['name'];
+
+            $this->load->model('model_city', 'city');
+            $cityData = $this->city->getCityById($data['city_id']);
+            $data['city_name'] = $cityData['city_name'];
+
+            $color = config_item('color');
+            $data['color_name'] = $color[$data['color_id']]['name'];
+
             $response['data'] = $data;
         } while (false);
 
@@ -221,6 +233,16 @@ class chauffeur extends MY_Controller
     public function resume_log()
     {
         $chauffeurId = intval($this->input->get_post('chauffeur_id'));
+        $startTime = $this->input->get_post('start_time');
+        $endTime = $this->input->get_post('end_time');
+
+        $start = intval($this->input->get_post('limit'));
+        $number = intval($this->input->get_post('offset'));
+
+        $limit = 50;
+        $offset = 0;
+        $start && $limit = $start;
+        $number && $offset = $number;
 
         $response = array('code' => '0', 'msg' => '获取成功');
 
@@ -230,8 +252,23 @@ class chauffeur extends MY_Controller
                 break;
             }
 
+            $startTime && $startTime = date('Y-m-d H:i:s', strtotime($startTime));//.' 00:00:00';
+            $endTime && $endTime = date('Y-m-d H:i:s', strtotime($endTime));//.' 23:59:59';
+
+            if ($startTime && $endTime) {
+                $where = array(
+                    'chauffeur_id' => $chauffeurId,
+                    'create_time >' => $startTime,
+                    'create_time <' => $endTime,
+                );
+            } else {
+                $where = array(
+                    'chauffeur_id' => $chauffeurId,
+                );
+            }
+
             $this->load->model('model_pay', 'pay');
-            $data = $this->pay->getMessageSendRecord($chauffeurId);
+            $data = $this->pay->getChauffeurPay($limit, $offset, '*', $where);
             $response['data'] = $data;
         } while (false);
 

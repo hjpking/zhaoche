@@ -403,6 +403,7 @@ $config['view_nav'] = array(
         '31' => array('title' => '充值管理', 'url' => 'pay/index'),
         '32' => array('title' => '给用户充值', 'url' => 'pay/beUserPay'),
         '33' => array('title' => '给用户充值记录', 'url' => 'pay/payLog'),
+        '34' => array('title' => '司机给用户充值记录', 'url' => 'pay/chauffeur_pay_log'),
     )),
     '4' => array('title' => '车辆/计费规则', 'links' => array(
         '40' => array('title' => '服务类型管理', 'url' => 'car/service_type_index'),

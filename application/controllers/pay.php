@@ -403,4 +403,78 @@ class pay extends MY_Controller
         $this->load->helper('url');
         redirect('pay/payLog');
     }
+
+    public function chauffeur_pay_log()
+    {
+        $Limit = 20;
+        $currentPage = $this->uri->segment(3, 1);
+        $offset = ($currentPage - 1) * $Limit;
+
+        $where = array();
+
+        $chauffeur_name = $this->input->get_post('chauffeur_name');
+        $time = $this->input->get_post('create_time');
+
+        if ($time) {
+            $eTime = explode('-', $time);
+            $where['create_time >='] = date('Y-m-d H:i:s', strtotime($eTime[0]));
+            $where['create_time <='] = date('Y-m-d ', strtotime($eTime[1])).'23:59:59';
+        }
+
+        $chauffeur_name && $where['chauffeur_name'] = $chauffeur_name;
+
+        $this->load->model('model_pay', 'pay');
+
+        $totalNum = $this->pay->getChauffeurPayCount($where);
+        $logInfo = $this->pay->getChauffeurPay($Limit, $offset, '*', $where, 'create_time desc');
+
+        $pageHtml = '';
+        if ($totalNum > $Limit) { //页数不足一页
+            $this->load->library('pagination');
+            $config['base_url'] = site_url('/pay/chauffeur_pay_log');
+            $where && $config['suffix'] = ('?' . http_build_query($where));
+            $config['total_rows'] = $totalNum;
+            $config['per_page'] = $Limit;
+            $config['num_links'] = 10;
+            $config['uri_segment'] = 3;
+            $config['use_page_numbers'] = TRUE;
+            $config['anchor_class'] = 'class="number"';
+            $config['prev_tag_open'] = '<li>';
+            $config['prev_tag_close'] = '</li>';
+
+            $config['full_tag_open'] = '<li>';
+            $config['full_tag_close'] = '</li>';
+            $config['first_tag_open'] = '<li>';
+            $config['first_tag_close'] = '</li>';
+            $config['last_tag_open'] = '<li>';
+            $config['last_tag_close'] = '</li>';
+
+            $config['next_tag_open'] = '<li>';
+            $config['next_tag_close'] = '</li>';
+            $config['prev_tag_open'] = '<li>';
+            $config['prev_tag_close'] = '</li>';
+            $config['num_tag_open'] = '<li>';
+            $config['num_tag_close'] = '</li>';
+
+            $config['cur_tag_open'] = '<li class="active"><a>';
+            $config['cur_tag_close'] = '</a></li>';
+
+            $this->pagination->initialize($config);
+            $pageHtml = $this->pagination->create_links();
+        }
+
+        $this->load->model('model_chauffeur', 'cf');
+        $chauffeurData = $this->cf->getChauffeur(10000, 0, 'chauffeur_id, cname', array('status' => '1', 'is_del' => '0'));
+
+        $data = array(
+            'log_info' => $logInfo,
+            'chauffeur_data' => $chauffeurData,
+            'pageHtml' => $pageHtml,
+            'time' => $time,
+            'chauffeur_name' => $chauffeur_name,
+            'totalNum' => $totalNum,
+        );
+
+        $this->load->view('pay/chauffeur_pay_log', $data);
+    }
 }

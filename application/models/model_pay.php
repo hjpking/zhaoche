@@ -133,6 +133,41 @@ class model_pay extends MY_Model
     }
 
     /**
+     * 获取司机充值记录
+     *
+     * @param int $limit
+     * @param int $offset
+     * @param string $field
+     * @param null $where
+     * @param null $order
+     * @return mixed
+     */
+    public function getChauffeurPay($limit = 20, $offset = 0, $field= '*', $where = null, $order = null)
+    {
+        $this->db->select($field);
+        $this->db->from('chauffeur_to_user_pay_log');
+        $where && $this->db->where($where);
+        $order && $this->db->order_by($order);
+        $this->db->limit($limit, $offset);
+        //$this->db->group_by('style_no');
+
+        return $data = $this->db->get()->result_array();
+    }
+
+    /**
+     * 获取司机充值记录数量
+     *
+     * @param array $where
+     * @return mixed
+     */
+    public function getChauffeurPayCount($where = array())
+    {
+        $this->db->select('*')->from('chauffeur_to_user_pay_log')->where($where);
+
+        return $this->db->count_all_results();
+    }
+
+    /**
      * 获取司机给用户的充值记录
      *
      * @param $chauffeurId
