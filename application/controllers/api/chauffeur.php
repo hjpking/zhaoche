@@ -231,7 +231,7 @@ class chauffeur extends MY_Controller
             }
 
             $this->load->model('model_pay', 'pay');
-            $data = $this->pay->getChauffeurPayByChauffeurId($chauffeurId);
+            $data = $this->pay->getMessageSendRecord($chauffeurId);
             $response['data'] = $data;
         } while (false);
 

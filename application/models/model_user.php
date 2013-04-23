@@ -31,6 +31,25 @@ class model_user extends MY_Model
     }
 
     /**
+     * 获取用户信息　where in
+     *
+     * @param int $limit
+     * @param int $offset
+     * @param string $field
+     * @param $in
+     * @return mixed
+     */
+    public function getUserWhereIn($limit = 20, $offset = 0, $field= '*', $in)
+    {
+        $this->db->select($field);
+        $this->db->from('user');
+        $this->db->where_in('uname', $in);
+        $this->db->limit($limit, $offset);
+
+        return $data = $this->db->get()->result_array();
+    }
+
+    /**
      * 获取用户数量
      *
      * @param array $where

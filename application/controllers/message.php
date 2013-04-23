@@ -337,25 +337,32 @@ class message extends MY_Controller
             show_error('消息不存在!');
         }
 
+        $this->load->model('model_user', 'user');
         if (empty ($recipient)) {
-            $this->load->model('model_user', 'user');
             $userList = $this->user->getUser(10000000, 0, '*', array('status' => '1', 'is_del' => '0'));
         } else {
             $arr = explode(',', $recipient);
-            p($arr);
+            $userList = $this->user->getUserWhereIn(10000000, 0, '*', $arr);
         }
-exit;
-        $data = array(
-            'user_type' => $userType,
-            'mid' => $mId,
-            'title' => $messageData['title'],
-            'content' => $messageData['content'],
-            'staff_id' => $this->amInfo['staff_id'],
-            'types' => $type,
-            'recipient' => $recipient
-        );
 
-        $this->message->send($data);
+        if (empty ($userList)) {
+            show_error('没有所要发送的用户！');
+        }
+        foreach ($userList as $v) {
+            $data = array(
+                'user_type' => $userType,
+                'mid' => $mId,
+                'title' => $messageData['title'],
+                'content' => $messageData['content'],
+                'staff_id' => $this->amInfo['staff_id'],
+                'types' => $type,
+                'recipient_id' => $v['uid'],
+                'recipient' => $v['uname'],
+            );
+
+            $this->message->send($data);
+        }
+
         $this->load->helper('url');
         redirect('message/sendRecord');
     }
