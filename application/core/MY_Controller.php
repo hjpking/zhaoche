@@ -150,7 +150,9 @@ class MY_Controller extends CI_Controller
             echo "{$callback}(",json_encode($data),")";
             return ;
         }
-        echo json_encode($data);
+        $str = json_encode($data);
+        $str = str_replace(':null,', ':"",', $str);
+        echo $str;
         return;
     }
 
