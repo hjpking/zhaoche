@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a24abf45-d036-4377-bc30-f6c86df0e96e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/pay/chauffeur_pay_log.php" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/key/alipay/alipay_public_key_back.pem" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/clients.php" afterPath="" />
@@ -10,17 +9,11 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-03.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-06.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/logs/log-2013-04-08.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/chauffeur.php" afterPath="$PROJECT_DIR$/application/controllers/api/chauffeur.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/model_pay.php" afterPath="$PROJECT_DIR$/application/models/model_pay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/sub/order_subnav.php" afterPath="$PROJECT_DIR$/application/views/sub/order_subnav.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/other.php" afterPath="$PROJECT_DIR$/application/controllers/api/other.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/pay.php" afterPath="$PROJECT_DIR$/application/controllers/pay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/order.php" afterPath="$PROJECT_DIR$/application/controllers/api/order.php" />
     </list>
     <ignored path="zhaoche.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/order.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1366701743409" ignored="false" />
+    <file path="/order.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1366709087214" ignored="false" />
     <file path="/a.dummy" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1366692151889" ignored="false" />
     <file path="/model_order.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1366690505420" ignored="false" />
     <file path="/pay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1366706212703" ignored="false" />
@@ -104,19 +97,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="order.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="6" selection-start="175" selection-end="175" vertical-scroll-proportion="-5.0">
+            <state line="43" column="69" selection-start="2270" selection-end="2270" vertical-scroll-proportion="0.5588942">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chauffeur.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="chauffeur.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/chauffeur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="254" column="60" selection-start="7648" selection-end="7648" vertical-scroll-proportion="0.5029586">
+            <state line="254" column="60" selection-start="7648" selection-end="7648" vertical-scroll-proportion="-17.708334">
               <folding />
             </state>
           </provider>
@@ -154,7 +147,6 @@
         <option value="$PROJECT_DIR$/application/models/model_order.php" />
         <option value="$PROJECT_DIR$/application/config/error.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/pay.php" />
-        <option value="$PROJECT_DIR$/application/controllers/api/order.php" />
         <option value="$PROJECT_DIR$/application/models/model_user.php" />
         <option value="$PROJECT_DIR$/application/controllers/message.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
@@ -165,6 +157,7 @@
         <option value="$PROJECT_DIR$/application/controllers/api/other.php" />
         <option value="$PROJECT_DIR$/application/models/model_pay.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/chauffeur.php" />
+        <option value="$PROJECT_DIR$/application/controllers/api/order.php" />
       </list>
     </option>
   </component>
@@ -642,13 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="6" selection-start="175" selection-end="175" vertical-scroll-proportion="-5.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/other.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="0" selection-start="885" selection-end="1074" vertical-scroll-proportion="-18.75">
@@ -658,7 +644,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/chauffeur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="254" column="60" selection-start="7648" selection-end="7648" vertical-scroll-proportion="0.5029586">
+        <state line="254" column="60" selection-start="7648" selection-end="7648" vertical-scroll-proportion="-17.708334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="69" selection-start="2270" selection-end="2270" vertical-scroll-proportion="0.5588942">
           <folding />
         </state>
       </provider>

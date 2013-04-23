@@ -31,6 +31,9 @@ class order extends MY_Controller
         //$amount = intval($this->input->get_post('amount'));
         $leaveMessage = $this->input->get_post('leave_message');
         $flight = $this->input->get_post('flight');
+        $uName = $this->input->get_post('uname');
+        $uPhone = $this->input->get_post('user_phone');
+        $uSex = $this->input->get_post('user_sex');
         $orderSn = intval($this->input->get_post('order_sn'));
 
         $response = array('code' => '0', 'msg' => '下单成功');
@@ -119,9 +122,9 @@ class order extends MY_Controller
                 'sid' => $serviceType,
                 'lid' => $carType,
                 'uid' => $uData['uid'],
-                'uname' => $uData['uname'],
-                'user_phone' => $uData['phone'],
-                'user_sex' => $uData['sex'],
+                'uname' => $uName ? $uName : $uData['uname'],//如果有传用户名/手机/性别则是派车接车
+                'user_phone' => $uPhone ? $uPhone : $uData['phone'],
+                'user_sex' => $uSex ? $uSex : $uData['sex'],
                 'amount' => 0,//$amount,
                 'base_price' => $ruleData['base_price'],
                 'km_price' => $ruleData['km_price'],
