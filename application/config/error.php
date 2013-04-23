@@ -92,5 +92,12 @@ $error[10044] = array('code' => '10044', 'msg' => '用户未上车');
 
 $error[10045] = array('code' => '10045', 'msg' => '手机号码已注册');
 
+$error[10046] = array('code' => '10046', 'msg' => '此订单未完成');
+
+$error[10047] = array('code' => '10047', 'msg' => '支付密码错误');
+
+$error[10048] = array('code' => '10048', 'msg' => '支付失败');
+
+$error[10049] = array('code' => '10049', 'msg' => '充值失败');
 
 return $error;

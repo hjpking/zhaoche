@@ -51,7 +51,9 @@
                     <th>车辆级别</th>
                     <th>基础价格</th>
                     <th>公里单价</th>
+                    <th>服务公里数</th>
                     <th>时间单价</th>
+                    <th>服务时长</th>
                     <th>夜间服务费</th>
                     <th>空驶费</th>
                     <th>描述</th>
@@ -68,7 +70,9 @@
                     <td><?=$carLevelInfo[$v['lid']]['name']?></td>
                     <td><?=fPrice($v['base_price'])?> 元</td>
                     <td><?=fPrice($v['km_price'])?> 元</td>
+                    <td><?=$v['service_km']?> 公里</td>
                     <td><?=fPrice($v['time_price'])?> 元(<?=$v['time']?>分钟)</td>
+                    <td><?=$v['service_time']?>分钟</td>
                     <td><?=fPrice($v['night_service_charge'])?>元</td>
                     <td><?=fPrice($v['kongshi_fee'])?>元</td>
                     <td><?=$v['descr']?></td>

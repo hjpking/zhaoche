@@ -214,4 +214,27 @@ class chauffeur extends MY_Controller
 
         $this->json_output($response);
     }
+
+    /**
+     * 消费记录
+     */
+    public function resume_log()
+    {
+        $chauffeurId = intval($this->input->get_post('chauffeur_id'));
+
+        $response = array('code' => '0', 'msg' => '获取成功');
+
+        do {
+            if (empty ($chauffeurId)) {
+                $response = error(10001);//参数不全
+                break;
+            }
+
+            $this->load->model('model_pay', 'pay');
+            $data = $this->pay->getChauffeurPayByChauffeurId($chauffeurId);
+            $response['data'] = $data;
+        } while (false);
+
+        $this->json_output($response);
+    }
 }

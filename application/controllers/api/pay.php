@@ -278,6 +278,61 @@ class pay  extends MY_Controller
         $this->json_output($response);
     }
 
+    /**
+     * 司机给用户充值
+     */
+    public function chauffeurToUserPay()
+    {
+        $chauffeurId = intval($this->input->get_post('chauffeur_id'));
+        $userPhone = $this->input->get_post('user_phone');
+        $amount = intval($this->input->get_post('amount'));
+        $descr = $this->input->get_post('descr');
+
+        $response = array('code' => '0', 'msg' => '充值成功');
+
+        do {
+            if (empty ($chauffeurId) || empty ($userPhone) || empty ($amount)) {
+                $response = error(10001);//参数不全
+                break;
+            }
+
+            $this->load->model('model_chauffeur', 'chauffeur');
+            $chauffeurData = $this->chauffeur->getChauffeurById($chauffeurId, '*', array('status' => '1'));
+            if (empty ($chauffeurData)) {
+                $response = error(10012);//司机不存在
+                break;
+            }
+
+            $this->load->model('model_user', 'user');
+            $uData = $this->user->getUserByPhone($userPhone);
+            if (empty ($uData)) {
+                $response = error(10007);//用户不存在
+                break;
+            }
+
+            $s = $this->db->set(array('amount' => 'amount+'.$amount), '', false)->where('uid', $uData['uid'])->update('user');
+            if (!$s) {
+                $response = error(10049);//充值失败
+                break;
+            }
+
+            $logData = array(
+                'chauffeur_id' => $chauffeurData['chauffeur_id'],
+                'chauffeur_name' => $chauffeurData['cname'],
+                'chauffeur_phone' => $chauffeurData['phone'],
+                'uid' => $uData['uid'],
+                'uname' => $uData['uname'],
+                'user_phone' => $uData['phone'],
+                'amount' => $amount,
+                'descr' => $descr,
+                'create_time' => date('Y-m-d H:i:s', TIMESTAMP),
+            );
+            $this->db->insert('chauffeur_to_user_pay_log', $logData);
+        } while (false);
+
+        $this->json_output($response);
+    }
+
 
     public function updatePay()
     {

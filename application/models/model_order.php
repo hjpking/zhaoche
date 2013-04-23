@@ -175,14 +175,22 @@ class model_order extends MY_Model
      * @param $chauffeurId
      * @param $orderSn
      * @param $amount
+     * @param $exceedKm
+     * @param $exceedTIme
+     * @param $exceedKmFee
+     * @param $exceedTImeFee
      * @return mixed
      */
-    public function confirmArrival($chauffeurId, $orderSn, $amount)
+    public function confirmArrival($chauffeurId, $orderSn, $amount, $exceedKm, $exceedTIme, $exceedKmFee, $exceedTImeFee)
     {
         $where = array(
             'status' => '1',
             'getoff_time' => date('Y-m-d H:i:s', TIMESTAMP),
             'amount' => $amount,
+            'exceed_time' => $exceedTIme,
+            'exceed_time_fee' => $exceedKmFee,
+            'exceed_km' => $exceedKm,
+            'exceed_km_fee' => $exceedTImeFee,
         );
         $this->db->where('order_sn', $orderSn);
         $this->db->where('chauffeur_id', $chauffeurId);

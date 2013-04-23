@@ -9,8 +9,9 @@
 
 class other extends MY_Controller
 {
-    public function getAirport()
+    public function getNotice()
     {
 
     }
+
 }

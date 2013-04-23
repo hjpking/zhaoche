@@ -131,4 +131,20 @@ class model_pay extends MY_Model
 
         return $data;
     }
+
+    /**
+     * 获取司机给用户的充值记录
+     *
+     * @param $chauffeurId
+     * @param string $field
+     * @param array $where
+     * @return mixed
+     */
+    public function getChauffeurPayByChauffeurId($chauffeurId, $field = '*', $where = array())
+    {
+        $where['chauffeur_id'] = $chauffeurId;
+        $data = $this->db->select($field)->get_where('chauffeur_to_user_pay_log', $where)->result_array();
+
+        return $data;
+    }
 }

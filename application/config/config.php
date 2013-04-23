@@ -553,5 +553,9 @@ define('CHAUFFEUR_TIMEOUT', 1800);
 define('CHAUFFEUR_USER_TRAIN_TIMEOUT', 1800);
 
 
+//夜间服务时间段
+define('NIGHT_START_TIME', 23);
+define('NIGHT_END_TIME', 6);
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */

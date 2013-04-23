@@ -157,9 +157,11 @@ class rule extends MY_Controller
         $basePrice = fPrice($basePrice, 4);
         $kmPrice = intval($this->input->get_post('km_price'));
         $kmPrice = fPrice($kmPrice, 4);
+        $serviceKm = intval($this->input->get_post('service_km'));
         $timePrice = intval($this->input->get_post('time_price'));
         $timePrice = fPrice($timePrice, 4);
         $timeInt = intval($this->input->get_post('time_int'));
+        $serviceTime = intval($this->input->get_post('service_time'));
         $nightServiceCharge = intval($this->input->get_post('night_service_charge'));
         $nightServiceCharge = fPrice($nightServiceCharge, 4);
         $kongshiFee = intval($this->input->get_post('kongshi_fee'));
@@ -177,8 +179,10 @@ class rule extends MY_Controller
             'lid' => $lId,
             'base_price' => $basePrice,
             'km_price' => $kmPrice,
+            'service_km' => $serviceKm,
             'time_price' => $timePrice,
             'time' => $timeInt,
+            'service_time' => $serviceTime,
             'night_service_charge' => $nightServiceCharge,
             'kongshi_fee' => $kongshiFee,
             'descr' => $descr,

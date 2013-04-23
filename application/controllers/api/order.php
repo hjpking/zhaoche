@@ -125,7 +125,9 @@ class order extends MY_Controller
                 'amount' => 0,//$amount,
                 'base_price' => $ruleData['base_price'],
                 'km_price' => $ruleData['km_price'],
+                'service_km' => $ruleData['service_km'],
                 'time_price' => $ruleData['time_price'],
+                'service_time' => $ruleData['service_time'],
                 'night_service_charge' => $ruleData['night_service_charge'],
                 'kongshi_fee' => $ruleData['kongshi_fee'],
                 'status' => '0',
@@ -275,7 +277,10 @@ class order extends MY_Controller
             }
 
             $field = 'order_sn,city_id,chauffeur_id,uid,uname,user_phone,chauffeur_login_name,chauffeur_phone,amount,status,sid, car_length,
-                train_address,getoff_address,train_time,getoff_time,create_time,is_invoice,payable,content,mailing_address,leave_message, train_address_desc,getoff_address_desc';
+                train_address,getoff_address,train_time,getoff_time,create_time,is_invoice,payable,content,mailing_address,leave_message, train_address_desc,getoff_address_desc,
+                base_price, night_service_charge, kongshi_fee, km_price';
+
+            //$field = '*';
             $where = array(
                 'chauffeur_id' => $chauffeurId,
                 'create_time >' => $startTime,
@@ -600,6 +605,12 @@ class order extends MY_Controller
     {
         $chauffeurId = intval($this->input->get_post('chauffeur_id'));
         $orderSn = intval($this->input->get_post('order_sn'));
+        $mileage = intval($this->input->get_post('mileage'));
+        $travelTime = intval($this->input->get_post('travel_time'));
+        $highSpeedCharge = intval($this->input->get_post('high_speed_charge'));
+        $airportServiceCharge = intval($this->input->get_post('airport_service_charge'));
+        $parkCharge = intval($this->input->get_post('park_charge'));
+
 
         $response = array('code' => '0', 'msg' => '确认成功');
 
@@ -638,8 +649,23 @@ class order extends MY_Controller
                 break;
             }
 
-            $totalPrice = 15000;
-            $s = $this->order->confirmArrival($chauffeurId, $orderSn, $totalPrice);
+            /* 计算费用开始 */
+            $currentHours = date('H', TIMESTAMP);
+            $nightServiceCharge = ($currentHours >= NIGHT_START_TIME && $currentHours <= NIGHT_END_TIME) ? $data['night_service_charge'] : 0;
+
+            $exceedKm = ceil($mileage - $data['service_km']);//超出公里数
+            $exceedTIme = ceil($travelTime - $data['service_time']);//超出时间
+            $exceedKmFee = ceil($exceedKm * $data['km_price']);//超出公里数费用
+            $exceedTImeFee = ceil($exceedTIme * $data['time_price']);//超出时间费用
+
+            '基础价格＋(超出公里数＊公里单价)+(超时时长＊超时单价)+高速费+停车费+夜间服务费+机场服务费';
+
+            //整体费用
+            $totalPrice = $data['base_price'] + $exceedKmFee + $exceedTImeFee + $highSpeedCharge + $airportServiceCharge + $parkCharge + $nightServiceCharge;
+            /* 计算费用结束 */
+
+            //$totalPrice = 15000;
+            $s = $this->order->confirmArrival($chauffeurId, $orderSn, $totalPrice, $exceedKm, $exceedTIme, $exceedKmFee, $exceedTImeFee);
             if (!$s) {
                 $response = error(10031);//确认到达失败
                 break;
@@ -647,14 +673,82 @@ class order extends MY_Controller
 
             $rData = array(
                 'total_price' => $totalPrice,
-                'paid' => 5000,
-                'need_pay' => 10000,
+                'exceed_km' => $exceedKm,
+                'exceed_time' => $exceedTIme,
+                'exceed_km_fee' => $exceedKmFee,
+                'exceed_time_fee' => $exceedTImeFee,
             );
             $response['data'] = $rData;
 
             $msg = '尊敬的：'.$data['user_phone'].', 您于'.date('Y-m-d H:i').'使用'.APP_NAME.'服务共消费：'.fPrice($rData['total_price']).'元,您需要支付：';
             $msg .= fPrice($rData['total_price']).'元。';
             $this->sendMessage($data['user_phone'], $msg);
+        } while (false);
+
+        $this->json_output($response);
+    }
+
+    /**
+     * 订单支付
+     */
+    public function orderPay()
+    {
+        $orderSn = intval($this->input->get_post('order_sn'));
+        $payPassword = $this->input->get_post('password');
+
+        $response = array('code' => '0', 'msg' => '支付成功');
+
+        do {
+            if (empty ($orderSn) || empty ($payPassword)) {
+                $response = error(10001);//参数不全
+                break;
+            }
+
+            $this->load->model('model_order', 'order');
+            $data = $this->order->getOrderById($orderSn);
+            if (empty ($data)) {
+                $response = error(10024);//订单不存在
+                break;
+            }
+
+            if ($data['status'] == '0') {
+                $response = error(10030);//此订单未被接单
+                break;
+            }
+
+            if ($data['status'] == '2') {
+                $response = error(10028);//此订单已取消
+                break;
+            }
+
+            if ($data['status'] != '1') {
+                $response = error(10046);//此订单未完成
+                break;
+            }
+
+            if ($payPassword != $data['pay_password']) {
+                $response = error(10047);//支付密码错误
+                break;
+            }
+
+            $this->load->model('model_user', 'user');
+            $uData = $this->user->getUserById($data['uid']);
+            if (empty ($uData)) {
+                $response = error(10007);//用户不存在
+                break;
+            }
+
+            //判断用户余额是否小于订单余额
+            if ($uData['amount'] < $data['amount']) {
+                $response = error(10023);//余额不足
+                break;
+            }
+
+            $s = $this->db->set(array('amount' => 'amount-'.$data['amount']), '', false)->where('uid', $data['uid'])->update('user');
+            if (!$s) {
+                $response = error(10048);//支付失败
+                break;
+            }
         } while (false);
 
         $this->json_output($response);

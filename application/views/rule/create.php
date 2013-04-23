@@ -81,6 +81,16 @@
                     </div>
 
                     <div class="control-group">
+                        <label for="input01" class="control-label">服务公里数</label>
+                        <div class="controls">
+                            <div class="input-append">
+                                <input class="span12" type="text" name="service_km" value="<?=isset($data['service_km']) ? $data['service_km'] : ''?>">
+                                <span class="add-on">公里</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
                         <label for="input01" class="control-label">时间单价</label>
                         <div class="controls">
                             <div class="input-append">
@@ -89,11 +99,23 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="control-group">
                         <label for="input01" class="control-label">时长</label>
                         <div class="controls">
                             <div class="input-append">
                                 <input class="span4" type="text" name="time_int" value="<?=isset($data['time']) ? $data['time'] : ''?>">
+                                <span class="add-on">分钟</span>
+                            </div>
+                            <!--<p class="help-block"> 字母、数字组合，不超过32个字符。 </p>-->
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="input01" class="control-label">服务时长</label>
+                        <div class="controls">
+                            <div class="input-append">
+                                <input class="span4" type="text" name="service_time" value="<?=isset($data['service_time']) ? $data['service_time'] : ''?>">
                                 <span class="add-on">分钟</span>
                             </div>
                             <!--<p class="help-block"> 字母、数字组合，不超过32个字符。 </p>-->
