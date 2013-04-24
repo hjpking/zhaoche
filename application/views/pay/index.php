@@ -64,7 +64,8 @@
                 <thead>
                 <tr>
                     <th>订单号</th>
-                    <th>用户名</th>
+                    <th>充值人</th>
+                    <th>被充值人</th>
                     <th>充值金额</th>
                     <th>充值来源</th>
                     <th>充值方式</th>
@@ -82,6 +83,7 @@
                 <?php foreach ($pay as $v){ ?>
                 <tr>
                     <td><?=$v['pay_id']?></td>
+                    <td><?=$v['pay_uname']?></td>
                     <td><?=$v['uname']?></td>
                     <td><?=fPrice($v['pay_amount'])?> 元</td>
                     <td><?=$v['source'] ? '其他':'客户端'?></td>

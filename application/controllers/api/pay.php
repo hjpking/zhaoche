@@ -13,6 +13,9 @@ class pay  extends MY_Controller
     {
         $amount = intval($this->input->get_post('amount'));
         $token = $this->input->get_post('token');
+        $phone = $this->input->get_post('phone');
+        $beWho = $this->input->get_post('be_who');
+        $beWho = ($beWho == '2') ? 2 : 1;
         $payType = $this->input->get_post('pay_type');
 
         $isInvoice = intval($this->input->get_post('is_invoice'));
@@ -21,19 +24,19 @@ class pay  extends MY_Controller
         $content = $this->input->get_post('content');
         $mailingAddress = $this->input->get_post('mailing_address');
 
-        log_message('PAYLOG', $payType.'-'.$amount.'-'.$token.'-'.print_r($_REQUEST,true));
+        log_message('PAYLOG', $payType.'-'.$amount.'-'.$phone.'-'.$beWho.'-'.print_r($_REQUEST,true));
 
         $response = array('code' => '0', 'msg' => '生成成功');
 
         do {
-            if (empty ($amount) || empty ($token) || empty ($payType)) {
+            if (empty ($amount) || empty ($phone) || empty ($payType)) {
                 $response = error(10001);//参数不全
                 break;
             }
 
             if ($amount < 100) {
-                //$response = error(10038);//金额大小(低于1元)
-                //break;
+                $response = error(10038);//金额大小(低于1元)
+                break;
             }
 
             $payChannel = config_item('pay_channel');
@@ -42,6 +45,7 @@ class pay  extends MY_Controller
                 break;
             }
 
+            //*
             $uInfo = $this->analyzeToken($token);
             if (!$uInfo) {
                 $response = error(10011);//用户未登陆
@@ -49,20 +53,29 @@ class pay  extends MY_Controller
             }
 
             $uId = $uInfo[0];
+            $uName = $uInfo[1];
             if (!$uId) {
                 $response = error(10009);//错误的token
                 break;
             }
 
             $this->load->model('model_user', 'user');
-            $uData = $this->user->getUserById($uId, 'uid, uname, password, realname, amount, sex, phone,binding_type, is_del, create_time');
-            if (empty ($uData)) {
+            $payUserData = $this->user->getUserById($uId, 'uid, uname, password, realname, amount, sex, phone,binding_type, is_del, create_time');
+            if (empty ($payUserData)) {
                 $response = error(10007);//用户不存在
                 break;
             }
 
-            if ($uData['password'] != $uInfo[2]) {
+            if ($payUserData['password'] != $uInfo[2]) {
                 $response = error(10008);//密码错误
+                break;
+            }
+            //*/
+
+            $this->load->model('model_user', 'user');
+            $uData = $this->user->getUserByPhone($phone, 'uid, uname, password, realname, amount, sex, phone,binding_type, is_del, create_time');
+            if (empty ($uData)) {
+                $response = error(10007);//用户不存在
                 break;
             }
 
@@ -72,6 +85,8 @@ class pay  extends MY_Controller
             }
 
             $payData = array(
+                'pay_uid' => $uId,
+                'pay_uname' => $uName,
                 'uid' => $uData['uid'],
                 'uname' => $uData['uname'],
                 'pay_amount' => $amount,
@@ -79,6 +94,7 @@ class pay  extends MY_Controller
                 'source' => '0',
                 'pay_type' => '1',
                 'pay_channel' => '1',
+                'be_who' => $beWho,
                 'opera_people' => '0',
                 'is_post' => $isInvoice,
                 'post_mode' => $postMode,
