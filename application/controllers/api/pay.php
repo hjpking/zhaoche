@@ -29,7 +29,7 @@ class pay  extends MY_Controller
         $response = array('code' => '0', 'msg' => '生成成功');
 
         do {
-            if (empty ($amount) || empty ($phone) || empty ($payType)) {
+            if (empty ($amount) || empty ($phone) || empty ($payType) || empty ($token)) {
                 $response = error(10001);//参数不全
                 break;
             }
