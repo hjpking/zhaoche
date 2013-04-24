@@ -1,9 +1,10 @@
-
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2013-3-18 19:11:57                           */
+/* Created on:     2013-4-24 11:36:21                           */
 /*==============================================================*/
 
+
+drop table if exists zc_be_user_pay_record;
 
 drop table if exists zc_bill_rule;
 
@@ -17,11 +18,19 @@ drop table if exists zc_card;
 
 drop table if exists zc_card_model;
 
+drop index Index_phone on zc_chauffeur;
+
 drop index index_cname on zc_chauffeur;
 
 drop table if exists zc_chauffeur;
 
 drop table if exists zc_chauffeur_location;
+
+drop table if exists zc_chauffeur_to_user_pay_log;
+
+drop index Index_phone on zc_chauffeur_verify;
+
+drop table if exists zc_chauffeur_verify;
 
 drop table if exists zc_city;
 
@@ -47,6 +56,8 @@ drop table if exists zc_message_send_record;
 
 drop table if exists zc_order;
 
+drop table if exists zc_order_run_path;
+
 drop table if exists zc_pay_record;
 
 drop table if exists zc_service_type;
@@ -57,11 +68,33 @@ drop table if exists zc_staff;
 
 drop table if exists zc_token_restore;
 
+drop index Index_phone on zc_user;
+
 drop index Index_uname on zc_user;
 
 drop table if exists zc_user;
 
 drop table if exists zc_user_invoice;
+
+/*==============================================================*/
+/* Table: zc_be_user_pay_record                                 */
+/*==============================================================*/
+create table zc_be_user_pay_record
+(
+   id                   int not null auto_increment comment '自增ID',
+   uid                  int not null comment '用户ID',
+   uname                varchar(32) comment '用户名',
+   pay_amount           int not null comment '充值金额',
+   opera_people         int not null comment '操作人',
+   opera_name           varchar(32) comment '操作人名称',
+   status               tinyint not null comment '状态 0 取消  1 成功',
+   create_time          datetime comment '充值时间',
+   primary key (id)
+)
+engine = MYISAM
+auto_increment = 1;
+
+alter table zc_be_user_pay_record comment '给用户充值记录';
 
 /*==============================================================*/
 /* Table: zc_bill_rule                                          */
@@ -74,8 +107,10 @@ create table zc_bill_rule
    city_id              int not null comment '城市ID',
    base_price           int not null comment '基础价格',
    km_price             int not null comment '公里单价',
+   service_km           int comment '服务公里数(单位为公里)',
    time_price           int not null comment '时间单价',
    time                 int comment '时长',
+   service_time         int comment '服务时长(单位为分钟)',
    night_service_charge int not null comment '夜间服务费',
    kongshi_fee          int not null comment '空驶费',
    descr                varchar(255) comment '描述',
@@ -87,8 +122,6 @@ engine = MYISAM
 auto_increment = 1;
 
 alter table zc_bill_rule comment '计费规则';
-
-INSERT INTO `zc_bill_rule` VALUES (1,1,1,1,5000,300,5000,30,1000,500,0,'2013-03-13 15:55:05'),(2,2,1,2,3000,300,4000,30,1000,500,0,'2013-03-13 15:55:53');
 
 /*==============================================================*/
 /* Table: zc_car_level                                          */
@@ -196,6 +229,7 @@ create table zc_chauffeur
    id_card              varchar(20) comment '身份证号码',
    city_id              int not null comment '城市ID',
    car_id               int comment '车型',
+   color_id             int comment '颜色',
    car_no               varchar(12) comment '车牌号',
    status               tinyint not null default 1 comment '服务状态 0暂停服务 1正常服务',
    descr                varchar(255) comment '司机描述',
@@ -208,7 +242,7 @@ auto_increment = 1;
 
 alter table zc_chauffeur comment '司机表';
 
-INSERT INTO `zc_chauffeur` VALUES (1,'hjpking','4297f44b13955235245b2497399d7a93','大佛爷',1,'15101559313','431028198702113418',1,3,'京P8888',1,'10年驾龄',0,'2013-03-13 15:57:48'),(2,'tgfc','4297f44b13955235245b2497399d7a93','东佛祖',1,'15101559313','431028198702113418',2,4,'京P6666',1,'拜一下吧',0,'2013-03-13 15:58:57');
+INSERT INTO `zc_chauffeur` VALUES (1,'hjpking','4297f44b13955235245b2497399d7a93','大佛爷',1,'15101559314','431028198702113418',1,3,1,'京P8888',1,'10年驾龄',0,'2013-03-13 15:57:48'),(2,'tgfc','4297f44b13955235245b2497399d7a93','东佛祖',1,'15101559313','431028198702113418',2,4,2,'京P6666',1,'拜一下吧',0,'2013-03-13 15:58:57');
 
 /*==============================================================*/
 /* Index: index_cname                                           */
@@ -216,6 +250,14 @@ INSERT INTO `zc_chauffeur` VALUES (1,'hjpking','4297f44b13955235245b2497399d7a93
 create unique index index_cname on zc_chauffeur
 (
    cname
+);
+
+/*==============================================================*/
+/* Index: Index_phone                                           */
+/*==============================================================*/
+create unique index Index_phone on zc_chauffeur
+(
+   phone
 );
 
 /*==============================================================*/
@@ -243,6 +285,52 @@ INSERT INTO `zc_chauffeur_location` (`lid`,`chauffeur_id`,`city_id`,`longitude`,
 INSERT INTO `zc_chauffeur_location` (`lid`,`chauffeur_id`,`city_id`,`longitude`,`update_time`,`latitude`) VALUES (5,5,1,'39.943436','2013-03-18 12:23:32','116.383324');
 INSERT INTO `zc_chauffeur_location` (`lid`,`chauffeur_id`,`city_id`,`longitude`,`update_time`,`latitude`) VALUES (6,6,1,'39.929484','2013-03-18 12:23:32','116.419373');
 INSERT INTO `zc_chauffeur_location` (`lid`,`chauffeur_id`,`city_id`,`longitude`,`update_time`,`latitude`) VALUES (7,7,1,'39.890246','2013-03-18 12:23:32','116.401005');
+
+/*==============================================================*/
+/* Table: zc_chauffeur_to_user_pay_log                          */
+/*==============================================================*/
+create table zc_chauffeur_to_user_pay_log
+(
+   id                   int not null auto_increment comment '自增ID',
+   chauffeur_id         int comment '司机ID',
+   chauffeur_name       varchar(64) comment '司机名',
+   chauffeur_phone      varchar(16) comment '司机手机号',
+   uid                  int not null comment '用户ID',
+   uname                varchar(32) comment '用户名',
+   user_phone           varchar(16) comment '用户手机号',
+   amount               int not null comment '金额',
+   descr                varchar(255) comment '描述',
+   create_time          datetime comment '创建时间',
+   primary key (id)
+)
+engine = MYISAM
+auto_increment = 1;
+
+alter table zc_chauffeur_to_user_pay_log comment '司机给用户充值记录';
+
+/*==============================================================*/
+/* Table: zc_chauffeur_verify                                   */
+/*==============================================================*/
+create table zc_chauffeur_verify
+(
+   id                   int not null auto_increment comment '自增ID',
+   phone                varchar(16) comment '手机号码',
+   verify_code          varchar(6) comment '验证码',
+   create_time          datetime comment '创建时间',
+   primary key (id)
+)
+engine = MYISAM
+auto_increment = 1;
+
+alter table zc_chauffeur_verify comment '司机登陆手机验证码';
+
+/*==============================================================*/
+/* Index: Index_phone                                           */
+/*==============================================================*/
+create unique index Index_phone on zc_chauffeur_verify
+(
+   phone
+);
 
 /*==============================================================*/
 /* Table: zc_city                                               */
@@ -274,12 +362,18 @@ create table zc_city_airport
    id                   int not null auto_increment comment '自增ID',
    city_id              int comment '城市ID',
    airport_name         varchar(64) comment '机场名',
+   longitude            varchar(64) comment '经度',
+   latitude             varchar(64) comment '纬度',
    primary key (id)
 )
 engine = MYISAM
 auto_increment = 1;
 
 alter table zc_city_airport comment '城市机场';
+
+INSERT INTO `zc_city_airport` (`id`,`city_id`,`airport_name`,`longitude`,`latitude`) VALUES (1,1,'北京首都机场1号航站楼','40.079122','116.59265');
+INSERT INTO `zc_city_airport` (`id`,`city_id`,`airport_name`,`longitude`,`latitude`) VALUES (2,1,'北京首都机场2号航站楼','40.078597','116.590333');
+INSERT INTO `zc_city_airport` (`id`,`city_id`,`airport_name`,`longitude`,`latitude`) VALUES (3,1,'北京首都机场3号航站楼','40.078334','116.593595');
 
 /*==============================================================*/
 /* Table: zc_city_useful_addresse                               */
@@ -290,6 +384,8 @@ create table zc_city_useful_addresse
    city_id              int not null comment '城市ID',
    name                 varchar(32) comment '名称',
    descr                varchar(255) comment '描述',
+   longitude            varchar(64) comment '经度',
+   latitude             varchar(64) comment '纬度',
    create_time          datetime comment '创建时间',
    primary key (ua_id)
 )
@@ -443,6 +539,7 @@ create table zc_message
    content              varchar(255) comment '消息内容',
    staff_id             int not null comment '员工ID',
    author               varchar(32) not null comment '消息作者',
+   is_del               tinyint not null comment '是否删除 0正常 1删除',
    create_time          datetime comment '创建时间',
    primary key (mid)
 )
@@ -451,7 +548,7 @@ auto_increment = 1;
 
 alter table zc_message comment '消息表';
 
-INSERT INTO `zc_message` VALUES (1,3,'天降大雨于北京城是也','天降大雨于北京城是也',1,'admin','2013-03-13 16:14:52');
+INSERT INTO `zc_message` VALUES (1,3,'天降大雨于北京城是也','天降大雨于北京城是也',1,'admin', '0','2013-03-13 16:14:52');
 
 /*==============================================================*/
 /* Table: zc_message_category                                   */
@@ -482,8 +579,10 @@ create table zc_message_send_record
    title                varchar(32) comment '消息名字',
    content              varchar(255) comment '消息内容',
    staff_id             int not null comment '发送人',
+   recipient_id         int comment '接收人ID',
    recipient            varchar(255) comment '接收人',
    user_type            tinyint comment '用户类别',
+   types                tinyint not null comment '消息分类 0 系统推送消息，1手机短信',
    create_time          datetime comment '发送时间',
    primary key (id)
 )
@@ -508,35 +607,70 @@ create table zc_order
    chauffeur_id         int comment '司机ID',
    chauffeur_login_name varchar(32) comment '司机用户名',
    chauffeur_phone      varchar(16) comment '司机手机',
-   amount               int not null comment '总金额',
-   car_rent             int not null comment '车辆租金',
-   mileage_fee          int not null comment '里程费',
-   chauffeur_commission int not null comment '司机佣金',
-   adjust_fares         int not null comment '调车费',
-   reduce_adjust_fares  int not null comment '减免调车费',
-   start_fee            int not null comment '起步费',
-   kongshi_fee          int not null comment '空驶费',
-   status               tinyint not null default 0 comment '订单状态 0初始 1成功 2 取消',
+   amount               int not null default 0 comment '总金额',
+   high_speed_charge    int not null default 0 comment '高速费',
+   park_charge          int not null default 0 comment '停车费',
+   air_service_charge   int not null default 0 comment '机场服务费',
+   dispatch_charge      int not null default 0 comment '调度费',
+   mileage              int default 0 comment '行驶里程',
+   travel_time          int default 0 comment '行驶时间',
+   exceed_time          int default 0 comment '超出时间',
+   exceed_time_fee      int not null default 0 comment '超出时间费用',
+   exceed_km            int default 0 comment '超出公里',
+   exceed_km_fee        int not null default 0 comment '超出公里费用',
+   base_price           int not null default 0 comment '基础价格',
+   km_price             int not null default 0 comment '公里单价',
+   service_km           int default 0 comment '服务公里数(单位为公里)',
+   time_price           int not null default 0 comment '时间单价',
+   time                 int default 0 comment '时长',
+   service_time         int default 0 comment '服务时长(单位为分钟)',
+   night_service_charge int not null default 0 comment '夜间服务费',
+   kongshi_fee          int not null default 0 comment '空驶费',
+   status               tinyint not null default 0 comment '订单状态 0初始 1成功 2 取消 3 司机已接单 4 服务开始  5 服务结束 6 车辆已出发  7  车辆已到，等待上车
+            ',
    car_time             datetime comment '用车时间',
-   car_length           datetime comment '用车时长',
+   car_length           int comment '用车时长',
    train_address        varchar(64) comment '上车地点',
+   train_address_desc   varchar(64) comment '上车地址描述',
    address_supplemental varchar(255) comment '上车地址补充',
    getoff_address       varchar(64) comment '下车地点',
+   getoff_address_desc  varchar(64) comment '下车地址描述',
    train_time           datetime comment '上车时间',
    getoff_time          datetime comment '下车时间',
    create_time          datetime comment '订车时间',
-   is_invoice           tinyint not null comment '是否需要发票',
+   is_invoice           tinyint not null comment '是否需要发票 0不需要 ，1需要 ',
    payable              varchar(64) comment '发票抬头',
    content              varchar(255) comment '发票内容',
    mailing_address      varchar(255) comment '发票寄送地址',
    leave_message        varchar(255) comment '留言',
    notice               varchar(255) comment '备注',
+   pay_password         varchar(32) comment '订单充值密码',
+   arrival_time         datetime comment '到达时间',
+   pay_status           tinyint not null default 0 comment '支付状态,0初始，1成功',
    primary key (order_sn)
+)
+engine = MYISAM
+auto_increment = 10000000;
+
+alter table zc_order comment '订单表';
+
+/*==============================================================*/
+/* Table: zc_order_run_path                                     */
+/*==============================================================*/
+create table zc_order_run_path
+(
+   id                   int not null auto_increment comment '自增ID',
+   order_sn             int comment '订单ID',
+   chauffeur_id         int comment '司机ID',
+   longitude            varchar(64) comment '经度',
+   latitude             varchar(64) comment '纬度',
+   create_time          datetime comment '创建时间',
+   primary key (id)
 )
 engine = MYISAM
 auto_increment = 1;
 
-alter table zc_order comment '订单表';
+alter table zc_order_run_path comment '订单运行路径';
 
 /*==============================================================*/
 /* Table: zc_pay_record                                         */
@@ -546,22 +680,23 @@ create table zc_pay_record
    pay_id               int not null auto_increment comment '充值ID',
    uid                  int comment '用户ID',
    uname                varchar(32) comment '用户名',
-   pay_amount           int not null comment '充值金额',
-   pay_status           tinyint not null comment '充值状态',
-   source               tinyint comment '充值来源',
+   pay_amount           int not null comment '充值金额 单位：分',
+   pay_status           tinyint not null comment '充值状态 0 初始，1成功 2 充值失败 3 签名错误 ',
+   source               tinyint comment '充值来源 0 客户端 1 其他 ',
    pay_type             tinyint comment '充值方式',
-   pay_channel          varchar(32) comment '充值渠道',
+   pay_channel          varchar(32) comment '充值渠道 1支付宝，2 银联',
    opera_people         varchar(16) comment '操作人',
    is_post              tinyint not null default 0 comment '是否寄送发票 0不需要 1 需要',
-   post_mode            tinyint comment '寄送方式',
+   post_mode            tinyint comment '寄送方式 1 快递，2 平邮',
    invoice              varchar(64) comment '发票抬头',
+   content              varchar(64) comment '发票内容',
    post_address         varchar(128) comment '邮寄地址',
    post_status          tinyint not null default 0 comment '寄送状态 0未寄 1已寄',
    create_time          datetime comment '充值时间',
    primary key (pay_id)
 )
 engine = MYISAM
-auto_increment = 1;
+auto_increment = 10000000;
 
 alter table zc_pay_record comment '充值记录';
 
@@ -645,9 +780,9 @@ create table zc_user
    amount               int not null default 0 comment '金额',
    sex                  tinyint not null default 0 comment '性别 0男 1女',
    phone                varchar(16) comment '手机号码',
-   binding_type         tinyint default 1 comment '绑定类型 1支付宝 2 银行卡',
+   binding_type         varchar(8) default '1' comment '绑定类型 1支付宝 2 银行卡',
    card_no              varchar(32) comment '卡账号',
-   status               tinyint not null default 1 comment '用户状态 0黑名单 1白名单',
+   status               tinyint not null comment '用户状态 0黑名单 1白名单',
    descr                varchar(255) comment '用户描述',
    is_del               char(10) default '0' comment '是否删除0正常 1已删除',
    create_time          datetime comment '创建时间',
@@ -659,7 +794,7 @@ auto_increment = 1;
 alter table zc_user comment '用户表';
 
 INSERT INTO `zc_user` VALUES (1,'hjpking','4297f44b13955235245b2497399d7a93','花心油',0,1,'15101559313',1, '622262226222622266',1,'花心油','0','2013-03-13 16:03:09'),
-(2,'tgfc','4297f44b13955235245b2497399d7a93','滑滑',0,2,'15101559313',2, '622262226222622266',1,'滑滑','0','2013-03-13 16:03:37');
+(2,'tgfc','4297f44b13955235245b2497399d7a93','滑滑',0,2,'15101559314',2, '622262226222622266',1,'滑滑','0','2013-03-13 16:03:37');
 
 /*==============================================================*/
 /* Index: Index_uname                                           */
@@ -667,6 +802,14 @@ INSERT INTO `zc_user` VALUES (1,'hjpking','4297f44b13955235245b2497399d7a93','�
 create unique index Index_uname on zc_user
 (
    uname
+);
+
+/*==============================================================*/
+/* Index: Index_phone                                           */
+/*==============================================================*/
+create unique index Index_phone on zc_user
+(
+   phone
 );
 
 /*==============================================================*/
