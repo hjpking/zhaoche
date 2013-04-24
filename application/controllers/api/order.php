@@ -279,9 +279,7 @@ class order extends MY_Controller
                 break;
             }
 
-            $field = 'order_sn,city_id,chauffeur_id,uid,uname,user_phone,chauffeur_login_name,chauffeur_phone,amount,status,sid, car_length,
-                train_address,getoff_address,train_time,getoff_time,create_time,is_invoice,payable,content,mailing_address,leave_message, train_address_desc,getoff_address_desc,
-                base_price, night_service_charge, kongshi_fee, km_price';
+            $field = '*';
 
             $this->load->model('model_service_type', 'service');
             $serviceData = $this->service->getServiceType(1000);
@@ -686,8 +684,20 @@ class order extends MY_Controller
             $totalPrice = $data['base_price'] + $exceedKmFee + $exceedTImeFee + $highSpeedCharge + $airportServiceCharge + $parkCharge + $nightServiceCharge;
             /* 计算费用结束 */
 
+            $upData = array(
+                'total_price' => $totalPrice,
+                'exceed_km' => $exceedKm,
+                'exceed_km_fee' => $exceedKmFee,
+                'exceed_time' => $exceedTIme,
+                'exceed_time_fee' => $exceedTImeFee,
+                'high_speed_fee' => $highSpeedCharge,
+                'park_fee' => $parkCharge,
+                'air_service_fee' => $airportServiceCharge,
+                'mileage' => $mileage,
+                'travel_time' => $travelTime,
+            );
             //$totalPrice = 15000;
-            $s = $this->order->confirmArrival($chauffeurId, $orderSn, $totalPrice, $exceedKm, $exceedTIme, $exceedKmFee, $exceedTImeFee);
+            $s = $this->order->confirmArrival($chauffeurId, $orderSn, $upData);
             if (!$s) {
                 $response = error(10031);//确认到达失败
                 break;

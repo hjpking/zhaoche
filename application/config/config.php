@@ -509,15 +509,15 @@ $config['pay_channel'] = array(
 );
 
 $config['color'] = array(
-    '1' => array('name' => '红色', 'code' => '#FF0000;', 'font_code' => '#ffffff;'),
-    '2' => array('name' => '黑色', 'code' => '#000000;', 'font_code' => '#ffffff;'),
-    '3' => array('name' => '蓝色', 'code' => '#0000FF;', 'font_code' => '#ffffff;'),
-    '4' => array('name' => '黄色', 'code' => '#FFFF00;', 'font_code' => '#000000;'),
-    '5' => array('name' => '银色', 'code' => '#E6E8FA;', 'font_code' => '#000000;'),
-    '6' => array('name' => '棕色', 'code' => '#A67D3D;', 'font_code' => '#ffffff;'),
-    '7' => array('name' => '紫色', 'code' => '#CC33CC;', 'font_code' => '#ffffff;'),
-    '8' => array('name' => '白色', 'code' => '#ffffff;', 'font_code' => '#000000;'),
-    '9' => array('name' => '绿色', 'code' => '#00FF00;', 'font_code' => '#000000;'),
+    '1' => array('id' => '1', 'name' => '红色', 'code' => '#FF0000;', 'font_code' => '#ffffff;'),
+    '2' => array('id' => '2', 'name' => '黑色', 'code' => '#000000;', 'font_code' => '#ffffff;'),
+    '3' => array('id' => '3', 'name' => '蓝色', 'code' => '#0000FF;', 'font_code' => '#ffffff;'),
+    '4' => array('id' => '4', 'name' => '黄色', 'code' => '#FFFF00;', 'font_code' => '#000000;'),
+    '5' => array('id' => '5', 'name' => '银色', 'code' => '#E6E8FA;', 'font_code' => '#000000;'),
+    '6' => array('id' => '6', 'name' => '棕色', 'code' => '#A67D3D;', 'font_code' => '#ffffff;'),
+    '7' => array('id' => '7', 'name' => '紫色', 'code' => '#CC33CC;', 'font_code' => '#ffffff;'),
+    '8' => array('id' => '8', 'name' => '白色', 'code' => '#ffffff;', 'font_code' => '#000000;'),
+    '9' => array('id' => '9', 'name' => '绿色', 'code' => '#00FF00;', 'font_code' => '#000000;'),
 );
 
 //支付宝配置信息

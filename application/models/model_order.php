@@ -174,24 +174,26 @@ class model_order extends MY_Model
      *
      * @param $chauffeurId
      * @param $orderSn
-     * @param $amount
-     * @param $exceedKm
-     * @param $exceedTIme
-     * @param $exceedKmFee
-     * @param $exceedTImeFee
+     * @param array $upData
      * @return mixed
      */
-    public function confirmArrival($chauffeurId, $orderSn, $amount, $exceedKm, $exceedTIme, $exceedKmFee, $exceedTImeFee)
+    public function confirmArrival($chauffeurId, $orderSn, array $upData)
     {
         $where = array(
             'status' => '1',
             'getoff_time' => date('Y-m-d H:i:s', TIMESTAMP),
-            'amount' => $amount,
-            'exceed_time' => $exceedTIme,
-            'exceed_time_fee' => $exceedKmFee,
-            'exceed_km' => $exceedKm,
-            'exceed_km_fee' => $exceedTImeFee,
+            'amount' => $upData['total_price'],
+            'exceed_time' => $upData['exceed_time'],
+            'exceed_time_fee' => $upData['exceed_time_fee'],
+            'exceed_km' => $upData['exceed_km'],
+            'exceed_km_fee' => $upData['exceed_km_fee'],
+            'high_speed_charge' => $upData['high_speed_fee'],
+            'park_charge' => $upData['park_fee'],
+            'air_service_charge' => $upData['air_service_fee'],
+            'mileage' => $upData['mileage'],
+            'travel_time' => $upData['travel_time'],
         );
+
         $this->db->where('order_sn', $orderSn);
         $this->db->where('chauffeur_id', $chauffeurId);
         return $this->db->update('order', $where);

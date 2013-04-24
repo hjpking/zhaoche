@@ -92,6 +92,7 @@ class chauffeur extends MY_Controller
         $carId = intval($this->input->get_post('car_id'));
         $carNo = $this->input->get_post('car_no');
         $status = intval($this->input->get_post('status'));
+        $colorId = intval($this->input->get_post('color_id'));
         $descr = $this->input->get_post('descr');
 
         $response = array('code' => '0', 'msg' => '修改成功');
@@ -111,6 +112,7 @@ class chauffeur extends MY_Controller
             $carNo && $where['car_no'] = $carNo;
             ($status || $status == '0') && $where['status'] = $status;
             $descr && $where['descr'] = $descr;
+            $colorId && $where['color_id'] = $colorId;
 
             if ($where) {
                 $this->load->model('model_chauffeur', 'chauffeur');
@@ -118,6 +120,20 @@ class chauffeur extends MY_Controller
             }
 
         } while (false);
+
+        $this->json_output($response);
+    }
+
+    /**
+     * 获取颜色
+     */
+    public function getColor()
+    {
+        //$color = config_item('color');
+
+        $response = array('code' => '0', 'msg' => '获取成功');
+
+        $response['data'] = config_item('color');
 
         $this->json_output($response);
     }
