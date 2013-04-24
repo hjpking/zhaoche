@@ -635,7 +635,7 @@ class order extends MY_Controller
         $response = array('code' => '0', 'msg' => '确认成功');
 
         do {
-            if (empty ($chauffeurId) || empty ($orderSn)) {
+            if (empty ($chauffeurId) || empty ($orderSn) || empty ($mileage) || empty ($travelTime)) {
                 $response = error(10001);//参数不全
                 break;
             }
@@ -673,8 +673,10 @@ class order extends MY_Controller
             $currentHours = date('H', TIMESTAMP);
             $nightServiceCharge = ($currentHours >= NIGHT_START_TIME && $currentHours <= NIGHT_END_TIME) ? $data['night_service_charge'] : 0;
 
-            $exceedKm = ceil($mileage - $data['service_km']);//超出公里数
+            $exceedKm = floatval(ceil($mileage - $data['service_km']));//超出公里数
+            $exceedKm = ($exceedKm < 1) ? 0 : $exceedKm;
             $exceedTIme = ceil($travelTime - $data['service_time']);//超出时间
+            $exceedTIme = ($exceedTIme < 1) ? 0 : $exceedTIme;
             $exceedKmFee = ceil($exceedKm * $data['km_price']);//超出公里数费用
             $exceedTImeFee = ceil($exceedTIme * $data['time_price']);//超出时间费用
 
@@ -683,7 +685,7 @@ class order extends MY_Controller
             //整体费用
             $totalPrice = $data['base_price'] + $exceedKmFee + $exceedTImeFee + $highSpeedCharge + $airportServiceCharge + $parkCharge + $nightServiceCharge;
             /* 计算费用结束 */
-
+            
             $upData = array(
                 'total_price' => $totalPrice,
                 'exceed_km' => $exceedKm,
