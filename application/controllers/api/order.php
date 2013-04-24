@@ -709,6 +709,13 @@ class order extends MY_Controller
                 'exceed_time' => $exceedTIme,
                 'exceed_km_fee' => $exceedKmFee,
                 'exceed_time_fee' => $exceedTImeFee,
+                'base_fee' => $data['base_price'],
+                'high_speed_fee' => $highSpeedCharge,
+                'night_service_fee' => $nightServiceCharge,
+                'park_fee' => $parkCharge,
+                'air_service_fee' => $airportServiceCharge,
+                'mileage' => $mileage,
+                'travel_time' => $travelTime,
             );
             $response['data'] = $rData;
 
