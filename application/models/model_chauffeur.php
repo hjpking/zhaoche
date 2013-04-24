@@ -32,6 +32,25 @@ class model_chauffeur extends MY_Model
     }
 
     /**
+     * 获取司机信息　where in
+     *
+     * @param int $limit
+     * @param int $offset
+     * @param string $field
+     * @param $in
+     * @return mixed
+     */
+    public function getChauffeurWhereIn($limit = 20, $offset = 0, $field= '*', $in)
+    {
+        $this->db->select($field);
+        $this->db->from('chauffeur');
+        $this->db->where_in('cname', $in);
+        $this->db->limit($limit, $offset);
+
+        return $data = $this->db->get()->result_array();
+    }
+
+    /**
      * 获取司机信息 -- 通过司机ID
      *
      * @param $chauffeurId

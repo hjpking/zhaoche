@@ -54,7 +54,6 @@ class other extends MY_Controller
                 );
             }
 
-
             $data = $this->message->getMessageSendRecord($limit, $offset, $field, $where);
             $response['data'] = $data;
         } while (false);

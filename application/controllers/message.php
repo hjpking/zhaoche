@@ -338,11 +338,22 @@ class message extends MY_Controller
         }
 
         $this->load->model('model_user', 'user');
-        if (empty ($recipient)) {
-            $userList = $this->user->getUser(10000000, 0, '*', array('status' => '1', 'is_del' => '0'));
+        $this->load->model('model_chauffeur', 'cf');
+
+        if ($userType == '2') {
+            if (empty ($recipient)) {
+                $userList = $this->cf->getChauffeur(10000000, 0, '*', array('status' => '1', 'is_del' => '0'));
+            } else {
+                $arr = explode(',', $recipient);
+                $userList = $this->cf->getChauffeurWhereIn(10000000, 0, '*', $arr);
+            }
         } else {
-            $arr = explode(',', $recipient);
-            $userList = $this->user->getUserWhereIn(10000000, 0, '*', $arr);
+            if (empty ($recipient)) {
+                $userList = $this->user->getUser(10000000, 0, '*', array('status' => '1', 'is_del' => '0'));
+            } else {
+                $arr = explode(',', $recipient);
+                $userList = $this->user->getUserWhereIn(10000000, 0, '*', $arr);
+            }
         }
 
         if (empty ($userList)) {
@@ -356,8 +367,8 @@ class message extends MY_Controller
                 'content' => $messageData['content'],
                 'staff_id' => $this->amInfo['staff_id'],
                 'types' => $type,
-                'recipient_id' => $v['uid'],
-                'recipient' => $v['uname'],
+                'recipient_id' => isset($v['uid']) ? $v['uid'] : $v['chauffeur_id'],
+                'recipient' => isset($v['cname']) ? $v['cname'] : $v['cname'],
             );
 
             $this->message->send($data);
