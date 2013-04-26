@@ -6,11 +6,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/key/alipay/alipay_public_key_back.pem" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/clients.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/error.php" afterPath="$PROJECT_DIR$/application/config/error.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/order.php" afterPath="$PROJECT_DIR$/application/controllers/api/order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/other.php" afterPath="$PROJECT_DIR$/application/controllers/api/other.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/user.php" afterPath="$PROJECT_DIR$/application/controllers/api/user.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zhaoche.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,19 +94,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="other.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="other.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/other.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="0" selection-start="2091" selection-end="2091" vertical-scroll-proportion="0.84023666">
+            <state line="72" column="0" selection-start="2091" selection-end="2091" vertical-scroll-proportion="-29.583334">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="config.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="523" column="24" selection-start="17764" selection-end="17779" vertical-scroll-proportion="-3.3333333">
+            <state line="547" column="0" selection-start="18949" selection-end="18949" vertical-scroll-proportion="0.52071005">
               <folding />
             </state>
           </provider>
@@ -194,8 +189,8 @@
         <option value="$PROJECT_DIR$/application/models/model_user.php" />
         <option value="$PROJECT_DIR$/system/core/Common.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/user.php" />
-        <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/other.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
       </list>
     </option>
   </component>
@@ -668,16 +663,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/api/other.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="523" column="24" selection-start="17764" selection-end="17779" vertical-scroll-proportion="-3.3333333">
+        <state line="72" column="0" selection-start="2091" selection-end="2091" vertical-scroll-proportion="-29.583334">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/api/other.php">
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="0" selection-start="2091" selection-end="2091" vertical-scroll-proportion="0.84023666">
+        <state line="547" column="0" selection-start="18949" selection-end="18949" vertical-scroll-proportion="0.52071005">
           <folding />
         </state>
       </provider>

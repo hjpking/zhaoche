@@ -522,6 +522,7 @@ $config['color'] = array(
 
 //版本列表
 $config['current_version'] = array(
+    'id' => 1,
     'version_no' => '1.0',
     'download_address' => $config['base_url'].'data/chauffeur_client_1.0.apk',
 );
