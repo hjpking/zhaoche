@@ -228,14 +228,19 @@ class chauffeur extends MY_Controller
             }
             $this->load->model('model_car', 'car');
             $carInfo = $this->car->getCarById($data['car_id']);
-            $data['car_name'] = $carInfo['name'];
+            $data['car_name'] = isset ($carInfo['name']) ? $carInfo['name'] : '';
 
             $this->load->model('model_city', 'city');
             $cityData = $this->city->getCityById($data['city_id']);
-            $data['city_name'] = $cityData['city_name'];
+            $data['city_name'] = isset ($cityData['city_name']) ? $cityData['city_name'] : '';
 
             $color = config_item('color');
-            $data['color_name'] = $color[$data['color_id']]['name'];
+            $data['color_name'] = isset ($color[$data['color_id']]['name']) ? $color[$data['color_id']]['name'] : '';
+
+            if (isset ($carInfo['lid'])) {
+                $lData = $this->car->getCarLevelById($carInfo['lid']);
+                $data['car_level_name'] = isset ($lData['name']) ? $lData['name'] : '';
+            }
 
             $response['data'] = $data;
         } while (false);

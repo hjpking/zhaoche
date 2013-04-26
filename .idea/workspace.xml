@@ -5,7 +5,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/key/alipay/alipay_public_key_back.pem" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/clients.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/order.php" afterPath="$PROJECT_DIR$/application/controllers/api/order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/chauffeur.php" afterPath="$PROJECT_DIR$/application/controllers/api/chauffeur.php" />
     </list>
     <ignored path="zhaoche.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,7 +22,7 @@
     <file path="/detail.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365316250957" ignored="false" />
     <file path="/pay_log.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365511880660" ignored="false" />
     <file path="/batch_user_pay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1365305514592" ignored="false" />
-    <file path="/chauffeur.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1366770199727" ignored="false" />
+    <file path="/chauffeur.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1366956590103" ignored="false" />
     <file path="/service_type_create.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364970618046" ignored="false" />
     <file path="/service_type_index.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1364970966910" ignored="false" />
     <file path="/Common.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1366946510777" ignored="false" />
@@ -85,10 +85,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="order.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="order.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="722" column="14" selection-start="25676" selection-end="25676" vertical-scroll-proportion="0.5673077">
+            <state line="722" column="14" selection-start="25676" selection-end="25676" vertical-scroll-proportion="-19.666666">
               <folding />
             </state>
           </provider>
@@ -121,10 +121,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chauffeur.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="chauffeur.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/chauffeur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="235" column="0" selection-start="7058" selection-end="7058" vertical-scroll-proportion="-25.333334">
+            <state line="243" column="0" selection-start="7507" selection-end="7507" vertical-scroll-proportion="0.75502956">
               <folding />
             </state>
           </provider>
@@ -178,7 +178,6 @@
         <option value="$PROJECT_DIR$/application/models/model_pay.php" />
         <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
         <option value="$PROJECT_DIR$/application/models/model_order.php" />
-        <option value="$PROJECT_DIR$/application/controllers/api/chauffeur.php" />
         <option value="$PROJECT_DIR$/application/views/pay/index.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/pay.php" />
         <option value="$PROJECT_DIR$/application/models/model_message.php" />
@@ -191,6 +190,7 @@
         <option value="$PROJECT_DIR$/application/controllers/api/other.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/order.php" />
+        <option value="$PROJECT_DIR$/application/controllers/api/chauffeur.php" />
       </list>
     </option>
   </component>
@@ -498,8 +498,8 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329581" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23577236" sideWeight="0.670045" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2326454" sideWeight="0.44048944" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23577236" sideWeight="0.670045" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2326454" sideWeight="0.44048944" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289556" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -575,16 +575,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/model_message.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="44" selection-start="5648" selection-end="5667" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/chauffeur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="8" selection-start="1329" selection-end="1373" vertical-scroll-proportion="0.68773234" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/pay.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="276" column="39" selection-start="9063" selection-end="9063" vertical-scroll-proportion="0.01775148" />
@@ -610,13 +600,6 @@
     <entry file="file://$PROJECT_DIR$/application/config/error.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="102" column="56" selection-start="3298" selection-end="3303" vertical-scroll-proportion="-31.458334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/api/chauffeur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="235" column="0" selection-start="7058" selection-end="7058" vertical-scroll-proportion="-25.333334">
           <folding />
         </state>
       </provider>
@@ -672,7 +655,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="722" column="14" selection-start="25676" selection-end="25676" vertical-scroll-proportion="0.5673077">
+        <state line="722" column="14" selection-start="25676" selection-end="25676" vertical-scroll-proportion="-19.666666">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/model_service_type.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.64634144">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/model_car.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="119" column="35" selection-start="2942" selection-end="2957" vertical-scroll-proportion="0.58536583">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/api/chauffeur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="243" column="0" selection-start="7507" selection-end="7507" vertical-scroll-proportion="0.75502956">
           <folding />
         </state>
       </provider>
