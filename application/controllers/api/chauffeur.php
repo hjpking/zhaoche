@@ -237,6 +237,7 @@ class chauffeur extends MY_Controller
             $color = config_item('color');
             $data['color_name'] = isset ($color[$data['color_id']]['name']) ? $color[$data['color_id']]['name'] : '';
 
+            $data['car_level_name'] = '';
             if (isset ($carInfo['lid'])) {
                 $lData = $this->car->getCarLevelById($carInfo['lid']);
                 $data['car_level_name'] = isset ($lData['name']) ? $lData['name'] : '';
