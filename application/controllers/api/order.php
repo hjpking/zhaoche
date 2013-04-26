@@ -685,7 +685,7 @@ class order extends MY_Controller
             //整体费用
             $totalPrice = $data['base_price'] + $exceedKmFee + $exceedTImeFee + $highSpeedCharge + $airportServiceCharge + $parkCharge + $nightServiceCharge;
             /* 计算费用结束 */
-            
+
             $upData = array(
                 'total_price' => $totalPrice,
                 'exceed_km' => $exceedKm,

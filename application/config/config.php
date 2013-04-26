@@ -520,6 +520,12 @@ $config['color'] = array(
     '9' => array('id' => '9', 'name' => '绿色', 'code' => '#00FF00;', 'font_code' => '#000000;'),
 );
 
+//版本列表
+$config['current_version'] = array(
+    'version_no' => '1.0',
+    'download_address' => $config['base_url'].'data/chauffeur_client_1.0.apk',
+);
+
 //支付宝配置信息
 define('ALIPAY_PARTNER', '2088901264408851');//合作伙伴ID
 define('ALIPAY_SELLER', 'meiyi@meiyiad.com');//签约支付宝账号或卖家支付宝帐户

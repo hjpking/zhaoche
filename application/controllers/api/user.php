@@ -8,9 +8,94 @@
  */
 class user extends MY_Controller
 {
-    /**12
-     * 登陆
+    public function login()
+    {
+        $phone = trim($this->input->get_post('phone'));
+
+        $response = array('code' => '0', 'msg' => '获取成功');
+
+        do {
+            if (empty ($phone)) {
+                $response = error(10001);//参数不全
+                break;
+            }
+
+            $this->load->model('model_user', 'user');
+            $uData = $this->user->getUserByPhone($phone, '*');
+            if (empty ($uData)) {
+                $response = error(10007);//用户不存在
+                break;
+            }
+
+            if (!checkMobile($phone)) {
+                $response = error(10019);//手机号码格式错误
+                break;
+            }
+
+            $code = rand(1000, 9999);
+            $data = array('password' => $code);
+
+            $s = $this->user->save($data, $uData['uid']);
+
+            if (!$s) {
+                $response = error(10020);//保存验证码错误
+                break;
+            }
+            $message = '欢迎使用'.APP_NAME.'，您本次登陆验证码：'.$code;
+            $this->sendMessage($phone, $message);
+        } while (false);
+
+        $this->json_output($response);
+    }
+    /**
+     * 登陆验证
      */
+    public function login_verify()
+    {
+        $this->load->helper('validation');
+        $phone = trim($this->input->get_post('phone'));
+        $code = $this->input->get_post('code');
+
+        $response = array('code' => '0', 'msg' => '验证成功');
+
+        do {
+            if (empty ($phone) || empty ($code)) {
+                $response = error(10001);//参数不全
+                break;
+            }
+
+            if (!checkMobile($phone)) {
+                $response = error(10019);//手机号码格式错误
+                break;
+            }
+
+            $this->load->model('model_user', 'user');
+            $uData = $this->user->getUserByPhone($phone, '*');
+
+            if (empty ($uData)) {
+                $response = error(10007);//用户不存在
+                break;
+            }
+
+            if ($uData['is_del'] == '1') {
+                $response = error(10010);//用户已禁用
+                break;
+            }
+
+            if (strtolower($uData['password']) != strtolower($code)) {
+                $response = error(10022);//验证失败
+                break;
+            }
+
+            $token = $this->generaToken($uData['uid'], $uData['uname'], $uData['password']);
+            $response['data'] = $token;
+        } while (false);
+
+        $this->json_output($response);
+    }
+
+    /*
+
     public function login()
     {
         $this->load->helper('validation');
@@ -59,8 +144,9 @@ class user extends MY_Controller
 
         $this->json_output($response);
     }
+     */
 
-    /**10
+    /**
      * 注册
      */
     public function register()
@@ -124,6 +210,14 @@ class user extends MY_Controller
         } while (false);
 
         $this->json_output($response);
+    }
+
+    /**
+     * 重置密码
+     */
+    public function resetPassword()
+    {
+
     }
 
     /**

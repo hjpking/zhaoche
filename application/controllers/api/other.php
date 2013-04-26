@@ -67,6 +67,9 @@ class other extends MY_Controller
     public function versionCheck()
     {
         $response = array('code' => '0', 'msg' => '检测成功');
+        $currentVersion = config_item('current_version');
+
+        $response['data'] = $currentVersion;
 
         $this->json_output($response);
     }

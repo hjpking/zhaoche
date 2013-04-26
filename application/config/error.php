@@ -100,4 +100,6 @@ $error[10048] = array('code' => '10048', 'msg' => '支付失败');
 
 $error[10049] = array('code' => '10049', 'msg' => '充值失败');
 
+$error[10050] = array('code' => '10050', 'msg' => '用户不存在');
+
 return $error;
