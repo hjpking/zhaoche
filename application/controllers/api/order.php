@@ -673,10 +673,12 @@ class order extends MY_Controller
             $currentHours = date('H', TIMESTAMP);
             $nightServiceCharge = ($currentHours >= NIGHT_START_TIME && $currentHours <= NIGHT_END_TIME) ? $data['night_service_charge'] : 0;
 
-            $exceedKm = floatval(ceil($mileage - $data['service_km']));//超出公里数
+            $exceedKm = ceil($mileage - $data['service_km']);//超出公里数
             $exceedKm = ($exceedKm < 1) ? 0 : $exceedKm;
             $exceedTIme = ceil($travelTime - $data['service_time']);//超出时间
+            $exceedTIme = ceil($exceedTIme / $data['time']);
             $exceedTIme = ($exceedTIme < 1) ? 0 : $exceedTIme;
+
             $exceedKmFee = ceil($exceedKm * $data['km_price']);//超出公里数费用
             $exceedTImeFee = ceil($exceedTIme * $data['time_price']);//超出时间费用
 
