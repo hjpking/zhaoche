@@ -152,6 +152,105 @@ class user extends MY_Controller
     public function register()
     {
         $this->load->helper('validation');
+        $response = array('code' => '0', 'msg' => '获取成功');
+
+        $phone = trim($this->input->get_post('phone'));
+        $userName = trim($this->input->get_post('username'));
+        $recommend = $this->input->get_post('recommend');
+
+        do {
+            if ( empty ($phone)) {
+                $response = error(10001);//参数不全
+                break;
+            }
+
+            if (!checkMobile($phone)) {
+                $response = error(10004);//手机号码格式错误
+                break;
+            }
+
+            $this->load->model('model_user', 'user');
+            $tmp = $this->user->getUserByPhone($phone);
+            if (!empty ($tmp)) {
+                $response = error(10045);//手机号码已注册
+                break;
+            }
+
+            $code = rand(1000, 9999);
+            $data = array(
+                'uname' => empty ($userName) ? $phone : $userName,
+                'password' => $code,
+                'phone' => $phone,
+                'is_del' => '1',
+            );
+
+            $uId = $this->user->save($data);
+            if (!$uId) {
+                $response = error(10005);//用户注册失败
+                break;
+            }
+
+            $message = '欢迎注册使用'.APP_NAME.'，您本次注册验证码：'.$code;
+            $this->sendMessage($phone, $message);
+
+            //$token = $this->generaToken($uId, $userName, $code);
+            //$response['data'] = $token;
+        } while (false);
+
+        $this->json_output($response);
+    }
+
+    /**
+     * 注册验证
+     */
+    public function register_verify()
+    {
+        $phone = trim($this->input->get_post('phone'));
+        $code = $this->input->get_post('code');
+
+        $response = array('code' => '0', 'msg' => '验证成功');
+
+        do {
+            if (empty ($phone) || empty ($code)) {
+                $response = error(10001);//参数不全
+                break;
+            }
+
+            if (!checkMobile($phone)) {
+                $response = error(10019);//手机号码格式错误
+                break;
+            }
+
+            $this->load->model('model_user', 'user');
+            $uData = $this->user->getUserByPhone($phone);
+
+            if (empty ($uData)) {
+                $response = error(10007);//用户不存在
+                break;
+            }
+
+            if (strtolower($uData['password']) != strtolower($code)) {
+                $response = error(10022);//验证失败
+                break;
+            }
+
+            $s = $this->user->save(array('is_del' => '0'), $uData['uid']);
+            if (!$s) {
+                $response = error(10022);//验证失败
+                break;
+            }
+
+            $token = $this->generaToken($uData['uid'], $uData['uname'], $uData['password']);
+            $response['data'] = $token;
+        } while (false);
+
+        $this->json_output($response);
+    }
+
+    /*
+    public function register()
+    {
+        $this->load->helper('validation');
         $response = array('code' => '0', 'msg' => '注册成功');
 
         $userName = trim($this->input->get_post('username'));
@@ -211,7 +310,7 @@ class user extends MY_Controller
 
         $this->json_output($response);
     }
-
+     */
     /**
      * 重置密码
      */
