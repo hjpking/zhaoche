@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     2013-4-24 11:36:21                           */
+/* Created on:     2013-4-26 16:05:07                           */
 /*==============================================================*/
 
 
@@ -678,6 +678,8 @@ alter table zc_order_run_path comment '订单运行路径';
 create table zc_pay_record
 (
    pay_id               int not null auto_increment comment '充值ID',
+   pay_uid              int not null comment '充值人ID',
+   pay_uname            varchar(32) comment '充值人名称',
    uid                  int comment '用户ID',
    uname                varchar(32) comment '用户名',
    pay_amount           int not null comment '充值金额 单位：分',
@@ -685,6 +687,7 @@ create table zc_pay_record
    source               tinyint comment '充值来源 0 客户端 1 其他 ',
    pay_type             tinyint comment '充值方式',
    pay_channel          varchar(32) comment '充值渠道 1支付宝，2 银联',
+   be_who               tinyint not null default 1 comment '给谁充值 1 给自己充值，2 给他人充值',
    opera_people         varchar(16) comment '操作人',
    is_post              tinyint not null default 0 comment '是否寄送发票 0不需要 1 需要',
    post_mode            tinyint comment '寄送方式 1 快递，2 平邮',
