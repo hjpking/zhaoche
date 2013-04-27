@@ -223,8 +223,7 @@ class order extends MY_Controller
             }
 
             $this->load->model('model_order', 'order');
-            $field = 'order_sn,city_id,chauffeur_id,uid,uname,user_phone,chauffeur_login_name,chauffeur_phone,amount,status,sid,car_time,lid,car_length,
-                train_address,getoff_address,train_time,getoff_time,create_time,is_invoice,payable,content,mailing_address,leave_message, train_address_desc,getoff_address_desc';
+            $field = '*';
             $orderData = $this->order->getOrder($defLimit, $defOffset, $field, array('uid' => $uId));
 
             if (isset ($orderData['chauffeur_id'])) {
@@ -299,6 +298,15 @@ class order extends MY_Controller
                 foreach ($serviceData as $sd) {
                     if ($sd['sid'] == $value['sid'])
                         $value['service_name'] = $sd['name'];
+
+                    $value['distance'] = 0;
+                    if (!empty ($value['train_address']) && !empty ($value['getoff_address'])) {
+                        $train = explode(',',$value['train_address']);
+                        $getOff = explode(',',$value['getoff_address']);
+
+                        $value['distance'] = getDistance($train[0], $train[1], $getOff[0], $getOff[1]);
+                    }
+
                 }
             }
 
@@ -344,6 +352,14 @@ class order extends MY_Controller
             if (!$data) {
                 $response = error(10018);//订单不存在
                 break;
+            }
+
+            $data['distance'] = 0;
+            if (!empty ($data['train_address']) && !empty ($data['getoff_address'])) {
+                $train = explode(',',$data['train_address']);
+                $getOff = explode(',',$data['getoff_address']);
+
+                $data['distance'] = getDistance($train[0], $train[1], $getOff[0], $getOff[1]);
             }
 
             $response['data'] = $data;
@@ -631,7 +647,6 @@ class order extends MY_Controller
         $airportServiceCharge = intval($this->input->get_post('airport_service_charge'));
         $parkCharge = intval($this->input->get_post('park_charge'));
 
-
         $response = array('code' => '0', 'msg' => '确认成功');
 
         do {
@@ -697,7 +712,7 @@ class order extends MY_Controller
                 'high_speed_fee' => $highSpeedCharge,
                 'park_fee' => $parkCharge,
                 'air_service_fee' => $airportServiceCharge,
-                'mileage' => $mileage,
+                'mileage' => ($mileage * 1000),
                 'travel_time' => $travelTime,
             );
             //$totalPrice = 15000;
