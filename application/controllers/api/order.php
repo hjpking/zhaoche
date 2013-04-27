@@ -1133,7 +1133,10 @@ class order extends MY_Controller
                 $data['car_name'] = $carData['name'];
             }
 
-
+	    $locationData = $this->chauffeur->isCurrentLocation($data['chauffeur_id']);
+		$data['chauffuer_longitude'] = $locationData['longitude'];
+		$data['chauffuer_latitude'] = $locationData['latitude'];
+//p($data);
 
             $response['data'] = $data;
             //$this->db->where('order_sn', $orderSn);
