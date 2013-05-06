@@ -733,7 +733,7 @@ class order extends MY_Controller
                 'night_service_fee' => $nightServiceCharge,
                 'park_fee' => $parkCharge,
                 'air_service_fee' => $airportServiceCharge,
-                'mileage' => $mileage,
+                'mileage' => ($mileage * 1000),
                 'travel_time' => $travelTime,
             );
             $response['data'] = $rData;
