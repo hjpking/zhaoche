@@ -541,7 +541,9 @@ class order extends MY_Controller
                     unset ($v);
                     continue;
                 }
+                //echo $latitude, $longitude, $arr[0], $arr[1].'<br>';
                 $v['distance'] = getDistance($latitude, $longitude, $arr[0], $arr[1]);
+                $arr = array();
                 //$v['distance'] = $distance;
             }
 
@@ -660,9 +662,12 @@ class order extends MY_Controller
         $orderSn = intval($this->input->get_post('order_sn'));
         $mileage = intval($this->input->get_post('mileage'));
         $travelTime = intval($this->input->get_post('travel_time'));
+        $travelTime = ($travelTime < 1) ? 0 : $travelTime;
         $highSpeedCharge = intval($this->input->get_post('high_speed_charge'));
+        $highSpeedCharge = ($highSpeedCharge * 100);
         $airportServiceCharge = intval($this->input->get_post('airport_service_charge'));
         $parkCharge = intval($this->input->get_post('park_charge'));
+        $parkCharge = ($parkCharge * 100);
 
         $response = array('code' => '0', 'msg' => '确认成功');
 
@@ -718,7 +723,7 @@ class order extends MY_Controller
             $exceedTImeFee = ceil($exceedTIme * $data['time_price']);//超出时间费用
 		//$exceedTImeFee = ($exceedTImeFee * 100);
 			$airportServiceNumber = $airportServiceCharge;
-			$airportServiceCharge = ($airportServiceCharge * 50);
+			$airportServiceCharge = ($airportServiceCharge * 5000);
 
 			$kongshiMileage = $mileage - 40;
 			$kongshiMileage = $kongshiMileage < 1 ? 0 : $kongshiMileage;

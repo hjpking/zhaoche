@@ -131,6 +131,8 @@ class pay extends MY_Controller
         $currentPage = $this->uri->segment(3, 1);
         $offset = ($currentPage - 1) * $Limit;
 
+        $this->load->helper('url');
+
         $where = array('is_del' => '0');
 
         $uname = $this->input->get_post('uname');
@@ -304,6 +306,7 @@ class pay extends MY_Controller
         $Limit = 20;
         $currentPage = $this->uri->segment(3, 1);
         $offset = ($currentPage - 1) * $Limit;
+        $this->load->helper('url');
 
         $where = array();
 
@@ -409,7 +412,8 @@ class pay extends MY_Controller
         $Limit = 20;
         $currentPage = $this->uri->segment(3, 1);
         $offset = ($currentPage - 1) * $Limit;
-
+        $this->load->helper('url');
+        
         $where = array();
 
         $chauffeur_name = $this->input->get_post('chauffeur_name');

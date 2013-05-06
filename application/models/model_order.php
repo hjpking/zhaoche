@@ -163,7 +163,7 @@ class model_order extends MY_Model
     public function cancelOrderByChauffeur($chauffeurId, $orderSn)
     {
         $data = array(
-            'chauffeur_id' => '',
+            'chauffeur_id' => null,
             'chauffeur_login_name' => '',
             'chauffeur_phone' => '',
             'status' => '0',
