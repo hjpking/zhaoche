@@ -102,4 +102,7 @@ $error[10049] = array('code' => '10049', 'msg' => '充值失败');
 
 $error[10050] = array('code' => '10050', 'msg' => '用户不存在');
 
+$error[10051] = array('code' => '10051', 'msg' => '司机已禁用');
+
+$error[10052] = array('code' => '10052', 'msg' => '司机已删除');
 return $error;

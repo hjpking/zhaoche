@@ -10,8 +10,11 @@ class car extends MY_Controller
 {
     public function test()
     {
-        echo $this->sendMessage('13520740166', '赵磊收');
-        echo '<br>'.date('Y-m-d H:i:s');
+		$status = array(0,1,4,7);
+		//p($status);
+		echo json_encode($status);
+        //echo $this->sendMessage('13520740166', '赵磊收');
+        //echo '<br>'.date('Y-m-d H:i:s');
         //$this->sendMessage('13811508022', '王振生收');
         /*/
         $gwUrl = 'http://sdkhttp.eucp.b2m.cn/sdk/SDKService?wsdl';
@@ -123,9 +126,9 @@ class car extends MY_Controller
             $carLevelData = $this->car->getCarLevel();
 
             $this->load->model('model_rule', 'rule');
-            $data = $this->rule->getRule(20, 0, '*', array('sid' => $serviceType, 'city_id' => $cityId));
+            $data = $this->rule->getRule(20, 0, '*', array('sid' => $serviceType, 'city_id' => $cityId), 'base_price');
             foreach ($data as &$v) {
-                $v['car_model_name'] = $carLevelData[$v['lid']]['name'];
+                $v['car_model_name'] = isset($carLevelData[$v['lid']]['name']) ? $carLevelData[$v['lid']]['name'] : '';
             }
             $response['data'] = $data;
         } while (false);

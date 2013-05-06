@@ -41,7 +41,7 @@ class user extends MY_Controller
                 $response = error(10020);//保存验证码错误
                 break;
             }
-            $message = '欢迎使用'.APP_NAME.'，您本次登陆验证码：'.$code;
+            $message = '获取验证码：欢迎使用'.APP_NAME.'，本次登陆验证码：'.$code;
             $this->sendMessage($phone, $message);
         } while (false);
 

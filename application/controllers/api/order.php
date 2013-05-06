@@ -226,16 +226,19 @@ class order extends MY_Controller
             $field = '*';
             $orderData = $this->order->getOrder($defLimit, $defOffset, $field, array('uid' => $uId));
 
-            if (isset ($orderData['chauffeur_id'])) {
-                $this->load->model('model_chauffeur', 'chauffeur');
-                $chauffeurData = $this->chauffeur->getChauffeurById($orderData['chauffeur_id']);
+			$this->load->model('model_chauffeur', 'chauffeur');
+			$this->load->model('model_car', 'car');
 
-                $this->load->model('model_car', 'car');
-                $carData = $this->car->getCarById($chauffeurData['car_id']);
-                $data['car_no'] = $chauffeurData['car_no'];
-                $data['car_name'] = $carData['name'];
-            }
+			foreach ($orderData as $odk=>$odv) {
+				if (isset ($odv['chauffeur_id'])) {
+					$chauffeurData = $this->chauffeur->getChauffeurById($odv['chauffeur_id']);
 
+					$carData = $this->car->getCarById($chauffeurData['car_id']);
+					$orderData[$odk]['car_no'] = $chauffeurData['car_no'];
+					$orderData[$odk]['car_name'] = $carData['name'];
+				}
+				$chauffeurData = array();
+			}
 
             $response['data'] = $orderData;
         } while (false);
@@ -253,7 +256,7 @@ class order extends MY_Controller
         $endTime = $this->input->get_post('end_time');
         $start = intval($this->input->get_post('limit'));
         $number = intval($this->input->get_post('offset'));
-        $status = intval($this->input->get_post('status'));
+        $status = ($this->input->get_post('status'));
 
         $limit = 20;
         $offset = 0;
@@ -289,10 +292,14 @@ class order extends MY_Controller
                 'create_time >' => $startTime,
                 'create_time <' => $endTime,
             );
-            $status && $where['status'] = $status;
+
+			if ($status) {
+				$status = json_decode($status, true);
+			}
+            //p($status);
 
             $this->load->model('model_order', 'order');
-            $orderData = $this->order->getOrder($limit, $offset, $field, $where);
+            $orderData = $this->order->getOrderWhereIn($limit, $offset, $field, $where, null, $status);
 
             foreach ($orderData as &$value) {
                 foreach ($serviceData as $sd) {
@@ -534,7 +541,7 @@ class order extends MY_Controller
                     unset ($v);
                     continue;
                 }
-                $v['distance'] = getDistance($longitude, $latitude, $arr[0], $arr[1]);
+                $v['distance'] = getDistance($latitude, $longitude, $arr[0], $arr[1]);
                 //$v['distance'] = $distance;
             }
 
@@ -587,6 +594,16 @@ class order extends MY_Controller
                 break;
             }
 
+			if ($chauffeurData['status'] == '0') {
+				$response = error(10051);//司机已禁用
+                break;
+			}
+
+			if ($chauffeurData['is_del'] == '1') {
+				$response = error(10052);//司机已删除
+                break;
+			}
+
             $this->load->model('model_order', 'order');
             $data = $this->order->getOrderById($orderSn);
             if (empty ($data)) {
@@ -624,7 +641,7 @@ class order extends MY_Controller
 
             $color = config_item('color');
             if (!empty ($data['user_phone'])) {
-                $msg = '您的订单分配车辆成功，司机'.$chauffeurData['realname'].'电话：'.$chauffeurData['phone'].'驾驶. '.$color[$chauffeurData['color_id']]['name'].'车,';
+                $msg = '订单成功，司机'.$chauffeurData['realname'].'电话：'.$chauffeurData['phone'].'驾驶. '.$color[$chauffeurData['color_id']]['name'].'车,';
                 $msg .= '车牌号:'.$chauffeurData['car_no'].'已经出发，您可以随时登陆客户端查看车辆的行驶轨迹。支付密码：'.$code.'。';
                 $this->sendMessage($data['user_phone'], $msg);
             }
@@ -691,11 +708,21 @@ class order extends MY_Controller
             $exceedKm = ceil($mileage - $data['service_km']);//超出公里数
             $exceedKm = ($exceedKm < 1) ? 0 : $exceedKm;
             $exceedTIme = ceil($travelTime - $data['service_time']);//超出时间
-            $exceedTIme = ceil($exceedTIme / $data['time']);
+//p($exceedTIme);
+//p($data['time']);
+            $exceedTIme = ($exceedTIme < 1) ? 0 : ceil($exceedTIme / $data['time']);
             $exceedTIme = ($exceedTIme < 1) ? 0 : $exceedTIme;
 
             $exceedKmFee = ceil($exceedKm * $data['km_price']);//超出公里数费用
+		//$exceedKmFee = ($exceedKmFee *  100);
             $exceedTImeFee = ceil($exceedTIme * $data['time_price']);//超出时间费用
+		//$exceedTImeFee = ($exceedTImeFee * 100);
+			$airportServiceNumber = $airportServiceCharge;
+			$airportServiceCharge = ($airportServiceCharge * 50);
+
+			$kongshiMileage = $mileage - 40;
+			$kongshiMileage = $kongshiMileage < 1 ? 0 : $kongshiMileage;
+			$kongshiFee = ceil(($kongshiMileage * $data['km_price']) / 2);
 
             '基础价格＋(超出公里数＊公里单价)+(超时时长＊超时单价)+高速费+停车费+夜间服务费+机场服务费';
 
@@ -712,8 +739,11 @@ class order extends MY_Controller
                 'high_speed_fee' => $highSpeedCharge,
                 'park_fee' => $parkCharge,
                 'air_service_fee' => $airportServiceCharge,
+				'air_service_num' => $airportServiceNumber,
                 'mileage' => ($mileage * 1000),
                 'travel_time' => $travelTime,
+				'kongshi_km' => ($kongshiMileage * 1000),
+				'kongshi_fee' => $kongshiFee,
             );
             //$totalPrice = 15000;
             $s = $this->order->confirmArrival($chauffeurId, $orderSn, $upData);
@@ -728,13 +758,16 @@ class order extends MY_Controller
                 'exceed_time' => $exceedTIme,
                 'exceed_km_fee' => $exceedKmFee,
                 'exceed_time_fee' => $exceedTImeFee,
-                'base_fee' => $data['base_price'],
+                'base_price' => $data['base_price'],
                 'high_speed_fee' => $highSpeedCharge,
                 'night_service_fee' => $nightServiceCharge,
                 'park_fee' => $parkCharge,
                 'air_service_fee' => $airportServiceCharge,
-                'mileage' => $mileage,
+				'air_service_num' => $airportServiceNumber,
+                'mileage' => ($mileage * 1000),
                 'travel_time' => $travelTime,
+				'kongshi_km' => ($kongshiMileage * 1000),
+				'kongshi_fee' => $kongshiFee,
             );
             $response['data'] = $rData;
 
@@ -807,6 +840,8 @@ class order extends MY_Controller
                 $response = error(10048);//支付失败
                 break;
             }
+
+			$s = $this->db->set(array('pay_status' => '1'), '', false)->where('order_sn', $orderSn)->update('order');
         } while (false);
 
         $this->json_output($response);
@@ -1039,16 +1074,20 @@ class order extends MY_Controller
                 $response = error(10035);//用户上车地址错误
                 break;
             }
-            $distance = getDistance($longitude, $latitude, $arr[0], $arr[1]);
+            $distance = getDistance($latitude, $longitude, $arr[0], $arr[1]);
 
             if ($distance > 1000) {
                 //$response = error(10036);//您离用户上车地点超过1000米
                 //bin_addressreak;
             }
 
+            $this->load->model('model_car', 'car');
+            $carData = $this->car->getCarById($chauffeurData['car_id']);
+
             $color = config_item('color');
-            $msg = $data['uname'].' 您好，接您的车已到达您的上车位点，您可以出发了。';//'司机：'.$chauffeurData['realname'].'，车牌号：'.$chauffeurData['car_no'];
+            //$msg = $data['uname'].' 您好，接您的车已到达您的上车位点，您可以出发了。';//'司机：'.$chauffeurData['realname'].'，车牌号：'.$chauffeurData['car_no'];
             //$msg .= ',车颜色：'.$color[$chauffeurData['color_id']]['name'].'。';
+			$msg = '就位：“接您的车（车型:'.$carData['name'].'）（牌照:'.$chauffeurData['car_no'].'）已经到达指定的位置，您可以出发了。”';
             $this->sendMessage($data['user_phone'], $msg);
 
             $upData = array(
@@ -1138,7 +1177,7 @@ class order extends MY_Controller
                 break;
             }
 
-            if (isset ($data['chauffeur_id'])) {
+            if (isset ($data['chauffeur_id']) && !empty($data['chauffeur_id'])) {
                 $this->load->model('model_chauffeur', 'chauffeur');
                 $chauffeurData = $this->chauffeur->getChauffeurById($data['chauffeur_id']);
 
@@ -1146,11 +1185,15 @@ class order extends MY_Controller
                 $carData = $this->car->getCarById($chauffeurData['car_id']);
                 $data['car_no'] = $chauffeurData['car_no'];
                 $data['car_name'] = $carData['name'];
-            }
-
-	    $locationData = $this->chauffeur->isCurrentLocation($data['chauffeur_id']);
+		$locationData = $this->chauffeur->isCurrentLocation($data['chauffeur_id']);
+//p($data);
 		$data['chauffuer_longitude'] = $locationData['longitude'];
 		$data['chauffuer_latitude'] = $locationData['latitude'];
+             }
+
+	    //$locationData = $this->chauffeur->isCurrentLocation($data['chauffeur_id']);
+		//$data['chauffuer_longitude'] = $locationData['longitude'];
+		//$data['chauffuer_latitude'] = $locationData['latitude'];
 //p($data);
 
             $response['data'] = $data;
@@ -1230,7 +1273,8 @@ class order extends MY_Controller
             $diffTime = TIMESTAMP - $orderTime;
             if ($diffTime > ORDER_TIMEOUT) {
                 if (!empty ($data['user_phone'])) {
-                    $msg = '已经半个多小时了，附近没有符合你要要求的车型，订单被取消,十分抱歉。';
+                    //$msg = '已经半个多小时了，附近没有符合你要要求的车型，订单被取消,十分抱歉。';
+					$msg = '订单失败：'.(ORDER_TIMEOUT / 60).'分钟没有司机应答，服务器取消订单。发送短信“已经半个多小时了，附近没有符合您要求的车辆，订单被取消。为了感谢您对我们的信任，欢迎您再次选择AA招车。”';
                     $this->sendMessage($data['user_phone'], $msg);
                 }
 

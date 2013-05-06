@@ -158,8 +158,9 @@ class model_chauffeur extends MY_Model
 
         $l = $this->isCurrentLocation($chauffeurId);
 
+	$data['update_time'] = date('Y-m-d H:i:s', TIMESTAMP);
         if (!$l) {
-            $data['update_time'] = date('Y-m-d H:i:s', TIMESTAMP);
+            //$data['update_time'] = date('Y-m-d H:i:s', TIMESTAMP);
             $this->db->insert('chauffeur_location', $data);
             return $this->db->insert_id();
         }

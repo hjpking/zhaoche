@@ -64,7 +64,7 @@
                         <label for="input01" class="control-label">基础价格</label>
                         <div class="controls">
                             <div class="input-append">
-                                <input class="span12" type="text" name="base_price" value="<?=isset($data['base_price']) ? $data['base_price'] : ''?>">
+                                <input class="span12" type="text" name="base_price" value="<?=isset($data['base_price']) ? fPrice($data['base_price']) : ''?>">
                                 <span class="add-on">元</span>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                         <label for="input01" class="control-label">公里单价</label>
                         <div class="controls">
                             <div class="input-append">
-                                <input class="span12" type="text" name="km_price" value="<?=isset($data['km_price']) ? $data['km_price'] : ''?>">
+                                <input class="span12" type="text" name="km_price" value="<?=isset($data['km_price']) ? fPrice($data['km_price']) : ''?>">
                                 <span class="add-on">元</span>
                             </div>
                         </div>
@@ -94,7 +94,7 @@
                         <label for="input01" class="control-label">时间单价</label>
                         <div class="controls">
                             <div class="input-append">
-                                <input class="span12" type="text" name="time_price" value="<?=isset($data['time_price']) ? $data['time_price'] : ''?>">
+                                <input class="span12" type="text" name="time_price" value="<?=isset($data['time_price']) ? fPrice($data['time_price']) : ''?>">
                                 <span class="add-on">元</span>
                             </div>
                         </div>
@@ -126,7 +126,7 @@
                         <label for="input01" class="control-label">夜间服务费</label>
                         <div class="controls">
                             <div class="input-append">
-                                <input class="span12" type="text" name="night_service_charge" value="<?=isset($data['night_service_charge']) ? $data['night_service_charge'] : ''?>">
+                                <input class="span12" type="text" name="night_service_charge" value="<?=isset($data['night_service_charge']) ? fPrice($data['night_service_charge']) : ''?>">
                                 <span class="add-on">元</span>
                             </div>
                         </div>
@@ -136,7 +136,7 @@
                         <label for="input01" class="control-label">空驶费</label>
                         <div class="controls">
                             <div class="input-append">
-                                <input class="span12" type="text" name="kongshi_fee" value="<?=isset($data['kongshi_fee']) ? $data['kongshi_fee'] : ''?>">
+                                <input class="span12" type="text" name="kongshi_fee" value="<?=isset($data['kongshi_fee']) ? fPrice($data['kongshi_fee']) : ''?>">
                                 <span class="add-on">元</span>
                             </div>
                         </div>

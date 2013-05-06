@@ -87,6 +87,29 @@ class model_order extends MY_Model
         return $data = $this->db->get()->result_array();
     }
 
+	/**
+	 *
+     * @param int $limit
+     * @param int $offset
+     * @param string $field
+     * @param null $where
+     * @param null $order
+     * @param string $group
+     * @return mixed
+	 */
+	public function getOrderWhereIn($limit = 20, $offset = 0, $field= '*', $where = null, $order = null, $whereIn = array())
+	{
+        $this->db->select($field);
+        $this->db->from('order');
+        $where && $this->db->where($where);
+		$whereIn && $this->db->where_in('status', $whereIn);
+        $order && $this->db->order_by($order);
+        $this->db->limit($limit, $offset);
+        //$this->db->group_by($group);
+
+        return $data = $this->db->get()->result_array();
+	}
+
     /**
      * 获取订单数量
      *
