@@ -768,7 +768,10 @@ class order extends MY_Controller
                 'night_service_fee' => $nightServiceCharge,
                 'park_fee' => $parkCharge,
                 'air_service_fee' => $airportServiceCharge,
+<<<<<<< HEAD
 				'air_service_num' => $airportServiceNumber,
+=======
+>>>>>>> a0098f72ec5a4bc31efd187b521973c949739a43
                 'mileage' => ($mileage * 1000),
                 'travel_time' => $travelTime,
 				'kongshi_km' => ($kongshiMileage * 1000),
