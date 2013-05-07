@@ -664,10 +664,10 @@ class order extends MY_Controller
         $travelTime = intval($this->input->get_post('travel_time'));
         $travelTime = ($travelTime < 1) ? 0 : $travelTime;
         $highSpeedCharge = intval($this->input->get_post('high_speed_charge'));
-        $highSpeedCharge = ($highSpeedCharge * 100);
+        //$highSpeedCharge = ($highSpeedCharge * 100);
         $airportServiceCharge = intval($this->input->get_post('airport_service_charge'));
         $parkCharge = intval($this->input->get_post('park_charge'));
-        $parkCharge = ($parkCharge * 100);
+        //$parkCharge = ($parkCharge * 100);
 
         $response = array('code' => '0', 'msg' => '确认成功');
 
@@ -768,10 +768,7 @@ class order extends MY_Controller
                 'night_service_fee' => $nightServiceCharge,
                 'park_fee' => $parkCharge,
                 'air_service_fee' => $airportServiceCharge,
-<<<<<<< HEAD
 				'air_service_num' => $airportServiceNumber,
-=======
->>>>>>> a0098f72ec5a4bc31efd187b521973c949739a43
                 'mileage' => ($mileage * 1000),
                 'travel_time' => $travelTime,
 				'kongshi_km' => ($kongshiMileage * 1000),
