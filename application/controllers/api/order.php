@@ -724,7 +724,7 @@ class order extends MY_Controller
             $exceedTImeFee = ceil($exceedTIme * $data['time_price']);//超出时间费用
 		//$exceedTImeFee = ($exceedTImeFee * 100);
 			$airportServiceNumber = $airportServiceCharge;
-			$airportServiceCharge = ($airportServiceCharge * 5000);
+			$airportServiceCharge = ($airportServiceCharge * 50);
 
 			$kongshiMileage = $mileage - 40;
 			$kongshiMileage = $kongshiMileage < 1 ? 0 : $kongshiMileage;
