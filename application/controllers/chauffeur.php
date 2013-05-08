@@ -218,10 +218,14 @@ class chauffeur extends MY_Controller
         //echo '<pre>';print_r($chauffeurData);exit;
 
         $this->load->model('model_city', 'city');
+        $this->load->model('model_service_type', 'st');
         $this->load->model('model_car', 'car');
 
         $city = $this->city->getCity(10000, 0, '*', array('is_del' => '0'));
-        $car = $this->car->getCar(10000);
+        $sfInfo = $this->st->getServiceType(1000);
+        $carLevelInfo = $this->car->getCarLevel(1000);
+        $car = $this->car->getCar(1000);
+
 
         $this->load->model('model_order', 'order');
         $order = $this->order->getChauffeurOrder($chauffeurId);
@@ -234,8 +238,10 @@ class chauffeur extends MY_Controller
         $orderStatus = config_item('order_status');
         $data = array(
             'city'=> $city,
-            'car' => $car,
+            'sf_info' => $sfInfo,
+            'carLevelInfo' => $carLevelInfo,
             'data' => $chauffeurData,
+            'car' => $car,
             'order' => $order,
             'time' => $time,
             'order_status' => $orderStatus,

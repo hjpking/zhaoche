@@ -112,7 +112,8 @@
                             <th>订单状态</th>
                             <th>租金</th>
                             <th>司机用户名</th>
-                            <th>车型</th>
+                            <th>服务类别</th>
+                            <th>车辆级别</th>
                             <th>操作</th>
                         <tr>
                         </thead>
@@ -126,13 +127,14 @@
                             <td><?=$v['order_sn']?></td>
                             <td><?=$v['user_phone']?></td>
                             <td><?=$v['uname']?></td>
-                            <td><?=$v['order_time']?></td>
+                            <td><?=$v['create_time']?></td>
                             <td><?=$v['train_time']?></td>
                             <td><?=$v['getoff_time']?></td>
                             <td><?=$order_status[$v['status']];?></td>
                             <td><?=fPrice($v['amount'])?>元</td>
                             <td><?=$v['chauffeur_login_name']?></td>
-                            <td><?=$car[$v['car_id']]['name']?></td>
+                            <td><?=$sf_info[$v['sid']]['name']?></td>
+                            <td><?=$carLevelInfo[$v['lid']]['name']?></td>
                             <td>
                                 <a href="<?=url('admin')?>order/detail/"><i class="icon-eye-open"></i></a>
                                 <a href="<?=url('admin')?>order/del/"><i class="icon-remove"></i></a>
