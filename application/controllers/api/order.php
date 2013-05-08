@@ -133,7 +133,7 @@ class order extends MY_Controller
                 'time' => $ruleData['time'],
                 'service_time' => $ruleData['service_time'],
                 'night_service_charge' => $ruleData['night_service_charge'],
-                'kongshi_fee' => $ruleData['kongshi_fee'],
+                //'kongshi_fee' => $ruleData['kongshi_fee'],
                 'status' => '0',
                 'car_time' => $carTime,
                 'car_length' => $carLength,
