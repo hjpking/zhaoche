@@ -798,7 +798,7 @@ function simplexml2array($xmle)
 function exportCsv($filename, $data)
 {
     //$str = $field;
-    //$data = iconv('utf-8','ASCII',$data);
+    $data = iconv('utf-8','GB2312',$data);
     header("Content-type:text/csv");
     header("Content-Disposition:attachment;filename=".$filename);
     header('Cache-Control:must-revalidate,post-check=0,pre-check=0');
