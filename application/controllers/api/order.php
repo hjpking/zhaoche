@@ -750,6 +750,7 @@ class order extends MY_Controller
                 'travel_time' => $travelTime,
 				'kongshi_km' => ($kongshiMileage * 1000),
 				'kongshi_fee' => $kongshiFee,
+                'night_service_fee' => $nightServiceCharge,
             );
             //$totalPrice = 15000;
             $s = $this->order->confirmArrival($chauffeurId, $orderSn, $upData);
