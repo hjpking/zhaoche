@@ -130,6 +130,7 @@ class order extends MY_Controller
                 'km_price' => $ruleData['km_price'],
                 'service_km' => $ruleData['service_km'],
                 'time_price' => $ruleData['time_price'],
+                'time' => $ruleData['time'],
                 'service_time' => $ruleData['service_time'],
                 'night_service_charge' => $ruleData['night_service_charge'],
                 'kongshi_fee' => $ruleData['kongshi_fee'],
