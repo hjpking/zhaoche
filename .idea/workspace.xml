@@ -83,25 +83,25 @@
       <file leaf-file-name="order.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="728" column="24" selection-start="25340" selection-end="25340" vertical-scroll-proportion="-12.12">
+            <state line="738" column="0" selection-start="25761" selection-end="26419" vertical-scroll-proportion="-7.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Common.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="model_order.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/models/model_order.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="216" column="42" selection-start="5997" selection-end="5997" vertical-scroll-proportion="0.6054254">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Common.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/system/core/Common.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="800" column="33" selection-start="20348" selection-end="20348" vertical-scroll-proportion="0.5674362">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="other.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/api/other.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="44" selection-start="2031" selection-end="2031" vertical-scroll-proportion="0.0">
+            <state line="800" column="30" selection-start="20342" selection-end="20348" vertical-scroll-proportion="-18.68">
               <folding />
             </state>
           </provider>
@@ -188,7 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/views/pay/index.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/pay.php" />
         <option value="$PROJECT_DIR$/application/models/model_message.php" />
         <option value="$PROJECT_DIR$/application/models/model_chauffeur.php" />
@@ -204,6 +203,7 @@
         <option value="$PROJECT_DIR$/application/controllers/chauffeur.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/order.php" />
         <option value="$PROJECT_DIR$/system/core/Common.php" />
+        <option value="$PROJECT_DIR$/application/models/model_order.php" />
       </list>
     </option>
   </component>
@@ -290,6 +290,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhaoche" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhaoche" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhaoche" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhaoche" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -428,11 +460,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/model_user.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="24" selection-start="2766" selection-end="2770" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="207" column="11" selection-start="5665" selection-end="5665" vertical-scroll-proportion="0.43414634" />
@@ -516,16 +543,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
+    <entry file="file://$PROJECT_DIR$/system/core/Common.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="728" column="24" selection-start="25340" selection-end="25340" vertical-scroll-proportion="-12.12">
+        <state line="800" column="30" selection-start="20342" selection-end="20348" vertical-scroll-proportion="-18.68">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/core/Common.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="800" column="33" selection-start="20348" selection-end="20348" vertical-scroll-proportion="0.5674362">
+        <state line="738" column="0" selection-start="25761" selection-end="26419" vertical-scroll-proportion="-7.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/model_order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="216" column="42" selection-start="5997" selection-end="5997" vertical-scroll-proportion="0.6054254">
           <folding />
         </state>
       </provider>

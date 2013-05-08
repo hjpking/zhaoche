@@ -213,8 +213,11 @@ class model_order extends MY_Model
             'high_speed_charge' => $upData['high_speed_fee'],
             'park_charge' => $upData['park_fee'],
             'air_service_charge' => $upData['air_service_fee'],
+            'air_service_num' => $upData['air_service_num'],
             'mileage' => $upData['mileage'],
             'travel_time' => $upData['travel_time'],
+            'kongshi_km' => $upData['kongshi_km'],
+            'kongshi_fee' => $upData['kongshi_fee'],
         );
 
         $this->db->where('order_sn', $orderSn);
