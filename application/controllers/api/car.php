@@ -73,7 +73,7 @@ class car extends MY_Controller
 
             $recentDistance = 1000000;//默认给一个非常远的距离
             foreach ($currData as &$v) {
-                $v['distance'] = getDistance($longitude,$latitude,$v['longitude'],$v['latitude']);
+                $v['distance'] = getDistance($latitude,$longitude,$v['latitude'],$v['longitude']);
 
                 $recentDistance = ($recentDistance > $v['distance']) ? $v['distance'] : $recentDistance;
             }
