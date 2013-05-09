@@ -26,7 +26,7 @@ class model_pay_unionpay extends MY_Model
         $xml = $this->unionPayGetXml($merchantOrderId,$merchantOrderTime,$merchantOrderAmt,$merchantOrderDesc,$transTimeout,$backEndUrl);
 
         $recv = $this->submitByPost(UNIONPAY_SUBMIT_URL, $xml);
-        $parse= $this->readXml($recv);
+        $parse= $this->readXml($recv);//p($recv);
         $html = '';
         if ($parse) {
             //接收成功
