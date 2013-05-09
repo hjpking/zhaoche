@@ -5,6 +5,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/key/alipay/alipay_public_key_back.pem" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/clients.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/key/unionpay/union_public_key.cer" afterPath="$PROJECT_DIR$/application/key/unionpay/union_public_key.cer" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
     </list>
     <ignored path="zhaoche.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -96,7 +98,7 @@
       <file leaf-file-name="config.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="543" column="75" selection-start="18688" selection-end="18703" vertical-scroll-proportion="0.44390243">
+            <state line="545" column="47" selection-start="18850" selection-end="18858" vertical-scroll-proportion="0.4804878">
               <folding />
             </state>
           </provider>
@@ -198,7 +200,6 @@
         <option value="$PROJECT_DIR$/application/config/error.php" />
         <option value="$PROJECT_DIR$/application/models/model_user.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/other.php" />
-        <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/user.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/chauffeur.php" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
@@ -208,6 +209,7 @@
         <option value="$PROJECT_DIR$/application/controllers/api/car.php" />
         <option value="$PROJECT_DIR$/application/models/model_order.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/order.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
       </list>
     </option>
   </component>
@@ -571,7 +573,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="543" column="75" selection-start="18688" selection-end="18703" vertical-scroll-proportion="0.44390243">
+        <state line="545" column="47" selection-start="18850" selection-end="18858" vertical-scroll-proportion="0.4804878">
           <folding />
         </state>
       </provider>
