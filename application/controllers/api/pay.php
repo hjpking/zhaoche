@@ -211,7 +211,7 @@ class pay  extends MY_Controller
 
 			$msg = '本账户客户端充值：您成功为您的AA招车账户充值'.fPrice($orderInfo['pay_amount']).'元，当前余额为'.fPrice($uData['amount'] + $orderInfo['pay_amount']).'元';
 			if ($orderInfo['be_who'] == '2') {
-				$msg = '客户端为他人账户充值：“账号'.$orderInfo['pay_uname'].'为您的账户充值'.fPrice($orderInfo['pay_amount']).'元。您AA招车账户当前的余额为'.fPrice($uData['amount+'] + $orderInfo['pay_amount']).'元';
+				$msg = '客户端为他人账户充值：“账号'.$orderInfo['pay_uname'].'为您的账户充值'.fPrice($orderInfo['pay_amount']).'元。您AA招车账户当前的余额为'.fPrice($uData['amount'] + $orderInfo['pay_amount']).'元';
 			}
 			
 			$this->sendMessage($uData['phone'], $msg);
