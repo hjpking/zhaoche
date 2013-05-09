@@ -78,7 +78,7 @@ class model_pay_alipay extends MY_Model
         $data['bank_order_sn'] = $nData['trade_no'];
         $data['buy_email'] = $nData['buyer_email'];
         $data['pay_type'] = 'alipay';
-
+        p($nData);
         $data['status'] = ($nData['trade_status'] == "TRADE_FINISHED") ? 1 : 2;
 
         return $data;

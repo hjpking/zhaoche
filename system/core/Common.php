@@ -689,7 +689,7 @@ function vPost($url, $data)
         $tmpInfo = 'Errno' . curl_error($curl); //捕抓异常
     }
     curl_close($curl); // 关闭CURL会话
-    //p($tmpInfo);
+    p($tmpInfo);
     return $tmpInfo; // 返回数据
 }
 
