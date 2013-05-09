@@ -540,7 +540,7 @@ define('UNIONPAY_SUBMIT_URL', 'http://mobilepay.unionpaysecure.com/qzjy/MerOrder
 define('UNIONPAY_UPOMP_PUBLIC_KEY', '');//前置密钥
 define('UNIONPAY_NOTIFY_PUBLIC_KEY', APPPATH."key/unionpay/union_public_key.cer");//前置密钥
 define('UNIONPAY_MY_ID', '808080201300485');//商户ID
-define('UNIONPAY_MY_NAME', '北京车族网际科技有限公司');//商户名称
+define('UNIONPAY_MY_NAME', '北京车族网际科技有限公司（无卡）');//商户名称
 define('UNIONPAY_MY_PUBLIC_KEY', APPPATH.'key/unionpay/id_public_key.cer');//商户公钥
 define('UNIONPAY_MY_PRIVATE_KEY', APPPATH.'key/unionpay/id_private_key.p12');//商户私钥
 define('UNIONPAY_MY_PRIKEY_PASSWORD', 'aayongche');//商户私钥密码

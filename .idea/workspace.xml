@@ -5,11 +5,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/key/alipay/alipay_public_key_back.pem" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/clients.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~$_ChauffeurIinterface_Evan_20130424.doc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doc/~$_UserIinterface_Evan_20130426.doc" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/model_pay_unionpay.php" afterPath="$PROJECT_DIR$/application/models/model_pay_unionpay.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zhaoche.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -98,10 +94,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="config.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/config/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="545" column="48" selection-start="18859" selection-end="18859" vertical-scroll-proportion="-15.416667">
+            <state line="542" column="44" selection-start="18639" selection-end="18639" vertical-scroll-proportion="0.39634147">
               <folding />
             </state>
           </provider>
@@ -116,10 +112,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model_pay_unionpay.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="model_pay_unionpay.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/model_pay_unionpay.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="63" selection-start="846" selection-end="846" vertical-scroll-proportion="0.39033458">
+            <state line="27" column="63" selection-start="846" selection-end="846" vertical-scroll-proportion="-13.125">
               <folding />
             </state>
           </provider>
@@ -211,8 +207,8 @@
         <option value="$PROJECT_DIR$/application/controllers/api/car.php" />
         <option value="$PROJECT_DIR$/application/models/model_order.php" />
         <option value="$PROJECT_DIR$/application/controllers/api/order.php" />
-        <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/models/model_pay_unionpay.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
       </list>
     </option>
   </component>
@@ -587,16 +583,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+    <entry file="file://$PROJECT_DIR$/application/models/model_pay_unionpay.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="545" column="48" selection-start="18859" selection-end="18859" vertical-scroll-proportion="-15.416667">
+        <state line="27" column="63" selection-start="846" selection-end="846" vertical-scroll-proportion="-13.125">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/model_pay_unionpay.php">
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="63" selection-start="846" selection-end="846" vertical-scroll-proportion="0.39033458">
+        <state line="542" column="44" selection-start="18639" selection-end="18639" vertical-scroll-proportion="0.39634147">
           <folding />
         </state>
       </provider>
