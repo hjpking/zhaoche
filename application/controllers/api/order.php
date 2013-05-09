@@ -659,6 +659,8 @@ class order extends MY_Controller
      */
     public function confirmArrival()
     {
+        log_message('PAYLOG', print_r($_REQUEST,true));
+
         $chauffeurId = intval($this->input->get_post('chauffeur_id'));
         $orderSn = intval($this->input->get_post('order_sn'));
         $mileage = intval($this->input->get_post('mileage'));
