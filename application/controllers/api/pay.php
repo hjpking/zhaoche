@@ -163,14 +163,14 @@ class pay  extends MY_Controller
             $this->load->model("model_pay_{$paymentChannel}", 'payment_channel');
             //$this->load->model("model_pay_alipay", 'payment_channel');
             $payResult = $this->payment_channel->response();
-
+            log_message("PAYLOG", "\n\n\n".$paymentChannel."\n\n\n");
             //0 签名错误
             if ($payResult['status'] == '0') {
                 $this->pay->savePay(array('pay_status' => '3'), $payResult['order_sn']);
                 log_message("PAYLOG", print_r($_REQUEST, true)."\n\n".print_r($xmlPost, true).'sign_error!'."\n\n\n");
                 break;
             }
-
+            //p($payResult);
             //2 订单支付失败
             if ($payResult['status'] == '2') {
                 log_message("PAYLOG", print_r($_REQUEST, true)."\n\n".print_r($xmlPost, true).'order_failed!'."\n\n\n");
@@ -209,7 +209,7 @@ class pay  extends MY_Controller
 
             $s = $this->db->set(array('amount' => 'amount+'.$orderInfo['pay_amount']), '', false)->where('uid', $orderInfo['uid'])->update('user');
 
-			$msg = '本账户客户端充值：您成功为您的AA招车账户充值'.fPrice($orderInfo['pay_amount']).'元，当前余额为'.fPrice($uData['amount+'] + $orderInfo['pay_amount']).'元';
+			$msg = '本账户客户端充值：您成功为您的AA招车账户充值'.fPrice($orderInfo['pay_amount']).'元，当前余额为'.fPrice($uData['amount'] + $orderInfo['pay_amount']).'元';
 			if ($orderInfo['be_who'] == '2') {
 				$msg = '客户端为他人账户充值：“账号'.$orderInfo['pay_uname'].'为您的账户充值'.fPrice($orderInfo['pay_amount']).'元。您AA招车账户当前的余额为'.fPrice($uData['amount+'] + $orderInfo['pay_amount']).'元';
 			}
