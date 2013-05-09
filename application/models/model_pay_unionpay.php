@@ -117,9 +117,9 @@ class model_pay_unionpay extends MY_Model
     {
 
         $merchantPublicCert = $this->getPublicKeyBase64(UNIONPAY_MY_PUBLIC_KEY);
-        // echo  $merchantPublicCert;
+        //echo  $merchantPublicCert;
         $merchantId = UNIONPAY_MY_ID;
-        $merchantName=UNIONPAY_MY_NAME;
+        $merchantName = UNIONPAY_MY_NAME;
         $strForSign = "merchantName=" . $merchantName .
             "&merchantId=" . $merchantId .
             "&merchantOrderId=" . $merchantOrderId .
@@ -127,7 +127,7 @@ class model_pay_unionpay extends MY_Model
             "&merchantOrderAmt=" . $merchantOrderAmt .
             "&merchantOrderDesc=" . $merchantOrderDesc.
             "&transTimeout=" .$transTimeout;
-        //echo $strForSign;
+        //echo $strForSign;exit;
 
         $sign = $this->sign($strForSign, UNIONPAY_MY_PRIVATE_KEY, UNIONPAY_MY_PRIKEY_PASSWORD);
 
