@@ -87,7 +87,7 @@
                     <td><?=$v['uname']?></td>
                     <td><?=fPrice($v['pay_amount'])?> 元</td>
                     <td><?=$v['source'] ? '其他':'客户端'?></td>
-                    <td><?=$pay_type[$v['pay_type']]?></td>
+                    <td><?=$pay_type[$v['pay_channel']]?></td>
                     <td><?=$pay_status[$v['pay_status']]?></td>
                     <td><?=$v['create_time']?></td>
                     <td><?=$v['opera_people']?></td>

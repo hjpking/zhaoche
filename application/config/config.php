@@ -449,7 +449,7 @@ $config['order_status'] = array(
 //充值方式
 $config['pay_type'] = array(
     '1' => '支付宝',
-    '2' => '银行卡',
+    '2' => '银联卡',
 );
 
 //充值状态

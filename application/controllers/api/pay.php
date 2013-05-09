@@ -84,6 +84,8 @@ class pay  extends MY_Controller
                 break;
             }
 
+            $payType = strtolower($payType);
+
             $payData = array(
                 'pay_uid' => $uId,
                 'pay_uname' => $uName,
@@ -93,7 +95,7 @@ class pay  extends MY_Controller
                 'pay_status' => '0',
                 'source' => '0',
                 'pay_type' => '1',
-                'pay_channel' => '1',
+                'pay_channel' => $payType == 'alipay' ? 1 : 2,
                 'be_who' => $beWho,
                 'opera_people' => '0',
                 'is_post' => $isInvoice,
@@ -118,7 +120,7 @@ class pay  extends MY_Controller
                 'desc' => 'descript',
                 'time_out' => '',
             );
-            $payType = strtolower($payType);
+
             switch ($payType) {
                 case 'alipay':
                     $this->load->model('model_pay_alipay', 'mpay');
