@@ -128,7 +128,7 @@ class order extends MY_Controller
                 'amount' => 0,//$amount,
                 'base_price' => $ruleData['base_price'],
                 'km_price' => $ruleData['km_price'],
-                'service_km' => $ruleData['service_km'],
+                'service_km' => ($ruleData['service_km'] * 1000),
                 'time_price' => $ruleData['time_price'],
                 'time' => $ruleData['time'],
                 'service_time' => $ruleData['service_time'],
@@ -714,7 +714,7 @@ class order extends MY_Controller
             $currentHours = date('H', TIMESTAMP);//夜间服务费计算
             $nightServiceCharge = ($currentHours >= NIGHT_START_TIME || $currentHours <= NIGHT_END_TIME) ? $data['night_service_charge'] : 0;
 
-            $exceedKm = isNegative(ceil($mileage - $data['service_km']));//超出公里数
+            $exceedKm = isNegative(ceil($mileage - ceil($data['service_km'] / 1000)));//超出公里数
 
             $exceedTimeMins = isNegative(ceil($travelTime - $data['service_time']));//超出时间
             $exceedTime = isNegative(ceil($exceedTimeMins / $data['time']));
@@ -736,7 +736,7 @@ class order extends MY_Controller
 
             $upData = array(
                 'total_price' => $totalPrice,
-                'exceed_km' => $exceedKm,
+                'exceed_km' => ($exceedKm * 1000),
                 'exceed_km_fee' => $exceedKmFee,
                 'exceed_time' => $exceedTimeMins,
                 'exceed_time_fee' => $exceedTImeFee,
@@ -759,7 +759,7 @@ class order extends MY_Controller
 
             $rData = array(
                 'total_price' => $totalPrice,
-                'exceed_km' => $exceedKm,
+                'exceed_km' => ($exceedKm * 1000),
                 'exceed_time' => $exceedTimeMins,
                 'exceed_km_fee' => $exceedKmFee,
                 'exceed_time_fee' => $exceedTImeFee,
