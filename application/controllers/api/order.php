@@ -716,11 +716,11 @@ class order extends MY_Controller
 
             $exceedKm = isNegative(ceil($mileage - $data['service_km']));//超出公里数
 
-            $exceedTIme = isNegative(ceil($travelTime - $data['service_time']));//超出时间
-            $exceedTIme = isNegative(ceil($exceedTIme / $data['time']));
+            $exceedTimeMins = isNegative(ceil($travelTime - $data['service_time']));//超出时间
+            $exceedTime = isNegative(ceil($exceedTimeMins / $data['time']));
 
             $exceedKmFee = ceil($exceedKm * $data['km_price']);//超出公里数费用
-            $exceedTImeFee = ceil($exceedTIme * $data['time_price']);//超出时间费用
+            $exceedTImeFee = ceil($exceedTime * $data['time_price']);//超出时间费用
 
 			$airportServiceNumber = $airportServiceCharge;//机场服务费
 			$airportServiceCharge = ($airportServiceCharge * 5000);
@@ -738,7 +738,7 @@ class order extends MY_Controller
                 'total_price' => $totalPrice,
                 'exceed_km' => $exceedKm,
                 'exceed_km_fee' => $exceedKmFee,
-                'exceed_time' => $exceedTIme,
+                'exceed_time' => $exceedTimeMins,
                 'exceed_time_fee' => $exceedTImeFee,
                 'high_speed_fee' => $highSpeedCharge,
                 'park_fee' => $parkCharge,
@@ -760,7 +760,7 @@ class order extends MY_Controller
             $rData = array(
                 'total_price' => $totalPrice,
                 'exceed_km' => $exceedKm,
-                'exceed_time' => $exceedTIme,
+                'exceed_time' => $exceedTimeMins,
                 'exceed_km_fee' => $exceedKmFee,
                 'exceed_time_fee' => $exceedTImeFee,
                 'base_price' => $data['base_price'],

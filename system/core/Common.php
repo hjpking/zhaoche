@@ -651,6 +651,15 @@ if ( ! function_exists('error'))
 //根据经纬度计算距离 其中A($lat1,$lng1)、B($lat2,$lng2)
 function getDistance($lat1,$lng1,$lat2,$lng2)
 {
+    $lat1 = (double)$lat1;
+    $lat2 = (double)$lat2;
+    $lng1 = (double)$lng1;
+    $lng2 = (double)$lng2;
+
+    if (empty ($lat1) || empty ($lat2) || empty ($lng1) || empty ($lng2)) {
+        return '';
+    }
+
     //地球半径
     $R = 6378137;
 
