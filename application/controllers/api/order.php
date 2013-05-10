@@ -298,6 +298,9 @@ class order extends MY_Controller
 				$status = json_decode($status, true);
 			}
             //p($status);
+		if (count($status) > 1) {
+			$where['pay_status'] = '0';
+		}
 
             $this->load->model('model_order', 'order');
             $orderData = $this->order->getOrderWhereIn($limit, $offset, $field, $where, null, $status);
