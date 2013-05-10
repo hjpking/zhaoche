@@ -734,9 +734,14 @@ class order extends MY_Controller
             $totalPrice = $data['base_price'] + $exceedKmFee + $exceedTImeFee + $highSpeedCharge + $airportServiceCharge + $parkCharge + $nightServiceCharge + $kongshiFee;
             /* 计算费用结束 */
 
+            //将里程的单位 换算成米
+            $exceedKm       = $exceedKm * 1000;
+            $mileage        = $mileage * 1000;
+            $kongshiMileage = $kongshiMileage * 1000;
+
             $upData = array(
                 'total_price' => $totalPrice,
-                'exceed_km' => ($exceedKm * 1000),
+                'exceed_km' => $exceedKm,
                 'exceed_km_fee' => $exceedKmFee,
                 'exceed_time' => $exceedTimeMins,
                 'exceed_time_fee' => $exceedTImeFee,
@@ -744,9 +749,9 @@ class order extends MY_Controller
                 'park_fee' => $parkCharge,
                 'air_service_fee' => $airportServiceCharge,
 				'air_service_num' => $airportServiceNumber,
-                'mileage' => ($mileage * 1000),
+                'mileage' => $mileage,
                 'travel_time' => $travelTime,
-				'kongshi_km' => ($kongshiMileage * 1000),
+				'kongshi_km' => $kongshiMileage,
 				'kongshi_fee' => $kongshiFee,
                 'night_service_fee' => $nightServiceCharge,
             );
@@ -759,7 +764,7 @@ class order extends MY_Controller
 
             $rData = array(
                 'total_price' => $totalPrice,
-                'exceed_km' => ($exceedKm * 1000),
+                'exceed_km' => $exceedKm,
                 'exceed_time' => $exceedTimeMins,
                 'exceed_km_fee' => $exceedKmFee,
                 'exceed_time_fee' => $exceedTImeFee,
@@ -769,9 +774,9 @@ class order extends MY_Controller
                 'park_fee' => $parkCharge,
                 'air_service_fee' => $airportServiceCharge,
 				'air_service_num' => $airportServiceNumber,
-                'mileage' => ($mileage * 1000),
+                'mileage' => $mileage,
                 'travel_time' => $travelTime,
-				'kongshi_km' => ($kongshiMileage * 1000),
+				'kongshi_km' => $kongshiMileage,
 				'kongshi_fee' => $kongshiFee,
             );
             $response['data'] = $rData;
