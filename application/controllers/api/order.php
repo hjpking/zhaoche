@@ -510,6 +510,7 @@ class order extends MY_Controller
             return ($a['distance'] < $b['distance']) ? -1 : 1;
         }
 
+        $chauffeurId = intval($this->input->get_post('chauffeur_id'));
         $cityId = intval($this->input->get_post('city_id'));
         $longitude = $this->input->get_post('longitude');
         $latitude = $this->input->get_post('latitude');
@@ -524,8 +525,21 @@ class order extends MY_Controller
         $response = array('code' => '0', 'msg' => '获取成功');
 
         do {
-            if (empty ($cityId) || empty ($longitude) || empty ($latitude)) {
+            if (empty ($cityId) || empty ($longitude) || empty ($latitude) || empty ($chauffeurId)) {
                 $response = error(10001);//参数不全
+                break;
+            }
+            $this->load->model('model_chauffeur', 'chauffeur');
+            $chauffeurData = $this->chauffeur->getChauffeurById($chauffeurId);
+            if (empty ($chauffeurData)) {
+                $response = error(10012);//司机不存在
+                break;
+            }
+
+            $this->load->model('model_car', 'car');
+            $carData = $this->car->getCarById($chauffeurData['car_id']);
+            if (empty ($carData)) {
+                $response = error(10017);//车型不存在
                 break;
             }
 
@@ -533,7 +547,7 @@ class order extends MY_Controller
             $serviceData = $this->service->getServiceType(1000);
 
             $this->load->model('model_order', 'order');
-            $data = $this->order->getOrder(1000, 0, '*', array('status' => '0', 'city_id' => $cityId));
+            $data = $this->order->getOrder(1000, 0, '*', array('status' => '0', 'city_id' => $cityId, 'lid' => $carData['lid']));
 
             foreach ($data as &$v) {
                 if (empty ($v['train_address'])) {

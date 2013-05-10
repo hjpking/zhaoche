@@ -136,8 +136,8 @@
                             <td><?=$sf_info[$v['sid']]['name']?></td>
                             <td><?=$carLevelInfo[$v['lid']]['name']?></td>
                             <td>
-                                <a href="<?=url('admin')?>order/detail/"><i class="icon-eye-open"></i></a>
-                                <a href="<?=url('admin')?>order/del/"><i class="icon-remove"></i></a>
+                                <a href="<?=url('admin')?>order/detail/<?=$v['order_sn']?>"><i class="icon-eye-open"></i></a>
+                                <a href="<?=url('admin')?>order/del/<?=$v['order_sn']?>"><i class="icon-remove"></i></a>
                             </td>
                         </tr>
                         <?php }}?>

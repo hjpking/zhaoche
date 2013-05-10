@@ -569,7 +569,7 @@ function url($prefix='base')
 /* 格式化产品价格 数据库中存储的价格为分 $type为获取单位：1 元， 2 角， 3 分*/
 function fPrice($price, $type = 1)
 {
-    $p = intval($price);
+    $p = (double)$price;
 
     switch ($type) {
         case 1:  $p = ( $p / 100 ); break;
