@@ -728,10 +728,10 @@ class order extends MY_Controller
 			$kongshiMileage = isNegative($mileage - 40);//空驶费
 			$kongshiFee = ceil(($kongshiMileage * $data['km_price']) / 2);
 
-            '基础价格＋(超出公里数＊公里单价)+(超时时长＊超时单价)+高速费+停车费+夜间服务费+机场服务费';
+            '基础价格＋(超出公里数＊公里单价)+(超时时长＊超时单价)+高速费+停车费+夜间服务费+机场服务费+空驶费';
 
             //整体费用
-            $totalPrice = $data['base_price'] + $exceedKmFee + $exceedTImeFee + $highSpeedCharge + $airportServiceCharge + $parkCharge + $nightServiceCharge;
+            $totalPrice = $data['base_price'] + $exceedKmFee + $exceedTImeFee + $highSpeedCharge + $airportServiceCharge + $parkCharge + $nightServiceCharge + $kongshiFee;
             /* 计算费用结束 */
 
             $upData = array(
