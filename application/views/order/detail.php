@@ -130,10 +130,11 @@
                 <tr>
                     <td></td>
                     <td>总金额：</td>
-                    <td> <?=isset ($data['amount']) ? $data['amount'] : ''?> 元</td>
+                    <td> <?=isset ($data['amount']) ? fPrice($data['amount']) : ''?> 元</td>
                     <td></td>
                     <td></td>
                 </tr>
+                <!--
                 <tr>
                     <td></td>
                     <td>车辆租金：</td>
@@ -183,6 +184,7 @@
                     <td></td>
                     <td></td>
                 </tr>
+                -->
             </table>
         </div>
     </div>

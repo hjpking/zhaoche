@@ -46,7 +46,7 @@
                         <div class="controls">
                             <input type="text" id="input01" class="input-xlarge" name="longitude"
                                    value="<?=isset ($data['longitude']) ? $data['longitude'] : '';?>">
-                            <!p class="help-block"> 机场经度，如：40.079122 </p>
+                            <!p class="help-block"> 机场经度，如：116.59265 </p>
                         </div>
                     </div>
 
@@ -55,7 +55,7 @@
                         <div class="controls">
                             <input type="text" id="input01" class="input-xlarge" name="latitude"
                                    value="<?=isset ($data['latitude']) ? $data['latitude'] : '';?>">
-                            <!p class="help-block"> 机场纬度，如：116.59265 </p>
+                            <!p class="help-block"> 机场纬度，如：40.079122 </p>
                         </div>
                     </div>
 

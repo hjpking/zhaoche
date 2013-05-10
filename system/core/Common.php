@@ -808,6 +808,16 @@ function exportCsv($filename, $data)
 }
 
 /**
+ * 是否为负数，如为负数则转成0
+ *
+ * @param $v
+ * @return int
+ */
+function isNegative($v)
+{
+    return ($v < 0) ? 0 : $v;
+}
+/**
 function cmp($a, $b)
 {
 $a = strtotime($a[0]['DATE']);

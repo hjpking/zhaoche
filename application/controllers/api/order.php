@@ -540,15 +540,16 @@ class order extends MY_Controller
                     unset ($v);
                     continue;
                 }
+
                 $arr = explode(',', $v['train_address']);
+                $arr[0] = (double)$arr[0];
+                $arr[1] = (double)$arr[1];
                 if (empty ($arr[0]) || empty ($arr[1])) {
                     unset ($v);
                     continue;
                 }
-                //echo $latitude, $longitude, $arr[0], $arr[1].'<br>';
+
                 $v['distance'] = getDistance($latitude, $longitude, $arr[0], $arr[1]);
-                $arr = array();
-                //$v['distance'] = $distance;
             }
 
             //对距离进行升序排序
@@ -665,15 +666,12 @@ class order extends MY_Controller
         log_message('PAYLOG', print_r($_REQUEST,true));
 
         $chauffeurId = intval($this->input->get_post('chauffeur_id'));
-        $orderSn = intval($this->input->get_post('order_sn'));
-        $mileage = intval($this->input->get_post('mileage'));
-        $travelTime = intval($this->input->get_post('travel_time'));
-        $travelTime = ($travelTime < 1) ? 0 : $travelTime;
-        $highSpeedCharge = intval($this->input->get_post('high_speed_charge'));
-        //$highSpeedCharge = ($highSpeedCharge * 100);
+        $orderSn     = intval($this->input->get_post('order_sn'));
+        $mileage     = intval($this->input->get_post('mileage'));
+        $travelTime  = isNegative(intval($this->input->get_post('travel_time')));
+        $parkCharge           = intval($this->input->get_post('park_charge'));
+        $highSpeedCharge      = intval($this->input->get_post('high_speed_charge'));
         $airportServiceCharge = intval($this->input->get_post('airport_service_charge'));
-        $parkCharge = intval($this->input->get_post('park_charge'));
-        //$parkCharge = ($parkCharge * 100);
 
         $response = array('code' => '0', 'msg' => '确认成功');
 
@@ -713,26 +711,21 @@ class order extends MY_Controller
             }
 
             /* 计算费用开始 */
-            $currentHours = date('H', TIMESTAMP);
-            $nightServiceCharge = ($currentHours >= NIGHT_START_TIME && $currentHours <= NIGHT_END_TIME) ? $data['night_service_charge'] : 0;
+            $currentHours = date('H', TIMESTAMP);//夜间服务费计算
+            $nightServiceCharge = ($currentHours >= NIGHT_START_TIME || $currentHours <= NIGHT_END_TIME) ? $data['night_service_charge'] : 0;
 
-            $exceedKm = ceil($mileage - $data['service_km']);//超出公里数
-            $exceedKm = ($exceedKm < 1) ? 0 : $exceedKm;
-            $exceedTIme = ceil($travelTime - $data['service_time']);//超出时间
-//p($exceedTIme);
-//p($data['time']);
-            $exceedTIme = ($exceedTIme < 1) ? 0 : ceil($exceedTIme / $data['time']);
-            $exceedTIme = ($exceedTIme < 1) ? 0 : $exceedTIme;
+            $exceedKm = isNegative(ceil($mileage - $data['service_km']));//超出公里数
+
+            $exceedTIme = isNegative(ceil($travelTime - $data['service_time']));//超出时间
+            $exceedTIme = isNegative(ceil($exceedTIme / $data['time']));
 
             $exceedKmFee = ceil($exceedKm * $data['km_price']);//超出公里数费用
-		//$exceedKmFee = ($exceedKmFee *  100);
             $exceedTImeFee = ceil($exceedTIme * $data['time_price']);//超出时间费用
-		//$exceedTImeFee = ($exceedTImeFee * 100);
-			$airportServiceNumber = $airportServiceCharge;
+
+			$airportServiceNumber = $airportServiceCharge;//机场服务费
 			$airportServiceCharge = ($airportServiceCharge * 5000);
 
-			$kongshiMileage = $mileage - 40;
-			$kongshiMileage = $kongshiMileage < 1 ? 0 : $kongshiMileage;
+			$kongshiMileage = isNegative($mileage - 40);//空驶费
 			$kongshiFee = ceil(($kongshiMileage * $data['km_price']) / 2);
 
             '基础价格＋(超出公里数＊公里单价)+(超时时长＊超时单价)+高速费+停车费+夜间服务费+机场服务费';
@@ -757,7 +750,7 @@ class order extends MY_Controller
 				'kongshi_fee' => $kongshiFee,
                 'night_service_fee' => $nightServiceCharge,
             );
-            //$totalPrice = 15000;
+
             $s = $this->order->confirmArrival($chauffeurId, $orderSn, $upData);
             if (!$s) {
                 $response = error(10031);//确认到达失败
