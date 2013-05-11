@@ -864,7 +864,7 @@ class order extends MY_Controller
                 break;
             }
 
-			$s = $this->db->set(array('pay_status' => '1', 'pay_time' => date('Y-m-d H:i:s', TIMESTAMP)), '', false)->where('order_sn', $orderSn)->update('order');
+			$s = $this->db->set(array('pay_status' => '1', 'pay_time' => "'".date('Y-m-d H:i:s', TIMESTAMP)."'"), '', false)->where('order_sn', $orderSn)->update('order');
         } while (false);
 
         $this->json_output($response);
