@@ -259,6 +259,7 @@ class order extends MY_Controller
         $number = intval($this->input->get_post('offset'));
         $status = ($this->input->get_post('status'));
         $payStatus = ($this->input->get_post('pay_status'));
+        $payTime = $this->input->get_post('pay_time');
 
         $limit = 20;
         $offset = 0;
@@ -298,6 +299,7 @@ class order extends MY_Controller
             $endTime   && $where['create_time <'] = date('Y-m-d H:i:s', strtotime($endTime));//.' 23:59:59';
             $where['chauffeur_id'] = $chauffeurId;
             ($payStatus || $payStatus === '0') && $where['pay_status'] = $payStatus;
+            $payTime && $where['pay_time >'] = date('Y-m-d H:i:s', strtotime($payTime));
 
             $this->load->model('model_order', 'order');
             $orderData = $this->order->getOrderWhereIn($limit, $offset, $field, $where, null, $status);

@@ -4,7 +4,7 @@
     <list default="true" id="a24abf45-d036-4377-bc30-f6c86df0e96e" name="Default" comment="" />
     <ignored path="zhaoche.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/order.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1368274603301" ignored="false" />
+    <file path="/order.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1368275188235" ignored="false" />
     <file path="/a.dummy" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1368025931504" ignored="false" />
     <file path="/model_order.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1366767974280" ignored="false" />
     <file path="/pay.php" changelist="a24abf45-d036-4377-bc30-f6c86df0e96e" time="1368098012993" ignored="false" />
@@ -80,21 +80,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="order.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="order.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="299" column="80" selection-start="11124" selection-end="11124" vertical-scroll-proportion="-15.4">
+            <state line="279" column="48" selection-start="10438" selection-end="10438" vertical-scroll-proportion="-0.038701624">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MY_Model.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MY_Model.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/core/MY_Model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="150" column="10" selection-start="3319" selection-end="3319" vertical-scroll-proportion="0.6068796">
+            <state line="150" column="10" selection-start="3319" selection-end="3319" vertical-scroll-proportion="-25.52">
               <folding>
-                <marker date="1368274862489" expanded="false" signature="3570:3652" placeholder="..." />
+                <marker date="1368275428384" expanded="true" signature="3570:3652" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -666,19 +666,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
+    <entry file="file://$PROJECT_DIR$/application/core/MY_Model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="299" column="80" selection-start="11124" selection-end="11124" vertical-scroll-proportion="-15.4">
-          <folding />
+        <state line="150" column="10" selection-start="3319" selection-end="3319" vertical-scroll-proportion="-25.52">
+          <folding>
+            <marker date="1368275428384" expanded="true" signature="3570:3652" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/core/MY_Model.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="10" selection-start="3319" selection-end="3319" vertical-scroll-proportion="0.6068796">
-          <folding>
-            <marker date="1368274862489" expanded="false" signature="3570:3652" placeholder="..." />
-          </folding>
+        <state line="279" column="48" selection-start="10438" selection-end="10438" vertical-scroll-proportion="-0.038701624">
+          <folding />
         </state>
       </provider>
     </entry>
