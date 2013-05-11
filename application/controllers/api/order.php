@@ -258,6 +258,7 @@ class order extends MY_Controller
         $start = intval($this->input->get_post('limit'));
         $number = intval($this->input->get_post('offset'));
         $status = ($this->input->get_post('status'));
+        $payStatus = intval($this->input->get_post('pay_status'));
 
         $limit = 20;
         $offset = 0;
@@ -267,13 +268,15 @@ class order extends MY_Controller
         $response = array('code' => '0', 'msg' => '获取成功');
 
         do {
-            if (empty ($chauffeurId) || empty ($startTime) || empty ($endTime)) {
+            if (empty ($chauffeurId)) {
                 $response = error(10001);//参数不全
                 break;
             }
 
-            $startTime = date('Y-m-d H:i:s', strtotime($startTime));//.' 00:00:00';
-            $endTime = date('Y-m-d H:i:s', strtotime($endTime));//.' 23:59:59';
+            $where = array();
+
+            isset($startTime) && $where['create_time >'] = date('Y-m-d H:i:s', strtotime($startTime));//.' 00:00:00';
+            isset($endTime) && $where['create_time <'] = date('Y-m-d H:i:s', strtotime($endTime));//.' 23:59:59';
 
             $this->load->model('model_chauffeur', 'chauffeur');
             $chauffeurData = $this->chauffeur->getChauffeurById($chauffeurId);
@@ -288,19 +291,17 @@ class order extends MY_Controller
             $serviceData = $this->service->getServiceType(1000);
 
             //$field = '*';
-            $where = array(
-                'chauffeur_id' => $chauffeurId,
-                'create_time >' => $startTime,
-                'create_time <' => $endTime,
-            );
+            $where['chauffeur_id'] = $chauffeurId;
+            //( empty ($payStatus) && $pay_status != '0' ) ?
 
 			if ($status) {
 				$status = json_decode($status, true);
 			}
             //p($status);
-		if (count($status) > 1) {
-			$where['pay_status'] = '0';
-		}
+            if (count($status) > 1) {
+                $where['pay_status'] = '0';
+            }
+            ($payStatus || $payStatus == '0') && $where['pay_status'] = $payStatus;
 
             $this->load->model('model_order', 'order');
             $orderData = $this->order->getOrderWhereIn($limit, $offset, $field, $where, null, $status);
@@ -865,7 +866,7 @@ class order extends MY_Controller
                 break;
             }
 
-			$s = $this->db->set(array('pay_status' => '1'), '', false)->where('order_sn', $orderSn)->update('order');
+			$s = $this->db->set(array('pay_status' => '1', 'pay_time' => date('Y-m-d H:i:s', TIMESTAMP)), '', false)->where('order_sn', $orderSn)->update('order');
         } while (false);
 
         $this->json_output($response);

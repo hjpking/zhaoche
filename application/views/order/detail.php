@@ -134,14 +134,15 @@
                     <td></td>
                     <td></td>
                 </tr>
-                <!--
+
                 <tr>
                     <td></td>
-                    <td>车辆租金：</td>
-                    <td> <?=isset ($data['car_rent']) ? $data['car_rent'] : ''?> 元</td>
+                    <td>支付密码：</td>
+                    <td> <?=isset ($data['pay_password']) ? $data['pay_password'] : ''?> </td>
                     <td></td>
                     <td></td>
                 </tr>
+                <!--
                 <tr>
                     <td></td>
                     <td>里程费：</td>
