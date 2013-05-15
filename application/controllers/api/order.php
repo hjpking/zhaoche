@@ -225,7 +225,7 @@ class order extends MY_Controller
 
             $this->load->model('model_order', 'order');
             $field = '*';
-            $orderData = $this->order->getOrder($defLimit, $defOffset, $field, array('uid' => $uId));
+            $orderData = $this->order->getOrder($defLimit, $defOffset, $field, array('uid' => $uId), 'create_time desc');
 
 			$this->load->model('model_chauffeur', 'chauffeur');
 			$this->load->model('model_car', 'car');
@@ -238,7 +238,7 @@ class order extends MY_Controller
 					$orderData[$odk]['car_no'] = $chauffeurData['car_no'];
 					$orderData[$odk]['car_name'] = $carData['name'];
 				}
-				$chauffeurData = array();
+				//$chauffeurData = array();
 			}
 
             $response['data'] = $orderData;
