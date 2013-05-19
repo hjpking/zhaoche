@@ -182,6 +182,7 @@ class user extends MY_Controller
                 'password' => $code,
                 'phone' => $phone,
                 'is_del' => '1',
+		'realname' => $phone,
             );
 
             $uId = $this->user->save($data);
