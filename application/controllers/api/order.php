@@ -502,6 +502,10 @@ class order extends MY_Controller
     {
         function cmp($a, $b)
         {
+            if (!isset ($a['distance']) || !isset ($b['distance']) || empty ($a['distance']) || empty ($b['distance'])) {
+                return 0;
+            }
+
             if ($a['distance'] == $b['distance']) {
                 return 0;
             }
