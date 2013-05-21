@@ -18,9 +18,9 @@ class order extends MY_Controller
         $carType = intval($this->input->get_post('car_type'));
         $carTime = $this->input->get_post('car_time');
         $carLength = intval($this->input->get_post('car_length'));
-        $trainAddress = $this->input->get_post('train_address');
+        $trainAddress = (double)$this->input->get_post('train_address');
         $trainAddressDesc = $this->input->get_post('train_address_desc');
-        $getoffAddress = $this->input->get_post('getoff_address');
+        $getoffAddress = (double)$this->input->get_post('getoff_address');
         $getoffAddressDesc = $this->input->get_post('getoff_address_desc');
         $addressSupplemental = $this->input->get_post('address_supplemental');
         $token = $this->input->get_post('token');

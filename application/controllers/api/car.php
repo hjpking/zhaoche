@@ -10,10 +10,17 @@ class car extends MY_Controller
 {
     public function test()
     {
+        $a = array('0' => '0', '1' => '1');
+        $b = array('0' => '1', '2' => '2');
+
+        p($a+$b);
+        p(array_merge($a,$b));
+
+
 		//$status = array(0,1,4,7);
 		//p($status);
 		//echo json_encode($status);
-        echo $this->sendMessage('13520740166', '赵磊收');
+        //echo $this->sendMessage('13520740166', '赵磊收');
         //echo '<br>'.date('Y-m-d H:i:s');
         //$this->sendMessage('13811508022', '王振生收');
         /*/
