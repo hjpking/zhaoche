@@ -36,6 +36,10 @@ class order extends MY_Controller
         $uSex = $this->input->get_post('user_sex');
         $orderSn = intval($this->input->get_post('order_sn'));
 
+        if (strpos($trainAddress, 'null') !== false) {
+            $trainAddress = '40.082406,116.588802';
+        }
+
         $response = array('code' => '0', 'msg' => '下单成功');
 
         //'?city_id=1&service_type=1&car_type=1&car_time=2013-03-28 12:00:00&car_length=30&train_address=39.903021,116.440487&getoff_address=39.903021,116.440487&address_supplemental=天安门广场&leave_message=麻烦快点过来&token=529262eaa1f89e6dc5153ea8577e58c6&is_invoice=1&payable=东方佛祖&content=租车&mailing_address=东方佛祖广场整栋&amount=25000&leave_message=你要快点到哦&flight=HU7636';
