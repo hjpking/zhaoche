@@ -5,9 +5,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dictionaries/Administrator.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/key/alipay/alipay_public_key_back.pem" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/application/libraries/clients.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/car.php" afterPath="$PROJECT_DIR$/application/controllers/api/car.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/api/order.php" afterPath="$PROJECT_DIR$/application/controllers/api/order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zhaoche.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,7 +97,7 @@
       <file leaf-file-name="order.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="13" selection-start="3922" selection-end="3922" vertical-scroll-proportion="0.6129808">
+            <state line="37" column="0" selection-start="1638" selection-end="1638" vertical-scroll-proportion="0.6670673">
               <folding />
             </state>
           </provider>
@@ -108,7 +106,7 @@
       <file leaf-file-name="car.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/api/car.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="58" selection-start="2280" selection-end="2280" vertical-scroll-proportion="23.125">
+            <state line="127" column="49" selection-start="4246" selection-end="4246" vertical-scroll-proportion="-47.5">
               <folding />
             </state>
           </provider>
@@ -558,13 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/api/car.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="58" selection-start="2280" selection-end="2280" vertical-scroll-proportion="23.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/core/Common.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="653" column="12" selection-start="15744" selection-end="15752" vertical-scroll-proportion="-15.625">
@@ -572,9 +563,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/api/car.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="49" selection-start="4246" selection-end="4246" vertical-scroll-proportion="-47.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/api/order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="13" selection-start="3922" selection-end="3922" vertical-scroll-proportion="0.6129808">
+        <state line="37" column="0" selection-start="1638" selection-end="1638" vertical-scroll-proportion="0.6670673">
           <folding />
         </state>
       </provider>
