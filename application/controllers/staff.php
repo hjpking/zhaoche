@@ -138,6 +138,7 @@ class staff extends MY_Controller
             'competence' => config_item('view_nav'),
             'data' => $staffInfo,
             'userCompetence' => $userCompetence,
+            'isEdit' => 1
         );
 //p($userCompetence);
         $this->load->view('staff/create', $data);
@@ -283,7 +284,7 @@ class staff extends MY_Controller
 
         $departInfo = $this->staff->getDepartment(1000, 0, '*', array('is_del' => '0'));
 
-        $this->load->view('staff/department_create', array('data' => $data, 'depart_data' => $departInfo));
+        $this->load->view('staff/department_create', array('data' => $data, 'depart_data' => $departInfo,'isEdit' => 1));
     }
 
     public function department_delete()

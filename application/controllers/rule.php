@@ -143,6 +143,7 @@ class rule extends MY_Controller
             'carLevelInfo' => $carLevelInfo,
             'cityInfo' => $city,
             'data' => $ruleInfo,
+            'isEdit' => 1
         );
 
         $this->load->view('rule/create', $data);

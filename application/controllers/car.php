@@ -58,6 +58,7 @@ class car extends MY_Controller
             'data' => $carInfo,
             'car_level_data' => $carLevelInfo,
             'car_data' => $carData,
+            'isEdit' => 1
         );
         $this->load->view('car/create', $data);
     }

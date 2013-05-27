@@ -9,7 +9,7 @@
             <?php require(APPPATH . 'views/sub/message_subnav.php');?>
 
             <div class="page-header">
-                <h4>添加消息分类</h4>
+                <h4><?=isset ($isEdit) ? '编辑' : '添加'?>消息分类</h4>
             </div>
 
             <form class="form-horizontal" action="<?=url('admin')?>/message/category_save" method="post">

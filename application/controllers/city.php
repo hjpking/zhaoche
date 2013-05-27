@@ -126,7 +126,7 @@ class city extends MY_Controller
         $city = $this->city->getCity(10000, 0, '*', array('is_del' => '0'));
 //echo '<pre>';print_r($cityData);exit;
 
-        $data = array('data' => $cityData, 'city' => $city);
+        $data = array('data' => $cityData, 'city' => $city, 'isEdit' => 1);
         $this->load->view('city/create', $data);
     }
 
@@ -231,7 +231,7 @@ class city extends MY_Controller
 
         $city = $this->city->getCity(10000, 0, '*', array('is_del' => '0'));
 
-        $data = array('data' => $cityData, 'city' => $city);
+        $data = array('data' => $cityData, 'city' => $city, 'isEdit' => 1);
         $this->load->view('city/useful_create', $data);
     }
 
@@ -359,7 +359,7 @@ class city extends MY_Controller
 
         $city = $this->city->getCity(10000, 0, '*', array('is_del' => '0'));
 
-        $data = array('data' => $data, 'city' => $city);
+        $data = array('data' => $data, 'city' => $city, 'isEdit' => 1);
         $this->load->view('city/airport_create', $data);
     }
 

@@ -9,7 +9,7 @@
             <?php require(APPPATH . 'views/sub/staff_subnav.php');?>
 
             <div class="page-header">
-                <h4>添加部门</h4>
+                <h4><?=isset ($isEdit) ? '编辑' : '添加'?>部门</h4>
             </div>
 
             <form class="form-horizontal" action="<?=url('admin');?>staff/department_save" method="post">

@@ -9,7 +9,7 @@
             <?php require(APPPATH . 'views/sub/chauffeur_subnav.php');?>
 
             <div class="page-header">
-                <h4>添加司机</h4>
+                <h4><?=isset ($isEdit) ? '编辑' : '添加'?>司机</h4>
             </div>
 
             <form class="form-horizontal" action="<?=url('admin');?>chauffeur/save/<?=isset ($isDeleteStatus) ? $isDeleteStatus : ''?>" method="post" onsubmit="return checkForm()">

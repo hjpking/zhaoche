@@ -202,6 +202,7 @@ class chauffeur extends MY_Controller
             'isDeleteStatus' => $isDeleteStatus,
             'url' => $url,
             'color' => config_item('color'),
+            'isEdit' => 1
         );
         $this->load->view('chauffeur/create', $data);
     }

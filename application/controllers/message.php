@@ -115,6 +115,7 @@ class message extends MY_Controller
         $data = array(
             'category_data' => $categoryInfo,
             'data' => $messageData,
+            'isEdit' => 1
         );
 
         $this->load->view('message/create', $data);
@@ -245,6 +246,7 @@ class message extends MY_Controller
         $data = array(
             'category_data' => $categoryInfo,
             'data' => $categoryData,
+            'isEdit' => 1
         );
 
         $this->load->view('message/category_create', $data);

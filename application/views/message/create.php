@@ -9,7 +9,7 @@
             <?php require(APPPATH . 'views/sub/message_subnav.php');?>
 
             <div class="page-header">
-                <h4>添加消息</h4>
+                <h4><?=isset ($isEdit) ? '编辑' : '添加'?>消息</h4>
             </div>
 
             <form class="form-horizontal" action="<?=url('admin')?>message/save" method="post" onsubmit="return checkForm()">

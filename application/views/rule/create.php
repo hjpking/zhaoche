@@ -9,7 +9,7 @@
             <?php require(APPPATH . 'views/sub/car_subnav.php');?>
 
             <div class="page-header">
-                <h4>添加计费规则</h4>
+                <h4><?=isset ($isEdit) ? '编辑' : '添加'?>计费规则</h4>
             </div>
 
             <form class="form-horizontal" action="<?=url('admin');?>rule/save" method="post">

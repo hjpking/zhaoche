@@ -9,7 +9,7 @@
             <?php require(APPPATH . 'views/sub/chauffeur_subnav.php');?>
 
             <div class="page-header">
-                <h4>添加机场</h4>
+                <h4><?=isset ($isEdit) ? '编辑' : '添加'?>机场</h4>
             </div>
 
             <form class="form-horizontal" action="<?=url('admin')?>/city/airport_save" method="post">

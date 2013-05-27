@@ -9,7 +9,7 @@
             <?php require(APPPATH . 'views/sub/staff_subnav.php');?>
 
             <div class="page-header">
-                <h4><?=isset ($data['staff_id']) ? '修改员工' : '添加员工';?></h4>
+                <h4><?=isset ($data['staff_id']) ? '编辑员工' : '添加员工';?></h4>
             </div>
 
 
