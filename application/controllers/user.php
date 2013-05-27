@@ -175,11 +175,11 @@ class user extends MY_Controller
             if (!empty($uInfo)) {
                 show_error('用户名已存在！');
             }
-        }
 
-        $tmp = $this->user->getUserByPhone($phone);
-        if (!empty ($tmp)) {
-            show_error('手机号码已存在！');
+            $tmp = $this->user->getUserByPhone($phone);
+            if (!empty ($tmp)) {
+                show_error('手机号码已存在！');
+            }
         }
 
         $this->user->save($data, $uid);
